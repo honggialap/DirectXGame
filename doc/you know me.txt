@@ -1,0 +1,24 @@
+Game: Game Life Cycle, Game Loop, Game Components
+Application: Win32, Game Component
+Time: Chronos, Game Component
+
+Graphics: Direct3D, Game Component
+Audio: DirectSound, Game Component
+Input: DirectInput, Game Component
+
+Resource: Readers, Manager, Game Component
+Networks: WinSock, Game Component
+
+-----
+Logic
+	Scene
+	SceneGraph
+	Game Object
+	System
+	Component
+	
+View
+	Player
+	AI
+	Host
+	RemotePlayer

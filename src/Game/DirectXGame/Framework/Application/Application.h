@@ -1,4 +1,9 @@
-#include <Windows.h>
+#pragma once
+
+#ifndef __APPLICATION__
+#define __APPLICATION__
+
+#include "Win32.h"
 
 class Application
 {
@@ -15,6 +20,13 @@ public:
 private:
 	HINSTANCE hInstance;
 	HWND hWnd;
+	
+	//GameWindow gameWindow;
+	//HWND hWnd;
+	//WString windowTitle;
+	//bool fullscreen;
+	//int widthResolution;
+	//int heightResolution;
 
 public:
 	HINSTANCE GetAppInstance() { return hInstance; }
@@ -24,7 +36,6 @@ public:
 	bool HandleMessage();
 	static LRESULT CALLBACK WinProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam);
 	
-
 	//Framework component
 public:
 	void Initialize(HINSTANCE hInstance);
@@ -32,3 +43,5 @@ public:
 };
 
 typedef Application* pApplication;
+
+#endif // !__APPLICATION__

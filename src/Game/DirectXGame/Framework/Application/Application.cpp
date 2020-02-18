@@ -88,9 +88,9 @@ bool Application::HandleMessage()
     MSG msg = {};
     bool done = false;
 
-    if(PeekMessage(&msg, hWnd, 0, 0, PM_REMOVE))
+    if(PeekMessage(&msg, NULL, 0, 0, PM_REMOVE))
     {
-        if (msg.message == WM_DESTROY)
+        if (msg.message == WM_QUIT)
             done = true;
 
         TranslateMessage(&msg);
