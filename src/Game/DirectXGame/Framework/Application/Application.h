@@ -1,9 +1,10 @@
 #pragma once
 
-#ifndef __APPLICATION__
-#define __APPLICATION__
+#ifndef __APPLICATION_H__
+#define __APPLICATION_H__
 
 #include "Win32.h"
+#include "GameWindow.h"
 
 class Application
 {
@@ -19,18 +20,11 @@ public:
 	//Win32 API
 private:
 	HINSTANCE hInstance;
-	HWND hWnd;
-	
-	//GameWindow gameWindow;
-	//HWND hWnd;
-	//WString windowTitle;
-	//bool fullscreen;
-	//int widthResolution;
-	//int heightResolution;
+	GameWindow gameWindow;
 
 public:
 	HINSTANCE GetAppInstance() { return hInstance; }
-	HWND GetWindow() { return hWnd; }
+	GameWindow GetGameWindow() { return gameWindow; }
 	
 	HWND CreateGameWindow();
 	bool HandleMessage();
@@ -44,4 +38,4 @@ public:
 
 typedef Application* pApplication;
 
-#endif // !__APPLICATION__
+#endif // !__APPLICATION_H__

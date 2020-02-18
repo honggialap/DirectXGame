@@ -142,31 +142,18 @@
     <ClInclude Include="DirectXGame\Framework\Application\Application.h" />
     <ClInclude Include="DirectXGame\Framework\Application\GameWindow.h" />
     <ClInclude Include="DirectXGame\Framework\Application\Win32.h" />
-    <ClInclude Include="DirectXGame\Framework\Audio\Audio.h" />
-    <ClInclude Include="DirectXGame\Framework\Audio\DirectSound.h" />
-    <ClInclude Include="DirectXGame\Framework\Graphics\Direct3D.h" />
-    <ClInclude Include="DirectXGame\Framework\Input\DirectInput.h" />
-    <ClInclude Include="DirectXGame\Framework\Input\Input.h" />
-    <ClInclude Include="DirectXGame\Framework\Networks\WinSock.h" />
     <ClInclude Include="DirectXGame\Framework\Time\Chrono.h" />
-    <ClInclude Include="DirectXGame\Framework\Time\GameTime.h" />
     <ClInclude Include="DirectXGame\Framework\Time\Time.h" />
-    <ClInclude Include="DirectXGame\IDrawable.h" />
-    <ClInclude Include="DirectXGame\IGameComponent.h" />
     <ClInclude Include="DirectXGame\Game.h" />
-    <ClInclude Include="DirectXGame\IUpdatable.h" />
+    <ClInclude Include="MarioSample\MarioSample.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="DirectXGame\Framework\Application\Application.cpp" />
     <ClCompile Include="DirectXGame\Framework\Application\GameWindow.cpp" />
-    <ClCompile Include="DirectXGame\Framework\Audio\Audio.cpp" />
-    <ClCompile Include="DirectXGame\Framework\Graphics\Graphics.cpp" />
-    <ClCompile Include="DirectXGame\Framework\Graphics\Graphics.h" />
-    <ClCompile Include="DirectXGame\Framework\Input\Input.cpp" />
-    <ClCompile Include="DirectXGame\Framework\Time\GameTime.cpp" />
     <ClCompile Include="DirectXGame\Framework\Time\Time.cpp" />
     <ClCompile Include="DirectXGame\Game.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="MarioSample\MarioSample.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

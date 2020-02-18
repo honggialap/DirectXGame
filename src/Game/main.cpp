@@ -1,16 +1,13 @@
-#include "DirectXGame/Framework/Application/Application.h"
+#include "DirectXGame/Game.h"
 
 int WINAPI wWinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPWSTR pCmdLine, int nCmdShow)
 {
-	pApplication app = Application::GetInstance();
+	auto game = new Game();
+	
+	game->Initialize(hInstance);
+	game->Run();
 
-	app->Initialize(hInstance);
-	app->CreateGameWindow();
-
-	while (!app->HandleMessage())
-	{
-		;
-	}
+	delete game;
 
 	return 0;
 }

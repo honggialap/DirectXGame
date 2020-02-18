@@ -13,7 +13,7 @@ Application* Application::GetInstance()
 Application::Application()
 {
 	hInstance = NULL;
-	hWnd = NULL;
+	gameWindow = {};
 }
 
 Application::~Application()
@@ -57,7 +57,7 @@ HWND Application::CreateGameWindow()
 
 
     // Create the window.
-    hWnd = CreateWindowEx(
+	gameWindow.hWnd = CreateWindowEx(
         0,                              // Optional window styles.
         CLASS_NAME,                     // Window class
         WINDOW_TITLE,    // Window text
@@ -72,15 +72,15 @@ HWND Application::CreateGameWindow()
         NULL        // Additional application data
     );
 
-    if (hWnd == NULL)
+    if (gameWindow.hWnd == NULL)
     {
         return 0;
     }
 
-    ShowWindow(hWnd, SW_SHOWNORMAL);
-    UpdateWindow(hWnd);
+    ShowWindow(gameWindow.hWnd, SW_SHOWNORMAL);
+    UpdateWindow(gameWindow.hWnd);
 
-	return hWnd;
+	return gameWindow.hWnd;
 }
 
 bool Application::HandleMessage()
