@@ -3,20 +3,26 @@
 #ifndef __GAME_WINDOW_H__
 #define __GAME_WINDOW_H__
 
-#include "Application.h"
+#include "Win32.h"
+#include <string>
+
+class Application;
 
 class GameWindow
 {
 private:
 	HWND hWnd;
-	//WString title;
+	std::wstring title;
 	bool fullscreen;
 	int width;
 	int height;
 
 public:
+	GameWindow();
+	~GameWindow();
+
 	HWND GetWindow() { return hWnd; }
-	//WString GetTitle() { return title; }
+	std::wstring GetTitle() { return title; }
 	bool IsFullscreen() { return fullscreen; }
 	int GetWidth() { return width; }
 	int GetHeight() { return height; }

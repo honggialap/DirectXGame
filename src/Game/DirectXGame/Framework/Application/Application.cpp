@@ -13,7 +13,7 @@ Application* Application::GetInstance()
 Application::Application()
 {
 	hInstance = NULL;
-	gameWindow = {};
+	gameWindow = GameWindow();
 }
 
 Application::~Application()

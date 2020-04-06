@@ -75,6 +75,8 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
+    <IncludePath>$(SolutionDir)Game\DirectXGame\Library\directx\Include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)Game\DirectXGame\Library\directx\Lib\x64;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
@@ -104,6 +106,8 @@
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>d3d9.lib;d3dx9.lib;dinput8.lib;dsound.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -142,16 +146,22 @@
     <ClInclude Include="DirectXGame\Framework\Application\Application.h" />
     <ClInclude Include="DirectXGame\Framework\Application\GameWindow.h" />
     <ClInclude Include="DirectXGame\Framework\Application\Win32.h" />
+    <ClInclude Include="DirectXGame\Framework\Graphics\Direct3D.h" />
+    <ClInclude Include="DirectXGame\Framework\Graphics\Graphics.h" />
     <ClInclude Include="DirectXGame\Framework\Time\Chrono.h" />
     <ClInclude Include="DirectXGame\Framework\Time\Time.h" />
     <ClInclude Include="DirectXGame\Game.h" />
+    <ClInclude Include="DirectXGame\Library\pugixml\pugiconfig.hpp" />
+    <ClInclude Include="DirectXGame\Library\pugixml\pugixml.hpp" />
     <ClInclude Include="MarioSample\MarioSample.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="DirectXGame\Framework\Application\Application.cpp" />
     <ClCompile Include="DirectXGame\Framework\Application\GameWindow.cpp" />
+    <ClCompile Include="DirectXGame\Framework\Graphics\Graphics.cpp" />
     <ClCompile Include="DirectXGame\Framework\Time\Time.cpp" />
     <ClCompile Include="DirectXGame\Game.cpp" />
+    <ClCompile Include="DirectXGame\Library\pugixml\pugixml.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="MarioSample\MarioSample.cpp" />
   </ItemGroup>
