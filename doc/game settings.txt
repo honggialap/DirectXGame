@@ -1,0 +1,14 @@
+GameData
+
+GameWindow
+	Title
+	WindowMode
+	WidthResolution
+	HeightResolution
+
+<gameData>
+	<title>Castlevania</title>
+	<windowMode>fullscreen</windowMode>
+	<widthResolution>800</widthResolution>
+	<heightResolution>600</widthResolution>
+</gameData>

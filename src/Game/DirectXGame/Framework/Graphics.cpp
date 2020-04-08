@@ -1,0 +1,61 @@
+#include "Graphics.h"
+
+Graphics::Graphics()
+{
+	graphicsDevice = new GraphicsDevice();
+}
+
+Graphics::~Graphics()
+{
+	graphicsDevice->spriteHandler->Release();
+	graphicsDevice->backBuffer->Release();
+	graphicsDevice->device->Release();
+	graphicsDevice->direct3D->Release();
+
+	delete graphicsDevice;
+	graphicsDevice = nullptr;
+}
+
+void Graphics::CreateGraphicsDevice(pGameWindow gameWindow)
+{
+	//create Direct3D object
+	graphicsDevice->direct3D = Direct3DCreate9(D3D_SDK_VERSION);
+
+	//instanciate Present Parameters
+	ZeroMemory(&(graphicsDevice->presentParameters), sizeof(graphicsDevice->presentParameters));
+	if(gameWindow->fullscreen == true)
+		graphicsDevice->presentParameters.Windowed = FALSE;
+	else
+		graphicsDevice->presentParameters.Windowed = TRUE;
+	graphicsDevice->presentParameters.SwapEffect = D3DSWAPEFFECT_DISCARD;
+	graphicsDevice->presentParameters.BackBufferFormat = D3DFMT_X8R8G8B8;
+	graphicsDevice->presentParameters.BackBufferCount = 1;
+	graphicsDevice->presentParameters.BackBufferWidth = gameWindow->width;
+	graphicsDevice->presentParameters.BackBufferHeight = gameWindow->height;
+
+	//create Direct3D Device object
+	graphicsDevice->direct3D->CreateDevice(
+		D3DADAPTER_DEFAULT,
+		D3DDEVTYPE_HAL,
+		gameWindow->hWnd,
+		D3DCREATE_SOFTWARE_VERTEXPROCESSING,
+		&graphicsDevice->presentParameters,
+		&graphicsDevice->device);
+	if (graphicsDevice->device == NULL)
+	{
+		OutputDebugString(L"[ERROR] Create graphics device failed.\n");
+	}
+
+	//Create back buffer
+	graphicsDevice->device->GetBackBuffer(0, 0, D3DBACKBUFFER_TYPE_MONO, &graphicsDevice->backBuffer);
+
+	//Create sprite helper
+	D3DXCreateSprite(graphicsDevice->device, &graphicsDevice->spriteHandler);
+
+	OutputDebugString(L"[INFO] Create graphics device successed.\n");
+}
+
+void Graphics::Draw()
+{
+
+}

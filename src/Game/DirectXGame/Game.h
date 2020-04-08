@@ -1,35 +1,51 @@
 #pragma once
-
 #ifndef __GAME_H__
 #define __GAME_H__
 
-#include <iostream>
+#include "Framework/Application.h"
+#include "Framework/Time.h"
+#include "Framework/Graphics.h"
+//#include "Framework/Audio.h"
+#include "Framework/Input.h"
+//#include "Framework/Networks.h"
+#include "Framework/Resource.h"
+#include "Framework/Ultilities.h"
 
-#include "Framework/Application/Application.h"
-#include "Framework/Time/Time.h"
-//#include "Framework/Graphics/Graphics.h"
-//#include "Framework/Audio/Audio.h"
-//#include "Framework/Input/Input.h"
+using namespace std;
+
+class GameSettings
+{
+public:
+	string gameTitle;
+	int maxFrameRate;
+	bool fullscreen;
+	int widthResolution;
+	int heightResolution;
+};
+
+typedef GameSettings* pGameSettings;
 
 class Game
 {
-protected:
+public:
 	pApplication application;
 	pTime time;
-	//pGraphics graphics;
+	pGraphics graphics;
 	//pAudio audio;
-	//pInput input;
+	pInput input;
+	//pNetworks networks;
+	pResource resource;
 
-public:
-	Game();
+	pGameSettings gameSettings;
+
+	Game(HINSTANCE hInstance);
 	~Game();
 
-	void Initialize(HINSTANCE hInstance);
-	void Shutdown();
-
+	void Load(LPCWSTR dataFilePath);
 	void Run();
-	void Update();
-	void Render();
+
+	virtual void Update(pGameTime gameTime);
+	virtual void Render();
 };
 
-#endif //!__GAME_H__
+#endif // !__GAME_H__
