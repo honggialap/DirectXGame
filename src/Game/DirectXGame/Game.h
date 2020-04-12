@@ -5,9 +5,9 @@
 #include "Framework/Application.h"
 #include "Framework/Time.h"
 #include "Framework/Graphics.h"
-//#include "Framework/Audio.h"
+#include "Framework/Audio.h"
 #include "Framework/Input.h"
-//#include "Framework/Networks.h"
+#include "Framework/Networks.h"
 #include "Framework/Resource.h"
 #include "Framework/Ultilities.h"
 
@@ -31,9 +31,9 @@ public:
 	pApplication application;
 	pTime time;
 	pGraphics graphics;
-	//pAudio audio;
+	pAudio audio;
 	pInput input;
-	//pNetworks networks;
+	pNetworks networks;
 	pResource resource;
 
 	pGameSettings gameSettings;

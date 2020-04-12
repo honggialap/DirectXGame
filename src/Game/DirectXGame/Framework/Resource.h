@@ -5,22 +5,26 @@
 #include "Graphics.h"
 #include "Content/Texture.h"
 
-//#include "Audio.h"
-//#include "Content/Sound.h"
+#include "Audio.h"
+#include "Content/Sound.h"
 
 class Resource
 {
 public:
 	pGraphics graphics;
-	//pAudio audio;
+	pAudio audio;
 
-	//pTextures
-	//pSprites
-	//pAnimations
-	//pTilemaps
+	//pTextures textures;
+	//pSounds sounds;
+	//pSprites sprites;
+	//pAnimations animations;
+	//pTilemaps tilemaps;
 
-	Resource(pGraphics graphics); //pAudio audio
+	Resource(pGraphics graphics, pAudio audio);
 	~Resource();
+
+	//bool Load();
+	//template <class T> T Get();
 };
 
 typedef Resource* pResource;

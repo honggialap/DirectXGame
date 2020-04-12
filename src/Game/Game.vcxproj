@@ -144,26 +144,48 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="DirectXGame\Framework\Application.cpp" />
+    <ClCompile Include="DirectXGame\Framework\Audio.cpp" />
+    <ClCompile Include="DirectXGame\Framework\Content\Sound.cpp" />
     <ClCompile Include="DirectXGame\Framework\Content\Texture.cpp" />
     <ClCompile Include="DirectXGame\Framework\Graphics.cpp" />
     <ClCompile Include="DirectXGame\Framework\Input.cpp" />
+    <ClCompile Include="DirectXGame\Framework\Networks.cpp" />
     <ClCompile Include="DirectXGame\Framework\Resource.cpp" />
     <ClCompile Include="DirectXGame\Framework\Time.cpp" />
     <ClCompile Include="DirectXGame\Framework\Utilities.cpp" />
     <ClCompile Include="DirectXGame\Game.cpp" />
     <ClCompile Include="DirectXGame\Library\pugixml\pugixml.cpp" />
+    <ClCompile Include="DirectXGame\Logic\Animation.cpp" />
+    <ClCompile Include="DirectXGame\Logic\Camera.cpp" />
+    <ClCompile Include="DirectXGame\Logic\Collision.cpp" />
+    <ClCompile Include="DirectXGame\Logic\Grid.cpp" />
+    <ClCompile Include="DirectXGame\Logic\Physics.cpp" />
     <ClCompile Include="DirectXGame\Logic\Sprite.cpp" />
+    <ClCompile Include="DirectXGame\Logic\Tilemap.cpp" />
     <ClCompile Include="DirectXGame\Logic\View\Controller.cpp" />
     <ClCompile Include="DirectXGame\Logic\GameObject.cpp" />
     <ClCompile Include="DirectXGame\Logic\View\Renderer.cpp" />
     <ClCompile Include="DirectXGame\Logic\Scene.cpp" />
+    <ClCompile Include="DirectXGame\Logic\View\Speaker.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Castlevania\Model\GameObject\Dagger.h" />
+    <ClInclude Include="Castlevania\Model\GameObject\DaggerItem.h" />
+    <ClInclude Include="Castlevania\Model\GameObject\EnergyItem.h" />
+    <ClInclude Include="Castlevania\Model\GameObject\Simon.h" />
+    <ClInclude Include="Castlevania\Model\GameObject\Tourch.h" />
+    <ClInclude Include="Castlevania\Model\GameObject\Whip.h" />
+    <ClInclude Include="Castlevania\Model\GameObject\WhipItem.h" />
+    <ClInclude Include="Castlevania\Model\Scene\MenuScene.h" />
+    <ClInclude Include="Castlevania\Model\Scene\PlayScene.h" />
     <ClInclude Include="DirectXGame\Framework\Application.h" />
+    <ClInclude Include="DirectXGame\Framework\Audio.h" />
+    <ClInclude Include="DirectXGame\Framework\Content\Sound.h" />
     <ClInclude Include="DirectXGame\Framework\Content\Texture.h" />
     <ClInclude Include="DirectXGame\Framework\Graphics.h" />
     <ClInclude Include="DirectXGame\Framework\Input.h" />
+    <ClInclude Include="DirectXGame\Framework\Networks.h" />
     <ClInclude Include="DirectXGame\Framework\Resource.h" />
     <ClInclude Include="DirectXGame\Framework\Time.h" />
     <ClInclude Include="DirectXGame\Framework\Ultilities.h" />
@@ -244,11 +266,18 @@
     <ClInclude Include="DirectXGame\Library\directx\Include\xnamath.h" />
     <ClInclude Include="DirectXGame\Library\pugixml\pugiconfig.hpp" />
     <ClInclude Include="DirectXGame\Library\pugixml\pugixml.hpp" />
+    <ClInclude Include="DirectXGame\Logic\Animation.h" />
+    <ClInclude Include="DirectXGame\Logic\Camera.h" />
+    <ClInclude Include="DirectXGame\Logic\Collision.h" />
+    <ClInclude Include="DirectXGame\Logic\Grid.h" />
+    <ClInclude Include="DirectXGame\Logic\Physics.h" />
     <ClInclude Include="DirectXGame\Logic\Sprite.h" />
+    <ClInclude Include="DirectXGame\Logic\Tilemap.h" />
     <ClInclude Include="DirectXGame\Logic\View\Controller.h" />
     <ClInclude Include="DirectXGame\Logic\GameObject.h" />
     <ClInclude Include="DirectXGame\Logic\View\Renderer.h" />
     <ClInclude Include="DirectXGame\Logic\Scene.h" />
+    <ClInclude Include="DirectXGame\Logic\View\Speaker.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="DirectXGame\Library\directx\Include\D3DX10math.inl" />
@@ -258,6 +287,9 @@
     <None Include="DirectXGame\Library\directx\Include\xnamathmatrix.inl" />
     <None Include="DirectXGame\Library\directx\Include\xnamathmisc.inl" />
     <None Include="DirectXGame\Library\directx\Include\xnamathvector.inl" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="progress.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

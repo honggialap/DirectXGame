@@ -28,7 +28,7 @@ public:
 	~Audio();
 
 	void CreateAudioDevice(pGameWindow gameWindow);
-
+	void Play();
 };
 
 typedef Audio* pAudio;

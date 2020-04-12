@@ -7,10 +7,10 @@ Game::Game(HINSTANCE hInstance)
 	application = new Application(hInstance);
 	time = new Time();
 	graphics = new Graphics();
-	//audio = new Audio();
+	audio = new Audio();
 	input = new Input();
-	//networks = new Networks();
-	resource = new Resource(graphics);
+	networks = new Networks();
+	resource = new Resource(graphics, audio);
 }
 
 Game::~Game()
@@ -18,14 +18,14 @@ Game::~Game()
 	delete resource;
 	resource = nullptr;
 
-	//sdelete networks;
-	//snetworks = nullptr;
+	delete networks;
+	networks = nullptr;
 
 	delete input;
 	input = nullptr;
 
-	//delete audio;
-	//audio = nullptr;
+	delete audio;
+	audio = nullptr;
 
 	delete graphics;
 	graphics = nullptr;
@@ -62,7 +62,7 @@ void Game::Load(LPCWSTR dataFilePath)
 	graphics->CreateGraphicsDevice(application->gameWindow);
 
 	// then create audio device
-	//audio->CreateAudioDevice();
+	//audio->CreateAudioDevice(application->gameWindow);
 
 	// then create input device
 	input->CreateInputDevice(application->gameWindow);
@@ -78,7 +78,7 @@ void Game::Load(LPCWSTR dataFilePath)
 
 void Game::Run()
 {
-	//pick 1st scene
+	//pick scene
 
 	bool done = false;
 	double frameTime = 1.0 / gameSettings->maxFrameRate * 1000; //in milliseconds

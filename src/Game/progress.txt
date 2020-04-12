@@ -1,0 +1,37 @@
+framework
+	Application: done
+	Time: done
+
+	graphics: draw
+	input: update, keydown, handler
+	audio: not now
+
+	resource: parser, load, get	
+		content
+			texture
+			sound
+			dictionary
+
+	network: not now
+	ultilities: maybe later
+-----------------------------------------------
+logic
+	scene
+	gameobject
+
+	sprite
+	animation
+	tilemap
+
+	renderer
+	controller
+	speaker
+
+	collision
+	physics
+	grid
+
+	camera
+	ui
+-----------------------------------------------
+game

@@ -14,3 +14,7 @@ Audio::~Audio()
 void Audio::CreateAudioDevice(pGameWindow gameWindow)
 {
 }
+
+void Audio::Play()
+{
+}
