@@ -8,7 +8,7 @@ class Texture
 public:
 	LPDIRECT3DTEXTURE9 texture;
 	D3DXIMAGE_INFO info;
-
+	
 };
 
 class Textures

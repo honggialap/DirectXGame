@@ -143,6 +143,9 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Castlevania\Castlevania.cpp" />
+    <ClCompile Include="Castlevania\Model\GameObject\Enemy\VampireBat.h" />
+    <ClCompile Include="Castlevania\Model\GameObject\Item\WatchItem.h" />
     <ClCompile Include="DirectXGame\Framework\Application.cpp" />
     <ClCompile Include="DirectXGame\Framework\Audio.cpp" />
     <ClCompile Include="DirectXGame\Framework\Content\Sound.cpp" />
@@ -164,21 +167,53 @@
     <ClCompile Include="DirectXGame\Logic\Tilemap.cpp" />
     <ClCompile Include="DirectXGame\Logic\View\Controller.cpp" />
     <ClCompile Include="DirectXGame\Logic\GameObject.cpp" />
+    <ClCompile Include="DirectXGame\Logic\View\Player.cpp" />
     <ClCompile Include="DirectXGame\Logic\View\Renderer.cpp" />
     <ClCompile Include="DirectXGame\Logic\Scene.cpp" />
     <ClCompile Include="DirectXGame\Logic\View\Speaker.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="MarioSample\MarioSample.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Castlevania\Model\GameObject\Dagger.h" />
-    <ClInclude Include="Castlevania\Model\GameObject\DaggerItem.h" />
-    <ClInclude Include="Castlevania\Model\GameObject\EnergyItem.h" />
-    <ClInclude Include="Castlevania\Model\GameObject\Simon.h" />
-    <ClInclude Include="Castlevania\Model\GameObject\Tourch.h" />
-    <ClInclude Include="Castlevania\Model\GameObject\Whip.h" />
-    <ClInclude Include="Castlevania\Model\GameObject\WhipItem.h" />
+    <ClInclude Include="Castlevania\Castlevania.h" />
+    <ClInclude Include="Castlevania\Model\GameObject\Enemy\BlackKnight.h" />
+    <ClInclude Include="Castlevania\Model\GameObject\Enemy\Ghost.h" />
+    <ClInclude Include="Castlevania\Model\GameObject\Enemy\Hunchback.h" />
+    <ClInclude Include="Castlevania\Model\GameObject\Enemy\PhantomBat.h" />
+    <ClInclude Include="Castlevania\Model\GameObject\Enemy\Raven.h" />
+    <ClInclude Include="Castlevania\Model\GameObject\Enemy\WhiteSkeleton.h" />
+    <ClInclude Include="Castlevania\Model\GameObject\Enemy\Zombie.h" />
+    <ClInclude Include="Castlevania\Model\GameObject\Item\AxeItem.h" />
+    <ClInclude Include="Castlevania\Model\GameObject\Item\BoomerangItem.h" />
+    <ClInclude Include="Castlevania\Model\GameObject\Item\CrossItem.h" />
+    <ClInclude Include="Castlevania\Model\GameObject\Item\DoubleShotItem.h" />
+    <ClInclude Include="Castlevania\Model\GameObject\Item\MagicCrystalItem.h" />
+    <ClInclude Include="Castlevania\Model\GameObject\Item\PorkChopItem.h" />
+    <ClInclude Include="Castlevania\Model\GameObject\Item\FireBombItem.h" />
+    <ClInclude Include="Castlevania\Model\GameObject\Item\InvisibilityPotionItem.h" />
+    <ClInclude Include="Castlevania\Model\GameObject\Item\MoneyBagItem.h" />
+    <ClInclude Include="Castlevania\Model\GameObject\Item\SmallHeartItem.h" />
+    <ClInclude Include="Castlevania\Model\GameObject\Item\TripleShotItem.h" />
+    <ClInclude Include="Castlevania\Model\GameObject\Prop\BreakableBrick.h" />
+    <ClInclude Include="Castlevania\Model\GameObject\Prop\Candle.h" />
+    <ClInclude Include="Castlevania\Model\GameObject\Simon\Axe.h" />
+    <ClInclude Include="Castlevania\Model\GameObject\Simon\Boomerang.h" />
+    <ClInclude Include="Castlevania\Model\GameObject\Simon\Dagger.h" />
+    <ClInclude Include="Castlevania\Model\GameObject\Item\DaggerItem.h" />
+    <ClInclude Include="Castlevania\Model\GameObject\Item\LargeHeartItem.h" />
+    <ClInclude Include="Castlevania\Model\GameObject\Simon\FireBomb.h" />
+    <ClInclude Include="Castlevania\Model\GameObject\Simon\Simon.h" />
+    <ClInclude Include="Castlevania\Model\GameObject\Prop\Tourch.h" />
+    <ClInclude Include="Castlevania\Model\GameObject\Simon\Watch.h" />
+    <ClInclude Include="Castlevania\Model\GameObject\Simon\Whip.h" />
+    <ClInclude Include="Castlevania\Model\GameObject\Item\MorningStarItem.h" />
+    <ClInclude Include="Castlevania\Model\GameObject\GameManager.h" />
     <ClInclude Include="Castlevania\Model\Scene\MenuScene.h" />
     <ClInclude Include="Castlevania\Model\Scene\PlayScene.h" />
+    <ClInclude Include="Castlevania\Model\GameObject\Map\Stage1.h" />
+    <ClInclude Include="Castlevania\Model\GameObject\Map\Stage2.h" />
+    <ClInclude Include="Castlevania\Model\GameObject\Map\Stage3.h" />
+    <ClInclude Include="Castlevania\Model\GameObject\Map\Stage4.h" />
     <ClInclude Include="DirectXGame\Framework\Application.h" />
     <ClInclude Include="DirectXGame\Framework\Audio.h" />
     <ClInclude Include="DirectXGame\Framework\Content\Sound.h" />
@@ -275,9 +310,11 @@
     <ClInclude Include="DirectXGame\Logic\Tilemap.h" />
     <ClInclude Include="DirectXGame\Logic\View\Controller.h" />
     <ClInclude Include="DirectXGame\Logic\GameObject.h" />
+    <ClInclude Include="DirectXGame\Logic\View\Player.h" />
     <ClInclude Include="DirectXGame\Logic\View\Renderer.h" />
     <ClInclude Include="DirectXGame\Logic\Scene.h" />
     <ClInclude Include="DirectXGame\Logic\View\Speaker.h" />
+    <ClInclude Include="MarioSample\MarioSample.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="DirectXGame\Library\directx\Include\D3DX10math.inl" />
