@@ -1,5 +1,19 @@
 #include "Application.h"
 
+GameWindow::GameWindow()
+{
+	hInstance = NULL;
+	hWnd = NULL;
+	windowTitle = NULL;
+	fullscreen = {};
+	width = {};
+	height = {};
+}
+
+GameWindow::~GameWindow()
+{
+}
+
 Application::Application(HINSTANCE hInstance)
 {
 	this->gameWindow = new GameWindow();
@@ -8,13 +22,15 @@ Application::Application(HINSTANCE hInstance)
 
 Application::~Application()
 {
-	delete gameWindow;
-	gameWindow = nullptr;
+	if (gameWindow != nullptr)
+	{
+		delete gameWindow;
+		gameWindow = nullptr;
+	}
 }
 
 void Application::CreateGameWindow(LPCWSTR windowTitle, int widthResolution, int heightResolution, bool fullscreen)
 {
-	gameWindow->hWnd = NULL;
 	gameWindow->windowTitle = windowTitle;
 	gameWindow->fullscreen = fullscreen;
 	gameWindow->width = widthResolution;

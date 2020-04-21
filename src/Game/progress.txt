@@ -1,37 +1,30 @@
-framework
-	Application: done
-	Time: done
+crunching
+	Game
+- Scene and GameObject
+- Sprite, Animation, TileMap
+- Collision, Physics
 
-	graphics: draw
-	input: update, keydown, handler
-	audio: not now
+	Castlevania
+Stage 1 map
+Simon
+Whip
+MorningStarItem
+Dagger
+DaggerItem
+LargeHeartItem
+SmallHeartItem
+Tourch
+Door
 
-	resource: parser, load, get	
-		content
-			texture
-			sound
-			dictionary
 
-	network: not now
-	ultilities: maybe later
------------------------------------------------
-logic
-	scene
-	gameobject
+Game Initalization
 
-	sprite
-	animation
-	tilemap
+Game
+	-> Components
+	-> Read gameData -> Game settings
+	-> Create devices
+	-> Read gameData -> Game content -> Read gameContent
+	-> Read gameData -> Scenes -> Read scene 
 
-	renderer
-	controller
-	speaker
-
-	collision
-	physics
-	grid
-
-	camera
-	ui
------------------------------------------------
-game
+Run
+Change scene

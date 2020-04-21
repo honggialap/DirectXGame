@@ -1,11 +1,18 @@
 #include "Time.h"
 
+GameTime::GameTime()
+{
+	elapsedMilliseconds = 0;
+	totalElapsedMilliseconds = 0;
+}
+
+GameTime::~GameTime()
+{
+}
+
 Time::Time()
 {
 	gameTime = new GameTime();
-
-	gameTime->elapsedMilliseconds = 0;
-	gameTime->totalElapsedMilliseconds = 0;
 
 	elapsedTime = { 0 };
 	totalElapsedTime = { 0 };
@@ -13,8 +20,11 @@ Time::Time()
 
 Time::~Time()
 {
-	delete gameTime;
-	gameTime = nullptr;
+	if (gameTime != nullptr)
+	{
+		delete gameTime;
+		gameTime = nullptr;
+	}
 }
 
 void Time::Start()

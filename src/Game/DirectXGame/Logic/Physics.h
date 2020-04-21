@@ -4,6 +4,7 @@
 
 class Body
 {
+	double mass;
 
 };
 
@@ -15,5 +16,7 @@ class Physics
 };
 
 typedef Physics* pPhysics;
+
+class Bodies;
 
 #endif // !__PHYSICS_H__

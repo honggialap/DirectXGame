@@ -1,5 +1,20 @@
 #include "Input.h"
 
+InputDevice::InputDevice()
+{
+	directInput = NULL;					
+	device = NULL;
+}
+
+InputDevice::~InputDevice()
+{
+	if (device != NULL) device->Release();
+	device = NULL;
+
+	if (directInput != NULL) directInput->Release();
+	directInput = NULL;
+}
+
 Input::Input()
 {
 	inputDevice = new InputDevice();
@@ -107,6 +122,7 @@ void Input::Update()
 
 int Input::IsKeyDown()
 {
+	return 0;
 }
 
 void Input::SetKeyHandler()

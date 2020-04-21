@@ -23,4 +23,7 @@ class AnimationSet
 
 typedef AnimationSet* pAnimationSet;
 
+class AnimationFrames{};
+class Animations{};
+class AnimationSets{};
 #endif // !__ANIMATION_H__

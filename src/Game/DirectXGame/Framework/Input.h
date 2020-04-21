@@ -25,10 +25,13 @@ public:
 
 	LPDIRECTINPUT8			directInput;						// The DirectInput object         
 	LPDIRECTINPUTDEVICE8	device;								// The keyboard device
-	BYTE					keyStates[KEYSTATE_BUFFER_SIZE];	// DirectInput keyboard state buffer 
-	DIDEVICEOBJECTDATA		keyEvents[KEYBOARD_BUFFER_SIZE];	// Buffered keyboard data
+	BYTE					keyStates[KEYSTATE_BUFFER_SIZE] = {0};	// DirectInput keyboard state buffer 
+	DIDEVICEOBJECTDATA		keyEvents[KEYBOARD_BUFFER_SIZE] = {0};	// Buffered keyboard data
 
 	//	LPKEYEVENTHANDLER keyHandler;
+
+	InputDevice();
+	~InputDevice();
 };
 
 typedef InputDevice* pInputDevice;

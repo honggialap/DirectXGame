@@ -12,6 +12,9 @@ class GameTime
 public:
 	double elapsedMilliseconds;
 	double totalElapsedMilliseconds;
+
+	GameTime();
+	~GameTime();
 };
 
 typedef GameTime* pGameTime;

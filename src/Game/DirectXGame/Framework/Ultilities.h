@@ -15,7 +15,7 @@
 
 using namespace std;
 
-void DebugOut(wchar_t* fmt, ...);
+void DebugOut(const wchar_t* fmt, ...);
 
 //vector<string> split(string line, string delimeter = "\t");
 

@@ -18,6 +18,9 @@ public:
 	bool fullscreen;
 	int width;
 	int height;
+
+	GameWindow();
+	~GameWindow();
 };
 
 typedef GameWindow* pGameWindow;

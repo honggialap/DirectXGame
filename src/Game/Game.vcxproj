@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
@@ -144,83 +144,27 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Castlevania\Castlevania.cpp" />
-    <ClCompile Include="Castlevania\Model\GameObject\Enemy\VampireBat.h" />
-    <ClCompile Include="Castlevania\Model\GameObject\Item\WatchItem.h" />
     <ClCompile Include="DirectXGame\Framework\Application.cpp" />
-    <ClCompile Include="DirectXGame\Framework\Audio.cpp" />
-    <ClCompile Include="DirectXGame\Framework\Content\Sound.cpp" />
     <ClCompile Include="DirectXGame\Framework\Content\Texture.cpp" />
     <ClCompile Include="DirectXGame\Framework\Graphics.cpp" />
     <ClCompile Include="DirectXGame\Framework\Input.cpp" />
-    <ClCompile Include="DirectXGame\Framework\Networks.cpp" />
+    <ClCompile Include="DirectXGame\Framework\Math.cpp" />
     <ClCompile Include="DirectXGame\Framework\Resource.cpp" />
     <ClCompile Include="DirectXGame\Framework\Time.cpp" />
     <ClCompile Include="DirectXGame\Framework\Utilities.cpp" />
     <ClCompile Include="DirectXGame\Game.cpp" />
     <ClCompile Include="DirectXGame\Library\pugixml\pugixml.cpp" />
-    <ClCompile Include="DirectXGame\Logic\Animation.cpp" />
-    <ClCompile Include="DirectXGame\Logic\Camera.cpp" />
-    <ClCompile Include="DirectXGame\Logic\Collision.cpp" />
-    <ClCompile Include="DirectXGame\Logic\Grid.cpp" />
-    <ClCompile Include="DirectXGame\Logic\Physics.cpp" />
-    <ClCompile Include="DirectXGame\Logic\Sprite.cpp" />
-    <ClCompile Include="DirectXGame\Logic\Tilemap.cpp" />
-    <ClCompile Include="DirectXGame\Logic\View\Controller.cpp" />
     <ClCompile Include="DirectXGame\Logic\GameObject.cpp" />
-    <ClCompile Include="DirectXGame\Logic\View\Player.cpp" />
-    <ClCompile Include="DirectXGame\Logic\View\Renderer.cpp" />
     <ClCompile Include="DirectXGame\Logic\Scene.cpp" />
-    <ClCompile Include="DirectXGame\Logic\View\Speaker.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="MarioSample\MarioSample.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Castlevania\Castlevania.h" />
-    <ClInclude Include="Castlevania\Model\GameObject\Enemy\BlackKnight.h" />
-    <ClInclude Include="Castlevania\Model\GameObject\Enemy\Ghost.h" />
-    <ClInclude Include="Castlevania\Model\GameObject\Enemy\Hunchback.h" />
-    <ClInclude Include="Castlevania\Model\GameObject\Enemy\PhantomBat.h" />
-    <ClInclude Include="Castlevania\Model\GameObject\Enemy\Raven.h" />
-    <ClInclude Include="Castlevania\Model\GameObject\Enemy\WhiteSkeleton.h" />
-    <ClInclude Include="Castlevania\Model\GameObject\Enemy\Zombie.h" />
-    <ClInclude Include="Castlevania\Model\GameObject\Item\AxeItem.h" />
-    <ClInclude Include="Castlevania\Model\GameObject\Item\BoomerangItem.h" />
-    <ClInclude Include="Castlevania\Model\GameObject\Item\CrossItem.h" />
-    <ClInclude Include="Castlevania\Model\GameObject\Item\DoubleShotItem.h" />
-    <ClInclude Include="Castlevania\Model\GameObject\Item\MagicCrystalItem.h" />
-    <ClInclude Include="Castlevania\Model\GameObject\Item\PorkChopItem.h" />
-    <ClInclude Include="Castlevania\Model\GameObject\Item\FireBombItem.h" />
-    <ClInclude Include="Castlevania\Model\GameObject\Item\InvisibilityPotionItem.h" />
-    <ClInclude Include="Castlevania\Model\GameObject\Item\MoneyBagItem.h" />
-    <ClInclude Include="Castlevania\Model\GameObject\Item\SmallHeartItem.h" />
-    <ClInclude Include="Castlevania\Model\GameObject\Item\TripleShotItem.h" />
-    <ClInclude Include="Castlevania\Model\GameObject\Prop\BreakableBrick.h" />
-    <ClInclude Include="Castlevania\Model\GameObject\Prop\Candle.h" />
-    <ClInclude Include="Castlevania\Model\GameObject\Simon\Axe.h" />
-    <ClInclude Include="Castlevania\Model\GameObject\Simon\Boomerang.h" />
-    <ClInclude Include="Castlevania\Model\GameObject\Simon\Dagger.h" />
-    <ClInclude Include="Castlevania\Model\GameObject\Item\DaggerItem.h" />
-    <ClInclude Include="Castlevania\Model\GameObject\Item\LargeHeartItem.h" />
-    <ClInclude Include="Castlevania\Model\GameObject\Simon\FireBomb.h" />
-    <ClInclude Include="Castlevania\Model\GameObject\Simon\Simon.h" />
-    <ClInclude Include="Castlevania\Model\GameObject\Prop\Tourch.h" />
-    <ClInclude Include="Castlevania\Model\GameObject\Simon\Watch.h" />
-    <ClInclude Include="Castlevania\Model\GameObject\Simon\Whip.h" />
-    <ClInclude Include="Castlevania\Model\GameObject\Item\MorningStarItem.h" />
-    <ClInclude Include="Castlevania\Model\GameObject\GameManager.h" />
-    <ClInclude Include="Castlevania\Model\Scene\MenuScene.h" />
-    <ClInclude Include="Castlevania\Model\Scene\PlayScene.h" />
-    <ClInclude Include="Castlevania\Model\GameObject\Map\Stage1.h" />
-    <ClInclude Include="Castlevania\Model\GameObject\Map\Stage2.h" />
-    <ClInclude Include="Castlevania\Model\GameObject\Map\Stage3.h" />
-    <ClInclude Include="Castlevania\Model\GameObject\Map\Stage4.h" />
     <ClInclude Include="DirectXGame\Framework\Application.h" />
-    <ClInclude Include="DirectXGame\Framework\Audio.h" />
-    <ClInclude Include="DirectXGame\Framework\Content\Sound.h" />
     <ClInclude Include="DirectXGame\Framework\Content\Texture.h" />
     <ClInclude Include="DirectXGame\Framework\Graphics.h" />
     <ClInclude Include="DirectXGame\Framework\Input.h" />
-    <ClInclude Include="DirectXGame\Framework\Networks.h" />
+    <ClInclude Include="DirectXGame\Framework\Math.h" />
     <ClInclude Include="DirectXGame\Framework\Resource.h" />
     <ClInclude Include="DirectXGame\Framework\Time.h" />
     <ClInclude Include="DirectXGame\Framework\Ultilities.h" />
@@ -301,22 +245,16 @@
     <ClInclude Include="DirectXGame\Library\directx\Include\xnamath.h" />
     <ClInclude Include="DirectXGame\Library\pugixml\pugiconfig.hpp" />
     <ClInclude Include="DirectXGame\Library\pugixml\pugixml.hpp" />
-    <ClInclude Include="DirectXGame\Logic\Animation.h" />
-    <ClInclude Include="DirectXGame\Logic\Camera.h" />
-    <ClInclude Include="DirectXGame\Logic\Collision.h" />
-    <ClInclude Include="DirectXGame\Logic\Grid.h" />
-    <ClInclude Include="DirectXGame\Logic\Physics.h" />
-    <ClInclude Include="DirectXGame\Logic\Sprite.h" />
-    <ClInclude Include="DirectXGame\Logic\Tilemap.h" />
-    <ClInclude Include="DirectXGame\Logic\View\Controller.h" />
     <ClInclude Include="DirectXGame\Logic\GameObject.h" />
-    <ClInclude Include="DirectXGame\Logic\View\Player.h" />
-    <ClInclude Include="DirectXGame\Logic\View\Renderer.h" />
     <ClInclude Include="DirectXGame\Logic\Scene.h" />
-    <ClInclude Include="DirectXGame\Logic\View\Speaker.h" />
-    <ClInclude Include="MarioSample\MarioSample.h" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Castlevania\Content\Texture\Levels\Stage1_map.tmx" />
+    <None Include="Castlevania\Content\Texture\Levels\Stage2A_map.tmx" />
+    <None Include="Castlevania\Content\Texture\Levels\Stage2B_map.tmx" />
+    <None Include="Castlevania\Content\Texture\Levels\Stage3A_map.tmx" />
+    <None Include="Castlevania\Content\Texture\Levels\Stage3B_map.tmx" />
+    <None Include="Castlevania\Content\Texture\Levels\Stage4_map.tmx" />
     <None Include="DirectXGame\Library\directx\Include\D3DX10math.inl" />
     <None Include="DirectXGame\Library\directx\Include\d3dx9math.inl" />
     <None Include="DirectXGame\Library\directx\Include\D3DX_DXGIFormatConvert.inl" />
@@ -327,6 +265,47 @@
   </ItemGroup>
   <ItemGroup>
     <Text Include="progress.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Xml Include="Castlevania\Content\Data\GameContent.xml" />
+    <Xml Include="Castlevania\Content\Data\GameData.xml" />
+    <Xml Include="Castlevania\Content\Data\Stage1.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="DirectXGame\Library\directx\Lib\x64\d2d1.lib" />
+    <Library Include="DirectXGame\Library\directx\Lib\x64\d3d10.lib" />
+    <Library Include="DirectXGame\Library\directx\Lib\x64\d3d10_1.lib" />
+    <Library Include="DirectXGame\Library\directx\Lib\x64\d3d11.lib" />
+    <Library Include="DirectXGame\Library\directx\Lib\x64\d3d9.lib" />
+    <Library Include="DirectXGame\Library\directx\Lib\x64\d3dcompiler.lib" />
+    <Library Include="DirectXGame\Library\directx\Lib\x64\D3DCSX.lib" />
+    <Library Include="DirectXGame\Library\directx\Lib\x64\D3DCSXd.lib" />
+    <Library Include="DirectXGame\Library\directx\Lib\x64\d3dx10.lib" />
+    <Library Include="DirectXGame\Library\directx\Lib\x64\d3dx10d.lib" />
+    <Library Include="DirectXGame\Library\directx\Lib\x64\d3dx11.lib" />
+    <Library Include="DirectXGame\Library\directx\Lib\x64\d3dx11d.lib" />
+    <Library Include="DirectXGame\Library\directx\Lib\x64\d3dx9.lib" />
+    <Library Include="DirectXGame\Library\directx\Lib\x64\d3dx9d.lib" />
+    <Library Include="DirectXGame\Library\directx\Lib\x64\d3dxof.lib" />
+    <Library Include="DirectXGame\Library\directx\Lib\x64\dinput8.lib" />
+    <Library Include="DirectXGame\Library\directx\Lib\x64\dsound.lib" />
+    <Library Include="DirectXGame\Library\directx\Lib\x64\dwrite.lib" />
+    <Library Include="DirectXGame\Library\directx\Lib\x64\DxErr.lib" />
+    <Library Include="DirectXGame\Library\directx\Lib\x64\dxgi.lib" />
+    <Library Include="DirectXGame\Library\directx\Lib\x64\dxguid.lib" />
+    <Library Include="DirectXGame\Library\directx\Lib\x64\X3DAudio.lib" />
+    <Library Include="DirectXGame\Library\directx\Lib\x64\xapobase.lib" />
+    <Library Include="DirectXGame\Library\directx\Lib\x64\xapobased.lib" />
+    <Library Include="DirectXGame\Library\directx\Lib\x64\XAPOFX.lib" />
+    <Library Include="DirectXGame\Library\directx\Lib\x64\XInput.lib" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Castlevania\Content\Texture\Levels\Stage1_bank.png" />
+    <Image Include="Castlevania\Content\Texture\Levels\Stage2A_bank.png" />
+    <Image Include="Castlevania\Content\Texture\Levels\Stage2B_bank.png" />
+    <Image Include="Castlevania\Content\Texture\Levels\Stage3A_bank.png" />
+    <Image Include="Castlevania\Content\Texture\Levels\Stage3B_bank.png" />
+    <Image Include="Castlevania\Content\Texture\Levels\Stage4_bank.png" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

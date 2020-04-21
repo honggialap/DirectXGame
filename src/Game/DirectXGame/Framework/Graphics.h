@@ -16,6 +16,9 @@ public:
 	D3DPRESENT_PARAMETERS presentParameters;
 	LPDIRECT3DSURFACE9 backBuffer;
 	LPD3DXSPRITE spriteHandler;
+
+	GraphicsDevice();
+	~GraphicsDevice();
 };
 
 typedef GraphicsDevice* pGraphicsDevice;

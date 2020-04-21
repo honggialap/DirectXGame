@@ -1,0 +1,396 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GameContent>
+	<Textures>
+		<Texture id ="SimonBelmonth" source="Castlevania\Content\Texture\Actors\SimonBelmont.png" 
+             transR ="116" transG ="116" transB="116"></Texture>
+		<Texture id ="Items" source="Castlevania\Content\Texture\Actors\Items.png"
+             transR ="116" transG ="116" transB="116"></Texture>
+		<Texture id ="Enemies" source="Castlevania\Content\Texture\Actors\Enemies.png"
+             transR ="116" transG ="116" transB="116"></Texture>
+    <Texture id ="Stage1_Tileset" source="Castlevania\Content\Texture\TileMap\Stage1_bank.png"
+             transR ="255" transG ="0" transB="255"></Texture>
+    
+    <!--not use yet
+    
+    <Texture id ="" source=""
+             transR ="" transG ="" transB=""></Texture>
+             
+    <Texture id ="Bosses" source="Castlevania\Content\Texture\Actors\Bosses.png" 
+             transR ="116" transG ="116" transB="116"></Texture>
+
+             
+    <Texture id ="TitleScene" source="Castlevania\Content\Texture\Mics\TitleScene.png" 
+             transR ="116" transG ="116" transB="116"></Texture>
+    <Texture id ="CutScenes" source="Castlevania\Content\Texture\Mics\CutScenes.png" 
+             transR ="116" transG ="116" transB="116"></Texture>
+
+             
+    <Texture id ="Stage2A_Tileset" source="Castlevania\Content\Texture\TileMap\Stage2A_bank.png" 
+             transR ="0" transG ="0" transB="0"></Texture>
+    <Texture id ="Stage2B_Tileset" source="Castlevania\Content\Texture\TileMap\Stage2B_bank.png" 
+             transR ="0" transG ="0" transB="0"></Texture>
+    <Texture id ="Stage3A_Tileset" source="Castlevania\Content\Texture\TileMap\Stage3A_bank.png" 
+             transR ="0" transG ="0" transB="0"></Texture>
+    <Texture id ="Stage3B_Tileset" source="Castlevania\Content\Texture\TileMap\Stage3B_bank.png" 
+             transR ="0" transG ="0" transB="0"></Texture>
+    <Texture id ="Stage4_Tileset" source="Castlevania\Content\Texture\TileMap\Stage4_bank.png" 
+             transR ="0" transG ="0" transB="0"></Texture>
+    -->
+  </Textures>
+
+	<Sprites>
+    <!--SimonBelmont-->
+		<Sprite id ="simon_idle" textureId ="SimonBelmonth" left ="" top ="" right ="" bottom ="" offsetX ="" offsetY =""></Sprite>
+		<Sprite id ="simon_walk_001" textureId ="SimonBelmonth" left ="" top ="" right ="" bottom ="" offsetX ="" offsetY =""></Sprite>
+		<Sprite id ="simon_walk_002" textureId ="SimonBelmonth" left ="" top ="" right ="" bottom ="" offsetX ="" offsetY =""></Sprite>
+		<Sprite id ="simon_walk_003" textureId ="SimonBelmonth" left ="" top ="" right ="" bottom ="" offsetX ="" offsetY =""></Sprite>
+		<Sprite id ="simon_crouch" textureId ="SimonBelmonth" left ="" top ="" right ="" bottom ="" offsetX ="" offsetY =""></Sprite>
+    <Sprite id ="simon_attack_001" textureId ="SimonBelmonth" left ="" top ="" right ="" bottom ="" offsetX ="" offsetY =""></Sprite>
+    <Sprite id ="simon_attack_002" textureId ="SimonBelmonth" left ="" top ="" right ="" bottom ="" offsetX ="" offsetY =""></Sprite>
+    <Sprite id ="simon_attack_003" textureId ="SimonBelmonth" left ="" top ="" right ="" bottom ="" offsetX ="" offsetY =""></Sprite>
+    <Sprite id ="simon_attack_003a" textureId ="SimonBelmonth" left ="" top ="" right ="" bottom ="" offsetX ="" offsetY =""></Sprite>
+    <Sprite id ="simon_attack_003b" textureId ="SimonBelmonth" left ="" top ="" right ="" bottom ="" offsetX ="" offsetY =""></Sprite>
+    <Sprite id ="simon_attack_003c" textureId ="SimonBelmonth" left ="" top ="" right ="" bottom ="" offsetX ="" offsetY =""></Sprite>
+    <Sprite id ="simon_crouchAttack_001" textureId ="SimonBelmonth" left ="" top ="" right ="" bottom ="" offsetX ="" offsetY =""></Sprite>
+    <Sprite id ="simon_crouchAttack_002" textureId ="SimonBelmonth" left ="" top ="" right ="" bottom ="" offsetX ="" offsetY =""></Sprite>
+    <Sprite id ="simon_crouchAttack_003" textureId ="SimonBelmonth" left ="" top ="" right ="" bottom ="" offsetX ="" offsetY =""></Sprite>
+    <Sprite id ="simon_crouchAttack_003a" textureId ="SimonBelmonth" left ="" top ="" right ="" bottom ="" offsetX ="" offsetY =""></Sprite>
+    <Sprite id ="simon_crouchAttack_003b" textureId ="SimonBelmonth" left ="" top ="" right ="" bottom ="" offsetX ="" offsetY =""></Sprite>
+    <Sprite id ="simon_crouchAttack_003c" textureId ="SimonBelmonth" left ="" top ="" right ="" bottom ="" offsetX ="" offsetY =""></Sprite>
+    
+    <!--Whip-->
+    <Sprite id ="whip1_attack_001" textureId ="SimonBelmonth" left ="" top ="" right ="" bottom ="" offsetX ="" offsetY =""></Sprite>
+    <Sprite id ="whip1_attack_002" textureId ="SimonBelmonth" left ="" top ="" right ="" bottom ="" offsetX ="" offsetY =""></Sprite>
+    <Sprite id ="whip1_attack_003" textureId ="SimonBelmonth" left ="" top ="" right ="" bottom ="" offsetX ="" offsetY =""></Sprite>
+    <Sprite id ="whip2_attack_001" textureId ="SimonBelmonth" left ="" top ="" right ="" bottom ="" offsetX ="" offsetY =""></Sprite>
+    <Sprite id ="whip2_attack_002" textureId ="SimonBelmonth" left ="" top ="" right ="" bottom ="" offsetX ="" offsetY =""></Sprite>
+    <Sprite id ="whip2_attack_003" textureId ="SimonBelmonth" left ="" top ="" right ="" bottom ="" offsetX ="" offsetY =""></Sprite>
+    <Sprite id ="whip3_attack_001a" textureId ="SimonBelmonth" left ="" top ="" right ="" bottom ="" offsetX ="" offsetY =""></Sprite>
+    <Sprite id ="whip3_attack_001b" textureId ="SimonBelmonth" left ="" top ="" right ="" bottom ="" offsetX ="" offsetY =""></Sprite>
+    <Sprite id ="whip3_attack_001c" textureId ="SimonBelmonth" left ="" top ="" right ="" bottom ="" offsetX ="" offsetY =""></Sprite>
+    <Sprite id ="whip3_attack_002a" textureId ="SimonBelmonth" left ="" top ="" right ="" bottom ="" offsetX ="" offsetY =""></Sprite>
+    <Sprite id ="whip3_attack_002b" textureId ="SimonBelmonth" left ="" top ="" right ="" bottom ="" offsetX ="" offsetY =""></Sprite>
+    <Sprite id ="whip3_attack_002c" textureId ="SimonBelmonth" left ="" top ="" right ="" bottom ="" offsetX ="" offsetY =""></Sprite>
+    <Sprite id ="whip3_attack_003" textureId ="SimonBelmonth" left ="" top ="" right ="" bottom ="" offsetX ="" offsetY =""></Sprite>
+    <Sprite id ="whip3_attack_003a" textureId ="SimonBelmonth" left ="" top ="" right ="" bottom ="" offsetX ="" offsetY =""></Sprite>
+    <Sprite id ="whip3_attack_003b" textureId ="SimonBelmonth" left ="" top ="" right ="" bottom ="" offsetX ="" offsetY =""></Sprite>
+    <Sprite id ="whip3_attack_003c" textureId ="SimonBelmonth" left ="" top ="" right ="" bottom ="" offsetX ="" offsetY =""></Sprite>
+    
+    <!--SubWeapons-->
+    <Sprite id ="dagger" textureId ="SimonBelmonth" left ="" top ="" right ="" bottom ="" offsetX ="" offsetY =""></Sprite>
+        
+    <!--Items-->
+    <Sprite id ="largeHeartItem" textureId ="Items" left ="" top ="" right ="" bottom ="" offsetX ="" offsetY =""></Sprite>
+    <Sprite id ="smallHeartItem" textureId ="Items" left ="" top ="" right ="" bottom ="" offsetX ="" offsetY =""></Sprite>
+    <Sprite id ="morningStarItem" textureId = "Items" left ="" top ="" right ="" bottom ="" offsetX ="" offsetY =""></Sprite>
+    <Sprite id ="daggerItem" textureId ="" left ="Items" top ="" right ="" bottom ="" offsetX ="" offsetY =""></Sprite>
+
+    <!--Effect-->
+    <Sprite id ="hitEffect" textureId ="" left ="" top ="" right ="" bottom ="" offsetX ="" offsetY =""></Sprite>
+    <Sprite id ="deathEffect_001" textureId ="" left ="" top ="" right ="" bottom ="" offsetX ="" offsetY =""></Sprite>
+    <Sprite id ="deathEffect_002" textureId ="" left ="" top ="" right ="" bottom ="" offsetX ="" offsetY =""></Sprite>
+    <Sprite id ="deathEffect_003" textureId ="" left ="" top ="" right ="" bottom ="" offsetX ="" offsetY =""></Sprite>
+
+    <!--Props-->
+    <Sprite id ="candle_001" textureId ="" left ="" top ="" right ="" bottom ="" offsetX ="" offsetY =""></Sprite>
+    <Sprite id ="candle_002" textureId ="" left ="" top ="" right ="" bottom ="" offsetX ="" offsetY =""></Sprite>
+    <Sprite id ="tourch_001" textureId ="" left ="" top ="" right ="" bottom ="" offsetX ="" offsetY =""></Sprite>
+    <Sprite id ="tourch_002" textureId ="" left ="" top ="" right ="" bottom ="" offsetX ="" offsetY =""></Sprite>
+
+    <!--Enemies-->
+    
+    <!--Stage1_Tileset-->
+    <Sprite id ="stage1_001" textureId ="" left ="" top ="" right ="" bottom ="" offsetX ="" offsetY =""></Sprite>
+    <Sprite id ="stage1_002" textureId ="" left ="" top ="" right ="" bottom ="" offsetX ="" offsetY =""></Sprite>
+    <Sprite id ="stage1_003" textureId ="" left ="" top ="" right ="" bottom ="" offsetX ="" offsetY =""></Sprite>
+    <Sprite id ="stage1_004" textureId ="" left ="" top ="" right ="" bottom ="" offsetX ="" offsetY =""></Sprite>
+    <Sprite id ="stage1_005" textureId ="" left ="" top ="" right ="" bottom ="" offsetX ="" offsetY =""></Sprite>
+    <Sprite id ="stage1_006" textureId ="" left ="" top ="" right ="" bottom ="" offsetX ="" offsetY =""></Sprite>
+    <Sprite id ="stage1_007" textureId ="" left ="" top ="" right ="" bottom ="" offsetX ="" offsetY =""></Sprite>
+    <Sprite id ="stage1_008" textureId ="" left ="" top ="" right ="" bottom ="" offsetX ="" offsetY =""></Sprite>
+    <Sprite id ="stage1_009" textureId ="" left ="" top ="" right ="" bottom ="" offsetX ="" offsetY =""></Sprite>
+    <Sprite id ="stage1_010" textureId ="" left ="" top ="" right ="" bottom ="" offsetX ="" offsetY =""></Sprite>
+    <Sprite id ="stage1_011" textureId ="" left ="" top ="" right ="" bottom ="" offsetX ="" offsetY =""></Sprite>
+    <Sprite id ="stage1_012" textureId ="" left ="" top ="" right ="" bottom ="" offsetX ="" offsetY =""></Sprite>
+    <Sprite id ="stage1_013" textureId ="" left ="" top ="" right ="" bottom ="" offsetX ="" offsetY =""></Sprite>
+    <Sprite id ="stage1_014" textureId ="" left ="" top ="" right ="" bottom ="" offsetX ="" offsetY =""></Sprite>
+    <Sprite id ="stage1_015" textureId ="" left ="" top ="" right ="" bottom ="" offsetX ="" offsetY =""></Sprite>
+    <Sprite id ="stage1_016" textureId ="" left ="" top ="" right ="" bottom ="" offsetX ="" offsetY =""></Sprite>
+    <Sprite id ="stage1_017" textureId ="" left ="" top ="" right ="" bottom ="" offsetX ="" offsetY =""></Sprite>
+    <Sprite id ="stage1_018" textureId ="" left ="" top ="" right ="" bottom ="" offsetX ="" offsetY =""></Sprite>
+    <Sprite id ="stage1_019" textureId ="" left ="" top ="" right ="" bottom ="" offsetX ="" offsetY =""></Sprite>
+    <Sprite id ="stage1_020" textureId ="" left ="" top ="" right ="" bottom ="" offsetX ="" offsetY =""></Sprite>
+    <Sprite id ="stage1_021" textureId ="" left ="" top ="" right ="" bottom ="" offsetX ="" offsetY =""></Sprite>
+    <Sprite id ="stage1_022" textureId ="" left ="" top ="" right ="" bottom ="" offsetX ="" offsetY =""></Sprite>
+    <Sprite id ="stage1_023" textureId ="" left ="" top ="" right ="" bottom ="" offsetX ="" offsetY =""></Sprite>
+    <Sprite id ="stage1_024" textureId ="" left ="" top ="" right ="" bottom ="" offsetX ="" offsetY =""></Sprite>
+    <Sprite id ="stage1_025" textureId ="" left ="" top ="" right ="" bottom ="" offsetX ="" offsetY =""></Sprite>
+    <Sprite id ="stage1_026" textureId ="" left ="" top ="" right ="" bottom ="" offsetX ="" offsetY =""></Sprite>
+    <Sprite id ="stage1_027" textureId ="" left ="" top ="" right ="" bottom ="" offsetX ="" offsetY =""></Sprite>
+    <Sprite id ="stage1_028" textureId ="" left ="" top ="" right ="" bottom ="" offsetX ="" offsetY =""></Sprite>
+    <Sprite id ="stage1_029" textureId ="" left ="" top ="" right ="" bottom ="" offsetX ="" offsetY =""></Sprite>
+    <Sprite id ="stage1_030" textureId ="" left ="" top ="" right ="" bottom ="" offsetX ="" offsetY =""></Sprite>
+    <Sprite id ="stage1_031" textureId ="" left ="" top ="" right ="" bottom ="" offsetX ="" offsetY =""></Sprite>
+    <Sprite id ="stage1_032" textureId ="" left ="" top ="" right ="" bottom ="" offsetX ="" offsetY =""></Sprite>
+    <Sprite id ="stage1_033" textureId ="" left ="" top ="" right ="" bottom ="" offsetX ="" offsetY =""></Sprite>
+    <Sprite id ="stage1_034" textureId ="" left ="" top ="" right ="" bottom ="" offsetX ="" offsetY =""></Sprite>
+    <Sprite id ="stage1_035" textureId ="" left ="" top ="" right ="" bottom ="" offsetX ="" offsetY =""></Sprite>
+    <Sprite id ="stage1_036" textureId ="" left ="" top ="" right ="" bottom ="" offsetX ="" offsetY =""></Sprite>
+    <Sprite id ="stage1_037" textureId ="" left ="" top ="" right ="" bottom ="" offsetX ="" offsetY =""></Sprite>
+    <Sprite id ="stage1_038" textureId ="" left ="" top ="" right ="" bottom ="" offsetX ="" offsetY =""></Sprite>
+    <Sprite id ="stage1_039" textureId ="" left ="" top ="" right ="" bottom ="" offsetX ="" offsetY =""></Sprite>
+    <Sprite id ="stage1_040" textureId ="" left ="" top ="" right ="" bottom ="" offsetX ="" offsetY =""></Sprite>
+    <Sprite id ="stage1_041" textureId ="" left ="" top ="" right ="" bottom ="" offsetX ="" offsetY =""></Sprite>
+    <Sprite id ="stage1_042" textureId ="" left ="" top ="" right ="" bottom ="" offsetX ="" offsetY =""></Sprite>
+    <Sprite id ="stage1_043" textureId ="" left ="" top ="" right ="" bottom ="" offsetX ="" offsetY =""></Sprite>
+    <Sprite id ="stage1_044" textureId ="" left ="" top ="" right ="" bottom ="" offsetX ="" offsetY =""></Sprite>
+    <Sprite id ="stage1_045" textureId ="" left ="" top ="" right ="" bottom ="" offsetX ="" offsetY =""></Sprite>
+    <Sprite id ="stage1_046" textureId ="" left ="" top ="" right ="" bottom ="" offsetX ="" offsetY =""></Sprite>
+    <Sprite id ="stage1_047" textureId ="" left ="" top ="" right ="" bottom ="" offsetX ="" offsetY =""></Sprite>
+    <Sprite id ="stage1_048" textureId ="" left ="" top ="" right ="" bottom ="" offsetX ="" offsetY =""></Sprite>
+    <Sprite id ="stage1_049" textureId ="" left ="" top ="" right ="" bottom ="" offsetX ="" offsetY =""></Sprite>
+    <Sprite id ="stage1_050" textureId ="" left ="" top ="" right ="" bottom ="" offsetX ="" offsetY =""></Sprite>
+    
+    <!--Bosses-->
+
+    <!--not use yet
+    
+    <Sprite id ="" textureId ="" left ="" top ="" right ="" bottom ="" offsetX ="" offsetY =""></Sprite>
+    
+    <Sprite id ="simon_ascend_001" textureId ="SimonBelmonth" left ="" top ="" right ="" bottom ="" offsetX ="" offsetY =""></Sprite>
+    <Sprite id ="simon_ascend_002" textureId ="SimonBelmonth" left ="" top ="" right ="" bottom ="" offsetX ="" offsetY =""></Sprite>
+    <Sprite id ="simon_descend_001" textureId ="SimonBelmonth" left ="" top ="" right ="" bottom ="" offsetX ="" offsetY =""></Sprite>
+    <Sprite id ="simon_descend_002" textureId ="SimonBelmonth" left ="" top ="" right ="" bottom ="" offsetX ="" offsetY =""></Sprite>
+    <Sprite id ="simon_ascendAttack_001" textureId ="SimonBelmonth" left ="" top ="" right ="" bottom ="" offsetX ="" offsetY =""></Sprite>
+    <Sprite id ="simon_ascendAttack_002" textureId ="SimonBelmonth" left ="" top ="" right ="" bottom ="" offsetX ="" offsetY =""></Sprite>
+    <Sprite id ="simon_ascendAttack_003" textureId ="SimonBelmonth" left ="" top ="" right ="" bottom ="" offsetX ="" offsetY =""></Sprite>
+    <Sprite id ="simon_ascendAttack_003a" textureId ="SimonBelmonth" left ="" top ="" right ="" bottom ="" offsetX ="" offsetY =""></Sprite>
+    <Sprite id ="simon_ascendAttack_003b" textureId ="SimonBelmonth" left ="" top ="" right ="" bottom ="" offsetX ="" offsetY =""></Sprite>
+    <Sprite id ="simon_ascendAttack_003c" textureId ="SimonBelmonth" left ="" top ="" right ="" bottom ="" offsetX ="" offsetY =""></Sprite>
+    <Sprite id ="simon_descendAttack_001" textureId ="SimonBelmonth" left ="" top ="" right ="" bottom ="" offsetX ="" offsetY =""></Sprite>
+    <Sprite id ="simon_descendAttack_002" textureId ="SimonBelmonth" left ="" top ="" right ="" bottom ="" offsetX ="" offsetY =""></Sprite>
+    <Sprite id ="simon_descendAttack_003" textureId ="SimonBelmonth" left ="" top ="" right ="" bottom ="" offsetX ="" offsetY =""></Sprite>
+    <Sprite id ="simon_descendAttack_003a" textureId ="SimonBelmonth" left ="" top ="" right ="" bottom ="" offsetX ="" offsetY =""></Sprite>
+    <Sprite id ="simon_descendAttack_003b" textureId ="SimonBelmonth" left ="" top ="" right ="" bottom ="" offsetX ="" offsetY =""></Sprite>
+    <Sprite id ="simon_descendAttack_003c" textureId ="SimonBelmonth" left ="" top ="" right ="" bottom ="" offsetX ="" offsetY =""></Sprite>
+    <Sprite id ="simon_hurt" textureId ="SimonBelmonth" left ="" top ="" right ="" bottom ="" offsetX ="" offsetY =""></Sprite>
+    <Sprite id ="simon_death_001" textureId ="SimonBelmonth" left ="" top ="" right ="" bottom ="" offsetX ="" offsetY =""></Sprite>
+    <Sprite id ="simon_death_002" textureId ="SimonBelmonth" left ="" top ="" right ="" bottom ="" offsetX ="" offsetY =""></Sprite>
+    <Sprite id ="simon_intro" textureId ="SimonBelmonth" left ="" top ="" right ="" bottom ="" offsetX ="" offsetY =""></Sprite>
+
+    <Sprite id ="boomerang_001" textureId ="SimonBelmonth" left ="" top ="" right ="" bottom ="" offsetX ="" offsetY =""></Sprite>
+    <Sprite id ="boomerang_002" textureId ="SimonBelmonth" left ="" top ="" right ="" bottom ="" offsetX ="" offsetY =""></Sprite>
+    <Sprite id ="boomerang_003" textureId ="SimonBelmonth" left ="" top ="" right ="" bottom ="" offsetX ="" offsetY =""></Sprite>
+    <Sprite id ="axe_001" textureId ="SimonBelmonth" left ="" top ="" right ="" bottom ="" offsetX ="" offsetY =""></Sprite>
+    <Sprite id ="axe_002" textureId ="SimonBelmonth" left ="" top ="" right ="" bottom ="" offsetX ="" offsetY =""></Sprite>
+    <Sprite id ="axe_003" textureId ="SimonBelmonth" left ="" top ="" right ="" bottom ="" offsetX ="" offsetY =""></Sprite>
+    <Sprite id ="axe_004" textureId ="SimonBelmonth" left ="" top ="" right ="" bottom ="" offsetX ="" offsetY =""></Sprite>
+    <Sprite id ="holyBomb_001" textureId ="SimonBelmonth" left ="" top ="" right ="" bottom ="" offsetX ="" offsetY =""></Sprite>
+    <Sprite id ="holyBomb_002" textureId ="SimonBelmonth" left ="" top ="" right ="" bottom ="" offsetX ="" offsetY =""></Sprite>
+    <Sprite id ="holyBomb_003" textureId ="SimonBelmonth" left ="" top ="" right ="" bottom ="" offsetX ="" offsetY =""></Sprite>
+    <Sprite id ="holyBomb_004" textureId ="SimonBelmonth" left ="" top ="" right ="" bottom ="" offsetX ="" offsetY =""></Sprite>
+    <Sprite id ="holyBomb_005" textureId ="SimonBelmonth" left ="" top ="" right ="" bottom ="" offsetX ="" offsetY =""></Sprite>
+    <Sprite id ="holyBomb_006" textureId ="SimonBelmonth" left ="" top ="" right ="" bottom ="" offsetX ="" offsetY =""></Sprite>
+    
+    <Sprite id ="porkChopItem" textureId ="" left ="" top ="" right ="" bottom ="" offsetX ="" offsetY =""></Sprite>
+    <Sprite id ="daggerItem" textureId ="" left ="" top ="" right ="" bottom ="" offsetX ="" offsetY =""></Sprite>
+    <Sprite id ="axeItem" textureId ="" left ="" top ="" right ="" bottom ="" offsetX ="" offsetY =""></Sprite>
+    <Sprite id ="fireBombItem" textureId ="" left ="" top ="" right ="" bottom ="" offsetX ="" offsetY =""></Sprite>
+    <Sprite id ="boomerangItem" textureId ="" left ="" top ="" right ="" bottom ="" offsetX ="" offsetY =""></Sprite>
+    <Sprite id ="stopWatchItem" textureId ="" left ="" top ="" right ="" bottom ="" offsetX ="" offsetY =""></Sprite>
+    <Sprite id ="doubleShotItem" textureId ="" left ="" top ="" right ="" bottom ="" offsetX ="" offsetY =""></Sprite>
+    <Sprite id ="tripleShotItem" textureId ="" left ="" top ="" right ="" bottom ="" offsetX ="" offsetY =""></Sprite>
+    <Sprite id ="doubleShot" textureId ="" left ="" top ="" right ="" bottom ="" offsetX ="" offsetY =""></Sprite>
+    <Sprite id ="invinciblePotion" textureId ="" left ="" top ="" right ="" bottom ="" offsetX ="" offsetY =""></Sprite>
+    <Sprite id ="crossItem" textureId ="" left ="" top ="" right ="" bottom ="" offsetX ="" offsetY =""></Sprite>
+    <Sprite id ="1upItem" textureId ="" left ="" top ="" right ="" bottom ="" offsetX ="" offsetY =""></Sprite>
+    <Sprite id ="money_001" textureId ="" left ="" top ="" right ="" bottom ="" offsetX ="" offsetY =""></Sprite>
+    <Sprite id ="money_002" textureId ="" left ="" top ="" right ="" bottom ="" offsetX ="" offsetY =""></Sprite>
+    <Sprite id ="money_003" textureId ="" left ="" top ="" right ="" bottom ="" offsetX ="" offsetY =""></Sprite>
+    <Sprite id ="energyBall_001" textureId ="" left ="" top ="" right ="" bottom ="" offsetX ="" offsetY =""></Sprite>
+    <Sprite id ="energyBall_002" textureId ="" left ="" top ="" right ="" bottom ="" offsetX ="" offsetY =""></Sprite>
+    <Sprite id ="crown_001" textureId ="" left ="" top ="" right ="" bottom ="" offsetX ="" offsetY =""></Sprite>
+    <Sprite id ="crown_002" textureId ="" left ="" top ="" right ="" bottom ="" offsetX ="" offsetY =""></Sprite>
+    <Sprite id ="crown_003" textureId ="" left ="" top ="" right ="" bottom ="" offsetX ="" offsetY =""></Sprite>
+    <Sprite id ="crown_004" textureId ="" left ="" top ="" right ="" bottom ="" offsetX ="" offsetY =""></Sprite>
+    <Sprite id ="chest_001" textureId ="" left ="" top ="" right ="" bottom ="" offsetX ="" offsetY =""></Sprite>
+    <Sprite id ="chest_002" textureId ="" left ="" top ="" right ="" bottom ="" offsetX ="" offsetY =""></Sprite>
+    <Sprite id ="chest_003" textureId ="" left ="" top ="" right ="" bottom ="" offsetX ="" offsetY =""></Sprite>
+    <Sprite id ="chest_004" textureId ="" left ="" top ="" right ="" bottom ="" offsetX ="" offsetY =""></Sprite>
+    <Sprite id ="bonusHead_001" textureId ="" left ="" top ="" right ="" bottom ="" offsetX ="" offsetY =""></Sprite>
+    <Sprite id ="bonusHead_001a" textureId ="" left ="" top ="" right ="" bottom ="" offsetX ="" offsetY =""></Sprite>
+    <Sprite id ="bonusHead_001b" textureId ="" left ="" top ="" right ="" bottom ="" offsetX ="" offsetY =""></Sprite>
+    <Sprite id ="bonusHead_001c" textureId ="" left ="" top ="" right ="" bottom ="" offsetX ="" offsetY =""></Sprite>
+    <Sprite id ="bonusHead_002" textureId ="" left ="" top ="" right ="" bottom ="" offsetX ="" offsetY =""></Sprite>
+    <Sprite id ="bonusHead_002a" textureId ="" left ="" top ="" right ="" bottom ="" offsetX ="" offsetY =""></Sprite>
+    <Sprite id ="bonusHead_002b" textureId ="" left ="" top ="" right ="" bottom ="" offsetX ="" offsetY =""></Sprite>
+    <Sprite id ="bonusHead_002c" textureId ="" left ="" top ="" right ="" bottom ="" offsetX ="" offsetY =""></Sprite>
+    <Sprite id ="bonusHead_003" textureId ="" left ="" top ="" right ="" bottom ="" offsetX ="" offsetY =""></Sprite>
+    <Sprite id ="bonusHead_003a" textureId ="" left ="" top ="" right ="" bottom ="" offsetX ="" offsetY =""></Sprite>
+    <Sprite id ="bonusHead_003b" textureId ="" left ="" top ="" right ="" bottom ="" offsetX ="" offsetY =""></Sprite>
+    <Sprite id ="bonusHead_003c" textureId ="" left ="" top ="" right ="" bottom ="" offsetX ="" offsetY =""></Sprite>
+    <Sprite id ="bonusHead_004" textureId ="" left ="" top ="" right ="" bottom ="" offsetX ="" offsetY =""></Sprite>
+    <Sprite id ="bonusHead_004a" textureId ="" left ="" top ="" right ="" bottom ="" offsetX ="" offsetY =""></Sprite>
+    <Sprite id ="bonusHead_004b" textureId ="" left ="" top ="" right ="" bottom ="" offsetX ="" offsetY =""></Sprite>
+    <Sprite id ="bonusHead_004c" textureId ="" left ="" top ="" right ="" bottom ="" offsetX ="" offsetY =""></Sprite>
+    
+    <Sprite id ="number_10" textureId ="" left ="" top ="" right ="" bottom ="" offsetX ="" offsetY =""></Sprite>
+    <Sprite id ="number_20" textureId ="" left ="" top ="" right ="" bottom ="" offsetX ="" offsetY =""></Sprite>
+    <Sprite id ="number_40" textureId ="" left ="" top ="" right ="" bottom ="" offsetX ="" offsetY =""></Sprite>
+    <Sprite id ="number_70" textureId ="" left ="" top ="" right ="" bottom ="" offsetX ="" offsetY =""></Sprite>
+    <Sprite id ="number_0" textureId ="" left ="" top ="" right ="" bottom ="" offsetX ="" offsetY =""></Sprite>
+    <Sprite id ="number_00" textureId ="" left ="" top ="" right ="" bottom ="" offsetX ="" offsetY =""></Sprite>
+    
+    <Sprite id ="fireball" textureId ="" left ="" top ="" right ="" bottom ="" offsetX ="" offsetY =""></Sprite>
+    <Sprite id ="brokenBit" textureId ="" left ="" top ="" right ="" bottom ="" offsetX ="" offsetY =""></Sprite>
+    <Sprite id ="movingFlatform" textureId ="" left ="" top ="" right ="" bottom ="" offsetX ="" offsetY =""></Sprite>
+    <Sprite id ="waterEffect" textureId ="" left ="" top ="" right ="" bottom ="" offsetX ="" offsetY =""></Sprite>
+
+    <Sprite id ="door_001" textureId ="" left ="" top ="" right ="" bottom ="" offsetX ="" offsetY =""></Sprite>
+    <Sprite id ="door_002" textureId ="" left ="" top ="" right ="" bottom ="" offsetX ="" offsetY =""></Sprite>
+
+    <Sprite id ="zombie_001" textureId ="" left ="" top ="" right ="" bottom ="" offsetX ="" offsetY =""></Sprite>
+    <Sprite id ="zombie_002" textureId ="" left ="" top ="" right ="" bottom ="" offsetX ="" offsetY =""></Sprite>
+    <Sprite id ="blackLeopard_001" textureId ="" left ="" top ="" right ="" bottom ="" offsetX ="" offsetY =""></Sprite>
+    <Sprite id ="blackLeopard_002" textureId ="" left ="" top ="" right ="" bottom ="" offsetX ="" offsetY =""></Sprite>
+    <Sprite id ="blackLeopard_003" textureId ="" left ="" top ="" right ="" bottom ="" offsetX ="" offsetY =""></Sprite>
+    <Sprite id ="vampireBat_001" textureId ="" left ="" top ="" right ="" bottom ="" offsetX ="" offsetY =""></Sprite>
+    <Sprite id ="vampireBat_002" textureId ="" left ="" top ="" right ="" bottom ="" offsetX ="" offsetY =""></Sprite>
+    <Sprite id ="vampireBat_003" textureId ="" left ="" top ="" right ="" bottom ="" offsetX ="" offsetY =""></Sprite>
+    <Sprite id ="vampireBat2_001" textureId ="" left ="" top ="" right ="" bottom ="" offsetX ="" offsetY =""></Sprite>
+    <Sprite id ="vampireBat2_002" textureId ="" left ="" top ="" right ="" bottom ="" offsetX ="" offsetY =""></Sprite>
+    <Sprite id ="vampireBat2_003" textureId ="" left ="" top ="" right ="" bottom ="" offsetX ="" offsetY =""></Sprite>
+    <Sprite id ="vampireBat2_004" textureId ="" left ="" top ="" right ="" bottom ="" offsetX ="" offsetY =""></Sprite>
+    <Sprite id ="fishMan_001" textureId ="" left ="" top ="" right ="" bottom ="" offsetX ="" offsetY =""></Sprite>
+    <Sprite id ="fishMan_002" textureId ="" left ="" top ="" right ="" bottom ="" offsetX ="" offsetY =""></Sprite>
+    <Sprite id ="fishMan_003" textureId ="" left ="" top ="" right ="" bottom ="" offsetX ="" offsetY =""></Sprite>
+    <Sprite id ="fishMan_004" textureId ="" left ="" top ="" right ="" bottom ="" offsetX ="" offsetY =""></Sprite>
+    <Sprite id ="blackKnight_001" textureId ="" left ="" top ="" right ="" bottom ="" offsetX ="" offsetY =""></Sprite>
+    <Sprite id ="blackKnight_002" textureId ="" left ="" top ="" right ="" bottom ="" offsetX ="" offsetY =""></Sprite>
+    <Sprite id ="blackKnight_003" textureId ="" left ="" top ="" right ="" bottom ="" offsetX ="" offsetY =""></Sprite>
+
+    <Sprite id ="ghost_001" textureId ="" left ="" top ="" right ="" bottom ="" offsetX ="" offsetY =""></Sprite>
+    <Sprite id ="ghost_002" textureId ="" left ="" top ="" right ="" bottom ="" offsetX ="" offsetY =""></Sprite>
+    <Sprite id ="dragonCannon_001" textureId ="" left ="" top ="" right ="" bottom ="" offsetX ="" offsetY =""></Sprite>
+    <Sprite id ="dragonCannon_002" textureId ="" left ="" top ="" right ="" bottom ="" offsetX ="" offsetY =""></Sprite>
+    <Sprite id ="dragonCannon_001a" textureId ="" left ="" top ="" right ="" bottom ="" offsetX ="" offsetY =""></Sprite>
+    <Sprite id ="dragonCannon_002a" textureId ="" left ="" top ="" right ="" bottom ="" offsetX ="" offsetY =""></Sprite>
+    -->
+	</Sprites>
+
+	<AnimationSets>
+		
+		<AnimationSet id ="simon">
+			<Animations>
+				
+				<Animation id ="simon_walk" animationTime ="0" loop = "false">
+					<AnimationFrames>
+						<AnimationFrame id ="simon_walk_001" spriteId ="simon_walk_001" frameTime =""></AnimationFrame>
+						<AnimationFrame id ="simon_walk_002" spriteId ="simon_walk_002" frameTime =""></AnimationFrame>
+						<AnimationFrame id ="simon_walk_003" spriteId ="simon_walk_003" frameTime =""></AnimationFrame>
+            <AnimationFrame id ="simon_walk_004" spriteId ="simon_walk_002" frameTime =""></AnimationFrame>
+					</AnimationFrames>
+				</Animation>
+
+				<Animation id ="simon_attack1" animationTime ="0" loop = "">
+					<AnimationFrames>
+						<AnimationFrame id ="simon_attack1_001" spriteId ="simon_attack_001" frameTime =""></AnimationFrame>
+						<AnimationFrame id ="simon_attack1_002" spriteId ="simon_attack_002" frameTime =""></AnimationFrame>
+						<AnimationFrame id ="simon_attack1_003" spriteId ="simon_attack_003" frameTime =""></AnimationFrame>
+					</AnimationFrames>
+				</Animation>
+
+        <Animation id ="simon_attack2" animationTime ="0" loop = "">
+          <AnimationFrames>
+            <AnimationFrame id ="simon_attack2_001" spriteId ="simon_attack_001" frameTime =""></AnimationFrame>
+            <AnimationFrame id ="simon_attack2_002" spriteId ="simon_attack_002" frameTime =""></AnimationFrame>
+            <AnimationFrame id ="simon_attack2_003" spriteId ="simon_attack_003" frameTime =""></AnimationFrame>
+            <AnimationFrame id ="simon_attack2_003a" spriteId ="simon_attack_003a" frameTime =""></AnimationFrame>
+            <AnimationFrame id ="simon_attack2_003b" spriteId ="simon_attack_003b" frameTime =""></AnimationFrame>
+            <AnimationFrame id ="simon_attack2_003c" spriteId ="simon_attack_003c" frameTime =""></AnimationFrame>
+          </AnimationFrames>
+        </Animation>
+
+        <Animation id ="simon_crouchAttack1" animationTime ="0" loop = "">
+          <AnimationFrames>
+            <AnimationFrame id ="simon_crouchAttack1_001" spriteId ="simon_crouchAttack_001" frameTime =""></AnimationFrame>
+            <AnimationFrame id ="simon_crouchAttack1_002" spriteId ="simon_croundAttack_002" frameTime =""></AnimationFrame>
+            <AnimationFrame id ="simon_crouchAttack1_003" spriteId ="simon_croundAttack_003" frameTime =""></AnimationFrame>
+          </AnimationFrames>
+        </Animation>
+
+        <Animation id ="simon_crouchAttack2" animationTime ="0" loop = "">
+          <AnimationFrames>
+            <AnimationFrame id ="simon_crouchAttack2_001" spriteId ="simon_crouchAttack_001" frameTime =""></AnimationFrame>
+            <AnimationFrame id ="simon_crouchAttack2_002" spriteId ="simon_croundAttack_002" frameTime =""></AnimationFrame>
+            <AnimationFrame id ="simon_crouchAttack2_003" spriteId ="simon_croundAttack_003" frameTime =""></AnimationFrame>
+            <AnimationFrame id ="simon_crouchAttack2_003a" spriteId ="simon_crouchAttack_003a" frameTime =""></AnimationFrame>
+            <AnimationFrame id ="simon_crouchAttack2_003b" spriteId ="simon_croundAttack_003b" frameTime =""></AnimationFrame>
+            <AnimationFrame id ="simon_crouchAttack2_003c" spriteId ="simon_croundAttack_003c" frameTime =""></AnimationFrame>
+
+          </AnimationFrames>
+        </Animation>
+			</Animations>
+		</AnimationSet>
+
+    <AnimationSet id ="whip">
+      <Animations>
+
+        <Animation id ="whip_attack1" animationTime ="" loop = "">
+          <AnimationFrames>
+            <AnimationFrame id ="whip_attack1_001" spriteId ="" frameTime =""></AnimationFrame>
+            <AnimationFrame id ="whip_attack1_002" spriteId ="" frameTime =""></AnimationFrame>
+            <AnimationFrame id ="whip_attack1_003" spriteId ="" frameTime =""></AnimationFrame>
+          </AnimationFrames>
+        </Animation>
+
+        <Animation id ="whip_attack2" animationTime ="" loop = "">
+          <AnimationFrames>
+            <AnimationFrame id ="whip_attack2_001" spriteId ="" frameTime =""></AnimationFrame>
+            <AnimationFrame id ="whip_attack2_002" spriteId ="" frameTime =""></AnimationFrame>
+            <AnimationFrame id ="whip_attack2_003" spriteId ="" frameTime =""></AnimationFrame>
+          </AnimationFrames>
+        </Animation>
+        
+        <Animation id ="whip_attack3" animationTime ="" loop = "">
+          <AnimationFrames>
+            <AnimationFrame id ="whip_attack3_001" spriteId ="" frameTime =""></AnimationFrame>
+            <AnimationFrame id ="whip_attack3_002" spriteId ="" frameTime =""></AnimationFrame>
+            <AnimationFrame id ="whip_attack3_003" spriteId ="" frameTime =""></AnimationFrame>
+            <AnimationFrame id ="whip_attack3_003a" spriteId ="" frameTime =""></AnimationFrame>
+            <AnimationFrame id ="whip_attack3_003b" spriteId ="" frameTime =""></AnimationFrame>
+            <AnimationFrame id ="whip_attack3_003c" spriteId ="" frameTime =""></AnimationFrame>
+          </AnimationFrames>
+        </Animation>
+
+      </Animations>
+    </AnimationSet>    
+    
+    
+		<AnimationSet id ="props">
+			<Animations>
+
+				<Animation id ="candle" animationTime ="" loop = "">
+					<AnimationFrames>
+						<AnimationFrame id ="candle_001" spriteId ="" frameTime =""></AnimationFrame>
+						<AnimationFrame id ="candle_002" spriteId ="" frameTime =""></AnimationFrame>
+					</AnimationFrames>
+				</Animation>
+
+        <Animation id ="tourch" animationTime ="" loop = "">
+          <AnimationFrames>
+            <AnimationFrame id ="tourch_001" spriteId ="" frameTime =""></AnimationFrame>
+            <AnimationFrame id ="tourch_002" spriteId ="" frameTime =""></AnimationFrame>
+          </AnimationFrames>
+        </Animation>
+        
+        
+			</Animations>
+		</AnimationSet>
+
+	</AnimationSets>
+
+	<Sounds>
+		<Sound></Sound>
+	</Sounds>
+</GameContent>

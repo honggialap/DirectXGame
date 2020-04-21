@@ -23,4 +23,6 @@ class CollisionEvent
 
 typedef CollisionEvent* pCollisionEvent;
 
+class Colliders;
+
 #endif // !__COLLISION_H__

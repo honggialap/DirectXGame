@@ -3,7 +3,10 @@
 int WINAPI wWinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPWSTR pCmdLine, int nCmdShow)
 {
 	auto game = new Game(hInstance);
-	game->Load(NULL);
+
+	string filePath = "Castlevania/Content/Data/GameData.xml";
+	game->Load(ToLPCWSTR(filePath));
+
 	game->Run();
 
 	delete game;

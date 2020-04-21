@@ -15,6 +15,9 @@ public:
 	LPDIRECTSOUNDBUFFER primaryBuffer;
 	LPDIRECTSOUNDBUFFER8 secondaryBuffer[SOUND_BUFFER_SIZE];
 
+	AudioDevice();
+	~AudioDevice();
+
 };
 
 typedef AudioDevice* pAudioDevice;

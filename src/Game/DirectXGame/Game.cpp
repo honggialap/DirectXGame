@@ -7,78 +7,98 @@ Game::Game(HINSTANCE hInstance)
 	application = new Application(hInstance);
 	time = new Time();
 	graphics = new Graphics();
-	audio = new Audio();
+	//audio = new Audio();
 	input = new Input();
-	networks = new Networks();
-	resource = new Resource(graphics, audio);
+	//networks = new Networks();
+	resource = new Resource(graphics); //, audio);
+
+	scenes = new Scenes(this);
+	changeScene = false;
 }
 
 Game::~Game()
 {
-	delete resource;
-	resource = nullptr;
+	if (scenes != nullptr)
+	{
+		delete scenes;
+		scenes = nullptr;
+	}
 
-	delete networks;
-	networks = nullptr;
+	if (resource != nullptr)
+	{
+		delete resource;
+		resource = nullptr;
+	}
 
-	delete input;
-	input = nullptr;
+	//if (networks != nullptr)
+	//{
+	//	delete networks;
+	//	networks = nullptr;
+	//}
 
-	delete audio;
-	audio = nullptr;
+	if (input != nullptr)
+	{
+		delete input;
+		input = nullptr;
+	}
 
-	delete graphics;
-	graphics = nullptr;
+	//if (audio != nullptr)
+	//{
+	//	delete audio;
+	//	audio = nullptr;
+	//}
 
-	delete time;
-	time = nullptr;
+	if (graphics != nullptr)
+	{
+		delete graphics;
+		graphics = nullptr;
+	}
 
-	delete application;
-	application = nullptr;
+	if (time != nullptr)
+	{
+		delete time;
+		time = nullptr;
+	}
 
-	delete gameSettings;
-	gameSettings = nullptr;
+	if (application != nullptr)
+	{
+		delete application;
+		application = nullptr;
+	}
+
+	if (gameSettings != nullptr)
+	{
+		delete gameSettings;
+		gameSettings = nullptr;
+	}
 }
 
 void Game::Load(LPCWSTR dataFilePath)
 {
-	//read game data file
-
-	// to create game settings
-	gameSettings->gameTitle = "GameTitle";
-	gameSettings->maxFrameRate = 60;
-	gameSettings->widthResolution = 800;
-	gameSettings->heightResolution = 600;
-	gameSettings->fullscreen = false;
-
-	// then create game window
+	resource->LoadGameData(gameSettings, dataFilePath);
+	
 	application->CreateGameWindow(
 		ToLPCWSTR(gameSettings->gameTitle),
 		gameSettings->widthResolution,
 		gameSettings->heightResolution,
 		gameSettings->fullscreen);
 
-	// then create graphics device
 	graphics->CreateGraphicsDevice(application->gameWindow);
-
-	// then create audio device
+	
 	//audio->CreateAudioDevice(application->gameWindow);
-
-	// then create input device
+	
 	input->CreateInputDevice(application->gameWindow);
-
-	// then create network device
+	
 	//networks->CreateNetworksDevice();
 
-	// then create reader and storage for content file format (with d3d and dsound)
-
-	// then create scene list and load game resource
-
+	//resource->LoadGameContent(dataFilePath);
+	//resource->LoadScenes(scenes, dataFilePath);
 }
 
-void Game::Run()
+void Game::Run(int scene)
 {
 	//pick scene
+	//scenes->currentScene = scenes->scenes[scene];
 
 	bool done = false;
 	double frameTime = 1.0 / gameSettings->maxFrameRate * 1000; //in milliseconds
@@ -87,6 +107,14 @@ void Game::Run()
 
 	while (!done)
 	{
+		if(changeScene)
+		{
+
+
+
+			time->Restart();
+		}
+
 		done = application->HandleMessage();
 		time->Update();
 
@@ -105,6 +133,7 @@ void Game::Run()
 
 void Game::Update(pGameTime gameTime)
 {
+	//scene update
 }
 
 void Game::Render()
@@ -114,7 +143,7 @@ void Game::Render()
 		//clear back buffer
 		graphics->graphicsDevice->device->ColorFill(
 			graphics->graphicsDevice->backBuffer,
-			NULL, D3DCOLOR_XRGB(255, 255, 255));
+			NULL, D3DCOLOR_XRGB(0, 0, 0));
 		
 		graphics->graphicsDevice->spriteHandler->Begin(D3DXSPRITE_ALPHABLEND);
 

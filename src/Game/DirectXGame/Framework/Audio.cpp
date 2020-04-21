@@ -1,5 +1,13 @@
 #include "Audio.h"
 
+AudioDevice::AudioDevice()
+{
+}
+
+AudioDevice::~AudioDevice()
+{
+}
+
 Audio::Audio()
 {
 	audioDevice = new AudioDevice();
@@ -7,8 +15,11 @@ Audio::Audio()
 
 Audio::~Audio()
 {
-	delete audioDevice;
-	audioDevice = nullptr;
+	if (audioDevice != nullptr)
+	{
+		delete audioDevice;
+		audioDevice = nullptr;
+	}
 }
 
 void Audio::CreateAudioDevice(pGameWindow gameWindow)
@@ -18,3 +29,5 @@ void Audio::CreateAudioDevice(pGameWindow gameWindow)
 void Audio::Play()
 {
 }
+
+

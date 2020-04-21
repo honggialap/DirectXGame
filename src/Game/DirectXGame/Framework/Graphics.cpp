@@ -1,5 +1,29 @@
 #include "Graphics.h"
 
+GraphicsDevice::GraphicsDevice()
+{
+	direct3D = NULL;
+	device = NULL;
+	presentParameters = {};
+	backBuffer = NULL;
+	spriteHandler = NULL;
+}
+
+GraphicsDevice::~GraphicsDevice()
+{
+	if (spriteHandler != NULL) spriteHandler->Release();
+	spriteHandler = NULL;
+
+	if (backBuffer != NULL) backBuffer->Release();
+	backBuffer = NULL;
+
+	if (device != NULL) device->Release();
+	device = NULL;
+
+	if (direct3D != NULL) direct3D->Release();
+	direct3D = NULL;
+}
+
 Graphics::Graphics()
 {
 	graphicsDevice = new GraphicsDevice();
@@ -7,11 +31,6 @@ Graphics::Graphics()
 
 Graphics::~Graphics()
 {
-	graphicsDevice->spriteHandler->Release();
-	graphicsDevice->backBuffer->Release();
-	graphicsDevice->device->Release();
-	graphicsDevice->direct3D->Release();
-
 	delete graphicsDevice;
 	graphicsDevice = nullptr;
 }
