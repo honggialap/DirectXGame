@@ -1,10 +1,10 @@
-#include "DirectXGame/Game.h"
+#include "MarioSample/MarioSample.h"
 
 int WINAPI wWinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPWSTR pCmdLine, int nCmdShow)
 {
-	auto game = new Game(hInstance);
+	auto game = new MarioSample(hInstance);
 
-	string filePath = "Castlevania/Content/Data/GameData.xml";
+	string filePath = "MarioSample/Content/Data/GameData.xml";
 	game->Load(ToLPCWSTR(filePath));
 
 	game->Run();

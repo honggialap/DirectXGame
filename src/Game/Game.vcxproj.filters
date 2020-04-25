@@ -18,19 +18,13 @@
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="DirectXGame\Framework\Application.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="DirectXGame\Framework\Utilities.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="DirectXGame\Game.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="DirectXGame\Framework\Time.cpp">
+    <ClCompile Include="DirectXGame\Framework\Application.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="DirectXGame\Library\pugixml\pugixml.cpp">
+    <ClCompile Include="DirectXGame\Framework\Audio.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="DirectXGame\Framework\Graphics.cpp">
@@ -39,36 +33,190 @@
     <ClCompile Include="DirectXGame\Framework\Input.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="DirectXGame\Framework\Resource.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="DirectXGame\Framework\Math.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="DirectXGame\Logic\Scene.cpp">
+    <ClCompile Include="DirectXGame\Framework\Networks.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="DirectXGame\Logic\GameObject.cpp">
+    <ClCompile Include="DirectXGame\Framework\Resource.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DirectXGame\Framework\Time.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DirectXGame\Framework\Utilities.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DirectXGame\Framework\Content\Sound.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="DirectXGame\Framework\Content\Texture.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Castlevania\Castlevania.cpp">
+    <ClCompile Include="DirectXGame\Logic\GameObject.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DirectXGame\Logic\Scene.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DirectXGame\Logic\View\Renderer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DirectXGame\Logic\Sprite.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MarioSample\MarioSample.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DirectXGame\Library\pugixml\pugixml.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MarioSample\Model\DemoScene.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MarioSample\Model\Mario.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DirectXGame\Logic\Component.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DirectXGame\Logic\Transform.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DirectXGame\Logic\View\Controller.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DirectXGame\Logic\Animation.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DirectXGame\Logic\Camera.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DirectXGame\Logic\Collision.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DirectXGame\Logic\Event.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DirectXGame\Logic\Grid.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DirectXGame\Logic\Physics.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DirectXGame\Logic\Tilemap.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Castlevania\Content\Texture\Levels\Stage1_map.tmx" />
+    <None Include="Castlevania\Content\Texture\Levels\Stage2A_map.tmx" />
+    <None Include="Castlevania\Content\Texture\Levels\Stage2B_map.tmx" />
+    <None Include="Castlevania\Content\Texture\Levels\Stage3A_map.tmx" />
+    <None Include="Castlevania\Content\Texture\Levels\Stage3B_map.tmx" />
+    <None Include="Castlevania\Content\Texture\Levels\Stage4_map.tmx" />
+    <None Include="DirectXGame\Library\directx\Include\D3DX_DXGIFormatConvert.inl">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="DirectXGame\Library\directx\Include\d3dx9math.inl">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="DirectXGame\Library\directx\Include\D3DX10math.inl">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="DirectXGame\Library\directx\Include\xnamathconvert.inl">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="DirectXGame\Library\directx\Include\xnamathmatrix.inl">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="DirectXGame\Library\directx\Include\xnamathmisc.inl">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="DirectXGame\Library\directx\Include\xnamathvector.inl">
+      <Filter>Header Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="progress.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Castlevania\Content\Texture\Levels\Stage1_bank.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Castlevania\Content\Texture\Levels\Stage2A_bank.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Castlevania\Content\Texture\Levels\Stage2B_bank.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Castlevania\Content\Texture\Levels\Stage3A_bank.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Castlevania\Content\Texture\Levels\Stage3B_bank.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Castlevania\Content\Texture\Levels\Stage4_bank.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="DirectXGame\Game.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DirectXGame\Include.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="DirectXGame\Framework\Application.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DirectXGame\Framework\Audio.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DirectXGame\Framework\Graphics.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DirectXGame\Framework\Input.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DirectXGame\Framework\Math.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DirectXGame\Framework\Networks.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DirectXGame\Framework\Resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DirectXGame\Framework\Time.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="DirectXGame\Framework\Ultilities.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="DirectXGame\Game.h">
+    <ClInclude Include="DirectXGame\Framework\Content\Texture.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="DirectXGame\Framework\Time.h">
+    <ClInclude Include="DirectXGame\Framework\Content\Sound.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DirectXGame\Logic\GameObject.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DirectXGame\Logic\Scene.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DirectXGame\Logic\View\Renderer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DirectXGame\Logic\Sprite.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MarioSample\MarioSample.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MarioSample\Include.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="DirectXGame\Library\directx\Include\audiodefs.h">
@@ -299,67 +447,47 @@
     <ClInclude Include="DirectXGame\Library\pugixml\pugixml.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="DirectXGame\Framework\Graphics.h">
+    <ClInclude Include="MarioSample\Model\DemoScene.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="DirectXGame\Framework\Input.h">
+    <ClInclude Include="MarioSample\Model\Mario.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="DirectXGame\Framework\Resource.h">
+    <ClInclude Include="DirectXGame\Logic\Component.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="DirectXGame\Framework\Math.h">
+    <ClInclude Include="DirectXGame\Logic\Transform.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="DirectXGame\Logic\Scene.h">
+    <ClInclude Include="DirectXGame\Logic\View\Controller.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="DirectXGame\Logic\GameObject.h">
+    <ClInclude Include="DirectXGame\Logic\Animation.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="DirectXGame\Framework\Content\Texture.h">
+    <ClInclude Include="DirectXGame\Logic\Camera.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Castlevania\Castlevania.h">
+    <ClInclude Include="DirectXGame\Logic\Collision.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DirectXGame\Logic\Event.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DirectXGame\Logic\Grid.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DirectXGame\Logic\Physics.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DirectXGame\Logic\Tilemap.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <None Include="DirectXGame\Library\directx\Include\D3DX_DXGIFormatConvert.inl">
-      <Filter>Header Files</Filter>
-    </None>
-    <None Include="DirectXGame\Library\directx\Include\d3dx9math.inl">
-      <Filter>Header Files</Filter>
-    </None>
-    <None Include="DirectXGame\Library\directx\Include\D3DX10math.inl">
-      <Filter>Header Files</Filter>
-    </None>
-    <None Include="DirectXGame\Library\directx\Include\xnamathconvert.inl">
-      <Filter>Header Files</Filter>
-    </None>
-    <None Include="DirectXGame\Library\directx\Include\xnamathmatrix.inl">
-      <Filter>Header Files</Filter>
-    </None>
-    <None Include="DirectXGame\Library\directx\Include\xnamathmisc.inl">
-      <Filter>Header Files</Filter>
-    </None>
-    <None Include="DirectXGame\Library\directx\Include\xnamathvector.inl">
-      <Filter>Header Files</Filter>
-    </None>
-    <None Include="Castlevania\Content\Texture\Levels\Stage1_map.tmx" />
-    <None Include="Castlevania\Content\Texture\Levels\Stage2A_map.tmx" />
-    <None Include="Castlevania\Content\Texture\Levels\Stage2B_map.tmx" />
-    <None Include="Castlevania\Content\Texture\Levels\Stage3A_map.tmx" />
-    <None Include="Castlevania\Content\Texture\Levels\Stage3B_map.tmx" />
-    <None Include="Castlevania\Content\Texture\Levels\Stage4_map.tmx" />
-  </ItemGroup>
-  <ItemGroup>
-    <Text Include="progress.txt" />
-  </ItemGroup>
-  <ItemGroup>
-    <Xml Include="Castlevania\Content\Data\GameData.xml" />
-    <Xml Include="Castlevania\Content\Data\GameContent.xml" />
-    <Xml Include="Castlevania\Content\Data\Stage1.xml" />
+    <Xml Include="MarioSample\Content\Data\DemoScene.xml" />
+    <Xml Include="MarioSample\Content\Data\GameContent.xml" />
+    <Xml Include="MarioSample\Content\Data\GameData.xml" />
   </ItemGroup>
   <ItemGroup>
     <Library Include="DirectXGame\Library\directx\Lib\x64\d2d1.lib" />
@@ -388,25 +516,32 @@
     <Library Include="DirectXGame\Library\directx\Lib\x64\xapobased.lib" />
     <Library Include="DirectXGame\Library\directx\Lib\x64\XAPOFX.lib" />
     <Library Include="DirectXGame\Library\directx\Lib\x64\XInput.lib" />
-  </ItemGroup>
-  <ItemGroup>
-    <Image Include="Castlevania\Content\Texture\Levels\Stage1_bank.png">
-      <Filter>Resource Files</Filter>
-    </Image>
-    <Image Include="Castlevania\Content\Texture\Levels\Stage2A_bank.png">
-      <Filter>Resource Files</Filter>
-    </Image>
-    <Image Include="Castlevania\Content\Texture\Levels\Stage2B_bank.png">
-      <Filter>Resource Files</Filter>
-    </Image>
-    <Image Include="Castlevania\Content\Texture\Levels\Stage3A_bank.png">
-      <Filter>Resource Files</Filter>
-    </Image>
-    <Image Include="Castlevania\Content\Texture\Levels\Stage3B_bank.png">
-      <Filter>Resource Files</Filter>
-    </Image>
-    <Image Include="Castlevania\Content\Texture\Levels\Stage4_bank.png">
-      <Filter>Resource Files</Filter>
-    </Image>
+    <Library Include="DirectXGame\Library\directx\Lib\x86\d2d1.lib" />
+    <Library Include="DirectXGame\Library\directx\Lib\x86\d3d9.lib" />
+    <Library Include="DirectXGame\Library\directx\Lib\x86\d3d10.lib" />
+    <Library Include="DirectXGame\Library\directx\Lib\x86\d3d10_1.lib" />
+    <Library Include="DirectXGame\Library\directx\Lib\x86\d3d11.lib" />
+    <Library Include="DirectXGame\Library\directx\Lib\x86\d3dcompiler.lib" />
+    <Library Include="DirectXGame\Library\directx\Lib\x86\D3DCSX.lib" />
+    <Library Include="DirectXGame\Library\directx\Lib\x86\D3DCSXd.lib" />
+    <Library Include="DirectXGame\Library\directx\Lib\x86\d3dx9.lib" />
+    <Library Include="DirectXGame\Library\directx\Lib\x86\d3dx9d.lib" />
+    <Library Include="DirectXGame\Library\directx\Lib\x86\d3dx10.lib" />
+    <Library Include="DirectXGame\Library\directx\Lib\x86\d3dx10d.lib" />
+    <Library Include="DirectXGame\Library\directx\Lib\x86\d3dx11.lib" />
+    <Library Include="DirectXGame\Library\directx\Lib\x86\d3dx11d.lib" />
+    <Library Include="DirectXGame\Library\directx\Lib\x86\d3dxof.lib" />
+    <Library Include="DirectXGame\Library\directx\Lib\x86\dinput8.lib" />
+    <Library Include="DirectXGame\Library\directx\Lib\x86\dsetup.lib" />
+    <Library Include="DirectXGame\Library\directx\Lib\x86\dsound.lib" />
+    <Library Include="DirectXGame\Library\directx\Lib\x86\dwrite.lib" />
+    <Library Include="DirectXGame\Library\directx\Lib\x86\DxErr.lib" />
+    <Library Include="DirectXGame\Library\directx\Lib\x86\dxgi.lib" />
+    <Library Include="DirectXGame\Library\directx\Lib\x86\dxguid.lib" />
+    <Library Include="DirectXGame\Library\directx\Lib\x86\X3DAudio.lib" />
+    <Library Include="DirectXGame\Library\directx\Lib\x86\xapobase.lib" />
+    <Library Include="DirectXGame\Library\directx\Lib\x86\xapobased.lib" />
+    <Library Include="DirectXGame\Library\directx\Lib\x86\XAPOFX.lib" />
+    <Library Include="DirectXGame\Library\directx\Lib\x86\XInput.lib" />
   </ItemGroup>
 </Project>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GameContent>
+  <Textures>
+    <Texture id ="mario" source="MarioSample\Content\Texture\mario.png"
+             transR ="255" transG ="255" transB="255"></Texture>
+
+    <!-- template 
+    <Texture id ="" source=""
+             transR ="" transG ="" transB=""></Texture>
+    -->
+  </Textures>
+
+  <Sprites>
+    <!--Mario-->
+    <Sprite id ="mario_idle" textureId ="mario"
+            left ="247" top ="0" right ="258" bottom ="14" offsetX ="0" offsetY ="0"></Sprite>
+    <Sprite id ="mario_walk_001" textureId ="mario"
+            left ="275" top ="0" right ="290" bottom ="15" offsetX ="0" offsetY ="0"></Sprite>
+    <Sprite id ="mario_walk_002" textureId ="mario"
+            left ="306" top ="0" right ="320" bottom ="15" offsetX ="0" offsetY ="0"></Sprite>
+    <Sprite id ="mario_walk_003" textureId ="mario"
+            left ="335" top ="0" right ="350" bottom ="15" offsetX ="0" offsetY ="0"></Sprite>
+
+    <!-- template
+    <Sprite id ="" textureId =""
+            left ="" top ="" right ="" bottom ="" offsetX ="" offsetY =""></Sprite>
+    -->
+  </Sprites>
+
+  <AnimationSets>
+    <AnimationSet>
+      <Animations>
+        <Animation>
+          <AnimationFrames>
+            <AnimationFrame>
+            </AnimationFrame>
+          </AnimationFrames>
+        </Animation>
+      </Animations>
+    </AnimationSet>
+  </AnimationSets>
+
+</GameContent>

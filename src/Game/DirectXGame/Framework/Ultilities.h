@@ -4,6 +4,8 @@
 
 #include <Windows.h>
 
+#include <iostream>
+#include <unordered_map>
 #include <signal.h>
 #include <string.h>
 #include <string>

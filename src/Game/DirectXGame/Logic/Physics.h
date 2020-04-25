@@ -2,21 +2,15 @@
 #ifndef __PHYSICS_H__
 #define __PHYSICS_H__
 
+#include "../Include.h"
+
 class Body
 {
+public:
+	pGameObject gameObject;
+
 	double mass;
-
+	bool dynamicBody;
 };
-
-typedef Body* pBody;
-
-class Physics
-{
-
-};
-
-typedef Physics* pPhysics;
-
-class Bodies;
 
 #endif // !__PHYSICS_H__

@@ -108,7 +108,8 @@ bool Application::HandleMessage()
 
 	if (PeekMessage(&msg, NULL, 0, 0, PM_REMOVE))
 	{
-		if (msg.message == WM_QUIT)
+
+		if (msg.message == WM_CLOSE)
 			done = true;
 
 		TranslateMessage(&msg);
@@ -116,6 +117,11 @@ bool Application::HandleMessage()
 	}
 
 	return done;
+}
+
+void Application::Exit()
+{
+	SendMessage(gameWindow->hWnd, WM_CLOSE, 0, 0);
 }
 
 LRESULT Application::WinProc(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam)

@@ -3,6 +3,8 @@
 Scene::Scene(pGame game)
 {
 	this->game = game;
+	done = false;
+	exit = false;
 }
 
 Scene::~Scene()
@@ -31,4 +33,15 @@ Scenes::Scenes(pGame game)
 Scenes::~Scenes()
 {
 	this->game = nullptr;
+}
+
+void Scenes::NextScene()
+{
+	currentScene = scenes[currentScene->nextScene];
+}
+
+void Scenes::Clear()
+{
+	//current scene -> unload
+	//game objects -> clear
 }

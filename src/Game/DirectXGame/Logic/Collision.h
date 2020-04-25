@@ -2,27 +2,18 @@
 #ifndef __COLLISION_H__
 #define __COLLISION_H__
 
+#include "../Include.h"
+
 class Collider
 {
+public:
+	RECT collider;
 
 };
-
-typedef	Collider* pCollider;
-
-class Collision
-{
-
-};
-
-typedef	Collision* pCollision;
 
 class CollisionEvent
 {
 
 };
-
-typedef CollisionEvent* pCollisionEvent;
-
-class Colliders;
 
 #endif // !__COLLISION_H__

@@ -2,9 +2,11 @@
 #ifndef __SOUND_H__
 #define __SOUND_H__
 
-#include "../Audio.h"
+#include "../../Include.h"
 
 #include <unordered_map>
+
+#include "../Audio.h"
 
 class Sound 
 {
@@ -20,13 +22,13 @@ class Sounds
 public:
 	pAudio audio;
 
-	unordered_map<int, pSound> sounds;
+	unordered_map<string, pSound> sounds;
 
 	Sounds(pAudio audio);
 	~Sounds();
 	
-	//void Add
-	//pAudio Get
+	void Add();
+	pSound Get();
 	void Clear();
 };
 

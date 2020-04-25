@@ -9,4 +9,11 @@ class Grid
 
 typedef Grid* pGrid;
 
+class Cell
+{
+
+};
+
+typedef Cell* pCell;
+
 #endif // !__GRID_H__

@@ -11,6 +11,4 @@ Castlevania::~Castlevania()
 void Castlevania::Load(LPCWSTR dataFilePath)
 {
 	Game::Load(dataFilePath);
-
-
 }

@@ -2,10 +2,12 @@
 #ifndef __TIME_H__
 #define __TIME_H__
 
-#include <chrono>
+#include "../Include.h"
 
+#include <chrono>
 using namespace std;
 using namespace std::chrono;
+
 
 class GameTime
 {

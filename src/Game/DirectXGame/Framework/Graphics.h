@@ -2,11 +2,14 @@
 #ifndef __GRAPHICS_H__
 #define __GRAPHICS_H__
 
+#include "../Include.h"
+
 #include <d3d9.h>
 #include <d3dx9.h>
 
 #include "Application.h"
-#include "Ultilities.h"
+#include "../Logic/Sprite.h"
+#include "../Logic/Animation.h"
 
 class GraphicsDevice
 {
@@ -32,7 +35,8 @@ public:
 	~Graphics();
 	void CreateGraphicsDevice(pGameWindow gameWindow);
 
-	void Draw();
+	void Draw(pSprite sprite);
+	void Draw(pAnimation animation);
 };
 
 typedef Graphics* pGraphics;

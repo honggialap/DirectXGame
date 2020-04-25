@@ -74,7 +74,16 @@ void Graphics::CreateGraphicsDevice(pGameWindow gameWindow)
 	OutputDebugString(L"[INFO] Create graphics device successed.\n");
 }
 
-void Graphics::Draw()
+void Graphics::Draw(pSprite sprite)
 {
+	graphicsDevice->spriteHandler->Draw(
+		sprite->texture->texture,
+		&(sprite->sourceRect),
+		NULL,
+		NULL,
+		sprite->texture->transparentColor);
+}
 
+void Graphics::Draw(pAnimation animation)
+{
 }

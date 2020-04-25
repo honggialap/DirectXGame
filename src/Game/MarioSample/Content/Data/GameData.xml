@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GameData>
+  
+  <GameSettings
+    gameTitle ="Mario Sample"
+    maxFrameRate ="60"
+    fullscreen ="false"
+    widthResolution ="800"
+    heightResolution ="600">
+  </GameSettings>
+
+  <GameContent source="MarioSample\Content\Data\GameContent.xml"></GameContent>
+    
+</GameData>

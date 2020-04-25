@@ -7,13 +7,12 @@ Game::Game(HINSTANCE hInstance)
 	application = new Application(hInstance);
 	time = new Time();
 	graphics = new Graphics();
-	//audio = new Audio();
+	audio = new Audio();
 	input = new Input();
-	//networks = new Networks();
-	resource = new Resource(graphics); //, audio);
+	networks = new Networks();
+	resource = new Resource(graphics, audio);
 
 	scenes = new Scenes(this);
-	changeScene = false;
 }
 
 Game::~Game()
@@ -30,11 +29,11 @@ Game::~Game()
 		resource = nullptr;
 	}
 
-	//if (networks != nullptr)
-	//{
-	//	delete networks;
-	//	networks = nullptr;
-	//}
+	if (networks != nullptr)
+	{
+		delete networks;
+		networks = nullptr;
+	}
 
 	if (input != nullptr)
 	{
@@ -42,11 +41,11 @@ Game::~Game()
 		input = nullptr;
 	}
 
-	//if (audio != nullptr)
-	//{
-	//	delete audio;
-	//	audio = nullptr;
-	//}
+	if (audio != nullptr)
+	{
+		delete audio;
+		audio = nullptr;
+	}
 
 	if (graphics != nullptr)
 	{
@@ -75,47 +74,50 @@ Game::~Game()
 
 void Game::Load(LPCWSTR dataFilePath)
 {
-	resource->LoadGameData(gameSettings, dataFilePath);
+	resource->LoadData(gameSettings, dataFilePath);
 	
 	application->CreateGameWindow(
 		ToLPCWSTR(gameSettings->gameTitle),
 		gameSettings->widthResolution,
 		gameSettings->heightResolution,
 		gameSettings->fullscreen);
-
 	graphics->CreateGraphicsDevice(application->gameWindow);
-	
 	//audio->CreateAudioDevice(application->gameWindow);
-	
 	input->CreateInputDevice(application->gameWindow);
-	
 	//networks->CreateNetworksDevice();
-
-	//resource->LoadGameContent(dataFilePath);
-	//resource->LoadScenes(scenes, dataFilePath);
 }
 
-void Game::Run(int scene)
+void Game::Run(string sceneId)
 {
-	//pick scene
-	//scenes->currentScene = scenes->scenes[scene];
-
 	bool done = false;
 	double frameTime = 1.0 / gameSettings->maxFrameRate * 1000; //in milliseconds
+
+	//scenes->currentScene = scenes->scenes[sceneId];
+	//scenes->currentScene->Load();
 
 	time->Start();
 
 	while (!done)
 	{
-		if(changeScene)
+		done = application->HandleMessage();
+		
+		if (scenes->currentScene->done)
 		{
+			scenes->currentScene->Unload();
 
+			if (scenes->currentScene->exit)
+			{
+				scenes->Clear();
+				application->Exit();
+				done = application->HandleMessage();
+				break;
+			}
 
-
+			scenes->NextScene();
+			scenes->currentScene->Load();
 			time->Restart();
 		}
-
-		done = application->HandleMessage();
+		
 		time->Update();
 
 		if (time->gameTime->elapsedMilliseconds >= frameTime)
@@ -126,28 +128,24 @@ void Game::Run(int scene)
 		else
 			Sleep(DWORD(frameTime - time->gameTime->elapsedMilliseconds));
 	}
-
-	//clean up scene assets and then
-	//Shutdown
 }
 
 void Game::Update(pGameTime gameTime)
 {
-	//scene update
+	scenes->currentScene->Update(gameTime);
 }
 
 void Game::Render()
 {
 	if (graphics->graphicsDevice->device->BeginScene())
 	{
-		//clear back buffer
 		graphics->graphicsDevice->device->ColorFill(
 			graphics->graphicsDevice->backBuffer,
 			NULL, D3DCOLOR_XRGB(0, 0, 0));
 		
 		graphics->graphicsDevice->spriteHandler->Begin(D3DXSPRITE_ALPHABLEND);
 
-		//render scene
+		scenes->currentScene->Render();
 
 		graphics->graphicsDevice->spriteHandler->End();
 		graphics->graphicsDevice->device->EndScene();

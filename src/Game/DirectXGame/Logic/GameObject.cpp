@@ -20,26 +20,22 @@ GameObjects::GameObjects(pGame game, pScene scene)
 
 GameObjects::~GameObjects()
 {
-	this->scene = nullptr;
 	this->game = nullptr;
+	this->scene = nullptr;
 }
 
 void GameObjects::Add()
 {
-
-}
-
-void GameObjects::Get()
-{
-
 }
 
 void GameObjects::Remove()
 {
+}
 
+void GameObjects::Get()
+{
 }
 
 void GameObjects::Clear()
 {
-
 }

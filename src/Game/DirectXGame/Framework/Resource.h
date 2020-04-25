@@ -2,47 +2,46 @@
 #ifndef __RESOURCE_H__
 #define __RESOURCE_H__
 
+#include "../Include.h"
+
 #include <iostream>
 
 #include "../Library/pugixml/pugixml.hpp"
 using namespace pugi;
 
-class GameSettings;
-typedef GameSettings* pGameSettings;
-
 #include "../Game.h"
-
-#include "../Logic/Scene.h"
-
 #include "Graphics.h"
+#include "Audio.h"
 #include "Content/Texture.h"
-
-//#include "Audio.h"
-//#include "Content/Sound.h"
-
-//#include "../Logic/Sprite.h"
+#include "Content/Sound.h"
+#include "../Logic/Scene.h"
+#include "../Logic/GameObject.h"
+#include "../Logic/Sprite.h"
 //#include "../Logic/Animation.h"
 //#include "../Logic/Tilemap.h"
-
 
 class Resource
 {
 public:
 	pGraphics graphics;
-	//pAudio audio;
+	pAudio audio;
 
 	pTextures textures;
-	//pSounds sounds;
-	//pSprites sprites;
+	pSounds sounds;
+
+	pSprites sprites;
 	//pAnimations animations;
 	//pTilemaps tilemaps;
 
-	Resource(pGraphics graphics); // ,pAudio audio);
+	Resource(pGraphics graphics, pAudio audio);
 	~Resource();
 
 	//bool Load();
-	void LoadGameData(pGameSettings gameSettings, LPCWSTR filePath);
-	void LoadGameContent(LPCWSTR filePath);
+	void LoadData(pGameSettings gameSettings, LPCWSTR filePath);
+	void LoadContent(LPCWSTR filePath);
+	void LoadScene(pScene scene, LPCWSTR filePath);
+	void LoadGameObject(pScene scene, LPCWSTR filePath);
+
 	void LoadScenes(pScenes scenes, LPCWSTR filePath);
 };
 

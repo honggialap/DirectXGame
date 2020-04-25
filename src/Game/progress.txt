@@ -1,30 +1,70 @@
-crunching
-	Game
-- Scene and GameObject
-- Sprite, Animation, TileMap
-- Collision, Physics
+Data structure
+	Scene
+		pGame
+		sceneId
+		gameObjects
 
-	Castlevania
-Stage 1 map
-Simon
-Whip
-MorningStarItem
-Dagger
-DaggerItem
-LargeHeartItem
-SmallHeartItem
-Tourch
-Door
+	GameObject
+		pScene
+		gameObjectId
+		components
 
+	Component
+		pGameObject
+		componentId
 
-Game Initalization
+	Transform
+		position
 
-Game
-	-> Components
-	-> Read gameData -> Game settings
-	-> Create devices
-	-> Read gameData -> Game content -> Read gameContent
-	-> Read gameData -> Scenes -> Read scene 
+	Sprite
 
-Run
-Change scene
+	AnimationSet
+
+	Body
+
+	Collider
+		boundingBox
+
+content level
+logic level
+unique level
+
+loading sequence
+
+-> Game read GameData for 
+		GameSettings
+		GameContent source
+		Scenes and scene source
+
+-> Scene read SceneData for
+		GameObject
+			Component
+				Transform
+				Sprite -> GameContent
+			Property
+				
+
+what about indivitual game object properties ??
+like mario jump force, moving speed, healthpoint ??
+
+where is the split point between framework and game loading sequence ?
+
+GameData, GameContent, Scenes -> framework
+Scene, GameObject -> game
+
+with MarioSample
+
+Game->Load()
+=> resource->LoadGameData() : GameSettings, GameContent source, Scenes and Scene source
+=> resource->LoadGameContent() : Textures, Sprites, AnimationSets,...
+MarioSample->Load()
+=> resource->LoadScene()
+
+Game->Load() : GameSettings
+MarioSample->Load() : GameContent, Scenes
+
+Scene->Load() = 0;
+DemoScene->Load() implementing;
+
+GameObject->Load() : Component
+Mario->Load() : Properties

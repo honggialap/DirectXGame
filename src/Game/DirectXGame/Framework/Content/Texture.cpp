@@ -64,10 +64,8 @@ void Textures::Add(string id, LPCWSTR filePath, D3DCOLOR transparentColor)
 
 		textures[id] = texture;
 
-		DebugOut(L"[INFO] Texture loaded Ok: id=%d, %s\n", id, filePath);
+		DebugOut(L"[INFO] Texture loaded Ok: id = %s \n", ToLPCWSTR(id));
 	}
-	else
-		return;
 }
 
 pTexture Textures::Get(string id)

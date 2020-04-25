@@ -2,11 +2,11 @@
 #ifndef __APPLICATION_H__
 #define __APPLICATION_H__
 
+#include "../Include.h"
+
 #include <Windows.h>
+
 #include <string>
-
-#include "Ultilities.h"
-
 using namespace std;
 
 class GameWindow
@@ -23,8 +23,6 @@ public:
 	~GameWindow();
 };
 
-typedef GameWindow* pGameWindow;
-
 class Application
 {
 public:
@@ -35,9 +33,8 @@ public:
 
 	void CreateGameWindow(LPCWSTR windowTitle, int widthResolution, int heightResolution, bool fullscreen);
 	bool HandleMessage();
+	void Exit();
 	static LRESULT CALLBACK WinProc(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam);
 };
-
-typedef Application* pApplication;
 
 #endif // !__APPLICATION_H__

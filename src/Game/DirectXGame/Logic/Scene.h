@@ -13,11 +13,17 @@ class Scene
 {
 public:
 	pGame game;
+	string nextScene;
+
+	bool done;
+	bool exit;
 
 	Scene(pGame game);
 	~Scene();
 
 	virtual void Load() = 0;
+	virtual void Unload() = 0;
+
 	virtual void Update(pGameTime gameTime) = 0;
 	virtual void Render() = 0;
 };
@@ -29,11 +35,14 @@ class Scenes
 public:
 	pGame game;
 
-	vector<pScene> scenes;
+	unordered_map<string, pScene> scenes;
 	pScene currentScene;
 
 	Scenes(pGame game);
 	~Scenes();
+
+	void NextScene();
+	void Clear();
 };
 
 typedef Scenes* pScenes;

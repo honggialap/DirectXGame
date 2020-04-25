@@ -2,10 +2,10 @@
 #ifndef __INPUT_H__
 #define __INPUT_H__
 
-#include <dinput.h>
+#include "../Include.h"
 
+#include <dinput.h>
 #include "Application.h"
-#include "Ultilities.h"
 
 class KeyEventHandler
 {

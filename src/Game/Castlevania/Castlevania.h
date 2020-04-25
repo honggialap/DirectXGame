@@ -5,13 +5,12 @@
 #include "../DirectXGame/Game.h"
 
 class Castlevania : public Game
+
 {
 public:
 	Castlevania(HINSTANCE hInstance);
 	~Castlevania();
 	virtual void Load(LPCWSTR dataFilePath);
 };
-
-
 
 #endif // !__CASTLEVANIA_H__

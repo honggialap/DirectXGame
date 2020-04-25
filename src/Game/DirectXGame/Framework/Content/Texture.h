@@ -2,6 +2,8 @@
 #ifndef __TEXTURE_H__
 #define __TEXTURE_H__
 
+#include "../../Include.h"
+
 #include <unordered_map>
 
 #include "../Graphics.h"
@@ -17,8 +19,6 @@ public:
 	~Texture();
 };
 
-typedef Texture* pTexture;
-
 class Textures
 {
 public:
@@ -33,7 +33,5 @@ public:
 	pTexture Get(string id);
 	void Clear();
 };
-
-typedef Textures* pTextures;
 
 #endif // !__TEXTURE_H__

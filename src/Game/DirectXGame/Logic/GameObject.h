@@ -2,24 +2,17 @@
 #ifndef __GAME_OBJECT_H__
 #define __GAME_OBJECT_H__
 
-#include <string>
-#include <vector>
-using namespace std;
-
-#include "../Framework/Math.h"
+#include "../Include.h"
 
 #include "../Game.h"
 #include "Scene.h"
-
-class Game;
-typedef Game* pGame;
-
-class Scene;
-typedef Scene* pScene;
-
-class GameObject;
-typedef GameObject* pGameObject;
-
+#include "Component.h"
+#include "Transform.h"
+//#include "Sprite.h"
+//#include "Animation.h"
+//#include "Tilemap.h"
+//#include "Physics.h"
+//#include "Collision.h"
 
 class GameObject
 {
@@ -31,24 +24,18 @@ public:
 	bool enabled;
 	bool visibled;
 
-	D3DXVECTOR3 position;
-	
-	//pBody body;
-	//vector<pSprite> sprites;
-	//vector<pAnimationSet> animationSets;
-	//vector<pColliders> colliders;
+	pComponents components;
 	
 	pGameObject parent;
-	vector<pGameObject> child;
+	unordered_map<string, pGameObject> childs;
 
 	GameObject(pGame game, pScene scene);
-	~GameObject();
+	~GameObject(); 
 
+	virtual void Load() = 0;
 	virtual void Update(pGameTime gameTime) = 0;
 	virtual void Render() = 0;
 };
-
-typedef GameObject* pGameObject;
 
 class GameObjects
 {
@@ -66,7 +53,5 @@ public:
 	void Get();
 	void Clear();
 };
-
-typedef GameObjects* pGameObjects;
 
 #endif // !__GAME_OBJECT_H__

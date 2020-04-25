@@ -2,6 +2,8 @@
 #ifndef __AUDIO_H__
 #define __AUDIO_H__
 
+#include "../Include.h"
+
 #include <dsound.h>
 
 #include "Application.h"
@@ -17,10 +19,7 @@ public:
 
 	AudioDevice();
 	~AudioDevice();
-
 };
-
-typedef AudioDevice* pAudioDevice;
 
 class Audio
 {
@@ -33,7 +32,5 @@ public:
 	void CreateAudioDevice(pGameWindow gameWindow);
 	void Play();
 };
-
-typedef Audio* pAudio;
 
 #endif // !__AUDIO_H__

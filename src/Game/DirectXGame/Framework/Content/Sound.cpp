@@ -11,6 +11,23 @@ Sounds::~Sounds()
 	this->audio = nullptr;
 }
 
+void Sounds::Add()
+{
+}
+
+pSound Sounds::Get()
+{
+	return pSound();
+}
+
 void Sounds::Clear()
+{
+}
+
+Sound::Sound()
+{
+}
+
+Sound::~Sound()
 {
 }

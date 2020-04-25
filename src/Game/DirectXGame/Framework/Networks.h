@@ -2,6 +2,8 @@
 #ifndef __NETWORKS_H__
 #define __NETWORKS_H__
 
+#include "../Include.h"
+
 //#include <winsock2.h>
 //#include <WS2tcpip.h>
 
