@@ -1,13 +1,12 @@
-#include "MarioSample/MarioSample.h"
+#include "Castlevania/Castlevania.h"
 
 int WINAPI wWinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPWSTR pCmdLine, int nCmdShow)
 {
-	auto game = new MarioSample(hInstance);
+	auto game = new Castlevania(hInstance);
 
-	string filePath = "MarioSample/Content/Data/GameData.xml";
+	string filePath = "Castlevania/Content/Data/GameData.xml";
 	game->Load(ToLPCWSTR(filePath));
-
-	game->Run();
+	game->Run("stage1");
 
 	delete game;
 	game = nullptr;

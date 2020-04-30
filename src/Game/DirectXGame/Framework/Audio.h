@@ -3,9 +3,6 @@
 #define __AUDIO_H__
 
 #include "../Include.h"
-
-#include <dsound.h>
-
 #include "Application.h"
 
 class AudioDevice

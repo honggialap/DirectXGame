@@ -3,14 +3,12 @@
 #define __TEXTURE_H__
 
 #include "../../Include.h"
-
-#include <unordered_map>
-
 #include "../Graphics.h"
 
 class Texture
 {
 public:
+	string textureID;
 	LPDIRECT3DTEXTURE9 texture;
 	D3DXIMAGE_INFO info;
 	D3DCOLOR transparentColor;
@@ -22,16 +20,28 @@ public:
 class Textures
 {
 public:
+	pResource resource;
 	pGraphics graphics;
 
 	unordered_map<string, pTexture> textures;
 
-	Textures(pGraphics graphics);
+	Textures(pResource resource, pGraphics graphics);
 	~Textures();
 
-	void Add(string id, LPCWSTR filePath, D3DCOLOR transparentColor);
-	pTexture Get(string id);
+	void Add(string textureID, LPCWSTR filePath, D3DCOLOR transparentColor);
+	pTexture Get(string textureID);
 	void Clear();
+};
+
+class TextureRegion
+{
+public:
+	string textureRegionID;
+	string textureID;
+	RECT sourceRect;
+
+	TextureRegion();
+	~TextureRegion();
 };
 
 #endif // !__TEXTURE_H__

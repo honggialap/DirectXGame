@@ -11,11 +11,10 @@ class Transform : public Component
 public:
 	pGameObject gameObject;
 	
-	D3DXVECTOR3 transform;
+	D3DXVECTOR3 position;
 
 	Transform();
 	~Transform();
 };
-
 
 #endif

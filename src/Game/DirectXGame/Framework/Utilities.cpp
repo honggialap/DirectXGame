@@ -38,7 +38,6 @@ wstring ToWSTR(string st)
 
 	// delete wcstring   // << can I ? 
 	return wstr;
-
 }
 
 LPCWSTR ToLPCWSTR(string st)

@@ -1,5 +1,7 @@
 #include "Application.h"
 
+#pragma region GameWindow
+
 GameWindow::GameWindow()
 {
 	hInstance = NULL;
@@ -13,6 +15,10 @@ GameWindow::GameWindow()
 GameWindow::~GameWindow()
 {
 }
+
+#pragma endregion
+
+#pragma region Application
 
 Application::Application(HINSTANCE hInstance)
 {
@@ -109,7 +115,7 @@ bool Application::HandleMessage()
 	if (PeekMessage(&msg, NULL, 0, 0, PM_REMOVE))
 	{
 
-		if (msg.message == WM_CLOSE)
+		if (msg.message == WM_QUIT)
 			done = true;
 
 		TranslateMessage(&msg);
@@ -121,7 +127,7 @@ bool Application::HandleMessage()
 
 void Application::Exit()
 {
-	SendMessage(gameWindow->hWnd, WM_CLOSE, 0, 0);
+	SendMessage(gameWindow->hWnd, WM_QUIT, 0, 0);
 }
 
 LRESULT Application::WinProc(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
@@ -134,3 +140,5 @@ LRESULT Application::WinProc(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
 	}
 	return DefWindowProc(hWnd, uMsg, wParam, lParam);
 }
+
+#pragma endregion

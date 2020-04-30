@@ -5,23 +5,20 @@ Scene::Scene(pGame game)
 	this->game = game;
 	done = false;
 	exit = false;
+
+	gameObjects = new GameObjects(game, this);
 }
 
 Scene::~Scene()
 {
 	this->game = nullptr;
-}
 
-void Scene::Load()
-{
-}
-
-void Scene::Update(pGameTime gameTime)
-{
-}
-
-void Scene::Render()
-{
+	if (gameObjects != nullptr)
+	{
+		gameObjects->Clear();
+		delete gameObjects;
+		gameObjects = nullptr;
+	}
 }
 
 Scenes::Scenes(pGame game)
@@ -33,6 +30,11 @@ Scenes::Scenes(pGame game)
 Scenes::~Scenes()
 {
 	this->game = nullptr;
+}
+
+void Scenes::Add(string id, pScene scene)
+{
+	scenes[id] = scene;
 }
 
 void Scenes::NextScene()

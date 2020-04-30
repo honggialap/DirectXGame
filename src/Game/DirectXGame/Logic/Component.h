@@ -7,8 +7,9 @@
 enum class ComponentType
 {
 	Transform,
-	Sprite,
-	Animation,
+	SpriteRenderer,
+	Animator,
+	TilemapRenderer,
 	Body,
 	Collider,
 	Control,
@@ -19,7 +20,12 @@ class Component
 {
 public:
 	pGameObject gameObject;
+
+	string id;
 	ComponentType componentType;
+
+	Component();
+	~Component();
 
 	void Attach(pGameObject gameObject);
 	void Detach();
@@ -28,7 +34,17 @@ public:
 class Components
 {
 public:
+	pGameObject gameObject;
 	unordered_map<string, pComponent> components;
+	
+	Components(pGameObject gameObject);
+	~Components();
+	
+	void Add(string id, pComponent component);
+	pComponent Get(string id);
+
+	void Remove(string id);
+	void Clear();
 };
 
 #endif // !__COMPONENT_H__

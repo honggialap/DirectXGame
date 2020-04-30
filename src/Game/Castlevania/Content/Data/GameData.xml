@@ -12,7 +12,7 @@
   <GameContent source="Castlevania\Content\Data\GameContent.xml"></GameContent>
   
   <Scenes>
-    <Scene id ="stage1" source ="Castlevania\Content\Data\Stage1.xml"></Scene>
+    <Scene id ="stage1" type ="Stage1Scene" source ="Castlevania\Content\Data\Stage1.xml"></Scene>
   </Scenes>
   
 </GameData>

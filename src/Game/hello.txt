@@ -1,0 +1,74 @@
+Loading sequence
+
+Game->Load()
+{
+	resource->LoadGameSettings
+	application->CreateGameWindow
+	graphics->CreateGraphicsDevice
+	input->CreateInputDevice
+}
+
+Resource->LoadGameSettings
+Resource->LoadContent
+
+Castlevania->Load()
+{
+
+}
+
+Castlevania->LoadScenes()
+{
+
+}
+
+Stage1Scene->Load()
+{
+
+}
+
+
+
+what the fuck is prefab ??
+it's a gameobject template
+why do we need one ?
+to spawn game object by prefabID
+what could we gain from this ?
+gameobject template is accessable by any scene because is game-specific
+english: we could spawn simon in stage1scene to stage4scene by a single prefab
+
+so what do we need to read
+
+prefab, and gameobject
+
+castlevania load prefabs make a list of prefabs
+stage1scene load gameobject by prefabsID
+
+sooooo how was it structured like
+
+Prefab
+	prefabID
+	gameObjectType
+	components
+			transform
+			spriteRenderer
+				sprites
+			animator
+				animations
+
+	properties
+
+are you sure GameObject - Prefab architecture is ok with c++
+
+ok, i really dunno, but it solve the unique-assets problems
+
+!!!how Simon got loading into Stage1Scene ?
+Game->Load() for framework component
+	Resource->LoadGameSettings
+	Resource->LoadContent
+
+Castlevania->Load() for game specific stuff
+	Castlevania->LoadPrefabs
+	Castlevania->LoadScenes
+
+Stage1Scene->Load() for scene specific stuff
+	

@@ -1,5 +1,7 @@
 #include "Input.h"
 
+#pragma region InputDevice
+
 InputDevice::InputDevice()
 {
 	directInput = NULL;					
@@ -14,6 +16,10 @@ InputDevice::~InputDevice()
 	if (directInput != NULL) directInput->Release();
 	directInput = NULL;
 }
+
+#pragma endregion
+
+#pragma region Input
 
 Input::Input()
 {
@@ -30,11 +36,11 @@ void Input::CreateInputDevice(pGameWindow gameWindow)
 {
 	//create direct input object
 	HRESULT hr = DirectInput8Create(
-				gameWindow->hInstance,
-				DIRECTINPUT_VERSION,
-				IID_IDirectInput8,
-				(VOID * *)&(inputDevice->directInput),
-				NULL);
+		gameWindow->hInstance,
+		DIRECTINPUT_VERSION,
+		IID_IDirectInput8,
+		(VOID * *) & (inputDevice->directInput),
+		NULL);
 
 	if (hr != DI_OK)
 	{
@@ -128,3 +134,5 @@ int Input::IsKeyDown()
 void Input::SetKeyHandler()
 {
 }
+
+#pragma endregion

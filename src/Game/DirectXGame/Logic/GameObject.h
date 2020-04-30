@@ -8,7 +8,7 @@
 #include "Scene.h"
 #include "Component.h"
 #include "Transform.h"
-//#include "Sprite.h"
+#include "Sprite.h"
 //#include "Animation.h"
 //#include "Tilemap.h"
 //#include "Physics.h"
@@ -21,20 +21,22 @@ public:
 	pScene scene;
 
 	string id;
-	bool enabled;
-	bool visibled;
+	bool enable;
+	//unsigned int updateOrder;
 
 	pComponents components;
 	
-	pGameObject parent;
-	unordered_map<string, pGameObject> childs;
+	//pGameObject parent;
+	//unordered_map<string, pGameObject> childs;
 
 	GameObject(pGame game, pScene scene);
-	~GameObject(); 
+	~GameObject();
 
-	virtual void Load() = 0;
+	virtual void Load(xml_node gameObjectNode);
 	virtual void Update(pGameTime gameTime) = 0;
 	virtual void Render() = 0;
+
+	//static bool CompareByUpdateOrder(const pGameObject a, const pGameObject b);
 };
 
 class GameObjects
@@ -48,10 +50,23 @@ public:
 	GameObjects(pGame game, pScene scene);
 	~GameObjects();
 
-	void Add();
+	void Add(pGameObject gameObject);
+	pGameObject Get(string id);
+
 	void Remove();
-	void Get();
 	void Clear();
+
+	//void SortByUpdateOrder();
+};
+
+class Prefab
+{
+
+};
+
+class Prefabs
+{
+
 };
 
 #endif // !__GAME_OBJECT_H__

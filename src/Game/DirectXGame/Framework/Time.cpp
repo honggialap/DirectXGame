@@ -1,5 +1,7 @@
 #include "Time.h"
 
+#pragma region GameTime
+
 GameTime::GameTime()
 {
 	elapsedMilliseconds = 0;
@@ -9,6 +11,10 @@ GameTime::GameTime()
 GameTime::~GameTime()
 {
 }
+
+#pragma endregion
+
+#pragma region Time
 
 Time::Time()
 {
@@ -56,3 +62,5 @@ void Time::Restart()
 
 	Start();
 }
+
+#pragma endregion

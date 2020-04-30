@@ -7,14 +7,10 @@
 #include "Framework/Application.h"
 #include "Framework/Time.h"
 #include "Framework/Graphics.h"
-#include "Framework/Audio.h"
 #include "Framework/Input.h"
-#include "Framework/Networks.h"
 #include "Framework/Resource.h"
 
 #include "Logic/Scene.h"
-
-using namespace std;
 
 class GameSettings
 {
@@ -32,9 +28,7 @@ public:
 	pApplication application;
 	pTime time;
 	pGraphics graphics;
-	pAudio audio;
 	pInput input;
-	pNetworks networks;
 	pResource resource;
 
 	pGameSettings gameSettings;
@@ -45,7 +39,9 @@ public:
 	~Game();
 
 	virtual void Load(LPCWSTR dataFilePath);
-	virtual void Run(string scene = "StartScene");
+	virtual void LoadPrefabs() = 0;
+	virtual void LoadScenes() = 0;
+	void Run(string sceneID);
 
 	void Update(pGameTime gameTime);
 	void Render();

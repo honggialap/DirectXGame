@@ -24,9 +24,6 @@
     <ClCompile Include="DirectXGame\Framework\Application.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="DirectXGame\Framework\Audio.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="DirectXGame\Framework\Graphics.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -34,9 +31,6 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="DirectXGame\Framework\Math.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="DirectXGame\Framework\Networks.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="DirectXGame\Framework\Resource.cpp">
@@ -48,9 +42,6 @@
     <ClCompile Include="DirectXGame\Framework\Utilities.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="DirectXGame\Framework\Content\Sound.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="DirectXGame\Framework\Content\Texture.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -60,22 +51,10 @@
     <ClCompile Include="DirectXGame\Logic\Scene.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="DirectXGame\Logic\View\Renderer.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="DirectXGame\Logic\Sprite.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="MarioSample\MarioSample.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="DirectXGame\Library\pugixml\pugixml.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="MarioSample\Model\DemoScene.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="MarioSample\Model\Mario.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="DirectXGame\Logic\Component.cpp">
@@ -84,28 +63,16 @@
     <ClCompile Include="DirectXGame\Logic\Transform.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="DirectXGame\Logic\View\Controller.cpp">
+    <ClCompile Include="Castlevania\Castlevania.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="DirectXGame\Logic\Animation.cpp">
+    <ClCompile Include="Castlevania\Model\Scene\MenuScene.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="DirectXGame\Logic\Camera.cpp">
+    <ClCompile Include="Castlevania\Model\Scene\Stage1Scene.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="DirectXGame\Logic\Collision.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="DirectXGame\Logic\Event.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="DirectXGame\Logic\Grid.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="DirectXGame\Logic\Physics.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="DirectXGame\Logic\Tilemap.cpp">
+    <ClCompile Include="Castlevania\Model\GameObject\Simon\Simon.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -139,9 +106,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Text Include="progress.txt" />
-  </ItemGroup>
-  <ItemGroup>
     <Image Include="Castlevania\Content\Texture\Levels\Stage1_bank.png">
       <Filter>Resource Files</Filter>
     </Image>
@@ -171,9 +135,6 @@
     <ClInclude Include="DirectXGame\Framework\Application.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="DirectXGame\Framework\Audio.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="DirectXGame\Framework\Graphics.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -181,9 +142,6 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="DirectXGame\Framework\Math.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="DirectXGame\Framework\Networks.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="DirectXGame\Framework\Resource.h">
@@ -198,25 +156,13 @@
     <ClInclude Include="DirectXGame\Framework\Content\Texture.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="DirectXGame\Framework\Content\Sound.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="DirectXGame\Logic\GameObject.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="DirectXGame\Logic\Scene.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="DirectXGame\Logic\View\Renderer.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="DirectXGame\Logic\Sprite.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="MarioSample\MarioSample.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="MarioSample\Include.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="DirectXGame\Library\directx\Include\audiodefs.h">
@@ -447,47 +393,27 @@
     <ClInclude Include="DirectXGame\Library\pugixml\pugixml.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="MarioSample\Model\DemoScene.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="MarioSample\Model\Mario.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="DirectXGame\Logic\Component.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="DirectXGame\Logic\Transform.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="DirectXGame\Logic\View\Controller.h">
+    <ClInclude Include="Castlevania\Castlevania.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="DirectXGame\Logic\Animation.h">
+    <ClInclude Include="Castlevania\Model\Scene\MenuScene.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="DirectXGame\Logic\Camera.h">
+    <ClInclude Include="Castlevania\Model\Scene\Stage1Scene.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="DirectXGame\Logic\Collision.h">
+    <ClInclude Include="Castlevania\Model\GameObject\Simon\Simon.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="DirectXGame\Logic\Event.h">
+    <ClInclude Include="Castlevania\Include.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="DirectXGame\Logic\Grid.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="DirectXGame\Logic\Physics.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="DirectXGame\Logic\Tilemap.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <Xml Include="MarioSample\Content\Data\DemoScene.xml" />
-    <Xml Include="MarioSample\Content\Data\GameContent.xml" />
-    <Xml Include="MarioSample\Content\Data\GameData.xml" />
   </ItemGroup>
   <ItemGroup>
     <Library Include="DirectXGame\Library\directx\Lib\x64\d2d1.lib" />
@@ -543,5 +469,16 @@
     <Library Include="DirectXGame\Library\directx\Lib\x86\xapobased.lib" />
     <Library Include="DirectXGame\Library\directx\Lib\x86\XAPOFX.lib" />
     <Library Include="DirectXGame\Library\directx\Lib\x86\XInput.lib" />
+  </ItemGroup>
+  <ItemGroup>
+    <Xml Include="Castlevania\Content\Data\Stage1.xml" />
+    <Xml Include="Castlevania\Content\Data\GameContent.xml" />
+    <Xml Include="Castlevania\Content\Data\GameData.xml" />
+    <Xml Include="Castlevania\Content\Data\Stage2.xml" />
+    <Xml Include="Castlevania\Content\Data\Stage3.xml" />
+    <Xml Include="Castlevania\Content\Data\Stage4.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="hello.txt" />
   </ItemGroup>
 </Project>

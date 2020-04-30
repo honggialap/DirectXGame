@@ -4,11 +4,6 @@
 
 #include "../Include.h"
 
-#include <chrono>
-using namespace std;
-using namespace std::chrono;
-
-
 class GameTime
 {
 public:
@@ -18,8 +13,6 @@ public:
 	GameTime();
 	~GameTime();
 };
-
-typedef GameTime* pGameTime;
 
 class Time
 {
@@ -40,7 +33,5 @@ public:
 	void Update();
 	void Restart();
 };
-
-typedef Time* pTime;
 
 #endif // !__TIME_H__

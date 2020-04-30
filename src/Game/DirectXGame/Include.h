@@ -4,6 +4,7 @@
 
 #pragma region Forward Declaration
 
+#pragma region Framework
 class Game;
 typedef Game* pGame;
 
@@ -34,15 +35,6 @@ typedef Input* pInput;
 class InputDevice;
 typedef InputDevice* pInputDevice;
 
-class Audio;
-typedef Audio* pAudio;
-
-class AudioDevice;
-typedef AudioDevice* pAudioDevice;
-
-class Network;
-typedef Network* pNetwork;
-
 class Resource;
 typedef Resource* pResource;
 
@@ -52,17 +44,24 @@ typedef Texture* pTexture;
 class Textures;
 typedef Textures* pTextures;
 
-class Sound;
-typedef Sound* pSound;
+class TextureRegion;
+typedef TextureRegion* pTextureRegion;
 
-class Sounds;
-typedef Sounds* pSounds;
+#pragma endregion
+
+#pragma region Logic
 
 class Scene;
 typedef Scene* pScene;
 
 class Scenes;
 typedef Scenes* pScenes;
+
+class Prefab;
+typedef Prefab* pPrefab;
+
+class Prefabs;
+typedef Prefabs* pPrefabs;
 
 class GameObject;
 typedef GameObject* pGameObject;
@@ -84,6 +83,9 @@ typedef Sprite* pSprite;
 
 class Sprites;
 typedef Sprites* pSprites;
+
+class SpriteAtlas;
+typedef SpriteAtlas* pSpriteAtlas;
 
 class AnimationFrame;
 typedef AnimationFrame* pAnimationFrame;
@@ -120,8 +122,9 @@ typedef CollisionEvents* pCollisionEvents;
 
 #pragma endregion
 
+#pragma endregion
+
 #include "Framework/Ultilities.h"
 #include "Framework/Math.h"
-
 
 #endif //!__DIRECTXGAME_INCLUDE_H__

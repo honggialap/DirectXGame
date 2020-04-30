@@ -3,8 +3,6 @@
 #define __INPUT_H__
 
 #include "../Include.h"
-
-#include <dinput.h>
 #include "Application.h"
 
 class KeyEventHandler
@@ -14,8 +12,6 @@ public:
 	virtual void OnKeyDown(int KeyCode) = 0;
 	virtual void OnKeyUp(int KeyCode) = 0;
 };
-
-typedef KeyEventHandler* pKeyEventHanlder;
 
 class InputDevice
 {
@@ -34,8 +30,6 @@ public:
 	~InputDevice();
 };
 
-typedef InputDevice* pInputDevice;
-
 class Input
 {
 public:
@@ -50,7 +44,5 @@ public:
 	int	IsKeyDown();
 	void SetKeyHandler();
 };
-
-typedef Input* pInput;
 
 #endif // !__INPUT_H__

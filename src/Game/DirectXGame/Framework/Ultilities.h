@@ -2,8 +2,7 @@
 #ifndef __ULTILITIES_H__
 #define __ULTILITIES_H__
 
-#include <Windows.h>
-
+#include <algorithm>
 #include <iostream>
 #include <unordered_map>
 #include <signal.h>
@@ -14,8 +13,20 @@
 #include <time.h>
 #include <stdlib.h>
 #include <vector>
+#include <chrono>
+
+#include <Windows.h>
+#include <d3d9.h>
+#include <d3dx9.h>
+#include <d3dx9math.h>
+#include <dinput.h>
+#include "../Library/pugixml/pugixml.hpp"
+//#include <winsock2.h>
+//#include <WS2tcpip.h>
 
 using namespace std;
+using namespace pugi;
+using namespace std::chrono;
 
 void DebugOut(const wchar_t* fmt, ...);
 

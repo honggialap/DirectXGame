@@ -10,5 +10,9 @@
   </GameSettings>
 
   <GameContent source="MarioSample\Content\Data\GameContent.xml"></GameContent>
-    
+
+  <Scenes>
+    <Scene id ="DemoScene" sceneType ="DemoScene" source ="MarioSample\Content\Data\DemoScene.xml"></Scene>
+  </Scenes>
+  
 </GameData>

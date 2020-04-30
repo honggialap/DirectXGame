@@ -1,27 +1,39 @@
 #include "Resource.h"
 
-Resource::Resource(pGraphics graphics, pAudio audio)
+Resource::Resource(pGraphics graphics)
 {
 	this->graphics = graphics;
-	this->audio = audio;
-
-	this->textures = new Textures(graphics);
-	this->sounds = new Sounds(audio);
-	this->sprites = new Sprites();
+	this->textures = new Textures(this, graphics);
+	this->spriteAtlas = new SpriteAtlas(this);
+	this->sprites = new Sprites(this);
+	//this->animations = new Animations(this);
+	//this->tilemaps = new Tilemaps(this);
 }
 
 Resource::~Resource()
 {
+	//if (tilemaps != nullptr)
+	//{
+	//	delete tilemaps;
+	//	tilemaps = nullptr;
+	//}
+
+	//if (animations != nullptr)
+	//{
+	//	delete animations;
+	//	animations = nullptr;
+	//}
+
 	if (sprites != nullptr)
 	{
 		delete sprites;
 		sprites = nullptr;
 	}
 
-	if (sounds != nullptr)
+	if (spriteAtlas != nullptr)
 	{
-		delete sounds;
-		sounds = nullptr;
+		delete spriteAtlas;
+		spriteAtlas = nullptr;
 	}
 
 	if (textures != nullptr)
@@ -31,10 +43,9 @@ Resource::~Resource()
 	}
 
 	this->graphics = nullptr;
-	this->audio = nullptr;
 }
 
-void Resource::LoadData(pGameSettings gameSettings, LPCWSTR filePath)
+void Resource::LoadGameSettings(pGameSettings gameSettings, LPCWSTR filePath)
 {
 	xml_document doc;
 	xml_parse_result result = doc.load_file(filePath);
@@ -63,62 +74,38 @@ void Resource::LoadContent(LPCWSTR filePath)
 		textureNode = textureNode.next_sibling("Texture"))
 	{
 		textures->Add(
-			textureNode.attribute("id").as_string(),
+			textureNode.attribute("textureID").as_string(),
 			ToLPCWSTR(textureNode.attribute("source").as_string()),
 			D3DCOLOR_XRGB(
 				textureNode.attribute("transR").as_int(),
 				textureNode.attribute("transG").as_int(),
-				textureNode.attribute("transB").as_int())
-		);
+				textureNode.attribute("transB").as_int()));
+	}
+
+	xml_node spriteAtlasNode = gameContentDoc.child("GameContent").child("SpriteAtlas");
+	for (xml_node textureRegionNode = spriteAtlasNode.child("TextureRegion");
+		textureRegionNode;
+		textureRegionNode = textureRegionNode.next_sibling("TextureRegion"))
+	{
+		spriteAtlas->Add(
+			textureRegionNode.attribute("textureRegionID").as_string(),
+			textureRegionNode.attribute("textureID").as_string(),
+			textureRegionNode.attribute("left").as_int(),
+			textureRegionNode.attribute("top").as_int(),
+			textureRegionNode.attribute("right").as_int(),
+			textureRegionNode.attribute("bottom").as_int());
 	}
 
 	xml_node spritesNode = gameContentDoc.child("GameContent").child("Sprites");
 	for (xml_node spriteNode = spritesNode.child("Sprite");
 		spriteNode;
-		spriteNode = spriteNode.next_sibling("Sprite"))
+		spriteNode = spritesNode.next_sibling("Sprite"))
 	{
 		sprites->Add(
-			spriteNode.attribute("id").as_string(),
-			textures->Get(spriteNode.attribute("textureId").as_string()),
-			spriteNode.attribute("left").as_int(),
-			spriteNode.attribute("top").as_int(),
-			spriteNode.attribute("right").as_int(),
-			spriteNode.attribute("bottom").as_int(),
+			spriteNode.attribute("spriteID").as_string(),
+			spriteNode.attribute("textureRegionID").as_string(),
 			spriteNode.attribute("offsetX").as_float(),
-			spriteNode.attribute("offsetY").as_float()
-		);
+			spriteNode.attribute("offsetY").as_float());
 	}
 
-	//xml_node animationSets
-	//
 }
-
-void Resource::LoadScenes(pScenes scenes, LPCWSTR filePath)
-{
-}
-
-void Resource::LoadScene(pScene scene, LPCWSTR filePath)
-{
-}
-
-//void Resource::LoadSprite(string gameData)
-//{
-//}
-//
-//void Resource::LoadAnimation(string gameData)
-//{
-//}
-//
-//void Resource::LoadGameObject()
-//{
-//}
-
-//bool Resource::Load()
-//{
-//	return false;
-//}
-//
-//template<class T> T Resource::Get()
-//{
-//	return T();
-//}

@@ -1,5 +1,7 @@
 #include "Texture.h"
 
+#pragma region Texture
+
 Texture::Texture()
 {
 	texture = NULL;
@@ -13,8 +15,13 @@ Texture::~Texture()
 	texture = NULL;
 }
 
-Textures::Textures(pGraphics graphics)
+#pragma endregion
+
+#pragma region Textures
+
+Textures::Textures(pResource resource, pGraphics graphics)
 {
+	this->resource = resource;
 	this->graphics = graphics;
 }
 
@@ -24,14 +31,15 @@ Textures::~Textures()
 	this->graphics = nullptr;
 }
 
-void Textures::Add(string id, LPCWSTR filePath, D3DCOLOR transparentColor)
+void Textures::Add(string textureID, LPCWSTR filePath, D3DCOLOR transparentColor)
 {
-	unordered_map<string, pTexture>::const_iterator got = textures.find(id);
+	unordered_map<string, pTexture>::const_iterator got = textures.find(textureID);
 	if (got == textures.end())
 	{
 		pTexture texture = new Texture();
+		texture->textureID = textureID;
 		texture->transparentColor = transparentColor;
-		
+
 		HRESULT result = D3DXGetImageInfoFromFile(filePath, &texture->info);
 		if (result != D3D_OK)
 		{
@@ -62,15 +70,15 @@ void Textures::Add(string id, LPCWSTR filePath, D3DCOLOR transparentColor)
 			return;
 		}
 
-		textures[id] = texture;
+		textures[textureID] = texture;
 
-		DebugOut(L"[INFO] Texture loaded Ok: id = %s \n", ToLPCWSTR(id));
+		DebugOut(L"[INFO] Texture loaded Ok: id = %s \n", ToLPCWSTR(textureID));
 	}
 }
 
-pTexture Textures::Get(string id)
+pTexture Textures::Get(string textureID)
 {
-	return textures[id];
+	return textures[textureID];
 }
 
 void Textures::Clear()
@@ -84,3 +92,17 @@ void Textures::Clear()
 	textures.clear();
 }
 
+#pragma endregion
+
+#pragma region TextureRegion
+
+TextureRegion::TextureRegion()
+{
+	sourceRect = {};
+}
+
+TextureRegion::~TextureRegion()
+{
+}
+
+#pragma endregion

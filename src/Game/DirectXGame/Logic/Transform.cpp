@@ -1,6 +1,6 @@
 #include "Transform.h"
 
-Transform::Transform()
+Transform::Transform() : Component::Component()
 {
 	componentType = ComponentType::Transform;
 }

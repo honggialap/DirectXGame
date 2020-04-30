@@ -13,13 +13,13 @@
   <Sprites>
     <!--Mario-->
     <Sprite id ="mario_idle" textureId ="mario"
-            left ="247" top ="0" right ="258" bottom ="14" offsetX ="0" offsetY ="0"></Sprite>
+            left ="247" top ="0" right ="258" bottom ="14"></Sprite>
     <Sprite id ="mario_walk_001" textureId ="mario"
-            left ="275" top ="0" right ="290" bottom ="15" offsetX ="0" offsetY ="0"></Sprite>
+            left ="275" top ="0" right ="290" bottom ="15"></Sprite>
     <Sprite id ="mario_walk_002" textureId ="mario"
-            left ="306" top ="0" right ="320" bottom ="15" offsetX ="0" offsetY ="0"></Sprite>
+            left ="306" top ="0" right ="320" bottom ="15"></Sprite>
     <Sprite id ="mario_walk_003" textureId ="mario"
-            left ="335" top ="0" right ="350" bottom ="15" offsetX ="0" offsetY ="0"></Sprite>
+            left ="335" top ="0" right ="350" bottom ="15"></Sprite>
 
     <!-- template
     <Sprite id ="" textureId =""

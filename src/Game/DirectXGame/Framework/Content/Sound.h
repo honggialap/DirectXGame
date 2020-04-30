@@ -3,9 +3,6 @@
 #define __SOUND_H__
 
 #include "../../Include.h"
-
-#include <unordered_map>
-
 #include "../Audio.h"
 
 class Sound 

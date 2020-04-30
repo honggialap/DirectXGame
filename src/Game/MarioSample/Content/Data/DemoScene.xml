@@ -1,21 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Scene id ="">
+<Scene>
+  <GameObjects>
+
+    <GameObject id ="mario" gameObjectType ="Mario">
+      <Components>
+        <Component id ="transform" componentType ="Transform">
+          <Transform x ="10" y ="10"></Transform>
+        </Component>
+        <Component id ="mario_idle" componentType ="Sprite">
+          <Sprite id ="mario_idle" offsetX ="" offsetY =""></Sprite>
+        </Component>
+      </Components>
+    </GameObject>
   
-  <GameObject id ="mario" type ="Mario">
-    <Components>
-      <Component componentType ="Transform">
-        <Transform x ="10" y ="10"></Transform></Component>
-      <Component componentType ="Sprite">
-        <Sprite id ="mario_idle"></Sprite></Component>
-      <Component componentType ="AnimationSet">
-        <AnimationSet id ="mario"></AnimationSet></Component>
-    </Components>
-    <Properties
-      jumpForce =""
-      moveSpeed ="">
-    </Properties>
-  </GameObject>
-
-
-
+  </GameObjects>
 </Scene>

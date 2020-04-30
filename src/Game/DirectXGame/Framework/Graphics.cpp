@@ -1,5 +1,7 @@
 #include "Graphics.h"
 
+#pragma region GraphicsDevice
+
 GraphicsDevice::GraphicsDevice()
 {
 	direct3D = NULL;
@@ -23,6 +25,10 @@ GraphicsDevice::~GraphicsDevice()
 	if (direct3D != NULL) direct3D->Release();
 	direct3D = NULL;
 }
+
+#pragma endregion
+
+#pragma region Graphics
 
 Graphics::Graphics()
 {
@@ -84,6 +90,12 @@ void Graphics::Draw(pSprite sprite)
 		sprite->texture->transparentColor);
 }
 
-void Graphics::Draw(pAnimation animation)
-{
-}
+//void Graphics::Draw(pAnimation animation)
+//{
+//}
+//
+//void Graphics::Draw(pTilemap tilemap)
+//{
+//}
+
+#pragma endregion

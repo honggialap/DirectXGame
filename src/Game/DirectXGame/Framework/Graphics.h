@@ -3,13 +3,10 @@
 #define __GRAPHICS_H__
 
 #include "../Include.h"
-
-#include <d3d9.h>
-#include <d3dx9.h>
-
 #include "Application.h"
 #include "../Logic/Sprite.h"
 #include "../Logic/Animation.h"
+//#include "../Logic/Tilemap.h"
 
 class GraphicsDevice
 {
@@ -24,8 +21,6 @@ public:
 	~GraphicsDevice();
 };
 
-typedef GraphicsDevice* pGraphicsDevice;
-
 class Graphics
 {
 public:
@@ -36,9 +31,8 @@ public:
 	void CreateGraphicsDevice(pGameWindow gameWindow);
 
 	void Draw(pSprite sprite);
-	void Draw(pAnimation animation);
+	//void Draw(pAnimation animation);
+	//void Draw(pTilemap tilemap);
 };
-
-typedef Graphics* pGraphics;
 
 #endif // !__GRAPHICS_H__
