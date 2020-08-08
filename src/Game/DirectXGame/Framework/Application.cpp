@@ -1,29 +1,14 @@
 #include "Application.h"
 
-#pragma region GameWindow
-
-GameWindow::GameWindow()
-{
-	hInstance = NULL;
-	hWnd = NULL;
-	windowTitle = NULL;
-	fullscreen = {};
-	width = {};
-	height = {};
-}
-
-GameWindow::~GameWindow()
-{
-}
-
-#pragma endregion
-
-#pragma region Application
-
 Application::Application(HINSTANCE hInstance)
 {
-	this->gameWindow = new GameWindow();
+	gameWindow = new GameWindow();
 	gameWindow->hInstance = hInstance;
+	gameWindow->hWnd = NULL;
+	gameWindow->windowTitle = NULL;
+	gameWindow->fullscreen = {};
+	gameWindow->width = {};
+	gameWindow->height = {};
 }
 
 Application::~Application()
@@ -89,7 +74,7 @@ void Application::CreateGameWindow(LPCWSTR windowTitle, int widthResolution, int
 		windowWidth, windowHeight,				// Size
 		NULL,									// Parent window    
 		NULL,									// Menu
-		gameWindow->hInstance,								// Instance handle
+		gameWindow->hInstance,					// Instance handle
 		NULL									// Additional application data
 	);
 
@@ -114,7 +99,6 @@ bool Application::HandleMessage()
 
 	if (PeekMessage(&msg, NULL, 0, 0, PM_REMOVE))
 	{
-
 		if (msg.message == WM_QUIT)
 			done = true;
 
@@ -140,5 +124,3 @@ LRESULT Application::WinProc(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
 	}
 	return DefWindowProc(hWnd, uMsg, wParam, lParam);
 }
-
-#pragma endregion

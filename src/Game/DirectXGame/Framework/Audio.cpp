@@ -1,19 +1,5 @@
 #include "Audio.h"
 
-#pragma region AudioDevice
-
-AudioDevice::AudioDevice()
-{
-}
-
-AudioDevice::~AudioDevice()
-{
-}
-
-#pragma endregion
-
-#pragma region Audio
-
 Audio::Audio()
 {
 	audioDevice = new AudioDevice();

@@ -1,0 +1,38 @@
+<Prefab layer ="0">
+  <Components>
+
+    <Component componentType="0">
+      <SpriteRenderer ui ="false">
+        <Palette paletteNo ="0" textureID ="item"/>
+        <Sprite spriteID ="crown1" paletting ="false" paletteNo ="0"
+        left = "4" top = "140" right = "67" bottom ="203"
+        offsetX ="0" offsetY ="0"/>
+        <Sprite spriteID ="crown2" paletting ="false" paletteNo ="0"
+        left = "72" top = "140" right = "135" bottom ="203"
+        offsetX ="0" offsetY ="0"/>
+        <Sprite spriteID ="crown3" paletting ="false" paletteNo ="0"
+        left = "140" top = "140" right = "203" bottom ="203"
+        offsetX ="0" offsetY ="0"/>
+        <Sprite spriteID ="crown4" paletting ="false" paletteNo ="0"
+        left = "208" top = "140" right = "271" bottom ="203"
+        offsetX ="0" offsetY ="0"/>
+      </SpriteRenderer>
+    </Component>
+
+    <Component componentType ="1">
+      <Animator>
+        <Animation animationID ="idle">
+          <AnimationFrame spriteID="crown1" frameTime="30"/>
+          <AnimationFrame spriteID="crown2" frameTime="30"/>
+          <AnimationFrame spriteID="crown3" frameTime="30"/>
+          <AnimationFrame spriteID="crown4" frameTime="30"/>
+        </Animation>
+      </Animator>
+    </Component>
+
+    <Component componentType ="5">
+      <Physics/>
+    </Component>
+    
+  </Components>
+</Prefab>

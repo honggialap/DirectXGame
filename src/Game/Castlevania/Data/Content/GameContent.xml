@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GameContent>
+
+  <Textures>
+    <Texture textureID ="bbox"
+             source="Castlevania\Data\Content\Texture\BBox.png"
+             transR ="255" transG ="255" transB="255"/>
+
+    <Texture textureID ="simon_0" 
+             source="Castlevania\Data\Content\Texture\Simon\Simon_0.png"
+             transR ="255" transG ="255" transB="255"/>
+    <Texture textureID ="simon_1" 
+             source="Castlevania\Data\Content\Texture\Simon\Simon_1.png"
+             transR ="255" transG ="255" transB="255"/>
+    <Texture textureID ="simon_2" 
+             source="Castlevania\Data\Content\Texture\Simon\Simon_2.png"
+             transR ="255" transG ="255" transB="255"/>
+    <Texture textureID ="simon_3" 
+             source="Castlevania\Data\Content\Texture\Simon\Simon_3.png"
+             transR ="255" transG ="255" transB="255"/>
+    <Texture textureID ="simon_4" 
+             source="Castlevania\Data\Content\Texture\Simon\Simon_4.png"
+             transR ="255" transG ="255" transB="255"/>
+
+    <Texture textureID ="effect" 
+             source="Castlevania\Data\Content\Texture\Effect.png"
+             transR ="255" transG ="255" transB="255"/>
+    <Texture textureID ="enemy" 
+             source="Castlevania\Data\Content\Texture\Enemy.png"
+             transR ="255" transG ="255" transB="255"/>
+    <Texture textureID ="hud" 
+             source="Castlevania\Data\Content\Texture\HUD.png"
+             transR ="255" transG ="255" transB="255"/>
+    <Texture textureID ="item" 
+             source="Castlevania\Data\Content\Texture\Item.png"
+             transR ="255" transG ="255" transB="255"/>
+    <Texture textureID ="weapon" 
+             source="Castlevania\Data\Content\Texture\Weapon.png"
+             transR ="255" transG ="255" transB="255"/>
+
+    <Texture textureID ="intro" 
+             source="Castlevania\Data\Content\Texture\Misc\CutScene.png"
+             transR ="255" transG ="255" transB="255"/>
+    <Texture textureID ="title" 
+             source="Castlevania\Data\Content\Texture\Misc\TitleScene.png"
+             transR ="255" transG ="255" transB="255"/>
+
+    <Texture textureID ="stage1" 
+             source="Castlevania\Data\Content\Texture\Tileset\Stage1.png"
+             transR ="255" transG ="255" transB="255"/>
+    <Texture textureID ="stage2A" 
+             source="Castlevania\Data\Content\Texture\Tileset\Stage2A.png"
+             transR ="255" transG ="255" transB="255"/>
+    <Texture textureID ="stage2B" 
+             source="Castlevania\Data\Content\Texture\Tileset\Stage2B.png"
+             transR ="255" transG ="255" transB="255"/>
+    <Texture textureID ="stage3A" 
+             source="Castlevania\Data\Content\Texture\Tileset\Stage3A.png"
+             transR ="255" transG ="255" transB="255"/>
+    <Texture textureID ="stage3B" 
+             source="Castlevania\Data\Content\Texture\Tileset\Stage3B.png"
+             transR ="255" transG ="255" transB="255"/>
+    <Texture textureID ="stage4" 
+             source="Castlevania\Data\Content\Texture\Tileset\Stage4.png"
+             transR ="255" transG ="255" transB="255"/>
+    <!--   
+    <Texture textureID ="" 
+             source=""
+             transR ="" transG ="" transB=""/>
+    -->
+  </Textures>
+
+  <Fonts>
+    <Font/>
+  </Fonts>
+
+  <SoundBank>
+    <Sound/>
+  </SoundBank>
+
+</GameContent>

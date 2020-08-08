@@ -1,0 +1,46 @@
+<Prefab layer ="0">
+  <Components>
+
+    <Component componentType="0">
+      <SpriteRenderer ui ="false">
+        <Palette paletteNo ="0" textureID ="enemy"/>
+        <Sprite spriteID ="raven1" paletting ="false" paletteNo ="0"
+        left = "4" top = "340" right = "67" bottom ="403"
+        offsetX ="0" offsetY ="0"/>
+        <Sprite spriteID ="raven2" paletting ="false" paletteNo ="0"
+        left = "72" top = "340" right = "135" bottom ="403"
+        offsetX ="0" offsetY ="0"/>
+        <Sprite spriteID ="raven3" paletting ="false" paletteNo ="0"
+        left = "140" top = "340" right = "203" bottom ="403"
+        offsetX ="0" offsetY ="0"/>
+        <Sprite spriteID ="raven4" paletting ="false" paletteNo ="0"
+        left = "208" top = "340" right = "271" bottom ="403"
+        offsetX ="0" offsetY ="0"/>
+
+      </SpriteRenderer>
+    </Component>
+
+    <Component componentType ="1">
+      <Animator>
+        <Animation animationID ="idle">
+          <AnimationFrame spriteID="raven1" frameTime="0"/>
+        </Animation>
+
+        <Animation animationID ="fly">
+          <AnimationFrame spriteID="raven3" frameTime="30"/>
+          <AnimationFrame spriteID="raven4" frameTime="30"/>
+        </Animation>
+        
+        <Animation animationID ="attack">
+          <AnimationFrame spriteID="raven2" frameTime="0"/>
+        </Animation>
+
+      </Animator>
+    </Component>
+
+    <Component componentType ="5">
+      <Physics/>
+    </Component>
+
+  </Components>
+</Prefab>

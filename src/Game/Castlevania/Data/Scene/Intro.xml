@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<Scene cellWidth="512" cellHeight="480" mode="0">
+	<Player type="0">
+		<Controller>
+			<Keybind keyCode="17" button="0" />
+			<Keybind keyCode="31" button="1" />
+			<Keybind keyCode="30" button="2" />
+			<Keybind keyCode="32" button="3" />
+			<Keybind keyCode="36" button="4" />
+			<Keybind keyCode="37" button="5" />
+			<Keybind keyCode="50" button="6" />
+			<Keybind keyCode="51" button="7" />
+		</Controller>
+		<Viewport left="0" top="0" right="1024" bottom="960" />
+	</Player>
+	<Camera positionX="512" positionY="480" viewport="0" />
+	<GameObject prefabID="intro" positionX="0" positionY="0" />
+	<GameObject prefabID="intro_BG" positionX="513" positionY="383" />
+	<GameObject prefabID="intro_Bat1" positionX="100" positionY="400" />
+	<GameObject prefabID="intro_Bat2" positionX="662" positionY="650" />
+	<GameObject prefabID="intro_Cloud" positionX="1000" positionY="630" />
+	<GameObject prefabID="intro_Simon" positionX="1088" positionY="186" />
+	<Grid>
+		<GameObject cellX="0" cellY="0" />
+		<GameObject cellX="1" cellY="1" />
+		<GameObject cellX="0" cellY="1" />
+		<GameObject cellX="1" cellY="1" />
+		<GameObject cellX="2" cellY="1" />
+		<GameObject cellX="2" cellY="0" />
+	</Grid>
+</Scene>

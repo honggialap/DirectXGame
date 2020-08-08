@@ -1,49 +1,48 @@
 #include "Texture.h"
 
-#pragma region Texture
-
-Texture::Texture()
+Texture::Texture(int r, int g, int b)
 {
-	texture = NULL;
+	texture = {};
 	info = {};
-	transparentColor = {};
+	this->r = r;
+	this->g = g;
+	this->b = b;
 }
 
 Texture::~Texture()
 {
-	if (texture != NULL) texture->Release();
-	texture = NULL;
+	texture->Release();
 }
 
-#pragma endregion
-
-#pragma region Textures
-
-Textures::Textures(pResource resource, pGraphics graphics)
+Textures::Textures(pGraphics graphics)
 {
-	this->resource = resource;
 	this->graphics = graphics;
 }
 
 Textures::~Textures()
 {
-	this->Clear();
+	for (auto texture : textures)
+	{
+		delete texture.second;
+		texture.second = nullptr;
+	}
+	textures.clear();
+	
 	this->graphics = nullptr;
 }
 
-void Textures::Add(string textureID, LPCWSTR filePath, D3DCOLOR transparentColor)
+void Textures::Add(string textureID, LPCWSTR filePath, int r, int g, int b)
 {
 	unordered_map<string, pTexture>::const_iterator got = textures.find(textureID);
 	if (got == textures.end())
 	{
-		pTexture texture = new Texture();
-		texture->textureID = textureID;
-		texture->transparentColor = transparentColor;
+		auto texture = new Texture(r, g, b);
+		D3DCOLOR transparentColor = D3DCOLOR_XRGB(r, g, b);
+		textures[textureID] = texture;
 
 		HRESULT result = D3DXGetImageInfoFromFile(filePath, &texture->info);
 		if (result != D3D_OK)
 		{
-			delete texture;
 			DebugOut(L"[ERROR] GetImageInfoFromFile failed: %s\n", filePath);
 			return;
 		}
@@ -59,20 +58,17 @@ void Textures::Add(string textureID, LPCWSTR filePath, D3DCOLOR transparentColor
 			D3DPOOL_DEFAULT,
 			D3DX_DEFAULT,
 			D3DX_DEFAULT,
-			texture->transparentColor,
+			transparentColor,
 			&texture->info,
 			NULL,
 			&texture->texture);
 		if (result != D3D_OK)
 		{
-			delete texture;
 			OutputDebugString(L"[ERROR] CreateTextureFromFile failed\n");
 			return;
 		}
 
-		textures[textureID] = texture;
-
-		DebugOut(L"[INFO] Texture loaded Ok: id = %s \n", ToLPCWSTR(textureID));
+		DebugOut(L"[INFO] Texture loaded: id = %s \n", ToLPCWSTR(textureID));
 	}
 }
 
@@ -80,29 +76,3 @@ pTexture Textures::Get(string textureID)
 {
 	return textures[textureID];
 }
-
-void Textures::Clear()
-{
-	for (auto i : textures)
-	{
-		delete i.second;
-		i.second = nullptr;
-	}
-
-	textures.clear();
-}
-
-#pragma endregion
-
-#pragma region TextureRegion
-
-TextureRegion::TextureRegion()
-{
-	sourceRect = {};
-}
-
-TextureRegion::~TextureRegion()
-{
-}
-
-#pragma endregion

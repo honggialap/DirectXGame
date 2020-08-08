@@ -4,35 +4,28 @@
 
 #include "../Include.h"
 #include "Application.h"
-#include "../Logic/Sprite.h"
-#include "../Logic/Animation.h"
-//#include "../Logic/Tilemap.h"
+#include "../Logic/Component/Sprite.h"
 
-class GraphicsDevice
+struct GraphicsDevice
 {
-public:
 	LPDIRECT3D9 direct3D;
 	LPDIRECT3DDEVICE9 device;
 	D3DPRESENT_PARAMETERS presentParameters;
 	LPDIRECT3DSURFACE9 backBuffer;
 	LPD3DXSPRITE spriteHandler;
-
-	GraphicsDevice();
-	~GraphicsDevice();
 };
 
 class Graphics
 {
 public:
-	pGraphicsDevice graphicsDevice;
-
 	Graphics();
 	~Graphics();
+	
+	pGraphicsDevice graphicsDevice;
 	void CreateGraphicsDevice(pGameWindow gameWindow);
 
-	void Draw(pSprite sprite);
-	//void Draw(pAnimation animation);
-	//void Draw(pTilemap tilemap);
+	void Draw(float x, float y, pSprite sprite,
+		bool flipX, bool flipY, int alpha);
 };
 
 #endif // !__GRAPHICS_H__

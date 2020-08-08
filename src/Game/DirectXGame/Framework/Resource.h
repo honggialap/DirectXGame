@@ -5,30 +5,36 @@
 #include "../Include.h"
 #include "../Game.h"
 #include "Graphics.h"
+#include "Audio.h"
 #include "Content/Texture.h"
-#include "../Logic/Scene.h"
-//#include "../Logic/GameObject.h"
-#include "../Logic/Sprite.h"
-//#include "../Logic/Animation.h"
-//#include "../Logic/Tilemap.h"
+#include "Content/Font.h"
+#include "Content/Sound.h"
 
 class Resource
 {
-public:
+private:
 	pGraphics graphics;
+	pAudio audio;
+
+public:
+	xml_document gameDataDoc;
+	string source;
+
 	pTextures textures;
-	pSpriteAtlas spriteAtlas;
-	pSprites sprites;
-	//pAnimations animations;
-	//pTilemaps tilemaps
+	pSoundBank soundBank;
+	pFonts fonts;
 
-	//pPrefabs prefabs;
-
-	Resource(pGraphics graphics);
+public:
+	Resource(pGraphics graphics, pAudio audio);
 	~Resource();
 
-	void LoadGameSettings(pGameSettings gameSettings, LPCWSTR filePath);
-	void LoadContent(LPCWSTR filePath);
+	void LoadGameData(LPCWSTR filePath);
+	void LoadGameSettings(pGame game);
+	
+	void LoadContent();
+	void LoadTextures();
+	void LoadSoundBank();
+	void LoadFonts();
 };
 
 #endif // !__RESOURCE_H__

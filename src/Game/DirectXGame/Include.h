@@ -2,129 +2,157 @@
 #ifndef __DIRECTXGAME_INCLUDE_H__
 #define __DIRECTXGAME_INCLUDE_H__
 
+#pragma region Include
+
+// Standard Library
+#include <algorithm>
+#include <iostream>
+#include <iostream>
+#include <sstream>
+#include <stdio.h>
+#include <stdarg.h>
+#include <time.h>
+#include <stdlib.h>
+#include <chrono>
+#include <cmath>
+
+#include <vector>
+#include <string>
+#include <map>
+#include <unordered_map>
+#include <signal.h>
+#include <string.h>
+
+// API
+#include <Windows.h>
+#include <d3d9.h>
+#include <d3dx9.h>
+#include <d3dx9math.h>
+#include <dinput.h>
+#include "Library/pugixml/pugixml.hpp"
+//#include <winsock2.h>
+//#include <WS2tcpip.h>
+
+using namespace std;
+using namespace pugi;
+using namespace std::chrono;
+
+#pragma endregion
+
 #pragma region Forward Declaration
 
-#pragma region Framework
 class Game;
 typedef Game* pGame;
-
-class GameSettings;
+struct GameSettings;
 typedef GameSettings* pGameSettings;
 
 class Application;
 typedef Application* pApplication;
-
-class GameWindow;
+struct GameWindow;
 typedef GameWindow* pGameWindow;
 
 class Time;
 typedef Time* pTime;
 
-class GameTime;
-typedef GameTime* pGameTime;
-
 class Graphics;
 typedef Graphics* pGraphics;
-
-class GraphicsDevice;
+struct GraphicsDevice;
 typedef GraphicsDevice* pGraphicsDevice;
 
 class Input;
 typedef Input* pInput;
-
-class InputDevice;
+struct InputDevice;
 typedef InputDevice* pInputDevice;
+class KeyHandler;
+typedef KeyHandler* pKeyHandler;
+
+class Audio;
+typedef Audio* pAudio;
+struct AudioDevice;
+typedef AudioDevice* pAudioDevice;
+
+class Networks;
+typedef Networks* pNetworks;
+struct NetworksDevice;
+typedef NetworksDevice* pNetworksDevice;
 
 class Resource;
 typedef Resource* pResource;
-
-class Texture;
+struct Texture;
 typedef Texture* pTexture;
-
 class Textures;
 typedef Textures* pTextures;
-
-class TextureRegion;
-typedef TextureRegion* pTextureRegion;
-
-#pragma endregion
-
-#pragma region Logic
+struct Font;
+typedef Font* pFont;
+class Fonts;
+typedef Fonts* pFonts;
+struct SoundClip;
+typedef SoundClip* pSoundClip;
+class SoundBank;
+typedef SoundBank* pSoundBank;
 
 class Scene;
 typedef Scene* pScene;
 
-class Scenes;
-typedef Scenes* pScenes;
-
-class Prefab;
-typedef Prefab* pPrefab;
-
-class Prefabs;
-typedef Prefabs* pPrefabs;
-
 class GameObject;
 typedef GameObject* pGameObject;
-
-class GameObjects;
-typedef GameObjects* pGameObjects;
 
 class Component;
 typedef Component* pComponent;
 
-class Components;
-typedef Components* pComponents;
-
-class Transform;
-typedef Transform* pTransform;
-
-class Sprite;
+class SpriteRenderer;
+typedef SpriteRenderer* pSpriteRenderer;
+struct Sprite;
 typedef Sprite* pSprite;
 
-class Sprites;
-typedef Sprites* pSprites;
-
-class SpriteAtlas;
-typedef SpriteAtlas* pSpriteAtlas;
-
-class AnimationFrame;
+class Animator;
+typedef Animator* pAnimator;
+struct Animation;
+typedef Animation* pAnimation;
+struct AnimationFrame;
 typedef AnimationFrame* pAnimationFrame;
 
-class AnimationFrames;
-typedef AnimationFrames* pAnimationFrames;
+class Tilemap;
+typedef Tilemap* pTilemap;
 
-class Animation;
-typedef Animation* pAnimation;
+class TextRenderer;
+typedef TextRenderer* pTextRenderer;
+struct Text;
+typedef Text* pText;
 
-class Animations;
-typedef Animations* pAnimations;
+class Physics;
+typedef Physics* pPhysics;
+struct Collision;
+typedef Collision* pCollision;
 
-class AnimationSet;
-typedef AnimationSet* pAnimationSet;
+class SoundSource;
+typedef SoundSource* pSoundSource;
+struct Sound;
+typedef Sound* pSound;
 
-class AnimationSets;
-typedef AnimationSets* pAnimationSets;
+class Camera;
+typedef Camera* pCamera;
 
-class Body;
-typedef Body* pBody;
+class Player;
+typedef Player* pPlayer;
 
-class Collider;
-typedef Collider* pCollider;
-
-class Colliders;
-typedef Colliders* pColliders;
-
-class CollisionEvent;
-typedef CollisionEvent* pCollisionEvent;
-
-class CollisionEvents;
-typedef CollisionEvents* pCollisionEvents;
+class LocalPlayer;
+typedef LocalPlayer* pLocalPlayer;
+class Controller;
+typedef Controller* pController;
+class Viewport;
+typedef Viewport* pViewport;
 
 #pragma endregion
 
-#pragma endregion
+#pragma region Ultilities
 
-#include "Framework/Ultilities.h"
-#include "Framework/Math.h"
+const double pi = 3.14159;
+
+void DebugOut(const wchar_t* fmt, ...);
+wstring ToWSTR(string st);
+LPCWSTR ToLPCWSTR(string st);
+
+#pragma endregion
 
 #endif //!__DIRECTXGAME_INCLUDE_H__

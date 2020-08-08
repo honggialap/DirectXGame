@@ -1,0 +1,41 @@
+#include "../Include.h"
+
+void DebugOut(const wchar_t* fmt, ...)
+{
+	va_list argp;
+	va_start(argp, fmt);
+	wchar_t dbg_out[4096];
+	vswprintf_s(dbg_out, fmt, argp);
+	va_end(argp);
+	OutputDebugString(dbg_out);
+}
+
+wstring ToWSTR(string st)
+{
+	const char* str = st.c_str();
+
+	size_t newsize = strlen(str) + 1;
+	wchar_t* wcstring = new wchar_t[newsize];
+	size_t convertedChars = 0;
+	mbstowcs_s(&convertedChars, wcstring, newsize, str, _TRUNCATE);
+
+	wstring wstr(wcstring);
+
+	// delete wcstring   // << can I ? 
+	return wstr;
+}
+
+LPCWSTR ToLPCWSTR(string st)
+{
+	const char* str = st.c_str();
+
+	size_t newsize = strlen(str) + 1;
+	wchar_t* wcstring = new wchar_t[newsize];
+	size_t convertedChars = 0;
+	mbstowcs_s(&convertedChars, wcstring, newsize, str, _TRUNCATE);
+
+	wstring* w = new wstring(wcstring);
+
+	// delete wcstring   // << can I ? 
+	return w->c_str();
+}

@@ -1,0 +1,484 @@
+<Prefabs>
+    <!--    Game Master   -->
+    <Prefab prefabID ="gameMaster">
+      <Components>
+      </Components>
+    </Prefab>
+    
+    <Prefab prefabID ="hud">
+      <Components>
+      </Components>
+    </Prefab>
+
+    <!--    Player    -->
+    <Prefab prefabID ="simon">
+      <Components>
+
+        <Component componentType ="0">
+          <SpriteRenderer>
+            <Sprite spriteID ="idle" textureID ="simon"
+                    left ="116" top ="84" right ="179" bottom ="211"
+                    offsetX ="0" offsetY ="0"></Sprite>
+            <Sprite spriteID ="walk1" textureID ="simon"
+                    left ="184" top ="84" right ="247" bottom ="211"
+                    offsetX ="0" offsetY ="0"></Sprite>
+            <Sprite spriteID ="walk2" textureID ="simon"
+                    left ="252" top ="84" right ="315" bottom ="211"
+                    offsetX ="0" offsetY ="0"></Sprite>
+            <Sprite spriteID ="crouch" textureID ="simon"
+                    left ="336" top ="84" right ="399" bottom ="211"
+                    offsetX ="0" offsetY ="0"></Sprite>
+            <Sprite spriteID ="ascend" textureID ="simon"
+                    left ="616" top ="84" right ="679" bottom ="211"
+                    offsetX ="0" offsetY ="0"></Sprite>
+            <Sprite spriteID ="descend" textureID ="simon"
+                    left ="844" top ="84" right ="907" bottom ="211"
+                    offsetX ="0" offsetY ="0"></Sprite>
+            <Sprite spriteID ="hurt" textureID ="simon"
+                    left ="1100" top ="84" right ="1163" bottom ="211"
+                    offsetX ="0" offsetY ="0"></Sprite>
+            <Sprite spriteID ="death1" textureID ="simon"
+                    left ="1232" top ="84" right ="1295" bottom ="211"
+                    offsetX ="0" offsetY ="0"></Sprite>
+            <Sprite spriteID ="death2" textureID ="simon"
+                    left ="1300" top ="84" right ="1427" bottom ="147"
+                    offsetX ="0" offsetY ="0"></Sprite>
+            <Sprite spriteID ="intro" textureID ="simon"
+                    left ="1448" top ="84" right ="1511" bottom ="211"
+                    offsetX ="0" offsetY ="0"></Sprite>
+            <Sprite spriteID ="attack1" textureID ="simon"
+                    left ="4" top ="312" right ="99" bottom ="439"
+                    offsetX ="0" offsetY ="0"></Sprite>
+            <Sprite spriteID ="attack2" textureID ="simon"
+                    left ="104" top ="312" right ="167" bottom ="439"                    
+                    offsetX ="0" offsetY ="0"></Sprite>
+            <Sprite spriteID ="attack3" textureID ="simon"
+                    left ="172" top ="312" right ="267" bottom ="439"
+                    offsetX ="0" offsetY ="0"></Sprite>
+            <Sprite spriteID ="crouchAttack1" textureID ="simon"
+                    left ="588" top ="312" right ="683" bottom ="439"
+                    offsetX ="0" offsetY ="0"></Sprite>
+            <Sprite spriteID ="crouchAttack2" textureID ="simon"
+                    left ="688" top ="312" right ="751" bottom ="439"
+                    offsetX ="0" offsetY ="0"></Sprite>
+            <Sprite spriteID ="crouchAttack3" textureID ="simon"
+                    left ="756" top ="312" right ="851" bottom ="439"
+                    offsetX ="0" offsetY ="0"></Sprite>
+            <Sprite spriteID ="ascendAttack1" textureID ="simon"
+                    left ="1172" top ="312" right ="1267" bottom ="439"
+                    offsetX ="0" offsetY ="0"></Sprite>
+            <Sprite spriteID ="ascendAttack2" textureID ="simon"
+                    left ="1272" top ="312" right ="1335" bottom ="439"
+                    offsetX ="0" offsetY ="0"></Sprite>
+            <Sprite spriteID ="ascendAttack3" textureID ="simon"
+                    left ="1340" top ="312" right ="1435" bottom ="439"
+                    offsetX ="0" offsetY ="0"></Sprite>
+            <Sprite spriteID ="decendAttack1" textureID ="simon"
+                    left ="1756" top ="312" right ="1851" bottom ="439"
+                    offsetX ="0" offsetY ="0"></Sprite>
+            <Sprite spriteID ="decendAttack2" textureID ="simon"
+                    left ="1856" top ="312" right ="1919" bottom ="439"
+                    offsetX ="0" offsetY ="0"></Sprite>
+            <Sprite spriteID ="decendAttack3" textureID ="simon"
+                    left ="1924" top ="312" right ="2019" bottom ="439"
+                    offsetX ="0" offsetY ="0"></Sprite>
+          </SpriteRenderer>
+        </Component>
+
+        <Component componentType ="1">
+          <Animator>
+            <Animation animationID ="idle">
+              <AnimationFrame spriteID ="idle" frameTime ="0"></AnimationFrame>
+            </Animation>
+            <Animation animationID ="crouch">
+              <AnimationFrame spriteID ="crouch" frameTime ="0"></AnimationFrame>
+            </Animation>
+            <Animation animationID ="hurt">
+              <AnimationFrame spriteID ="hurt" frameTime ="0"></AnimationFrame>
+            </Animation>
+            <Animation animationID ="intro">
+              <AnimationFrame spriteID ="intro" frameTime ="0"></AnimationFrame>
+            </Animation>
+            <Animation animationID ="walk">
+              <AnimationFrame spriteID ="idle" frameTime ="100"></AnimationFrame>
+              <AnimationFrame spriteID ="walk1" frameTime ="100"></AnimationFrame>
+              <AnimationFrame spriteID ="walk2" frameTime ="100"></AnimationFrame>
+              <AnimationFrame spriteID ="walk1" frameTime ="100"></AnimationFrame>
+            </Animation>
+            <Animation animationID ="attack">
+              <AnimationFrame spriteID ="attack1" frameTime ="100"></AnimationFrame>
+              <AnimationFrame spriteID ="attack2" frameTime ="100"></AnimationFrame>
+              <AnimationFrame spriteID ="attack3" frameTime ="100"></AnimationFrame>
+            </Animation>
+            <Animation animationID ="crouchAttack">
+              <AnimationFrame spriteID ="crouchAttack1" frameTime ="100"></AnimationFrame>
+              <AnimationFrame spriteID ="crouchAttack2" frameTime ="100"></AnimationFrame>
+              <AnimationFrame spriteID ="crouchAttack3" frameTime ="100"></AnimationFrame>
+            </Animation>
+            <Animation animationID ="ascendAttack">
+              <AnimationFrame spriteID ="ascendAttack1" frameTime ="100"></AnimationFrame>
+              <AnimationFrame spriteID ="ascendAttack2" frameTime ="100"></AnimationFrame>
+              <AnimationFrame spriteID ="ascendAttack3" frameTime ="100"></AnimationFrame>
+            </Animation>
+            <Animation animationID ="descendAttack">
+              <AnimationFrame spriteID ="descendAttack1" frameTime ="100"></AnimationFrame>
+              <AnimationFrame spriteID ="descendAttack2" frameTime ="100"></AnimationFrame>
+              <AnimationFrame spriteID ="descendAttack3" frameTime ="100"></AnimationFrame>
+            </Animation>
+            <Animation animationID ="death">
+              <AnimationFrame spriteID ="death1" frameTime ="100"></AnimationFrame>
+              <AnimationFrame spriteID ="death2" frameTime ="100"></AnimationFrame>
+            </Animation>
+          </Animator>
+        </Component>
+
+        <Component componentType="3">
+          <Physics>
+            <Body></Body>
+            <Collider></Collider>
+            <Collidable></Collidable>
+          </Physics>
+        </Component>
+        
+      </Components>
+      <GameStats>
+        <Default></Default>
+        <Save></Save>
+      </GameStats>
+    </Prefab>
+    
+    <Prefab prefabID ="vampireKiller">
+      <Components>
+      </Components>
+    </Prefab>
+    
+    <Prefab prefabID ="axe">
+      <Components>
+      </Components>
+    </Prefab>
+    
+    <Prefab prefabID ="boomerang">
+      <Components>
+      </Components>
+    </Prefab>
+      
+    <Prefab prefabID ="dagger">
+      <Components>
+      </Components>
+    </Prefab>
+      
+    <Prefab prefabID ="firebomb">
+      <Components>
+      </Components>
+    </Prefab>
+      
+    <Prefab prefabID ="stopwatch">
+      <Components>
+      </Components>
+    </Prefab>
+
+    <!--    Weapon Pickup   -->
+    <Prefab prefabID ="morningStar">
+      <Components>
+      </Components>
+    </Prefab>
+
+    <Prefab prefabID ="axeItem">
+      <Components>
+      </Components>
+    </Prefab>
+
+    <Prefab prefabID ="boomerangItem">
+      <Components>
+      </Components>
+    </Prefab>
+
+    <Prefab prefabID ="daggerItem">
+      <Components>
+      </Components>
+    </Prefab>
+
+    <Prefab prefabID ="firebombItem">
+      <Components>
+      </Components>
+    </Prefab>
+
+    <Prefab prefabID ="stopwatchItem">
+      <Components>
+      </Components>
+    </Prefab>
+
+    <!--    Player Pickup   -->
+    <Prefab prefabID ="smallHeart">
+      <Components>
+      </Components>
+    </Prefab>
+
+    <Prefab prefabID ="largeHeart">
+      <Components>
+      </Components>
+    </Prefab>
+
+    <Prefab prefabID ="porkChop">
+      <Components>
+      </Components>
+    </Prefab>
+
+    <Prefab prefabID ="extraLife">
+      <Components>
+      </Components>
+    </Prefab>
+    
+    <Prefab prefabID ="doubleShot">
+      <Components>
+      </Components>
+    </Prefab>
+    
+    <Prefab prefabID ="tripleShot">
+      <Components>
+      </Components>
+    </Prefab>
+    
+    <Prefab prefabID ="potion">
+      <Components>
+      </Components>
+    </Prefab>
+    
+    <Prefab prefabID ="cross">
+      <Components>
+      </Components>
+    </Prefab>
+    
+    <Prefab prefabID ="magicCrystal">
+      <Components>
+      </Components>
+    </Prefab>
+
+    <!--    Bonus Pickup    -->
+    <Prefab prefabID ="moneyBag100">
+      <Components>
+      </Components>
+    </Prefab>
+
+    <Prefab prefabID ="moneyBag400">
+      <Components>
+      </Components>
+    </Prefab>
+    
+    <Prefab prefabID ="moneyBag700">
+      <Components>
+      </Components>
+    </Prefab>
+    
+    <Prefab prefabID ="moneyBag1000">
+      <Components>
+      </Components>
+    </Prefab>
+    
+    <Prefab prefabID ="crown">
+      <Components>
+      </Components>
+    </Prefab>
+    
+    <Prefab prefabID ="moai">
+      <Components>
+      </Components>
+    </Prefab>
+    
+    <Prefab prefabID ="treasureChest">
+      <Components>
+      </Components>
+    </Prefab>
+    
+    <!--    Prop    -->
+    <Prefab prefabID ="breakableBrick">
+      <Components>
+      </Components>
+    </Prefab>
+    
+    <Prefab prefabID ="candle">
+      <Components>
+      </Components>
+    </Prefab>
+      
+    <Prefab prefabID ="tourch">
+      <Components>
+      </Components>
+    </Prefab>
+    
+    <Prefab prefabID ="door">
+      <Components>
+      </Components>
+    </Prefab>
+
+    <Prefab prefabID ="platform">
+      <Components>
+      </Components>
+    </Prefab>
+
+    <Prefab prefabID ="movingPlatform">
+      <Components>
+      </Components>
+    </Prefab>
+
+    <Prefab prefabID ="stair">
+      <Components>
+      </Components>
+    </Prefab>
+    
+    <!--    Enemy   -->
+    <Prefab prefabID ="vampireBat">
+      <Components>
+      </Components>
+    </Prefab>
+
+    <Prefab prefabID ="blackKnight">
+      <Components>
+      </Components>
+    </Prefab>
+
+    <Prefab prefabID ="hunchback">
+      <Components>
+      </Components>
+    </Prefab>
+
+    <Prefab prefabID ="raven">
+      <Components>
+      </Components>
+    </Prefab>
+
+    <Prefab prefabID ="skeleton">
+      <Components>
+      </Components>
+    </Prefab>
+
+    <Prefab prefabID ="skeletonBone">
+      <Components>
+      </Components>
+    </Prefab>
+    
+    <Prefab prefabID ="zombie">
+      <Components>
+      </Components>
+    </Prefab>
+
+    <Prefab prefabID ="phantomBat">
+      <Components>
+      </Components>
+    </Prefab>
+
+    <Prefab prefabID ="fireball">
+      <Components>
+      </Components>
+    </Prefab>
+
+    <!--    Effects   -->
+    <Prefab prefabID ="hitEffect">
+      <Components>
+      </Components>
+    </Prefab>
+    
+    <Prefab prefabID ="deathEffect">
+      <Components>
+      </Components>
+    </Prefab>
+    
+    <Prefab prefabID ="brokenBrick">
+      <Components>
+      </Components>
+    </Prefab>
+    
+    <!--    Background   -->
+    <Prefab prefabID ="stage1">
+      <Components>
+      </Components>
+    </Prefab>
+
+    <Prefab prefabID ="stage2A">
+      <Components>
+      </Components>
+    </Prefab>
+    
+    <Prefab prefabID ="stage2B">
+      <Components>
+      </Components>
+    </Prefab>
+    
+    <Prefab prefabID ="stage3A">
+      <Components>
+      </Components>
+    </Prefab>
+    
+    <Prefab prefabID ="stage3B">
+      <Components>
+      </Components>
+    </Prefab>
+    
+    <Prefab prefabID ="stage4">
+      <Components>
+      </Components>
+    </Prefab>
+    
+    <!--template-->
+    <!--
+    <Prefab prefabID ="">
+      <Components>
+        
+        <Component componentType ="0">
+          <SpriteRenderer>
+            <Sprite spriteID ="" textureID =""
+                    left = "" top = "" right = "" bottom =""
+                    offsetX ="" offsetY =""></Sprite>
+            <Sprite spriteID ="" textureID =""
+                    left = "" top = "" right = "" bottom =""
+                    offsetX ="" offsetY =""></Sprite>
+          </SpriteRenderer>
+        </Component>
+        
+        <Component componentType="1">
+          <TextRenderer>
+          </TextRenderer>
+        </Component>
+
+        <Component componentType ="2">
+          <Animator>
+            <Animation animationID ="">
+              <AnimationFrame spriteID ="" frameTime =""></AnimationFrame>
+              <AnimationFrame spriteID ="" frameTime =""></AnimationFrame>
+            </Animation>
+            <Animation animationID ="">
+              <AnimationFrame spriteID ="" frameTime =""></AnimationFrame>
+              <AnimationFrame spriteID ="" frameTime =""></AnimationFrame>
+            </Animation>
+          </Animator>
+        </Component>
+
+    <Component componentType="3">
+      <Tilemap column ="" row =""
+               tileHeight = "" tileWidth ="">
+        <Tileset>
+          <Tile spriteID =""></Tile>
+          <Tile spriteID =""></Tile>
+          <Tile spriteID =""></Tile>
+        </Tileset>
+        <Map>
+          <Cell tile =""></Cell>
+          <Cell tile =""></Cell>
+          <Cell tile =""></Cell>
+        </Map>
+      </Tilemap>
+    </Component>
+
+        <Component componentType="4">
+          <Physics>
+            <Body></Body>
+            <Collider></Collider>
+            <Collidable></Collidable>
+          </Physics>
+        </Component>
+       
+      </Components>
+    </Prefab>
+    -->
+
+  </Prefabs>

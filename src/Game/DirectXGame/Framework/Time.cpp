@@ -1,36 +1,13 @@
 #include "Time.h"
 
-#pragma region GameTime
-
-GameTime::GameTime()
+Time::Time()
 {
 	elapsedMilliseconds = 0;
 	totalElapsedMilliseconds = 0;
 }
 
-GameTime::~GameTime()
-{
-}
-
-#pragma endregion
-
-#pragma region Time
-
-Time::Time()
-{
-	gameTime = new GameTime();
-
-	elapsedTime = { 0 };
-	totalElapsedTime = { 0 };
-}
-
 Time::~Time()
 {
-	if (gameTime != nullptr)
-	{
-		delete gameTime;
-		gameTime = nullptr;
-	}
 }
 
 void Time::Start()
@@ -43,24 +20,25 @@ void Time::Update()
 {
 	previousTimeStamp = currentTimeStamp;
 	currentTimeStamp = clock.now();
-	duration<double, milli> delta = duration_cast<duration<double, milli>>(currentTimeStamp - previousTimeStamp);
-
-	elapsedTime = delta;
-	totalElapsedTime += delta;
-
-	gameTime->elapsedMilliseconds = elapsedTime.count();
-	gameTime->totalElapsedMilliseconds = totalElapsedTime.count();
+	elapsedMilliseconds = duration_cast<duration<float, milli>>
+		(currentTimeStamp - previousTimeStamp).count();
+	totalElapsedMilliseconds = duration_cast<duration<float, milli>>
+		(currentTimeStamp - startTimeStamp).count();
 }
 
 void Time::Restart()
 {
-	gameTime->elapsedMilliseconds = 0;
-	gameTime->totalElapsedMilliseconds = 0;
-
-	elapsedTime = { 0 };
-	totalElapsedTime = { 0 };
-
+	elapsedMilliseconds = 0;
+	totalElapsedMilliseconds = 0;
 	Start();
 }
 
-#pragma endregion
+float Time::ElapsedMilliseconds()
+{
+	return elapsedMilliseconds;
+}
+
+float Time::TotalElapsedMilliseconds()
+{
+	return totalElapsedMilliseconds;
+}

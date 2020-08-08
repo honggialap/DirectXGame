@@ -1,0 +1,187 @@
+<Prefab layer ="1">
+  <Components>
+    <Component componentType ="0">
+      <SpriteRenderer ui ="false">
+        <Palette paletteNo ="0" textureID ="title"></Palette>
+        <!---->
+        <Sprite spriteID ="0" paletting ="false" paletteNo ="0"
+                left = "4" top = "1024" right = "291" bottom ="1247"
+                offsetX ="0" offsetY ="0"></Sprite>
+        <Sprite spriteID ="1" paletting ="false" paletteNo ="0"
+                left = "296" top = "1024" right = "583" bottom ="1247"
+                offsetX ="0" offsetY ="0"></Sprite>
+        <Sprite spriteID ="2" paletting ="false" paletteNo ="0"
+                left = "588" top = "1024" right = "875" bottom ="1247"
+                offsetX ="0" offsetY ="0"></Sprite>
+        <Sprite spriteID ="3" paletting ="false" paletteNo ="0"
+                left = "880" top = "1024" right = "1167" bottom ="1247"
+                offsetX ="0" offsetY ="0"></Sprite>
+        <Sprite spriteID ="4" paletting ="false" paletteNo ="0"
+                left = "1172" top = "1024" right = "1459" bottom ="1247"
+                offsetX ="0" offsetY ="0"></Sprite>
+        <Sprite spriteID ="5" paletting ="false" paletteNo ="0"
+                left = "1464" top = "1024" right = "1751" bottom ="1247"
+                offsetX ="0" offsetY ="0"></Sprite>
+        <Sprite spriteID ="6" paletting ="false" paletteNo ="0"
+                left = "1756" top = "1024" right = "2043" bottom ="1247"
+                offsetX ="0" offsetY ="0"></Sprite>
+        <Sprite spriteID ="7" paletting ="false" paletteNo ="0"
+                left = "2048" top = "1024" right = "2335" bottom ="1247"
+                offsetX ="0" offsetY ="0"></Sprite>
+        <Sprite spriteID ="8" paletting ="false" paletteNo ="0"
+                left = "2340" top = "1024" right = "2627" bottom ="1247"
+                offsetX ="0" offsetY ="0"></Sprite>
+        <Sprite spriteID ="9" paletting ="false" paletteNo ="0"
+                left = "2632" top = "1024" right = "2919" bottom ="1247"
+                offsetX ="0" offsetY ="0"></Sprite>
+        <!---->
+        <Sprite spriteID ="10" paletting ="false" paletteNo ="0"
+                left = "4" top = "1252" right = "291" bottom ="1475"
+                offsetX ="0" offsetY ="0"></Sprite>
+        <Sprite spriteID ="11" paletting ="false" paletteNo ="0"
+                left = "296" top = "1252" right = "583" bottom ="1475"
+                offsetX ="0" offsetY ="0"></Sprite>
+        <Sprite spriteID ="12" paletting ="false" paletteNo ="0"
+                left = "588" top = "1252" right = "875" bottom ="1475"
+                offsetX ="0" offsetY ="0"></Sprite>
+        <Sprite spriteID ="13" paletting ="false" paletteNo ="0"
+                left = "880" top = "1252" right = "1167" bottom ="1475"
+                offsetX ="0" offsetY ="0"></Sprite>
+        <Sprite spriteID ="14" paletting ="false" paletteNo ="0"
+                left = "1172" top = "1252" right = "1459" bottom ="1475"
+                offsetX ="0" offsetY ="0"></Sprite>
+        <Sprite spriteID ="15" paletting ="false" paletteNo ="0"
+                left = "1464" top = "1252" right = "1751" bottom ="1475"
+                offsetX ="0" offsetY ="0"></Sprite>
+        <Sprite spriteID ="16" paletting ="false" paletteNo ="0"
+                left = "1756" top = "1252" right = "2043" bottom ="1475"
+                offsetX ="0" offsetY ="0"></Sprite>
+        <Sprite spriteID ="17" paletting ="false" paletteNo ="0"
+                left = "2048" top = "1252" right = "2335" bottom ="1475"
+                offsetX ="0" offsetY ="0"></Sprite>
+        <Sprite spriteID ="18" paletting ="false" paletteNo ="0"
+                left = "2340" top = "1252" right = "2627" bottom ="1475"
+                offsetX ="0" offsetY ="0"></Sprite>
+        <Sprite spriteID ="19" paletting ="false" paletteNo ="0"
+                left = "2632" top = "1252" right = "2919" bottom ="1475"
+                offsetX ="0" offsetY ="0"></Sprite>
+        <!---->
+        <Sprite spriteID ="20" paletting ="false" paletteNo ="0"
+                left = "4" top = "1480" right = "291" bottom ="1703"
+                offsetX ="0" offsetY ="0"></Sprite>
+        <Sprite spriteID ="21" paletting ="false" paletteNo ="0"
+                left = "296" top = "1480" right = "583" bottom ="1703"
+                offsetX ="0" offsetY ="0"></Sprite>
+        <Sprite spriteID ="22" paletting ="false" paletteNo ="0"
+                left = "588" top = "1480" right = "875" bottom ="1703"
+                offsetX ="0" offsetY ="0"></Sprite>
+        <Sprite spriteID ="23" paletting ="false" paletteNo ="0"
+                left = "880" top = "1480" right = "1167" bottom ="1703"
+                offsetX ="0" offsetY ="0"></Sprite>
+        <Sprite spriteID ="24" paletting ="false" paletteNo ="0"
+                left = "1172" top = "1480" right = "1459" bottom ="1703"
+                offsetX ="0" offsetY ="0"></Sprite>
+        <Sprite spriteID ="25" paletting ="false" paletteNo ="0"
+                left = "1464" top = "1480" right = "1751" bottom ="1703"
+                offsetX ="0" offsetY ="0"></Sprite>
+        <Sprite spriteID ="26" paletting ="false" paletteNo ="0"
+                left = "1756" top = "1480" right = "2043" bottom ="1703"
+                offsetX ="0" offsetY ="0"></Sprite>
+        <Sprite spriteID ="27" paletting ="false" paletteNo ="0"
+                left = "2048" top = "1480" right = "2335" bottom ="1703"
+                offsetX ="0" offsetY ="0"></Sprite>
+        <Sprite spriteID ="28" paletting ="false" paletteNo ="0"
+                left = "2340" top = "1480" right = "2627" bottom ="1703"
+                offsetX ="0" offsetY ="0"></Sprite>
+        <Sprite spriteID ="29" paletting ="false" paletteNo ="0"
+                left = "2632" top = "1480" right = "2919" bottom ="1703"
+                offsetX ="0" offsetY ="0"></Sprite>
+        <!---->
+        <Sprite spriteID ="30" paletting ="false" paletteNo ="0"
+                left = "4" top = "1708" right = "291" bottom ="1931"
+                offsetX ="0" offsetY ="0"></Sprite>
+        <Sprite spriteID ="31" paletting ="false" paletteNo ="0"
+                left = "296" top = "1708" right = "583" bottom ="1931"
+                offsetX ="0" offsetY ="0"></Sprite>
+        <Sprite spriteID ="32" paletting ="false" paletteNo ="0"
+                left = "588" top = "1708" right = "875" bottom ="1931"
+                offsetX ="0" offsetY ="0"></Sprite>
+        <Sprite spriteID ="33" paletting ="false" paletteNo ="0"
+                left = "880" top = "1708" right = "1167" bottom ="1931"
+                offsetX ="0" offsetY ="0"></Sprite>
+        <Sprite spriteID ="34" paletting ="false" paletteNo ="0"
+                left = "1172" top = "1708" right = "1459" bottom ="1931"
+                offsetX ="0" offsetY ="0"></Sprite>
+        <Sprite spriteID ="35" paletting ="false" paletteNo ="0"
+                left = "1464" top = "1708" right = "1751" bottom ="1931"
+                offsetX ="0" offsetY ="0"></Sprite>
+        <Sprite spriteID ="36" paletting ="false" paletteNo ="0"
+                left = "1756" top = "1708" right = "2043" bottom ="1931"
+                offsetX ="0" offsetY ="0"></Sprite>
+        <Sprite spriteID ="37" paletting ="false" paletteNo ="0"
+                left = "2048" top = "1708" right = "2335" bottom ="1931"
+                offsetX ="0" offsetY ="0"></Sprite>
+        <Sprite spriteID ="38" paletting ="false" paletteNo ="0"
+                left = "2340" top = "1708" right = "2627" bottom ="1931"
+                offsetX ="0" offsetY ="0"></Sprite>
+        <Sprite spriteID ="39" paletting ="false" paletteNo ="0"
+                left = "2632" top = "1708" right = "2919" bottom ="1931"
+                offsetX ="0" offsetY ="0"></Sprite>
+
+      </SpriteRenderer>
+    </Component>
+
+    <Component componentType ="1">
+      <Animator>
+        <Animation animationID ="begin">
+          <AnimationFrame spriteID ="0" frameTime ="80"></AnimationFrame>
+          <AnimationFrame spriteID ="1" frameTime ="80"></AnimationFrame>
+          <AnimationFrame spriteID ="2" frameTime ="80"></AnimationFrame>
+          <AnimationFrame spriteID ="3" frameTime ="80"></AnimationFrame>
+          <AnimationFrame spriteID ="4" frameTime ="80"></AnimationFrame>
+          <AnimationFrame spriteID ="5" frameTime ="80"></AnimationFrame>
+          <AnimationFrame spriteID ="6" frameTime ="80"></AnimationFrame>
+          <AnimationFrame spriteID ="7" frameTime ="80"></AnimationFrame>
+          <AnimationFrame spriteID ="8" frameTime ="80"></AnimationFrame>
+          <AnimationFrame spriteID ="9" frameTime ="80"></AnimationFrame>
+          <AnimationFrame spriteID ="10" frameTime ="80"></AnimationFrame>
+          <AnimationFrame spriteID ="11" frameTime ="80"></AnimationFrame>
+          <AnimationFrame spriteID ="12" frameTime ="80"></AnimationFrame>
+          <AnimationFrame spriteID ="13" frameTime ="80"></AnimationFrame>
+          <AnimationFrame spriteID ="14" frameTime ="80"></AnimationFrame>
+          <AnimationFrame spriteID ="15" frameTime ="80"></AnimationFrame>
+          <AnimationFrame spriteID ="16" frameTime ="80"></AnimationFrame>
+          <AnimationFrame spriteID ="17" frameTime ="80"></AnimationFrame>
+          <AnimationFrame spriteID ="18" frameTime ="80"></AnimationFrame>
+          <AnimationFrame spriteID ="19" frameTime ="80"></AnimationFrame>
+          <AnimationFrame spriteID ="20" frameTime ="80"></AnimationFrame>
+          <AnimationFrame spriteID ="21" frameTime ="80"></AnimationFrame>
+          <AnimationFrame spriteID ="22" frameTime ="80"></AnimationFrame>
+          <AnimationFrame spriteID ="23" frameTime ="80"></AnimationFrame>
+          <AnimationFrame spriteID ="24" frameTime ="80"></AnimationFrame>
+          <AnimationFrame spriteID ="25" frameTime ="80"></AnimationFrame>
+          <AnimationFrame spriteID ="26" frameTime ="80"></AnimationFrame>
+          <AnimationFrame spriteID ="27" frameTime ="80"></AnimationFrame>
+          <AnimationFrame spriteID ="28" frameTime ="80"></AnimationFrame>
+          <AnimationFrame spriteID ="29" frameTime ="80"></AnimationFrame>
+          <AnimationFrame spriteID ="30" frameTime ="80"></AnimationFrame>
+          <AnimationFrame spriteID ="31" frameTime ="80"></AnimationFrame>
+          <AnimationFrame spriteID ="32" frameTime ="80"></AnimationFrame>
+          <AnimationFrame spriteID ="33" frameTime ="80"></AnimationFrame>
+          <AnimationFrame spriteID ="34" frameTime ="80"></AnimationFrame>
+          <AnimationFrame spriteID ="35" frameTime ="80"></AnimationFrame>
+          <AnimationFrame spriteID ="36" frameTime ="80"></AnimationFrame>
+          <AnimationFrame spriteID ="37" frameTime ="80"></AnimationFrame>
+          <AnimationFrame spriteID ="38" frameTime ="80"></AnimationFrame>
+          <AnimationFrame spriteID ="39" frameTime ="80"></AnimationFrame>
+        </Animation>
+        <Animation animationID ="loop">
+          <AnimationFrame spriteID ="37" frameTime ="80"></AnimationFrame>
+          <AnimationFrame spriteID ="38" frameTime ="80"></AnimationFrame>
+          <AnimationFrame spriteID ="39" frameTime ="80"></AnimationFrame>
+        </Animation>
+      </Animator>
+    </Component>
+
+  </Components>  
+</Prefab>

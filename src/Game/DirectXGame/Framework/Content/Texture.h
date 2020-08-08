@@ -5,43 +5,28 @@
 #include "../../Include.h"
 #include "../Graphics.h"
 
-class Texture
+struct Texture
 {
-public:
-	string textureID;
 	LPDIRECT3DTEXTURE9 texture;
-	D3DXIMAGE_INFO info;
-	D3DCOLOR transparentColor;
+	D3DXIMAGE_INFO info; 
+	int r, g, b;
 
-	Texture();
+	Texture(int r, int g, int b);
 	~Texture();
 };
 
 class Textures
 {
-public:
-	pResource resource;
+private:
 	pGraphics graphics;
-
 	unordered_map<string, pTexture> textures;
 
-	Textures(pResource resource, pGraphics graphics);
+public:
+	Textures(pGraphics graphics);
 	~Textures();
 
-	void Add(string textureID, LPCWSTR filePath, D3DCOLOR transparentColor);
+	void Add(string textureID, LPCWSTR filePath, int r, int g, int b);
 	pTexture Get(string textureID);
-	void Clear();
-};
-
-class TextureRegion
-{
-public:
-	string textureRegionID;
-	string textureID;
-	RECT sourceRect;
-
-	TextureRegion();
-	~TextureRegion();
 };
 
 #endif // !__TEXTURE_H__

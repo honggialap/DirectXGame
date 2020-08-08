@@ -1,0 +1,35 @@
+<Prefab layer ="0">
+  <Components>
+
+    <Component componentType="0">
+      <SpriteRenderer ui ="false">
+        <Palette paletteNo ="0" textureID ="weapon"/>
+        <Sprite spriteID ="boomerang1" paletting ="false" paletteNo ="0"
+        left = "140" top = "372" right = "203" bottom ="435"
+        offsetX ="0" offsetY ="0"/>
+        <Sprite spriteID ="boomerang2" paletting ="false" paletteNo ="0"
+        left = "208" top = "372" right = "271" bottom ="435"
+        offsetX ="0" offsetY ="0"/>
+        <Sprite spriteID ="boomerang3" paletting ="false" paletteNo ="0"
+        left = "276" top = "372" right = "339" bottom ="435"
+        offsetX ="0" offsetY ="0"/>
+      </SpriteRenderer>
+    </Component>
+
+    <Component componentType ="1">
+      <Animator>
+        <Animation animationID ="spin">
+          <AnimationFrame spriteID="boomerang1" frameTime="30"/>
+          <AnimationFrame spriteID="boomerang2" frameTime="30"/>
+          <AnimationFrame spriteID="boomerang1" frameTime="30"/>
+          <AnimationFrame spriteID="boomerang3" frameTime="30"/>
+        </Animation>
+      </Animator>
+    </Component>
+
+    <Component componentType ="5">
+      <Physics/>
+    </Component>
+
+  </Components>
+</Prefab>

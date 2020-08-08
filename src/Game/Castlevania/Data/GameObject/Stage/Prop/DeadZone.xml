@@ -1,0 +1,16 @@
+<Prefab layer ="0">
+  <Components>
+
+    <Component componentType="0">
+      <SpriteRenderer>
+        <Palette paletteNo="1" textureID="bbox" />
+        <Sprite spriteID="bbox" paletting="false" paletteNo="1" left="0" top="0" right="0" bottom="0" offsetX="0" offsetY="0" />
+      </SpriteRenderer>
+    </Component>
+
+    <Component componentType ="5">
+      <Physics/>
+    </Component>
+
+  </Components>
+</Prefab>

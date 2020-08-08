@@ -3,70 +3,67 @@
 #define __GAME_OBJECT_H__
 
 #include "../Include.h"
-
 #include "../Game.h"
 #include "Scene.h"
-#include "Component.h"
-#include "Transform.h"
-#include "Sprite.h"
-//#include "Animation.h"
-//#include "Tilemap.h"
-//#include "Physics.h"
-//#include "Collision.h"
+#include "Component/Component.h"
+#include "Component/Sprite.h"
+#include "Component/Animation.h"
+#include "Component/Tilemap.h"
+#include "Component/Text.h"
+#include "Component/SoundSource.h"
+#include "Component/Physics.h"
 
 class GameObject
 {
+protected:
+	string source;
+	unordered_map<Component::Type, pComponent> components;
+
 public:
-	pGame game;
 	pScene scene;
 
-	string id;
+	bool start;
+	bool expired;
 	bool enable;
-	//unsigned int updateOrder;
-
-	pComponents components;
+	bool visible;
 	
-	//pGameObject parent;
-	//unordered_map<string, pGameObject> childs;
+	int id;
+	int layer;
+	float x, y;
+	int cellX, cellY;
 
-	GameObject(pGame game, pScene scene);
-	~GameObject();
+public:
+	GameObject(pScene scene);
+	virtual ~GameObject() = 0;
 
-	virtual void Load(xml_node gameObjectNode);
-	virtual void Update(pGameTime gameTime) = 0;
+	virtual void Load();
+	virtual void Unload();
+
+	void Activate() { this->enable = true; }
+	void Deactivate() { this->enable = false; }
+	void Show() { this->visible = true; }
+	void Hide() { this->visible = false; }
+
+	virtual void Start() = 0;
+	virtual void Update(float elapsedMs) = 0;
 	virtual void Render() = 0;
 
-	//static bool CompareByUpdateOrder(const pGameObject a, const pGameObject b);
-};
+	void SetPosition(float x, float y);
+	void GetPosition(float &x, float &y);
+	void Translate(float x, float y);
 
-class GameObjects
-{
-public:
-	pGame game;
-	pScene scene;
+	pSpriteRenderer GetSpriteRenderer();
+	pAnimator GetAnimator();
+	pTilemap GetTilemap();
+	pTextRenderer GetTextRenderer();
+	pSoundSource GetSoundSource();
+	pPhysics GetPhysics();
 
-	vector<pGameObject> gameObjects;
+	virtual void Collided(pCollision &collision) = 0;
+	virtual void SpawnedHandler(pGameObject gameObject) = 0;
+	virtual void DestroyedHandler(pGameObject gameObject) = 0;
 
-	GameObjects(pGame game, pScene scene);
-	~GameObjects();
-
-	void Add(pGameObject gameObject);
-	pGameObject Get(string id);
-
-	void Remove();
-	void Clear();
-
-	//void SortByUpdateOrder();
-};
-
-class Prefab
-{
-
-};
-
-class Prefabs
-{
-
+	static bool LayerCompare(const pGameObject& a, const pGameObject& b);
 };
 
 #endif // !__GAME_OBJECT_H__

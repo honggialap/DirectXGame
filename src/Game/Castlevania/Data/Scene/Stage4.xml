@@ -1,0 +1,18 @@
+<Scene cellWidth="512" cellHeight="480" mode="0">
+  <Player type="0">
+    <Controller>
+      <Keybind keyCode="17" button="0" />
+      <Keybind keyCode="31" button="1" />
+      <Keybind keyCode="30" button="2" />
+      <Keybind keyCode="32" button="3" />
+      <Keybind keyCode="36" button="4" />
+      <Keybind keyCode="37" button="5" />
+      <Keybind keyCode="50" button="6" />
+      <Keybind keyCode="51" button="7" />
+    </Controller>
+    <Viewport left="0" top="0" right="1024" bottom="960" />
+  </Player>
+  <Camera positionX="512" positionY="480" viewport="0" />
+  <GameObject prefabID="" positionX="0" positionY="0" />
+  
+</Scene>

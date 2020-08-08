@@ -1,0 +1,71 @@
+<Prefab layer ="0">
+  <Components>
+
+    <Component componentType="0">
+      <SpriteRenderer ui ="true">
+        <Palette paletteNo ="0" textureID ="hud"/>
+        <Sprite spriteID ="frame" paletting ="false" paletteNo ="0"
+        left = "0" top = "0" right = "1024" bottom ="126"
+        offsetX ="0" offsetY ="0"/>
+        
+        <Sprite spriteID ="0" paletting ="false" paletteNo ="0"
+        left = "30" top = "128" right = "57" bottom ="155"
+        offsetX ="0" offsetY ="0"/>
+        <Sprite spriteID ="1" paletting ="false" paletteNo ="0"
+        left = "60" top = "128" right = "87" bottom ="155"
+        offsetX ="0" offsetY ="0"/>
+        <Sprite spriteID ="2" paletting ="false" paletteNo ="0"
+        left = "90" top = "128" right = "117" bottom ="155"
+        offsetX ="0" offsetY ="0"/>
+        <Sprite spriteID ="3" paletting ="false" paletteNo ="0"
+        left = "120" top = "128" right = "147" bottom ="155"
+        offsetX ="0" offsetY ="0"/>
+        <Sprite spriteID ="4" paletting ="false" paletteNo ="0"
+        left = "150" top = "128" right = "177" bottom ="155"
+        offsetX ="0" offsetY ="0"/>
+        <Sprite spriteID ="5" paletting ="false" paletteNo ="0"
+        left = "180" top = "128" right = "207" bottom ="155"
+        offsetX ="0" offsetY ="0"/>
+        <Sprite spriteID ="6" paletting ="false" paletteNo ="0"
+        left = "210" top = "128" right = "237" bottom ="155"
+        offsetX ="0" offsetY ="0"/>
+        <Sprite spriteID ="7" paletting ="false" paletteNo ="0"
+        left = "240" top = "128" right = "267" bottom ="155"
+        offsetX ="0" offsetY ="0"/>
+        <Sprite spriteID ="8" paletting ="false" paletteNo ="0"
+        left = "270" top = "128" right = "297" bottom ="155"
+        offsetX ="0" offsetY ="0"/>
+        <Sprite spriteID ="9" paletting ="false" paletteNo ="0"
+        left = "300" top = "128" right = "327" bottom ="155"
+        offsetX ="0" offsetY ="0"/>
+        
+        <Sprite spriteID ="simonHealth" paletting ="false" paletteNo ="0"
+        left = "2" top = "128" right = "13" bottom ="151"
+        offsetX ="0" offsetY ="0"/>
+        <Sprite spriteID ="bossHealth" paletting ="false" paletteNo ="0"
+        left = "16" top = "128" right = "27" bottom ="151"
+        offsetX ="0" offsetY ="0"/>
+
+        <Sprite spriteID ="gameOver" paletting ="false" paletteNo ="0"
+        left = "330" top = "128" right = "613" bottom ="155"
+        offsetX ="0" offsetY ="0"/>
+        <Sprite spriteID ="continue" paletting ="false" paletteNo ="0"
+        left = "616" top = "128" right = "867" bottom ="155"
+        offsetX ="0" offsetY ="0"/>
+        <Sprite spriteID ="end" paletting ="false" paletteNo ="0"
+        left = "870" top = "128" right = "957" bottom ="155"
+        offsetX ="0" offsetY ="0"/>
+
+        <Sprite spriteID ="heart" paletting ="false" paletteNo ="0"
+        left = "960" top = "128" right = "991" bottom ="159"
+        offsetX ="0" offsetY ="0"/>
+
+      </SpriteRenderer>
+    </Component>
+
+    <Component componentType ="5">
+      <Physics/>
+    </Component>
+
+  </Components>
+</Prefab>

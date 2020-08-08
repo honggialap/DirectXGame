@@ -1,0 +1,13 @@
+<Prefab layer ="0">
+  <Components>
+    <Component componentType ="0">
+      <SpriteRenderer ui ="false">
+        <Palette paletteNo ="0" textureID ="title"></Palette>
+        <Sprite spriteID ="title" paletting ="false" paletteNo ="0"
+                left = "3" top = "3" right = "1028" bottom ="964"
+                offsetX ="0" offsetY ="0"></Sprite>
+      </SpriteRenderer>
+    </Component>
+
+  </Components>  
+</Prefab>

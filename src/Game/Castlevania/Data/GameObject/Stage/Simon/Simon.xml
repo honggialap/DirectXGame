@@ -1,0 +1,87 @@
+<?xml version="1.0"?>
+<Prefab>
+	<Components>
+    
+		<Component componentType="0">
+			<SpriteRenderer>
+				<Palette paletteNo="0" textureID="simon_0" />
+				<Palette paletteNo="1" textureID="simon_1" />
+				<Palette paletteNo="2" textureID="simon_2" />
+				<Palette paletteNo="3" textureID="simon_3" />
+				<Palette paletteNo="4" textureID="simon_4" />
+        <Palette paletteNo="5" textureID="bbox" />
+        <Sprite spriteID="bbox" paletting="false" paletteNo="5" left="0" top="0" right="0" bottom="0" offsetX="0" offsetY="0" />
+        <Sprite spriteID="idle" paletting="true" paletteNo="0" left="4" top="4" right="67" bottom="131" offsetX="0" offsetY="-4" />
+				<Sprite spriteID="walk1" paletting="true" paletteNo="0" left="72" top="4" right="135" bottom="131" offsetX="0" offsetY="-4" />
+				<Sprite spriteID="walk2" paletting="true" paletteNo="0" left="140" top="4" right="203" bottom="131" offsetX="0" offsetY="-4" />
+				<Sprite spriteID="crouch" paletting="true" paletteNo="0" left="208" top="4" right="271" bottom="131" offsetX="0" offsetY="-32" />
+				<Sprite spriteID="ascend" paletting="true" paletteNo="0" left="276" top="4" right="339" bottom="131" offsetX="0" offsetY="0" />
+				<Sprite spriteID="descend" paletting="true" paletteNo="0" left="344" top="4" right="407" bottom="131" offsetX="0" offsetY="0" />
+				<Sprite spriteID="hurt" paletting="true" paletteNo="0" left="412" top="4" right="475" bottom="131" offsetX="0" offsetY="0" />
+				<Sprite spriteID="death1" paletting="true" paletteNo="0" left="480" top="4" right="543" bottom="131" offsetX="0" offsetY="0" />
+				<Sprite spriteID="death2" paletting="true" paletteNo="0" left="540" top="136" right="667" bottom="199" offsetX="0" offsetY="-32" />
+				<Sprite spriteID="attack1" paletting="true" paletteNo="0" left="4" top="136" right="99" bottom="263" offsetX="16" offsetY="-4" />
+				<Sprite spriteID="attack2" paletting="true" paletteNo="0" left="104" top="136" right="167" bottom="263" offsetX="0" offsetY="-4" />
+				<Sprite spriteID="attack3" paletting="true" paletteNo="0" left="172" top="136" right="267" bottom="263" offsetX="-16" offsetY="-4" />
+				<Sprite spriteID="crouchAttack1" paletting="true" paletteNo="0" left="272" top="136" right="367" bottom="263" offsetX="0" offsetY="-32" />
+				<Sprite spriteID="crouchAttack2" paletting="true" paletteNo="0" left="372" top="136" right="435" bottom="263" offsetX="0" offsetY="-32" />
+				<Sprite spriteID="crouchAttack3" paletting="true" paletteNo="0" left="440" top="136" right="535" bottom="263" offsetX="0" offsetY="-32" />
+				<Sprite spriteID="ascendAttack1" paletting="true" paletteNo="0" left="4" top="268" right="99" bottom="395" offsetX="0" offsetY="0" />
+				<Sprite spriteID="ascendAttack2" paletting="true" paletteNo="0" left="104" top="268" right="167" bottom="395" offsetX="0" offsetY="0" />
+				<Sprite spriteID="ascendAttack3" paletting="true" paletteNo="0" left="172" top="268" right="267" bottom="395" offsetX="0" offsetY="0" />
+				<Sprite spriteID="descendAttack1" paletting="true" paletteNo="0" left="272" top="268" right="367" bottom="395" offsetX="0" offsetY="0" />
+				<Sprite spriteID="descendAttack2" paletting="true" paletteNo="0" left="372" top="268" right="435" bottom="395" offsetX="0" offsetY="0" />
+				<Sprite spriteID="descendAttack3" paletting="true" paletteNo="0" left="440" top="268" right="535" bottom="395" offsetX="0" offsetY="0" />
+			</SpriteRenderer>
+		</Component>
+    
+		<Component componentType="1">
+			<Animator>
+				<Animation animationID="idle">
+					<AnimationFrame spriteID="idle" frameTime="0" />
+				</Animation>
+				<Animation animationID="crouch">
+					<AnimationFrame spriteID="crouch" frameTime="0" />
+				</Animation>
+				<Animation animationID="hurt">
+					<AnimationFrame spriteID="hurt" frameTime="0" />
+				</Animation>
+				<Animation animationID="walk">
+					<AnimationFrame spriteID="idle" frameTime="100" />
+					<AnimationFrame spriteID="walk1" frameTime="100" />
+					<AnimationFrame spriteID="walk2" frameTime="100" />
+					<AnimationFrame spriteID="walk1" frameTime="100" />
+				</Animation>
+				<Animation animationID="attack">
+					<AnimationFrame spriteID="attack1" frameTime="100" />
+					<AnimationFrame spriteID="attack2" frameTime="100" />
+					<AnimationFrame spriteID="attack3" frameTime="100" />
+				</Animation>
+				<Animation animationID="crouchAttack">
+					<AnimationFrame spriteID="crouchAttack1" frameTime="100" />
+					<AnimationFrame spriteID="crouchAttack2" frameTime="100" />
+					<AnimationFrame spriteID="crouchAttack3" frameTime="100" />
+				</Animation>
+				<Animation animationID="ascendAttack">
+					<AnimationFrame spriteID="ascendAttack1" frameTime="100" />
+					<AnimationFrame spriteID="ascendAttack2" frameTime="100" />
+					<AnimationFrame spriteID="ascendAttack3" frameTime="100" />
+				</Animation>
+				<Animation animationID="descendAttack">
+					<AnimationFrame spriteID="descendAttack1" frameTime="100" />
+					<AnimationFrame spriteID="descendAttack2" frameTime="100" />
+					<AnimationFrame spriteID="descendAttack3" frameTime="100" />
+				</Animation>
+				<Animation animationID="death">
+					<AnimationFrame spriteID="death1" frameTime="100" />
+					<AnimationFrame spriteID="death2" frameTime="100" />
+				</Animation>
+			</Animator>
+		</Component>
+    
+		<Component componentType="5">
+			<Physics />
+		</Component>
+    
+	</Components>
+</Prefab>

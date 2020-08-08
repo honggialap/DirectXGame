@@ -1,0 +1,191 @@
+<SpriteRenderer>
+  <!--Simon-->
+  <Sprite spriteID="intro"                paletting="true"  paletteNo="0" left="548"  top="4"     right="611" bottom="131"  offsetX="0"   offsetY="-4" />
+  <Sprite spriteID="idle"                 paletting="true"  paletteNo="0" left="4"    top="4"     right="67"  bottom="131"  offsetX="0"   offsetY="-4" />
+  <Sprite spriteID="walk1"                paletting="true"  paletteNo="0" left="72"   top="4"     right="135" bottom="131"  offsetX="0"   offsetY="-4" />
+  <Sprite spriteID="walk2"                paletting="true"  paletteNo="0" left="140"  top="4"     right="203" bottom="131"  offsetX="0"   offsetY="-4" />
+  <Sprite spriteID="crouch"               paletting="true"  paletteNo="0" left="208"  top="4"     right="271" bottom="131"  offsetX="0"   offsetY="-32" />
+  <Sprite spriteID="ascend"               paletting="true"  paletteNo="0" left="276"  top="4"     right="339" bottom="131"  offsetX="0"   offsetY="0" />
+  <Sprite spriteID="descend"              paletting="true"  paletteNo="0" left="344"  top="4"     right="407" bottom="131"  offsetX="0"   offsetY="0" />
+  <Sprite spriteID="hurt"                 paletting="true"  paletteNo="0" left="412"  top="4"     right="475" bottom="131"  offsetX="0"   offsetY="0" />
+  <Sprite spriteID="death1"               paletting="true"  paletteNo="0" left="480"  top="4"     right="543" bottom="131"  offsetX="0"   offsetY="0" />
+  <Sprite spriteID="death2"               paletting="true"  paletteNo="0" left="540"  top="136"   right="667" bottom="199"  offsetX="0"   offsetY="-32" />
+  <Sprite spriteID="attack1"              paletting="true"  paletteNo="0" left="4"    top="136"   right="99"  bottom="263"  offsetX="16"  offsetY="-4" />
+  <Sprite spriteID="attack2"              paletting="true"  paletteNo="0" left="104"  top="136"   right="167" bottom="263"  offsetX="0"   offsetY="-4" />
+  <Sprite spriteID="attack3"              paletting="true"  paletteNo="0" left="172"  top="136"   right="267" bottom="263"  offsetX="-16" offsetY="-4" />
+  <Sprite spriteID="crouchAttack1"        paletting="true"  paletteNo="0" left="272"  top="136"   right="367" bottom="263"  offsetX="0"   offsetY="-32" />
+  <Sprite spriteID="crouchAttack2"        paletting="true"  paletteNo="0" left="372"  top="136"   right="435" bottom="263"  offsetX="0"   offsetY="-32" />
+  <Sprite spriteID="crouchAttack3"        paletting="true"  paletteNo="0" left="440"  top="136"   right="535" bottom="263"  offsetX="0"   offsetY="-32" />
+  <Sprite spriteID="ascendAttack1"        paletting="true"  paletteNo="0" left="4"    top="268"   right="99"  bottom="395"  offsetX="0"   offsetY="0" />
+  <Sprite spriteID="ascendAttack2"        paletting="true"  paletteNo="0" left="104"  top="268"   right="167" bottom="395"  offsetX="0"   offsetY="0" />
+  <Sprite spriteID="ascendAttack3"        paletting="true"  paletteNo="0" left="172"  top="268"   right="267" bottom="395"  offsetX="0"   offsetY="0" />
+  <Sprite spriteID="descendAttack1"       paletting="true"  paletteNo="0" left="272"  top="268"   right="367" bottom="395"  offsetX="0"   offsetY="0" />
+  <Sprite spriteID="descendAttack2"       paletting="true"  paletteNo="0" left="372"  top="268"   right="435" bottom="395"  offsetX="0"   offsetY="0" />
+  <Sprite spriteID="descendAttack3"       paletting="true"  paletteNo="0" left="440"  top="268"   right="535" bottom="395"  offsetX="0"   offsetY="0" />
+
+  <!--Items-->
+  <Sprite spriteID="smallHeart"           paletting="false" paletteNo="0" left="0"    top="0"    right="0"    bottom="0"    offsetX="0"   offsetY="0" />
+  <Sprite spriteID="largeHeart"           paletting="false" paletteNo="0" left="0"    top="0"    right="0"    bottom="0"    offsetX="0"   offsetY="0" />
+  <Sprite spriteID="porkChop"             paletting="false" paletteNo="0" left="0"    top="0"    right="0"    bottom="0"    offsetX="0"   offsetY="0" />
+  <Sprite spriteID="potion"               paletting="false" paletteNo="0" left="0"    top="0"    right="0"    bottom="0"    offsetX="0"   offsetY="0" />
+  <Sprite spriteID="cross"                paletting="false" paletteNo="0" left="0"    top="0"    right="0"    bottom="0"    offsetX="0"   offsetY="0" />
+  <Sprite spriteID="extraLife"            paletting="false" paletteNo="0" left="0"    top="0"    right="0"    bottom="0"    offsetX="0"   offsetY="0" />
+  <Sprite spriteID="magicCrystal1"        paletting="false" paletteNo="0" left="0"    top="0"    right="0"    bottom="0"    offsetX="0"   offsetY="0" />
+  <Sprite spriteID="magicCrystal2"        paletting="false" paletteNo="0" left="0"    top="0"    right="0"    bottom="0"    offsetX="0"   offsetY="0" />
+  
+  <Sprite spriteID="moneyBag1"            paletting="false" paletteNo="0" left="0"    top="0"    right="0"    bottom="0"    offsetX="0"   offsetY="0" />
+  <Sprite spriteID="moneyBag2"            paletting="false" paletteNo="0" left="0"    top="0"    right="0"    bottom="0"    offsetX="0"   offsetY="0" />
+  <Sprite spriteID="moneyBag3"            paletting="false" paletteNo="0" left="0"    top="0"    right="0"    bottom="0"    offsetX="0"   offsetY="0" />
+  <Sprite spriteID="crown1"               paletting="false" paletteNo="0" left="0"    top="0"    right="0"    bottom="0"    offsetX="0"   offsetY="0" />
+  <Sprite spriteID="crown2"               paletting="false" paletteNo="0" left="0"    top="0"    right="0"    bottom="0"    offsetX="0"   offsetY="0" />
+  <Sprite spriteID="crown3"               paletting="false" paletteNo="0" left="0"    top="0"    right="0"    bottom="0"    offsetX="0"   offsetY="0" />
+  <Sprite spriteID="crown4"               paletting="false" paletteNo="0" left="0"    top="0"    right="0"    bottom="0"    offsetX="0"   offsetY="0" />
+  <Sprite spriteID="treasureChest1"       paletting="false" paletteNo="0" left="0"    top="0"    right="0"    bottom="0"    offsetX="0"   offsetY="0" />
+  <Sprite spriteID="treasureChest2"       paletting="false" paletteNo="0" left="0"    top="0"    right="0"    bottom="0"    offsetX="0"   offsetY="0" />
+  <Sprite spriteID="treasureChest3"       paletting="false" paletteNo="0" left="0"    top="0"    right="0"    bottom="0"    offsetX="0"   offsetY="0" />
+  <Sprite spriteID="treasureChest4"       paletting="false" paletteNo="0" left="0"    top="0"    right="0"    bottom="0"    offsetX="0"   offsetY="0" />
+  <Sprite spriteID="moaiA1"               paletting="false" paletteNo="0" left="0"    top="0"    right="0"    bottom="0"    offsetX="0"   offsetY="0" />
+  <Sprite spriteID="moaiA2"               paletting="false" paletteNo="0" left="0"    top="0"    right="0"    bottom="0"    offsetX="0"   offsetY="0" />
+  <Sprite spriteID="moaiA3"               paletting="false" paletteNo="0" left="0"    top="0"    right="0"    bottom="0"    offsetX="0"   offsetY="0" />
+  <Sprite spriteID="moaiA4"               paletting="false" paletteNo="0" left="0"    top="0"    right="0"    bottom="0"    offsetX="0"   offsetY="0" />
+  <Sprite spriteID="moaiB1"               paletting="false" paletteNo="0" left="0"    top="0"    right="0"    bottom="0"    offsetX="0"   offsetY="0" />
+  <Sprite spriteID="moaiB2"               paletting="false" paletteNo="0" left="0"    top="0"    right="0"    bottom="0"    offsetX="0"   offsetY="0" />
+  <Sprite spriteID="moaiB3"               paletting="false" paletteNo="0" left="0"    top="0"    right="0"    bottom="0"    offsetX="0"   offsetY="0" />
+  <Sprite spriteID="moaiB4"               paletting="false" paletteNo="0" left="0"    top="0"    right="0"    bottom="0"    offsetX="0"   offsetY="0" />
+  <Sprite spriteID="moaiC1"               paletting="false" paletteNo="0" left="0"    top="0"    right="0"    bottom="0"    offsetX="0"   offsetY="0" />
+  <Sprite spriteID="moaiC2"               paletting="false" paletteNo="0" left="0"    top="0"    right="0"    bottom="0"    offsetX="0"   offsetY="0" />
+  <Sprite spriteID="moaiC3"               paletting="false" paletteNo="0" left="0"    top="0"    right="0"    bottom="0"    offsetX="0"   offsetY="0" />
+  <Sprite spriteID="moaiC4"               paletting="false" paletteNo="0" left="0"    top="0"    right="0"    bottom="0"    offsetX="0"   offsetY="0" />
+  <Sprite spriteID="moaiD1"               paletting="false" paletteNo="0" left="0"    top="0"    right="0"    bottom="0"    offsetX="0"   offsetY="0" />
+  <Sprite spriteID="moaiD2"               paletting="false" paletteNo="0" left="0"    top="0"    right="0"    bottom="0"    offsetX="0"   offsetY="0" />
+  <Sprite spriteID="moaiD3"               paletting="false" paletteNo="0" left="0"    top="0"    right="0"    bottom="0"    offsetX="0"   offsetY="0" />
+  <Sprite spriteID="moaiD4"               paletting="false" paletteNo="0" left="0"    top="0"    right="0"    bottom="0"    offsetX="0"   offsetY="0" />
+
+  <!--Weapons-->
+  <Sprite spriteID="morningStar"          paletting="false" paletteNo="5" left="0"    top="0"    right="0"    bottom="0"    offsetX="0"   offsetY="0" />
+  <Sprite spriteID="vampireKillerA1"      paletting="false" paletteNo="5" left="0"    top="0"    right="0"    bottom="0"    offsetX="0"   offsetY="0" />
+  <Sprite spriteID="vampireKillerA2"      paletting="false" paletteNo="5" left="0"    top="0"    right="0"    bottom="0"    offsetX="0"   offsetY="0" />
+  <Sprite spriteID="vampireKillerA3"      paletting="false" paletteNo="5" left="0"    top="0"    right="0"    bottom="0"    offsetX="0"   offsetY="0" />
+  <Sprite spriteID="vampireKillerA4"      paletting="false" paletteNo="5" left="0"    top="0"    right="0"    bottom="0"    offsetX="0"   offsetY="0" />
+  <Sprite spriteID="vampireKillerA5"      paletting="false" paletteNo="5" left="0"    top="0"    right="0"    bottom="0"    offsetX="0"   offsetY="0" />
+  <Sprite spriteID="vampireKillerB1"      paletting="false" paletteNo="5" left="0"    top="0"    right="0"    bottom="0"    offsetX="0"   offsetY="0" />
+  <Sprite spriteID="vampireKillerB2"      paletting="false" paletteNo="5" left="0"    top="0"    right="0"    bottom="0"    offsetX="0"   offsetY="0" />
+  <Sprite spriteID="vampireKillerB3"      paletting="false" paletteNo="5" left="0"    top="0"    right="0"    bottom="0"    offsetX="0"   offsetY="0" />
+  <Sprite spriteID="vampireKillerB4"      paletting="false" paletteNo="5" left="0"    top="0"    right="0"    bottom="0"    offsetX="0"   offsetY="0" />
+  <Sprite spriteID="vampireKillerB5"      paletting="false" paletteNo="5" left="0"    top="0"    right="0"    bottom="0"    offsetX="0"   offsetY="0" />
+  <Sprite spriteID="vampireKillerC1"      paletting="false" paletteNo="5" left="0"    top="0"    right="0"    bottom="0"    offsetX="0"   offsetY="0" />
+  <Sprite spriteID="vampireKillerC2"      paletting="false" paletteNo="5" left="0"    top="0"    right="0"    bottom="0"    offsetX="0"   offsetY="0" />
+  <Sprite spriteID="vampireKillerC3"      paletting="false" paletteNo="5" left="0"    top="0"    right="0"    bottom="0"    offsetX="0"   offsetY="0" />
+  <Sprite spriteID="vampireKillerC4"      paletting="false" paletteNo="5" left="0"    top="0"    right="0"    bottom="0"    offsetX="0"   offsetY="0" />
+  <Sprite spriteID="vampireKillerC5"      paletting="false" paletteNo="5" left="0"    top="0"    right="0"    bottom="0"    offsetX="0"   offsetY="0" />
+  <Sprite spriteID="dagger1"              paletting="false" paletteNo="5" left="0"    top="0"    right="0"    bottom="0"    offsetX="0"   offsetY="0" />
+  <Sprite spriteID="dagger2"              paletting="false" paletteNo="5" left="0"    top="0"    right="0"    bottom="0"    offsetX="0"   offsetY="0" />
+  <Sprite spriteID="boomerang1"           paletting="false" paletteNo="5" left="0"    top="0"    right="0"    bottom="0"    offsetX="0"   offsetY="0" />
+  <Sprite spriteID="boomerang2"           paletting="false" paletteNo="5" left="0"    top="0"    right="0"    bottom="0"    offsetX="0"   offsetY="0" />
+  <Sprite spriteID="boomerang3"           paletting="false" paletteNo="5" left="0"    top="0"    right="0"    bottom="0"    offsetX="0"   offsetY="0" />
+  <Sprite spriteID="axe1"                 paletting="false" paletteNo="5" left="0"    top="0"    right="0"    bottom="0"    offsetX="0"   offsetY="0" />
+  <Sprite spriteID="axe2"                 paletting="false" paletteNo="5" left="0"    top="0"    right="0"    bottom="0"    offsetX="0"   offsetY="0" />
+  <Sprite spriteID="axe3"                 paletting="false" paletteNo="5" left="0"    top="0"    right="0"    bottom="0"    offsetX="0"   offsetY="0" />
+  <Sprite spriteID="axe4"                 paletting="false" paletteNo="5" left="0"    top="0"    right="0"    bottom="0"    offsetX="0"   offsetY="0" />
+  <Sprite spriteID="firebomb1"            paletting="false" paletteNo="5" left="0"    top="0"    right="0"    bottom="0"    offsetX="0"   offsetY="0" />
+  <Sprite spriteID="firebomb2"            paletting="false" paletteNo="5" left="0"    top="0"    right="0"    bottom="0"    offsetX="0"   offsetY="0" />
+  <Sprite spriteID="firebomb3"            paletting="false" paletteNo="5" left="0"    top="0"    right="0"    bottom="0"    offsetX="0"   offsetY="0" />
+  <Sprite spriteID="firebomb4"            paletting="false" paletteNo="5" left="0"    top="0"    right="0"    bottom="0"    offsetX="0"   offsetY="0" />
+  <Sprite spriteID="firebomb5"            paletting="false" paletteNo="5" left="0"    top="0"    right="0"    bottom="0"    offsetX="0"   offsetY="0" />
+  <Sprite spriteID="firebomb6"            paletting="false" paletteNo="5" left="0"    top="0"    right="0"    bottom="0"    offsetX="0"   offsetY="0" />
+  <Sprite spriteID="firebomb7"            paletting="false" paletteNo="5" left="0"    top="0"    right="0"    bottom="0"    offsetX="0"   offsetY="0" />
+  <Sprite spriteID="stopwatch"            paletting="false" paletteNo="5" left="0"    top="0"    right="0"    bottom="0"    offsetX="0"   offsetY="0" />
+  <Sprite spriteID="doubleShot"           paletting="false" paletteNo="5" left="0"    top="0"    right="0"    bottom="0"    offsetX="0"   offsetY="0" />
+  <Sprite spriteID="tripleShot"           paletting="false" paletteNo="5" left="0"    top="0"    right="0"    bottom="0"    offsetX="0"   offsetY="0" />
+
+  <!--Enemies-->
+  <Sprite spriteID="blackKnight1"         paletting="false" paletteNo="5" left="0"    top="0"    right="0"    bottom="0"    offsetX="0"   offsetY="0" />
+  <Sprite spriteID="blackKnight2"         paletting="false" paletteNo="5" left="0"    top="0"    right="0"    bottom="0"    offsetX="0"   offsetY="0" />
+  <Sprite spriteID="blackKnight3"         paletting="false" paletteNo="5" left="0"    top="0"    right="0"    bottom="0"    offsetX="0"   offsetY="0" />
+  <Sprite spriteID="ghost1"               paletting="false" paletteNo="5" left="0"    top="0"    right="0"    bottom="0"    offsetX="0"   offsetY="0" />
+  <Sprite spriteID="ghost2"               paletting="false" paletteNo="5" left="0"    top="0"    right="0"    bottom="0"    offsetX="0"   offsetY="0" />
+  <Sprite spriteID="hunchback1"           paletting="false" paletteNo="5" left="0"    top="0"    right="0"    bottom="0"    offsetX="0"   offsetY="0" />
+  <Sprite spriteID="hunchback2"           paletting="false" paletteNo="5" left="0"    top="0"    right="0"    bottom="0"    offsetX="0"   offsetY="0" />
+  <Sprite spriteID="phantomBat1"          paletting="false" paletteNo="5" left="0"    top="0"    right="0"    bottom="0"    offsetX="0"   offsetY="0" />
+  <Sprite spriteID="phantomBat2"          paletting="false" paletteNo="5" left="0"    top="0"    right="0"    bottom="0"    offsetX="0"   offsetY="0" />
+  <Sprite spriteID="phantomBat3"          paletting="false" paletteNo="5" left="0"    top="0"    right="0"    bottom="0"    offsetX="0"   offsetY="0" />
+  <Sprite spriteID="fireball"             paletting="false" paletteNo="5" left="0"    top="0"    right="0"    bottom="0"    offsetX="0"   offsetY="0" />
+  <Sprite spriteID="raven1"               paletting="false" paletteNo="5" left="0"    top="0"    right="0"    bottom="0"    offsetX="0"   offsetY="0" />
+  <Sprite spriteID="raven2"               paletting="false" paletteNo="5" left="0"    top="0"    right="0"    bottom="0"    offsetX="0"   offsetY="0" />
+  <Sprite spriteID="raven3"               paletting="false" paletteNo="5" left="0"    top="0"    right="0"    bottom="0"    offsetX="0"   offsetY="0" />
+  <Sprite spriteID="raven4"               paletting="false" paletteNo="5" left="0"    top="0"    right="0"    bottom="0"    offsetX="0"   offsetY="0" />
+  <Sprite spriteID="skeleton1"            paletting="false" paletteNo="5" left="0"    top="0"    right="0"    bottom="0"    offsetX="0"   offsetY="0" />
+  <Sprite spriteID="skeleton2"            paletting="false" paletteNo="5" left="0"    top="0"    right="0"    bottom="0"    offsetX="0"   offsetY="0" />
+  <Sprite spriteID="skeletonBone1"        paletting="false" paletteNo="5" left="0"    top="0"    right="0"    bottom="0"    offsetX="0"   offsetY="0" />
+  <Sprite spriteID="skeletonBone2"        paletting="false" paletteNo="5" left="0"    top="0"    right="0"    bottom="0"    offsetX="0"   offsetY="0" />
+  <Sprite spriteID="skeletonBone3"        paletting="false" paletteNo="5" left="0"    top="0"    right="0"    bottom="0"    offsetX="0"   offsetY="0" />
+  <Sprite spriteID="vampireBat1"          paletting="false" paletteNo="5" left="0"    top="0"    right="0"    bottom="0"    offsetX="0"   offsetY="0" />
+  <Sprite spriteID="vampireBat2"          paletting="false" paletteNo="5" left="0"    top="0"    right="0"    bottom="0"    offsetX="0"   offsetY="0" />
+  <Sprite spriteID="vampireBat3"          paletting="false" paletteNo="5" left="0"    top="0"    right="0"    bottom="0"    offsetX="0"   offsetY="0" />
+  <Sprite spriteID="vampireBat4"          paletting="false" paletteNo="5" left="0"    top="0"    right="0"    bottom="0"    offsetX="0"   offsetY="0" />
+  <Sprite spriteID="zombie1"              paletting="false" paletteNo="5" left="0"    top="0"    right="0"    bottom="0"    offsetX="0"   offsetY="0" />
+  <Sprite spriteID="zombie2"              paletting="false" paletteNo="5" left="0"    top="0"    right="0"    bottom="0"    offsetX="0"   offsetY="0" />
+
+  <!--Props-->
+  <Sprite spriteID="candle1"              paletting="false" paletteNo="5" left="0"    top="0"    right="0"    bottom="0"    offsetX="0"   offsetY="0" />
+  <Sprite spriteID="candle2"              paletting="false" paletteNo="5" left="0"    top="0"    right="0"    bottom="0"    offsetX="0"   offsetY="0" />
+  <Sprite spriteID="tourch1"              paletting="false" paletteNo="5" left="0"    top="0"    right="0"    bottom="0"    offsetX="0"   offsetY="0" />
+  <Sprite spriteID="tourch2"              paletting="false" paletteNo="5" left="0"    top="0"    right="0"    bottom="0"    offsetX="0"   offsetY="0" />
+  <Sprite spriteID="door1"                paletting="false" paletteNo="5" left="0"    top="0"    right="0"    bottom="0"    offsetX="0"   offsetY="0" />
+  <Sprite spriteID="door2"                paletting="false" paletteNo="5" left="0"    top="0"    right="0"    bottom="0"    offsetX="0"   offsetY="0" />
+  <Sprite spriteID="movingPlatform"       paletting="false" paletteNo="5" left="0"    top="0"    right="0"    bottom="0"    offsetX="0"   offsetY="0" />
+  <Sprite spriteID="breakableBrick"       paletting="false" paletteNo="5" left="0"    top="0"    right="0"    bottom="0"    offsetX="0"   offsetY="0" />
+
+  <!--Effects-->
+  <Sprite spriteID="hitEffect"            paletting="false" paletteNo="0" left="4"    top="4"    right="35"   bottom="67"   offsetX="0"   offsetY="0" />
+  <Sprite spriteID="brokenBrickEffect"    paletting="false" paletteNo="0" left="40"   top="4"    right="71"   bottom="67"   offsetX="0"   offsetY="0" />
+  <Sprite spriteID="waterEffect"          paletting="false" paletteNo="0" left="184"  top="4"    right="215"  bottom="67"   offsetX="0"   offsetY="0" />
+  <Sprite spriteID="death1Effect_1"       paletting="false" paletteNo="0" left="76"   top="4"    right="107"  bottom="67"   offsetX="0"   offsetY="0" />
+  <Sprite spriteID="death1Effect_2"       paletting="false" paletteNo="0" left="112"  top="4"    right="143"  bottom="67"   offsetX="0"   offsetY="0" />
+  <Sprite spriteID="death1Effect_3"       paletting="false" paletteNo="0" left="148"  top="4"    right="179"  bottom="67"   offsetX="0"   offsetY="0" />
+  <Sprite spriteID="death2Effect_1"       paletting="false" paletteNo="0" left="4"    top="72"   right="99"   bottom="199"  offsetX="0"   offsetY="0" />
+  <Sprite spriteID="death2Effect_2"       paletting="false" paletteNo="0" left="104"  top="72"   right="199"  bottom="199"  offsetX="0"   offsetY="0" />
+  <Sprite spriteID="death2Effect_3"       paletting="false" paletteNo="0" left="204"  top="72"   right="299"  bottom="199"  offsetX="0"   offsetY="0" />
+  <Sprite spriteID="death3Effect_1"       paletting="false" paletteNo="0" left="4"    top="204"  right="99"   bottom="395"  offsetX="0"   offsetY="0" />
+  <Sprite spriteID="death3Effect_2"       paletting="false" paletteNo="0" left="104"  top="204"  right="199"  bottom="395"  offsetX="0"   offsetY="0" />
+  <Sprite spriteID="death3Effect_3"       paletting="false" paletteNo="0" left="204"  top="204"  right="299"  bottom="395"  offsetX="0"   offsetY="0" />
+  <Sprite spriteID="text10"               paletting="false" paletteNo="0" left="4"    top="400"  right="35"   bottom="463"  offsetX="0"   offsetY="0" />
+  <Sprite spriteID="text20"               paletting="false" paletteNo="0" left="40"   top="400"  right="71"   bottom="463"  offsetX="0"   offsetY="0" />
+  <Sprite spriteID="text40"               paletting="false" paletteNo="0" left="76"   top="400"  right="107"  bottom="463"  offsetX="0"   offsetY="0" />
+  <Sprite spriteID="text70"               paletting="false" paletteNo="0" left="112"  top="400"  right="143"  bottom="463"  offsetX="0"   offsetY="0" />
+  <Sprite spriteID="text0"                paletting="false" paletteNo="0" left="148"  top="400"  right="179"  bottom="463"  offsetX="0"   offsetY="0" />
+  <Sprite spriteID="text00"               paletting="false" paletteNo="0" left="184"  top="400"  right="215"  bottom="463"  offsetX="0"   offsetY="0" />
+
+  <!--HUD-->
+  <Sprite spriteID="hud"                  paletting="false" paletteNo="5" left="0"    top="0"    right="0"    bottom="0"    offsetX="0"   offsetY="0" />
+  <Sprite spriteID="health1"              paletting="false" paletteNo="5" left="0"    top="0"    right="0"    bottom="0"    offsetX="0"   offsetY="0" />
+  <Sprite spriteID="health2"              paletting="false" paletteNo="5" left="0"    top="0"    right="0"    bottom="0"    offsetX="0"   offsetY="0" />
+  <Sprite spriteID="0"                    paletting="false" paletteNo="5" left="0"    top="0"    right="0"    bottom="0"    offsetX="0"   offsetY="0" />
+  <Sprite spriteID="1"                    paletting="false" paletteNo="5" left="0"    top="0"    right="0"    bottom="0"    offsetX="0"   offsetY="0" />
+  <Sprite spriteID="2"                    paletting="false" paletteNo="5" left="0"    top="0"    right="0"    bottom="0"    offsetX="0"   offsetY="0" />
+  <Sprite spriteID="3"                    paletting="false" paletteNo="5" left="0"    top="0"    right="0"    bottom="0"    offsetX="0"   offsetY="0" />
+  <Sprite spriteID="4"                    paletting="false" paletteNo="5" left="0"    top="0"    right="0"    bottom="0"    offsetX="0"   offsetY="0" />
+  <Sprite spriteID="5"                    paletting="false" paletteNo="5" left="0"    top="0"    right="0"    bottom="0"    offsetX="0"   offsetY="0" />
+  <Sprite spriteID="6"                    paletting="false" paletteNo="5" left="0"    top="0"    right="0"    bottom="0"    offsetX="0"   offsetY="0" />
+  <Sprite spriteID="7"                    paletting="false" paletteNo="5" left="0"    top="0"    right="0"    bottom="0"    offsetX="0"   offsetY="0" />
+  <Sprite spriteID="8"                    paletting="false" paletteNo="5" left="0"    top="0"    right="0"    bottom="0"    offsetX="0"   offsetY="0" />
+  <Sprite spriteID="9"                    paletting="false" paletteNo="5" left="0"    top="0"    right="0"    bottom="0"    offsetX="0"   offsetY="0" />
+  <Sprite spriteID="gameOver"             paletting="false" paletteNo="5" left="0"    top="0"    right="0"    bottom="0"    offsetX="0"   offsetY="0" />
+  <Sprite spriteID="continue"             paletting="false" paletteNo="5" left="0"    top="0"    right="0"    bottom="0"    offsetX="0"   offsetY="0" />
+  <Sprite spriteID="end"                  paletting="false" paletteNo="5" left="0"    top="0"    right="0"    bottom="0"    offsetX="0"   offsetY="0" />
+  <Sprite spriteID="heart"                paletting="false" paletteNo="5" left="0"    top="0"    right="0"    bottom="0"    offsetX="0"   offsetY="0" />
+  
+  <!--Misc-->
+  <Sprite spriteID="title_BG"             paletting="false" paletteNo="5" left="0"    top="0"    right="0"    bottom="0"    offsetX="0"   offsetY="0" />
+  <Sprite spriteID="title_Label1"         paletting="false" paletteNo="5" left="0"    top="0"    right="0"    bottom="0"    offsetX="0"   offsetY="0" />
+  <Sprite spriteID="title_Label2"         paletting="false" paletteNo="5" left="0"    top="0"    right="0"    bottom="0"    offsetX="0"   offsetY="0" />
+  <!--title_bat x40-->
+  <Sprite spriteID="intro_BG"             paletting="false" paletteNo="5" left="0"    top="0"    right="0"    bottom="0"    offsetX="0"   offsetY="0" />
+  <Sprite spriteID="intro_Bat1"           paletting="false" paletteNo="5" left="0"    top="0"    right="0"    bottom="0"    offsetX="0"   offsetY="0" />
+  <Sprite spriteID="intro_Bat2"           paletting="false" paletteNo="5" left="0"    top="0"    right="0"    bottom="0"    offsetX="0"   offsetY="0" />
+  <Sprite spriteID="intro_Cloud"          paletting="false" paletteNo="5" left="0"    top="0"    right="0"    bottom="0"    offsetX="0"   offsetY="0" />
+
+  <!--BoundingBox-->
+  <Sprite spriteID="bbox"                 paletting="false" paletteNo="5" left="0"    top="0"    right="0"    bottom="0"    offsetX="0"   offsetY="0" />
+
+</SpriteRenderer>

@@ -1,0 +1,36 @@
+<Prefab layer ="0">
+  <Components>
+
+    <Component componentType="0">
+      <SpriteRenderer ui ="false">
+        <Palette paletteNo ="0" textureID ="enemy"/>
+        <Sprite spriteID ="phantomBat1" paletting ="false" paletteNo ="0"
+        left = "720" top = "340" right = "783" bottom ="403"
+        offsetX ="0" offsetY ="0"/>
+        <Sprite spriteID ="phantomBat2" paletting ="false" paletteNo ="0"
+        left = "664" top = "408" right = "791" bottom ="535"
+        offsetX ="0" offsetY ="0"/>
+        <Sprite spriteID ="phantomBat3" paletting ="false" paletteNo ="0"
+        left = "468" top = "408" right = "659" bottom ="535"
+        offsetX ="0" offsetY ="0"/>
+      </SpriteRenderer>
+    </Component>
+
+    <Component componentType ="1">
+      <Animator>
+        <Animation animationID ="idle">
+          <AnimationFrame spriteID="phantomBat1" frameTime="0"/>
+        </Animation>
+        <Animation animationID ="fly">
+          <AnimationFrame spriteID="phantomBat2" frameTime="30"/>
+          <AnimationFrame spriteID="phantomBat3" frameTime="30"/>
+        </Animation>
+      </Animator>
+    </Component>
+
+    <Component componentType ="5">
+      <Physics/>
+    </Component>
+
+  </Components>
+</Prefab>

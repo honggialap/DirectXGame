@@ -1,0 +1,33 @@
+<Prefab layer ="0">
+  <Components>
+
+    <Component componentType="0">
+      <SpriteRenderer ui ="false">
+        <Palette paletteNo ="0" textureID ="enemy"/>
+        <Sprite spriteID ="skeleton1" paletting ="false" paletteNo ="0"
+        left = "480" top = "208" right = "543" bottom ="335"
+        offsetX ="0" offsetY ="0"/>
+        <Sprite spriteID ="skeleton2" paletting ="false" paletteNo ="0"
+        left = "548" top = "208" right = "611" bottom ="335"
+        offsetX ="0" offsetY ="0"/>
+      </SpriteRenderer>
+    </Component>
+
+    <Component componentType ="1">
+      <Animator>
+        <Animation animationID ="idle">
+          <AnimationFrame spriteID="skeleton1" frameTime="0"/>
+        </Animation>
+        <Animation animationID ="attack">
+          <AnimationFrame spriteID="skeleton1" frameTime="30"/>
+          <AnimationFrame spriteID="skeleton2" frameTime="30"/>
+        </Animation>
+      </Animator>
+    </Component>
+
+    <Component componentType ="5">
+      <Physics/>
+    </Component>
+
+  </Components>
+</Prefab>

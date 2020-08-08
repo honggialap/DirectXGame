@@ -4,34 +4,26 @@
 
 #include "../Include.h"
 
-class GameTime
-{
-public:
-	double elapsedMilliseconds;
-	double totalElapsedMilliseconds;
-
-	GameTime();
-	~GameTime();
-};
-
 class Time
 {
-public:
+private:
 	steady_clock clock;
 	steady_clock::time_point startTimeStamp;
 	steady_clock::time_point currentTimeStamp;
 	steady_clock::time_point previousTimeStamp;
-	duration<double, milli> elapsedTime;
-	duration<double, milli> totalElapsedTime;
 
-	pGameTime gameTime;
-
+	float elapsedMilliseconds;
+	float totalElapsedMilliseconds;
+public:
 	Time();
 	~Time();
-	
+
 	void Start();
 	void Update();
 	void Restart();
+
+	float ElapsedMilliseconds();
+	float TotalElapsedMilliseconds();
 };
 
 #endif // !__TIME_H__

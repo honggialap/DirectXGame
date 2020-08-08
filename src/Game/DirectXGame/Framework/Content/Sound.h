@@ -5,30 +5,22 @@
 #include "../../Include.h"
 #include "../Audio.h"
 
-class Sound 
+struct SoundClip 
 {
-public:
-	Sound();
-	~Sound();
 };
 
-typedef Sound* pSound;
-
-class Sounds
+class SoundBank
 {
-public:
+private:
 	pAudio audio;
+	unordered_map<string, pSound> soundBank;
 
-	unordered_map<string, pSound> sounds;
-
-	Sounds(pAudio audio);
-	~Sounds();
+public:
+	SoundBank(pAudio audio);
+	~SoundBank();
 	
 	void Add();
 	pSound Get();
-	void Clear();
 };
-
-typedef Sounds* pSounds;
 
 #endif // !__SOUND_H__

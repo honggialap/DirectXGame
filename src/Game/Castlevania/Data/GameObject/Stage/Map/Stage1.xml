@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<Prefab layer ="0">
+  <Components>
+    <SpriteRenderer ui ="true">
+      <Palette/>
+      <Sprite/>
+    </SpriteRenderer>
+  </Components>
+	<GameStats>
+	</GameStats>
+</Prefab>

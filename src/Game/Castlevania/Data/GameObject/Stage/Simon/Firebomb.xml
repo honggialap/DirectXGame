@@ -1,0 +1,50 @@
+<Prefab layer ="0">
+  <Components>
+
+    <Component componentType="0">
+      <SpriteRenderer ui ="false">
+        <Palette paletteNo ="0" textureID ="weapon"/>
+        <Sprite spriteID ="firebomb1" paletting ="false" paletteNo ="0"
+        left = "72" top = "508" right = "103" bottom ="571"
+        offsetX ="0" offsetY ="0"/>
+        <Sprite spriteID ="firebomb2" paletting ="false" paletteNo ="0"
+        left = "108" top = "508" right = "139" bottom ="571"
+        offsetX ="0" offsetY ="0"/>
+        <Sprite spriteID ="firebomb3" paletting ="false" paletteNo ="0"
+        left = "144" top = "508" right = "175" bottom ="571"
+        offsetX ="0" offsetY ="0"/>
+        <Sprite spriteID ="firebomb4" paletting ="false" paletteNo ="0"
+        left = "180" top = "508" right = "211" bottom ="571"
+        offsetX ="0" offsetY ="0"/>
+        <Sprite spriteID ="firebomb5" paletting ="false" paletteNo ="0"
+        left = "216" top = "508" right = "279" bottom ="571"
+        offsetX ="0" offsetY ="0"/>
+        <Sprite spriteID ="firebomb6" paletting ="false" paletteNo ="0"
+        left = "284" top = "508" right = "347" bottom ="571"
+        offsetX ="0" offsetY ="0"/>
+      </SpriteRenderer>
+    </Component>
+
+    <Component componentType ="1">
+      <Animator>
+        <Animation animationID ="throw">
+          <AnimationFrame spriteID="firebomb1" frameTime="0"/>
+        </Animation>
+        <Animation animationID ="ignite">
+          <AnimationFrame spriteID="firebomb2" frameTime="50"/>
+          <AnimationFrame spriteID="firebomb3" frameTime="50"/>
+          <AnimationFrame spriteID="firebomb4" frameTime="50"/>
+          <AnimationFrame spriteID="firebomb5" frameTime="50"/>
+          <AnimationFrame spriteID="firebomb6" frameTime="50"/>
+          <AnimationFrame spriteID="firebomb5" frameTime="50"/>
+          <AnimationFrame spriteID="firebomb6" frameTime="50"/>
+        </Animation>
+      </Animator>
+    </Component>
+
+    <Component componentType ="5">
+      <Physics/>
+    </Component>
+
+  </Components>
+</Prefab>

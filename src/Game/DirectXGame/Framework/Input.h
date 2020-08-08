@@ -5,7 +5,7 @@
 #include "../Include.h"
 #include "Application.h"
 
-class KeyEventHandler
+class KeyHandler
 {
 public:
 	virtual void KeyState(BYTE* state) = 0;
@@ -13,9 +13,8 @@ public:
 	virtual void OnKeyUp(int KeyCode) = 0;
 };
 
-class InputDevice
+struct InputDevice
 {
-public:
 	static const int KEYBOARD_BUFFER_SIZE = 1024;
 	static const int KEYSTATE_BUFFER_SIZE = 256;
 
@@ -24,25 +23,21 @@ public:
 	BYTE					keyStates[KEYSTATE_BUFFER_SIZE] = {0};	// DirectInput keyboard state buffer 
 	DIDEVICEOBJECTDATA		keyEvents[KEYBOARD_BUFFER_SIZE] = {0};	// Buffered keyboard data
 
-	//	LPKEYEVENTHANDLER keyHandler;
-
-	InputDevice();
-	~InputDevice();
+	pKeyHandler keyHandler;
 };
 
 class Input
 {
 public:
-	pInputDevice inputDevice;
-	
 	Input();
 	~Input();
 
+	pInputDevice inputDevice;
 	void CreateInputDevice(pGameWindow gameWindow);
-	
+
 	void Update();
-	int	IsKeyDown();
-	void SetKeyHandler();
+	int IsKeyDown(int KeyCode);
+	void SetKeyHandler(pKeyHandler keyHandler);
 };
 
 #endif // !__INPUT_H__

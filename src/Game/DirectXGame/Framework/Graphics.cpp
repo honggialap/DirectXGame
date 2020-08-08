@@ -1,44 +1,34 @@
 #include "Graphics.h"
 
-#pragma region GraphicsDevice
-
-GraphicsDevice::GraphicsDevice()
-{
-	direct3D = NULL;
-	device = NULL;
-	presentParameters = {};
-	backBuffer = NULL;
-	spriteHandler = NULL;
-}
-
-GraphicsDevice::~GraphicsDevice()
-{
-	if (spriteHandler != NULL) spriteHandler->Release();
-	spriteHandler = NULL;
-
-	if (backBuffer != NULL) backBuffer->Release();
-	backBuffer = NULL;
-
-	if (device != NULL) device->Release();
-	device = NULL;
-
-	if (direct3D != NULL) direct3D->Release();
-	direct3D = NULL;
-}
-
-#pragma endregion
-
-#pragma region Graphics
-
 Graphics::Graphics()
 {
 	graphicsDevice = new GraphicsDevice();
+	graphicsDevice->direct3D = NULL;
+	graphicsDevice->device = NULL;
+	graphicsDevice->presentParameters = {};
+	graphicsDevice->backBuffer = NULL;
+	graphicsDevice->spriteHandler = NULL;
 }
 
 Graphics::~Graphics()
 {
-	delete graphicsDevice;
-	graphicsDevice = nullptr;
+	if (graphicsDevice->spriteHandler != NULL) graphicsDevice->spriteHandler->Release();
+	graphicsDevice->spriteHandler = NULL;
+
+	if (graphicsDevice->backBuffer != NULL) graphicsDevice->backBuffer->Release();
+	graphicsDevice->backBuffer = NULL;
+
+	if (graphicsDevice->device != NULL) graphicsDevice->device->Release();
+	graphicsDevice->device = NULL;
+
+	if (graphicsDevice->direct3D != NULL) graphicsDevice->direct3D->Release();
+	graphicsDevice->direct3D = NULL;
+
+	if (graphicsDevice != nullptr)
+	{
+		delete graphicsDevice;
+		graphicsDevice = nullptr;
+	}
 }
 
 void Graphics::CreateGraphicsDevice(pGameWindow gameWindow)
@@ -80,22 +70,32 @@ void Graphics::CreateGraphicsDevice(pGameWindow gameWindow)
 	OutputDebugString(L"[INFO] Create graphics device successed.\n");
 }
 
-void Graphics::Draw(pSprite sprite)
+void Graphics::Draw(float x, float y, pSprite sprite,
+	bool flipX, bool flipY, int alpha)
 {
+	D3DXMATRIX mat;
+	
+	float ix = 1;
+	if (flipX) ix = -1;
+
+	float iy = 1;
+	if (flipY) iy = -1;
+
+	D3DXMatrixScaling(&mat, ix, iy, 0);
+	graphicsDevice->spriteHandler->SetTransform(&mat);
+	x *= ix;
+	y *= iy;
+
+	D3DXVECTOR3 renderPosition(x, y, 0);
 	graphicsDevice->spriteHandler->Draw(
-		sprite->texture->texture,
+		(sprite->texture->texture),
 		&(sprite->sourceRect),
-		NULL,
-		NULL,
-		sprite->texture->transparentColor);
+		&(sprite->center),
+		&renderPosition,
+		D3DCOLOR_ARGB(
+			alpha,
+			sprite->texture->r,
+			sprite->texture->g,
+			sprite->texture->b));
+	D3DXMatrixScaling(&mat, ix, iy, 0);
 }
-
-//void Graphics::Draw(pAnimation animation)
-//{
-//}
-//
-//void Graphics::Draw(pTilemap tilemap)
-//{
-//}
-
-#pragma endregion

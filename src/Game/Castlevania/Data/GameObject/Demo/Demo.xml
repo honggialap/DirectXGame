@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Prefab layer ="0">
+  <GameStat>
+    <Map>
+      <Platform width ="" height =""/>
+      <Platform width ="" height =""/>
+      <Platform width ="" height =""/>
+      <Stair stairBottomX ="" stairBottomY ="" stairButtomDirection =""
+             stairTopX ="" stairTopY ="" stairTopDirection =""/>
+    </Map>
+  </GameStat>
+</Prefab>

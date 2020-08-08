@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GameData>
+
+  <GameSettings
+    gameTitle ="Castlevania"
+    maxFrameRate ="60"
+    fullscreen ="false"
+    widthResolution ="1024"
+    heightResolution ="960"/>
+  
+  <GameContent source ="Castlevania\Data\Content\GameContent.xml"/>
+
+  <Scenes>
+    <Scene sceneID ="demo" source ="Castlevania\Data\Scene\Demo.xml"/>
+    <Scene sceneID ="title" source ="Castlevania\Data\Scene\Title.xml"/>
+    <Scene sceneID ="intro" source ="Castlevania\Data\Scene\Intro.xml"/>
+    <!--
+    <Scene sceneID ="stage1" source ="Castlevania\Data\Scene\Stage1.xml"/>
+    <Scene sceneID ="stage2A" source ="Castlevania\Data\Scene\Stage2A.xml"/>
+    <Scene sceneID ="stage2B" source ="Castlevania\Data\Scene\Stage2B.xml"/>
+    <Scene sceneID ="stage3A" source ="Castlevania\Data\Scene\Stage3A.xml"/>
+    <Scene sceneID ="stage3B" source ="Castlevania\Data\Scene\Stage3B.xml"/>
+    <Scene sceneID ="stage4" source ="Castlevania\Data\Scene\Stage4.xml"/>
+    -->
+  </Scenes>
+
+</GameData>

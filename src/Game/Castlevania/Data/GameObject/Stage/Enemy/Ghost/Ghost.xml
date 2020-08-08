@@ -1,0 +1,31 @@
+<Prefab layer ="0">
+  <Components>
+
+    <Component componentType="0">
+      <SpriteRenderer ui ="false">
+        <Palette paletteNo ="0" textureID ="enemy"/>
+        <Sprite spriteID ="ghost1" paletting ="false" paletteNo ="0"
+        left = "372" top = "4" right = "435" bottom ="67"
+        offsetX ="0" offsetY ="0"/>
+        <Sprite spriteID ="ghost2" paletting ="false" paletteNo ="0"
+        left = "440" top = "4" right = "503" bottom ="67"
+        offsetX ="0" offsetY ="0"/>
+
+      </SpriteRenderer>
+    </Component>
+
+    <Component componentType ="1">
+      <Animator>
+        <Animation animationID ="fly">
+          <AnimationFrame spriteID="ghost1" frameTime="30"/>
+          <AnimationFrame spriteID="ghost2" frameTime="30"/>
+        </Animation>
+      </Animator>
+    </Component>
+
+    <Component componentType ="5">
+      <Physics/>
+    </Component>
+
+  </Components>
+</Prefab>

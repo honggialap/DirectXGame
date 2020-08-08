@@ -5,28 +5,24 @@
 #include "../Include.h"
 #include "Application.h"
 
-class AudioDevice
+struct AudioDevice
 {
-public:
-	static const int SOUND_BUFFER_SIZE = 128;
-
-	LPDIRECTSOUND8 directSound;
-	LPDIRECTSOUNDBUFFER primaryBuffer;
-	LPDIRECTSOUNDBUFFER8 secondaryBuffer[SOUND_BUFFER_SIZE];
-
-	AudioDevice();
-	~AudioDevice();
+	//static const int SOUND_BUFFER_SIZE = 128;
+	//
+	//LPDIRECTSOUND8 directSound;
+	//LPDIRECTSOUNDBUFFER primaryBuffer;
+	//LPDIRECTSOUNDBUFFER8 secondaryBuffer[SOUND_BUFFER_SIZE];
 };
 
 class Audio
 {
 public:
-	pAudioDevice audioDevice;
-
 	Audio();
 	~Audio();
 
+	pAudioDevice audioDevice;
 	void CreateAudioDevice(pGameWindow gameWindow);
+
 	void Play();
 };
 

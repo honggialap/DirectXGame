@@ -1,0 +1,34 @@
+<Prefab layer ="0">
+  <Components>
+
+    <Component componentType="0">
+      <SpriteRenderer ui ="false">
+        <Palette paletteNo ="0" textureID ="item"/>
+        <Sprite spriteID ="moneyBag100" paletting ="false" paletteNo ="0"
+        left = "108" top = "4" right = "171" bottom ="67"
+        offsetX ="0" offsetY ="0"/>
+        <Sprite spriteID ="moneyBag400" paletting ="false" paletteNo ="0"
+        left = "176" top = "4" right = "239" bottom ="67"
+        offsetX ="0" offsetY ="0"/>
+        <Sprite spriteID ="moneyBag700" paletting ="false" paletteNo ="0"
+        left = "244" top = "4" right = "307" bottom ="67"
+        offsetX ="0" offsetY ="0"/>
+      </SpriteRenderer>
+    </Component>
+
+    <Component componentType ="1">
+      <Animator>
+        <Animation animationID ="idle">
+          <AnimationFrame spriteID="moneyBag100" frameTime="30"/>
+          <AnimationFrame spriteID="moneyBag400" frameTime="30"/>
+          <AnimationFrame spriteID="moneyBag700" frameTime="30"/>
+        </Animation>
+      </Animator>
+    </Component>
+
+    <Component componentType ="5">
+      <Physics/>
+    </Component>
+    
+  </Components>
+</Prefab>

@@ -1,0 +1,31 @@
+<Prefab layer ="0">
+  <Components>
+
+    <Component componentType="0">
+      <SpriteRenderer ui ="false">
+        <Palette paletteNo ="0" textureID ="item"/>
+        <Sprite spriteID ="magicCrystal1" paletting ="false" paletteNo ="0"
+        left = "312" top = "4" right = "375" bottom ="67"
+        offsetX ="0" offsetY ="0"/>
+        <Sprite spriteID ="magicCrystal2" paletting ="false" paletteNo ="0"
+        left = "380" top = "4" right = "443" bottom ="67"
+        offsetX ="0" offsetY ="0"/>
+
+      </SpriteRenderer>
+    </Component>
+
+    <Component componentType ="1">
+      <Animator>
+        <Animation animationID ="idle">
+          <AnimationFrame spriteID="magicCrystal1" frameTime="30"/>
+          <AnimationFrame spriteID="magicCrystal2" frameTime="30"/>
+        </Animation>
+      </Animator>
+    </Component>
+
+    <Component componentType ="5">
+      <Physics/>
+    </Component>
+
+  </Components>
+</Prefab>

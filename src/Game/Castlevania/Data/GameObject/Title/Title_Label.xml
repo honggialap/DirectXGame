@@ -1,0 +1,28 @@
+<Prefab layer ="1">
+  <Components>
+    <Component componentType ="0">
+      <SpriteRenderer ui ="false">
+        <Palette paletteNo ="0" textureID ="title"></Palette>
+        <Sprite spriteID ="0" paletting ="false" paletteNo ="0"
+                left = "2232" top = "4" right = "2681" bottom ="37"
+                offsetX ="0" offsetY ="0"></Sprite>
+        <Sprite spriteID ="1" paletting ="false" paletteNo ="0"
+                left = "2232" top = "40" right = "2681" bottom ="73"
+                offsetX ="0" offsetY ="0"></Sprite>
+      </SpriteRenderer>
+    </Component>
+
+    <Component componentType ="1">
+      <Animator>
+        <Animation animationID ="idle">
+          <AnimationFrame spriteID ="0" frameTime ="0"></AnimationFrame>
+        </Animation>
+        <Animation animationID ="blink">
+          <AnimationFrame spriteID ="0" frameTime ="100"></AnimationFrame>
+          <AnimationFrame spriteID ="1" frameTime ="100"></AnimationFrame>
+        </Animation>
+      </Animator>
+    </Component>
+
+  </Components>  
+</Prefab>

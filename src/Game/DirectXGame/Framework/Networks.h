@@ -4,11 +4,19 @@
 
 #include "../Include.h"
 
+struct NetworksDevice
+{
+
+};
+
 class Networks
 {
 public:
 	Networks();
 	~Networks();
+
+	pNetworksDevice networksDevice;
+	void CreateNetworksDevice(pGameWindow gameWindow);
 };
 
 #endif // !__NETWORKS_H__

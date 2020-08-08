@@ -4,29 +4,25 @@
 
 #include "../Include.h"
 
-class GameWindow
+struct GameWindow
 {
-public:
 	HINSTANCE hInstance;
 	HWND hWnd;
 	LPCWSTR windowTitle;
 	bool fullscreen;
 	int width;
 	int height;
-
-	GameWindow();
-	~GameWindow();
 };
 
 class Application
 {
 public:
-	pGameWindow gameWindow;
-
 	Application(HINSTANCE hInstance);
 	~Application();
 
+	pGameWindow gameWindow;
 	void CreateGameWindow(LPCWSTR windowTitle, int widthResolution, int heightResolution, bool fullscreen);
+
 	bool HandleMessage();
 	void Exit();
 	static LRESULT CALLBACK WinProc(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam);

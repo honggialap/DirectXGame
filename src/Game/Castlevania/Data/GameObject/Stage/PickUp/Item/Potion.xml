@@ -1,0 +1,18 @@
+<Prefab layer ="0">
+  <Components>
+
+    <Component componentType="0">
+      <SpriteRenderer ui ="false">
+        <Palette paletteNo ="0" textureID ="item"/>
+        <Sprite spriteID ="potion" paletting ="false" paletteNo ="0"
+        left = "72" top = "72" right = "135" bottom ="135"
+        offsetX ="0" offsetY ="0"/>
+      </SpriteRenderer>
+    </Component>
+
+    <Component componentType ="5">
+      <Physics/>
+    </Component>
+
+  </Components>
+</Prefab>

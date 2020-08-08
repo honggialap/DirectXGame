@@ -1,0 +1,37 @@
+<Prefab layer ="1">
+  <Components>
+    <Component componentType ="0">
+      <SpriteRenderer ui =" false">
+        <Palette paletteNo ="0" textureID ="simon_0"></Palette>
+        <Sprite spriteID ="idle" paletting ="false" paletteNo ="0"
+                        left = "4" top = "4" right = "67" bottom ="131"
+                        offsetX ="0" offsetY ="-4"></Sprite>
+        <Sprite spriteID ="walk1" paletting ="false" paletteNo ="0"
+                        left = "72" top = "4" right = "135" bottom ="131"
+                        offsetX ="0" offsetY ="-4"></Sprite>
+        <Sprite spriteID ="walk2" paletting ="false" paletteNo ="0"
+                        left = "140" top = "4" right = "203" bottom ="131"
+                        offsetX ="0" offsetY ="-4"></Sprite>
+        <Sprite spriteID ="intro" paletting ="false" paletteNo ="0"
+                        left = "548" top = "4" right = "611" bottom ="131"
+                        offsetX ="0" offsetY ="0"></Sprite>
+      </SpriteRenderer>
+    </Component>
+
+    <Component componentType ="1">
+      <Animator>
+        <Animation animationID ="walk">
+          <AnimationFrame spriteID ="idle" frameTime ="100"></AnimationFrame>
+          <AnimationFrame spriteID ="walk1" frameTime ="100"></AnimationFrame>
+          <AnimationFrame spriteID ="walk2" frameTime ="100"></AnimationFrame>
+          <AnimationFrame spriteID ="walk1" frameTime ="100"></AnimationFrame>
+        </Animation>
+
+        <Animation animationID ="intro">
+          <AnimationFrame spriteID ="intro" frameTime ="0"></AnimationFrame>
+        </Animation>
+      </Animator>
+    </Component>
+
+  </Components>  
+</Prefab>

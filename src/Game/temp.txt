@@ -1,0 +1,7 @@
+how physics work
+
+Physics Update
+	initial motion (x, y, vx, vy, gravity)
+	overlapping -> response -> new motion (x, y, vx, vy, gravity)
+	sweptAABB -> response -> final motion (x, y, vx, vy, gravity)
+	update

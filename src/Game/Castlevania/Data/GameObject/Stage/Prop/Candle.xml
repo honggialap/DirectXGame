@@ -1,0 +1,35 @@
+<Prefab layer ="0">
+  <Components>
+
+    <Component componentType="0">
+      <SpriteRenderer ui ="false">
+        <Palette paletteNo ="0" textureID ="item"/>
+        <Palette paletteNo ="1" textureID ="bbox"/>
+        <Sprite spriteID ="candle1" paletting ="false" paletteNo ="0"
+        left = "276" top = "72" right = "307" bottom ="135"
+        offsetX ="0" offsetY ="0"/>
+        <Sprite spriteID ="candle2" paletting ="false" paletteNo ="0"
+        left = "276" top = "140" right = "307" bottom ="203"
+        offsetX ="0" offsetY ="0"/>
+        <Sprite spriteID="bbox" paletting="false" paletteNo="1"
+        left="0" top="0" right="0" bottom="0"
+        offsetX="0" offsetY="0" />
+      </SpriteRenderer>
+    </Component>
+
+
+    <Component componentType ="1">
+      <Animator>
+        <Animation animationID ="idle">
+          <AnimationFrame spriteID="candle1" frameTime="30"/>
+          <AnimationFrame spriteID="candle2" frameTime="30"/>
+        </Animation>
+      </Animator>
+    </Component>
+
+    <Component componentType ="5">
+      <Physics/>
+    </Component>
+
+  </Components>
+</Prefab>

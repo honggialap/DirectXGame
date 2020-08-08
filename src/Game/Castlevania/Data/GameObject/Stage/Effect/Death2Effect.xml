@@ -1,0 +1,31 @@
+<Prefab layer ="0">
+  <Components>
+
+    <Component componentType="0">
+      <SpriteRenderer ui ="false">
+        <Palette paletteNo ="0" textureID ="effect"/>
+        <Sprite spriteID ="death2Effect1" paletting ="false" paletteNo ="0"
+        left = "4" top = "72" right = "99" bottom ="199"
+        offsetX ="0" offsetY ="0"/>
+        <Sprite spriteID ="death2Effect2" paletting ="false" paletteNo ="0"
+        left = "104" top = "72" right = "199" bottom ="199"
+        offsetX ="0" offsetY ="0"/>
+        <Sprite spriteID ="death2Effect3" paletting ="false" paletteNo ="0"
+        left = "204" top = "72" right = "299" bottom ="199"
+        offsetX ="0" offsetY ="0"/>
+      </SpriteRenderer>
+    </Component>
+
+    <Component componentType ="1">
+      <Animator>
+        <Animation animationID ="death2Effect">
+          <AnimationFrame spriteID="death2Effect1" frameTime="40"/>
+          <AnimationFrame spriteID="death2Effect2" frameTime="40"/>
+          <AnimationFrame spriteID="death2Effect3" frameTime="40"/>
+        </Animation>
+      </Animator>
+    </Component>
+
+
+  </Components>
+</Prefab>

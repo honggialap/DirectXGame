@@ -1,0 +1,92 @@
+<Prefab layer ="0">
+  <Components>
+
+    <Component componentType="0">
+      <SpriteRenderer ui ="false">
+        <Palette paletteNo ="0" textureID ="item"/>
+        <Sprite spriteID ="moai1" paletting ="false" paletteNo ="0"
+        left = "4" top = "276" right = "35" bottom ="339"
+        offsetX ="0" offsetY ="0"/>
+        <Sprite spriteID ="moai2" paletting ="false" paletteNo ="0"
+        left = "40" top = "276" right = "103" bottom ="339"
+        offsetX ="0" offsetY ="0"/>
+        <Sprite spriteID ="moai3" paletting ="false" paletteNo ="0"
+        left = "108" top = "276" right = "139" bottom ="339"
+        offsetX ="0" offsetY ="0"/>
+        <Sprite spriteID ="moai4" paletting ="false" paletteNo ="0"
+        left = "144" top = "276" right = "207" bottom ="339"
+        offsetX ="0" offsetY ="0"/>
+        
+        <Sprite spriteID ="moai5" paletting ="false" paletteNo ="0"
+        left = "212" top = "276" right = "243" bottom ="339"
+        offsetX ="0" offsetY ="0"/>
+        <Sprite spriteID ="moai6" paletting ="false" paletteNo ="0"
+        left = "248" top = "276" right = "311" bottom ="339"
+        offsetX ="0" offsetY ="0"/>
+        <Sprite spriteID ="moai7" paletting ="false" paletteNo ="0"
+        left = "316" top = "276" right = "347" bottom ="339"
+        offsetX ="0" offsetY ="0"/>
+        <Sprite spriteID ="moai8" paletting ="false" paletteNo ="0"
+        left = "352" top = "276" right = "415" bottom ="339"
+        offsetX ="0" offsetY ="0"/>
+        
+        <Sprite spriteID ="moai9" paletting ="false" paletteNo ="0"
+        left = "4" top = "344" right = "35" bottom ="407"
+        offsetX ="0" offsetY ="0"/>
+        <Sprite spriteID ="moai10" paletting ="false" paletteNo ="0"
+        left = "40" top = "344" right = "103" bottom ="407"
+        offsetX ="0" offsetY ="0"/>
+        <Sprite spriteID ="moai11" paletting ="false" paletteNo ="0"
+        left = "108" top = "344" right = "139" bottom ="407"
+        offsetX ="0" offsetY ="0"/>
+        <Sprite spriteID ="moai12" paletting ="false" paletteNo ="0"
+        left = "144" top = "344" right = "207" bottom ="407"
+        offsetX ="0" offsetY ="0"/>
+        
+        <Sprite spriteID ="moai13" paletting ="false" paletteNo ="0"
+        left = "212" top = "344" right = "243" bottom ="407"
+        offsetX ="0" offsetY ="0"/>
+        <Sprite spriteID ="moai14" paletting ="false" paletteNo ="0"
+        left = "248" top = "344" right = "311" bottom ="407"
+        offsetX ="0" offsetY ="0"/>
+        <Sprite spriteID ="moai15" paletting ="false" paletteNo ="0"
+        left = "316" top = "344" right = "347" bottom ="407"
+        offsetX ="0" offsetY ="0"/>
+        <Sprite spriteID ="moai16" paletting ="false" paletteNo ="0"
+        left = "352" top = "344" right = "415" bottom ="407"
+        offsetX ="0" offsetY ="0"/>
+      </SpriteRenderer>
+    </Component>
+
+    <Component componentType ="1">
+      <Animator>
+        <Animation animationID ="idle">
+          <AnimationFrame spriteID="moai1" frameTime="30"/>
+          <AnimationFrame spriteID="moai5" frameTime="30"/>
+          <AnimationFrame spriteID="moai9" frameTime="30"/>
+          <AnimationFrame spriteID="moai13" frameTime="30"/>
+
+          <AnimationFrame spriteID="moai2" frameTime="30"/>
+          <AnimationFrame spriteID="moai6" frameTime="30"/>
+          <AnimationFrame spriteID="moai10" frameTime="30"/>
+          <AnimationFrame spriteID="moai14" frameTime="30"/>
+
+          <AnimationFrame spriteID="moai3" frameTime="30"/>
+          <AnimationFrame spriteID="moai7" frameTime="30"/>
+          <AnimationFrame spriteID="moai11" frameTime="30"/>
+          <AnimationFrame spriteID="moai15" frameTime="30"/>
+
+          <AnimationFrame spriteID="moai4" frameTime="30"/>
+          <AnimationFrame spriteID="moai8" frameTime="30"/>
+          <AnimationFrame spriteID="moai12" frameTime="30"/>
+          <AnimationFrame spriteID="moai16" frameTime="30"/>
+        </Animation>
+      </Animator>
+    </Component>
+
+    <Component componentType ="5">
+      <Physics/>
+    </Component>
+
+  </Components>
+</Prefab>

@@ -4,17 +4,14 @@
 
 #include "Include.h"
 #include "../DirectXGame/Game.h"
-#include "Model/Scene/Stage1Scene.h"
+#include "../Castlevania/Model/Scene/PlayScene.h"
 
 class Castlevania : public Game
 {
 public:
 	Castlevania(HINSTANCE hInstance);
 	~Castlevania();
-	
-	void Load(LPCWSTR dataFilePath);
-	void LoadPrefabs(LPCWSTR dataFilePath);
-	void LoadScenes(LPCWSTR dataFilePath);
+	virtual void LoadScene(string sceneID);
 };
 
 #endif // !__CASTLEVANIA_H__

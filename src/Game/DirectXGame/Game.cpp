@@ -2,23 +2,29 @@
 
 Game::Game(HINSTANCE hInstance)
 {
-	gameSettings = new GameSettings();
+	exit = false;
 
+	gameSettings = new GameSettings();
 	application = new Application(hInstance);
 	time = new Time();
 	graphics = new Graphics();
 	input = new Input();
-	resource = new Resource(graphics);
-
-	scenes = new Scenes(this);
+	audio = new Audio();
+	resource = new Resource(graphics, audio);
+	networks = new Networks();
+	
+	currentScene = nullptr;
 }
 
 Game::~Game()
 {
-	if (scenes != nullptr)
+	currentScene = nullptr;
+	scenes.clear();
+
+	if (networks != nullptr)
 	{
-		delete scenes;
-		scenes = nullptr;
+		delete networks;
+		networks = nullptr;
 	}
 
 	if (resource != nullptr)
@@ -31,6 +37,12 @@ Game::~Game()
 	{
 		delete input;
 		input = nullptr;
+	}
+
+	if (audio != nullptr)
+	{
+		delete audio;
+		audio = nullptr;
 	}
 
 	if (graphics != nullptr)
@@ -58,10 +70,11 @@ Game::~Game()
 	}
 }
 
-void Game::Load(LPCWSTR dataFilePath)
+void Game::Load()
 {
-	resource->LoadGameSettings(gameSettings, dataFilePath);
-	
+	resource->LoadGameData(ToLPCWSTR(source));
+	resource->LoadGameSettings(this);
+
 	application->CreateGameWindow(
 		ToLPCWSTR(gameSettings->gameTitle),
 		gameSettings->widthResolution,
@@ -69,55 +82,87 @@ void Game::Load(LPCWSTR dataFilePath)
 		gameSettings->fullscreen);
 
 	graphics->CreateGraphicsDevice(application->gameWindow);
+	audio->CreateAudioDevice(application->gameWindow);
 	input->CreateInputDevice(application->gameWindow);
+	networks->CreateNetworksDevice(application->gameWindow);
+
+	resource->LoadContent();
+	LoadScenesList();
+}
+
+void Game::LoadScenesList()
+{
+	auto gridMaker = new GridMaker();
+
+	xml_node scenesNode = resource->gameDataDoc.child("GameData").child("Scenes");
+	for (xml_node sceneNode = scenesNode.child("Scene");
+		sceneNode;
+		sceneNode = sceneNode.next_sibling("Scene"))
+	{
+		scenes[sceneNode.attribute("sceneID").as_string()] = sceneNode.attribute("source").as_string();
+		gridMaker->MakeGrid(sceneNode.attribute("source").as_string());
+	}
+
+	delete gridMaker;
+	gridMaker = nullptr;
 }
 
 void Game::Run(string sceneID)
 {
-	bool done = false;
-	double frameTime = 1.0 / gameSettings->maxFrameRate * 1000; //in milliseconds
+	Load();
+	LoadScene(sceneID);
 
-	scenes->currentScene = scenes->scenes[sceneID];
-	scenes->currentScene->Load();
-
+	float frameTime = 1000.0f / gameSettings->maxFrameRate; //in milliseconds
+	float currentFrameTime = 0;
 	time->Start();
 
+	bool done = false;
 	while (!done)
 	{
-		done = application->HandleMessage();
-		
-		if (scenes->currentScene->done)
+		exit = done = application->HandleMessage();
+
+		// Change scene
+		if (currentScene->done && !exit)
 		{
-			scenes->currentScene->Unload();
+			string nextScene = currentScene->nextScene;
+			currentScene->Unload();
+			delete currentScene;
 
-			if (scenes->currentScene->exit)
-			{
-				scenes->Clear();
-				application->Exit();
-				done = application->HandleMessage();
-				break;
-			}
+			LoadScene(nextScene);
 
-			scenes->NextScene();
-			scenes->currentScene->Load();
 			time->Restart();
+			currentFrameTime = 0;
 		}
-		
-		time->Update();
 
-		if (time->gameTime->elapsedMilliseconds >= frameTime)
+		// End game
+		if (exit)
 		{
-			Update(time->gameTime);
+			currentScene->Unload();
+			delete currentScene;
+
+			application->Exit();
+			done = true;
+		}
+
+		// Game loop
+		time->Update();
+		currentFrameTime += time->ElapsedMilliseconds();
+
+		if (currentFrameTime >= frameTime)
+		{
+			input->Update();
+			Update(currentFrameTime);
 			Render();
+			currentFrameTime = 0;
 		}
 		else
-			Sleep(DWORD(frameTime - time->gameTime->elapsedMilliseconds));
+			Sleep(DWORD(frameTime - currentFrameTime));
 	}
 }
 
-void Game::Update(pGameTime gameTime)
+void Game::Update(float elapsedMs)
 {
-	scenes->currentScene->Update(gameTime);
+	currentScene->Update(elapsedMs);
 }
 
 void Game::Render()
@@ -128,11 +173,14 @@ void Game::Render()
 			graphics->graphicsDevice->backBuffer,
 			NULL, D3DCOLOR_XRGB(0, 0, 0));
 		
-		graphics->graphicsDevice->spriteHandler->Begin(D3DXSPRITE_ALPHABLEND);
+		graphics->graphicsDevice->
+			spriteHandler->Begin(D3DXSPRITE_ALPHABLEND);
 
-		scenes->currentScene->Render();
+		currentScene->Render();
 
-		graphics->graphicsDevice->spriteHandler->End();
+		graphics->graphicsDevice->
+			spriteHandler->End();
+
 		graphics->graphicsDevice->device->EndScene();
 	}
 	graphics->graphicsDevice->device->Present(NULL, NULL, NULL, NULL);

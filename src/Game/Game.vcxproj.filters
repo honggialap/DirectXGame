@@ -1,80 +1,317 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="Source Files">
-      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
-      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
-    </Filter>
-    <Filter Include="Header Files">
-      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
-      <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
-    </Filter>
-    <Filter Include="Resource Files">
-      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
-      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
-    </Filter>
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="DirectXGame\Tool\GridMaker.cpp" />
+    <ClCompile Include="DirectXGame\Library\pugixml\pugixml.cpp" />
+    <ClCompile Include="DirectXGame\Framework\Content\Font.cpp" />
+    <ClCompile Include="DirectXGame\Framework\Content\Sound.cpp" />
+    <ClCompile Include="DirectXGame\Framework\Content\Texture.cpp" />
+    <ClCompile Include="DirectXGame\Framework\Application.cpp" />
+    <ClCompile Include="DirectXGame\Framework\Audio.cpp" />
+    <ClCompile Include="DirectXGame\Framework\Graphics.cpp" />
+    <ClCompile Include="DirectXGame\Framework\Input.cpp" />
+    <ClCompile Include="DirectXGame\Framework\Networks.cpp" />
+    <ClCompile Include="DirectXGame\Framework\Resource.cpp" />
+    <ClCompile Include="DirectXGame\Framework\Time.cpp" />
+    <ClCompile Include="DirectXGame\Framework\Ultilities.cpp" />
+    <ClCompile Include="DirectXGame\Logic\Component\Animation.cpp" />
+    <ClCompile Include="DirectXGame\Logic\Component\Component.cpp" />
+    <ClCompile Include="DirectXGame\Logic\Component\Physics.cpp" />
+    <ClCompile Include="DirectXGame\Logic\Component\SoundSource.cpp" />
+    <ClCompile Include="DirectXGame\Logic\Component\Sprite.cpp" />
+    <ClCompile Include="DirectXGame\Logic\Component\Text.cpp" />
+    <ClCompile Include="DirectXGame\Logic\Component\Tilemap.cpp" />
+    <ClCompile Include="DirectXGame\Logic\View\Player.cpp" />
+    <ClCompile Include="DirectXGame\Logic\Camera.cpp" />
+    <ClCompile Include="DirectXGame\Logic\GameObject.cpp" />
+    <ClCompile Include="DirectXGame\Logic\Scene.cpp" />
+    <ClCompile Include="DirectXGame\Game.cpp" />
+    <ClCompile Include="DirectXGame\Logic\View\Local\LocalPlayer.cpp" />
+    <ClCompile Include="DirectXGame\Logic\View\Local\Viewport.cpp" />
+    <ClCompile Include="DirectXGame\Logic\View\Local\Control.cpp" />
+    <ClCompile Include="Castlevania\Castlevania.cpp" />
+    <ClCompile Include="Castlevania\Model\Scene\PlayScene.cpp" />
+    <ClCompile Include="Castlevania\Model\GameObject\Stage\Simon\Simon.cpp" />
+    <ClCompile Include="Castlevania\Model\GameObject\Intro\Intro.cpp" />
+    <ClCompile Include="Castlevania\Model\GameObject\Intro\Intro_Bat1.cpp" />
+    <ClCompile Include="Castlevania\Model\GameObject\Intro\Intro_Bat2.cpp" />
+    <ClCompile Include="Castlevania\Model\GameObject\Intro\Intro_BG.cpp" />
+    <ClCompile Include="Castlevania\Model\GameObject\Intro\Intro_Cloud.cpp" />
+    <ClCompile Include="Castlevania\Model\GameObject\Intro\Intro_Simon.cpp" />
+    <ClCompile Include="Castlevania\Model\GameObject\Demo\Demo.cpp" />
+    <ClCompile Include="Castlevania\Model\GameObject\Title\Title.cpp" />
+    <ClCompile Include="Castlevania\Model\GameObject\Title\Title_Bat.cpp" />
+    <ClCompile Include="Castlevania\Model\GameObject\Title\Title_BG.cpp" />
+    <ClCompile Include="Castlevania\Model\GameObject\Title\Title_Label.cpp" />
+    <ClCompile Include="Castlevania\Model\GameObject\Stage\Prop\Platform.cpp" />
+    <ClCompile Include="Castlevania\Model\GameObject\Stage\Background\Stage1_BG.cpp" />
+    <ClCompile Include="Castlevania\Model\GameObject\Stage\Background\Stage2A_BG.cpp" />
+    <ClCompile Include="Castlevania\Model\GameObject\Stage\Background\Stage2B_BG.cpp" />
+    <ClCompile Include="Castlevania\Model\GameObject\Stage\Background\Stage3A_BG.cpp" />
+    <ClCompile Include="Castlevania\Model\GameObject\Stage\Background\Stage3B_BG.cpp" />
+    <ClCompile Include="Castlevania\Model\GameObject\Stage\Background\Stage4_BG.cpp" />
+    <ClCompile Include="Castlevania\Model\GameObject\Stage\Effect\BrokenBrickEffect.cpp" />
+    <ClCompile Include="Castlevania\Model\GameObject\Stage\Effect\HitEffect.cpp" />
+    <ClCompile Include="Castlevania\Model\GameObject\Stage\Enemy\BlackKnight\BlackKnight.cpp" />
+    <ClCompile Include="Castlevania\Model\GameObject\Stage\Enemy\BlackKnight\BlackKnightTrigger.cpp" />
+    <ClCompile Include="Castlevania\Model\GameObject\Stage\Enemy\PhantomBat\PhantomBat.cpp" />
+    <ClCompile Include="Castlevania\Model\GameObject\Stage\Enemy\PhantomBat\Fireball.cpp" />
+    <ClCompile Include="Castlevania\Model\GameObject\Stage\Enemy\PhantomBat\PhantomBatTrigger.cpp" />
+    <ClCompile Include="Castlevania\Model\GameObject\Stage\Enemy\Ghost\Ghost.cpp" />
+    <ClCompile Include="Castlevania\Model\GameObject\Stage\Enemy\Ghost\GhostTrigger.cpp" />
+    <ClCompile Include="Castlevania\Model\GameObject\Stage\Enemy\Hunchback\Hunchback.cpp" />
+    <ClCompile Include="Castlevania\Model\GameObject\Stage\Enemy\Raven\Raven.cpp" />
+    <ClCompile Include="Castlevania\Model\GameObject\Stage\Enemy\Skeleton\Skeleton.cpp" />
+    <ClCompile Include="Castlevania\Model\GameObject\Stage\Enemy\Skeleton\SkeletonBone.cpp" />
+    <ClCompile Include="Castlevania\Model\GameObject\Stage\Enemy\Zombie\Zombie.cpp" />
+    <ClCompile Include="Castlevania\Model\GameObject\Stage\Enemy\VampireBat\VampireBat.cpp" />
+    <ClCompile Include="Castlevania\Model\GameObject\Stage\Enemy\VampireBat\VampireBatTrigger.cpp" />
+    <ClCompile Include="Castlevania\Model\GameObject\Stage\Enemy\VampireBat\VampireBatSpawnZone.cpp" />
+    <ClCompile Include="Castlevania\Model\GameObject\Stage\Enemy\Zombie\ZombieSpawnZone.cpp" />
+    <ClCompile Include="Castlevania\Model\GameObject\Stage\Enemy\Skeleton\SkeletonTrigger.cpp" />
+    <ClCompile Include="Castlevania\Model\GameObject\Stage\Enemy\Raven\RavenTrigger.cpp" />
+    <ClCompile Include="Castlevania\Model\GameObject\Stage\Enemy\Hunchback\HunchbackTrigger.cpp" />
+    <ClCompile Include="Castlevania\Model\GameObject\Stage\Pickup\Bonus\Crown.cpp" />
+    <ClCompile Include="Castlevania\Model\GameObject\Stage\Pickup\Bonus\Moai.cpp" />
+    <ClCompile Include="Castlevania\Model\GameObject\Stage\Pickup\Bonus\TreasureChest.cpp" />
+    <ClCompile Include="Castlevania\Model\GameObject\Stage\Pickup\Item\Cross.cpp" />
+    <ClCompile Include="Castlevania\Model\GameObject\Stage\Pickup\Item\ExtraLife.cpp" />
+    <ClCompile Include="Castlevania\Model\GameObject\Stage\Pickup\Item\LargeHeart.cpp" />
+    <ClCompile Include="Castlevania\Model\GameObject\Stage\Pickup\Item\MagicCrystal.cpp" />
+    <ClCompile Include="Castlevania\Model\GameObject\Stage\Pickup\Item\PorkChop.cpp" />
+    <ClCompile Include="Castlevania\Model\GameObject\Stage\Pickup\Item\Potion.cpp" />
+    <ClCompile Include="Castlevania\Model\GameObject\Stage\Pickup\Item\SmallHeart.cpp" />
+    <ClCompile Include="Castlevania\Model\GameObject\Stage\Pickup\Weapon\AxeItem.cpp" />
+    <ClCompile Include="Castlevania\Model\GameObject\Stage\Pickup\Weapon\BoomerangItem.cpp" />
+    <ClCompile Include="Castlevania\Model\GameObject\Stage\Pickup\Weapon\DaggerItem.cpp" />
+    <ClCompile Include="Castlevania\Model\GameObject\Stage\Pickup\Weapon\DoubleShot.cpp" />
+    <ClCompile Include="Castlevania\Model\GameObject\Stage\Pickup\Weapon\FirebombItem.cpp" />
+    <ClCompile Include="Castlevania\Model\GameObject\Stage\Pickup\Weapon\MorningStar.cpp" />
+    <ClCompile Include="Castlevania\Model\GameObject\Stage\Pickup\Weapon\StopwatchItem.cpp" />
+    <ClCompile Include="Castlevania\Model\GameObject\Stage\Pickup\Weapon\TripleShot.cpp" />
+    <ClCompile Include="Castlevania\Model\GameObject\Stage\Prop\BreakableBrick.cpp" />
+    <ClCompile Include="Castlevania\Model\GameObject\Stage\Prop\Candle.cpp" />
+    <ClCompile Include="Castlevania\Model\GameObject\Stage\Prop\DeadZone.cpp" />
+    <ClCompile Include="Castlevania\Model\GameObject\Stage\Prop\MovingPlatform.cpp" />
+    <ClCompile Include="Castlevania\Model\GameObject\Stage\Prop\Stair.cpp" />
+    <ClCompile Include="Castlevania\Model\GameObject\Stage\Prop\StairEnd.cpp" />
+    <ClCompile Include="Castlevania\Model\GameObject\Stage\Prop\Tourch.cpp" />
+    <ClCompile Include="Castlevania\Model\GameObject\Stage\Simon\Axe.cpp" />
+    <ClCompile Include="Castlevania\Model\GameObject\Stage\Simon\Boomerang.cpp" />
+    <ClCompile Include="Castlevania\Model\GameObject\Stage\Simon\Dagger.cpp" />
+    <ClCompile Include="Castlevania\Model\GameObject\Stage\Simon\Firebomb.cpp" />
+    <ClCompile Include="Castlevania\Model\GameObject\Stage\Simon\Stopwatch.cpp" />
+    <ClCompile Include="Castlevania\Model\GameObject\Stage\Simon\VampireKiller.cpp" />
+    <ClCompile Include="Castlevania\Model\GameObject\Stage\GameMaster.cpp" />
+    <ClCompile Include="Castlevania\Model\GameObject\Stage\HUD.cpp" />
+    <ClCompile Include="Castlevania\Model\GameObject\Stage\Effect\Text\Text100Effect.cpp" />
+    <ClCompile Include="Castlevania\Model\GameObject\Stage\Effect\Text\Text400Effect.cpp" />
+    <ClCompile Include="Castlevania\Model\GameObject\Stage\Effect\Text\Text700Effect.cpp" />
+    <ClCompile Include="Castlevania\Model\GameObject\Stage\Effect\Text\Text1000Effect.cpp" />
+    <ClCompile Include="Castlevania\Model\GameObject\Stage\Effect\Text\Text2000Effect.cpp" />
+    <ClCompile Include="Castlevania\Model\GameObject\Stage\Effect\Text\Text4000Effect.cpp" />
+    <ClCompile Include="Castlevania\Model\GameObject\Stage\Effect\Death1Effect.cpp" />
+    <ClCompile Include="Castlevania\Model\GameObject\Stage\Effect\Death2Effect.cpp" />
+    <ClCompile Include="Castlevania\Model\GameObject\Stage\Effect\Death3Effect.cpp" />
+    <ClCompile Include="Castlevania\Model\GameObject\Stage\Pickup\Bonus\MoneyBag100.cpp" />
+    <ClCompile Include="Castlevania\Model\GameObject\Stage\Pickup\Bonus\MoneyBag400.cpp" />
+    <ClCompile Include="Castlevania\Model\GameObject\Stage\Pickup\Bonus\MoneyBag700.cpp" />
+    <ClCompile Include="Castlevania\Model\GameObject\Stage\Pickup\Bonus\MoneyBag1000.cpp" />
+    <ClCompile Include="Castlevania\Model\GameObject\Stage\Prop\Door.cpp" />
+    <ClCompile Include="Castlevania\Model\GameObject\Stage\Enemy\Ghost\GhostSpawnZone.cpp" />
+    <ClCompile Include="Castlevania\Model\GameObject\Stage\Map\Stage1.cpp" />
+    <ClCompile Include="Castlevania\Model\GameObject\Stage\Map\Stage2A.cpp" />
+    <ClCompile Include="Castlevania\Model\GameObject\Stage\Map\Stage2B.cpp" />
+    <ClCompile Include="Castlevania\Model\GameObject\Stage\Map\Stage3A.cpp" />
+    <ClCompile Include="Castlevania\Model\GameObject\Stage\Map\Stage3B.cpp" />
+    <ClCompile Include="Castlevania\Model\GameObject\Stage\Map\Stage4.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="main.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="DirectXGame\Game.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="DirectXGame\Framework\Application.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="DirectXGame\Framework\Graphics.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="DirectXGame\Framework\Input.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="DirectXGame\Framework\Math.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="DirectXGame\Framework\Resource.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="DirectXGame\Framework\Time.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="DirectXGame\Framework\Utilities.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="DirectXGame\Framework\Content\Texture.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="DirectXGame\Logic\GameObject.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="DirectXGame\Logic\Scene.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="DirectXGame\Logic\Sprite.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="DirectXGame\Library\pugixml\pugixml.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="DirectXGame\Logic\Component.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="DirectXGame\Logic\Transform.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Castlevania\Castlevania.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Castlevania\Model\Scene\MenuScene.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Castlevania\Model\Scene\Stage1Scene.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Castlevania\Model\GameObject\Simon\Simon.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
+    <ClInclude Include="DirectXGame\Tool\GridMaker.h" />
+    <ClInclude Include="DirectXGame\Library\pugixml\pugiconfig.hpp" />
+    <ClInclude Include="DirectXGame\Library\pugixml\pugixml.hpp" />
+    <ClInclude Include="DirectXGame\Framework\Content\Font.h" />
+    <ClInclude Include="DirectXGame\Framework\Content\Sound.h" />
+    <ClInclude Include="DirectXGame\Framework\Content\Texture.h" />
+    <ClInclude Include="DirectXGame\Framework\Application.h" />
+    <ClInclude Include="DirectXGame\Framework\Audio.h" />
+    <ClInclude Include="DirectXGame\Framework\Graphics.h" />
+    <ClInclude Include="DirectXGame\Framework\Input.h" />
+    <ClInclude Include="DirectXGame\Framework\Networks.h" />
+    <ClInclude Include="DirectXGame\Framework\Resource.h" />
+    <ClInclude Include="DirectXGame\Framework\Time.h" />
+    <ClInclude Include="DirectXGame\Logic\Component\Animation.h" />
+    <ClInclude Include="DirectXGame\Logic\Component\Component.h" />
+    <ClInclude Include="DirectXGame\Logic\Component\Physics.h" />
+    <ClInclude Include="DirectXGame\Logic\Component\SoundSource.h" />
+    <ClInclude Include="DirectXGame\Logic\Component\Sprite.h" />
+    <ClInclude Include="DirectXGame\Logic\Component\Text.h" />
+    <ClInclude Include="DirectXGame\Logic\View\Player.h" />
+    <ClInclude Include="DirectXGame\Logic\Camera.h" />
+    <ClInclude Include="DirectXGame\Logic\GameObject.h" />
+    <ClInclude Include="DirectXGame\Logic\Scene.h" />
+    <ClInclude Include="DirectXGame\Game.h" />
+    <ClInclude Include="DirectXGame\Include.h" />
+    <ClInclude Include="DirectXGame\Logic\View\Local\LocalPlayer.h" />
+    <ClInclude Include="DirectXGame\Logic\View\Local\Viewport.h" />
+    <ClInclude Include="DirectXGame\Logic\View\Local\Control.h" />
+    <ClInclude Include="Castlevania\Include.h" />
+    <ClInclude Include="Castlevania\Castlevania.h" />
+    <ClInclude Include="Castlevania\Model\Scene\PlayScene.h" />
+    <ClInclude Include="DirectXGame\Logic\Component\Tilemap.h" />
+    <ClInclude Include="Castlevania\Model\GameObject\Stage\Simon\Simon.h" />
+    <ClInclude Include="Castlevania\Model\GameObject\Intro\Intro.h" />
+    <ClInclude Include="Castlevania\Model\GameObject\Intro\Intro_Bat1.h" />
+    <ClInclude Include="Castlevania\Model\GameObject\Intro\Intro_Bat2.h" />
+    <ClInclude Include="Castlevania\Model\GameObject\Intro\Intro_BG.h" />
+    <ClInclude Include="Castlevania\Model\GameObject\Intro\Intro_Cloud.h" />
+    <ClInclude Include="Castlevania\Model\GameObject\Intro\Intro_Simon.h" />
+    <ClInclude Include="Castlevania\Model\GameObject\Demo\Demo.h" />
+    <ClInclude Include="Castlevania\Model\GameObject\Title\Title.h" />
+    <ClInclude Include="Castlevania\Model\GameObject\Title\Title_Bat.h" />
+    <ClInclude Include="Castlevania\Model\GameObject\Title\Title_BG.h" />
+    <ClInclude Include="Castlevania\Model\GameObject\Title\Title_Label.h" />
+    <ClInclude Include="Castlevania\Model\GameObject\Stage\Prop\Platform.h" />
+    <ClInclude Include="Castlevania\Model\GameObject\Stage\Background\Stage1_BG.h" />
+    <ClInclude Include="Castlevania\Model\GameObject\Stage\Background\Stage2A_BG.h" />
+    <ClInclude Include="Castlevania\Model\GameObject\Stage\Background\Stage2B_BG.h" />
+    <ClInclude Include="Castlevania\Model\GameObject\Stage\Background\Stage3A_BG.h" />
+    <ClInclude Include="Castlevania\Model\GameObject\Stage\Background\Stage3B_BG.h" />
+    <ClInclude Include="Castlevania\Model\GameObject\Stage\Background\Stage4_BG.h" />
+    <ClInclude Include="Castlevania\Model\GameObject\Stage\Effect\BrokenBrickEffect.h" />
+    <ClInclude Include="Castlevania\Model\GameObject\Stage\Effect\HitEffect.h" />
+    <ClInclude Include="Castlevania\Model\GameObject\Stage\Enemy\BlackKnight\BlackKnight.h" />
+    <ClInclude Include="Castlevania\Model\GameObject\Stage\Enemy\BlackKnight\BlackKnightTrigger.h" />
+    <ClInclude Include="Castlevania\Model\GameObject\Stage\Enemy\PhantomBat\PhantomBat.h" />
+    <ClInclude Include="Castlevania\Model\GameObject\Stage\Enemy\PhantomBat\Fireball.h" />
+    <ClInclude Include="Castlevania\Model\GameObject\Stage\Enemy\PhantomBat\PhantomBatTrigger.h" />
+    <ClInclude Include="Castlevania\Model\GameObject\Stage\Enemy\Ghost\Ghost.h" />
+    <ClInclude Include="Castlevania\Model\GameObject\Stage\Enemy\Ghost\GhostTrigger.h" />
+    <ClInclude Include="Castlevania\Model\GameObject\Stage\Enemy\Hunchback\Hunchback.h" />
+    <ClInclude Include="Castlevania\Model\GameObject\Stage\Enemy\Raven\Raven.h" />
+    <ClInclude Include="Castlevania\Model\GameObject\Stage\Enemy\Skeleton\Skeleton.h" />
+    <ClInclude Include="Castlevania\Model\GameObject\Stage\Enemy\Skeleton\SkeletonBone.h" />
+    <ClInclude Include="Castlevania\Model\GameObject\Stage\Enemy\Zombie\Zombie.h" />
+    <ClInclude Include="Castlevania\Model\GameObject\Stage\Enemy\VampireBat\VampireBat.h" />
+    <ClInclude Include="Castlevania\Model\GameObject\Stage\Enemy\VampireBat\VampireBatTrigger.h" />
+    <ClInclude Include="Castlevania\Model\GameObject\Stage\Enemy\VampireBat\VampireBatSpawnZone.h" />
+    <ClInclude Include="Castlevania\Model\GameObject\Stage\Enemy\Zombie\ZombieSpawnZone.h" />
+    <ClInclude Include="Castlevania\Model\GameObject\Stage\Enemy\Skeleton\SkeletonTrigger.h" />
+    <ClInclude Include="Castlevania\Model\GameObject\Stage\Enemy\Raven\RavenTrigger.h" />
+    <ClInclude Include="Castlevania\Model\GameObject\Stage\Enemy\Hunchback\HunchbackTrigger.h" />
+    <ClInclude Include="Castlevania\Model\GameObject\Stage\Pickup\Bonus\Crown.h" />
+    <ClInclude Include="Castlevania\Model\GameObject\Stage\Pickup\Bonus\Moai.h" />
+    <ClInclude Include="Castlevania\Model\GameObject\Stage\Pickup\Bonus\TreasureChest.h" />
+    <ClInclude Include="Castlevania\Model\GameObject\Stage\Pickup\Item\Cross.h" />
+    <ClInclude Include="Castlevania\Model\GameObject\Stage\Pickup\Item\ExtraLife.h" />
+    <ClInclude Include="Castlevania\Model\GameObject\Stage\Pickup\Item\LargeHeart.h" />
+    <ClInclude Include="Castlevania\Model\GameObject\Stage\Pickup\Item\MagicCrystal.h" />
+    <ClInclude Include="Castlevania\Model\GameObject\Stage\Pickup\Item\PorkChop.h" />
+    <ClInclude Include="Castlevania\Model\GameObject\Stage\Pickup\Item\Potion.h" />
+    <ClInclude Include="Castlevania\Model\GameObject\Stage\Pickup\Item\SmallHeart.h" />
+    <ClInclude Include="Castlevania\Model\GameObject\Stage\Pickup\Weapon\AxeItem.h" />
+    <ClInclude Include="Castlevania\Model\GameObject\Stage\Pickup\Weapon\BoomerangItem.h" />
+    <ClInclude Include="Castlevania\Model\GameObject\Stage\Pickup\Weapon\DaggerItem.h" />
+    <ClInclude Include="Castlevania\Model\GameObject\Stage\Pickup\Weapon\DoubleShot.h" />
+    <ClInclude Include="Castlevania\Model\GameObject\Stage\Pickup\Weapon\FirebombItem.h" />
+    <ClInclude Include="Castlevania\Model\GameObject\Stage\Pickup\Weapon\MorningStar.h" />
+    <ClInclude Include="Castlevania\Model\GameObject\Stage\Pickup\Weapon\StopwatchItem.h" />
+    <ClInclude Include="Castlevania\Model\GameObject\Stage\Pickup\Weapon\TripleShot.h" />
+    <ClInclude Include="Castlevania\Model\GameObject\Stage\Prop\BreakableBrick.h" />
+    <ClInclude Include="Castlevania\Model\GameObject\Stage\Prop\Candle.h" />
+    <ClInclude Include="Castlevania\Model\GameObject\Stage\Prop\DeadZone.h" />
+    <ClInclude Include="Castlevania\Model\GameObject\Stage\Prop\MovingPlatform.h" />
+    <ClInclude Include="Castlevania\Model\GameObject\Stage\Prop\Stair.h" />
+    <ClInclude Include="Castlevania\Model\GameObject\Stage\Prop\StairEnd.h" />
+    <ClInclude Include="Castlevania\Model\GameObject\Stage\Prop\Tourch.h" />
+    <ClInclude Include="Castlevania\Model\GameObject\Stage\Simon\Axe.h" />
+    <ClInclude Include="Castlevania\Model\GameObject\Stage\Simon\Boomerang.h" />
+    <ClInclude Include="Castlevania\Model\GameObject\Stage\Simon\Dagger.h" />
+    <ClInclude Include="Castlevania\Model\GameObject\Stage\Simon\Firebomb.h" />
+    <ClInclude Include="Castlevania\Model\GameObject\Stage\Simon\Stopwatch.h" />
+    <ClInclude Include="Castlevania\Model\GameObject\Stage\Simon\VampireKiller.h" />
+    <ClInclude Include="Castlevania\Model\GameObject\Stage\GameMaster.h" />
+    <ClInclude Include="Castlevania\Model\GameObject\Stage\HUD.h" />
+    <ClInclude Include="Castlevania\Model\GameObject\Stage\Effect\Text\Text100Effect.h" />
+    <ClInclude Include="Castlevania\Model\GameObject\Stage\Effect\Text\Text400Effect.h" />
+    <ClInclude Include="Castlevania\Model\GameObject\Stage\Effect\Text\Text700Effect.h" />
+    <ClInclude Include="Castlevania\Model\GameObject\Stage\Effect\Text\Text1000Effect.h" />
+    <ClInclude Include="Castlevania\Model\GameObject\Stage\Effect\Text\Text2000Effect.h" />
+    <ClInclude Include="Castlevania\Model\GameObject\Stage\Effect\Text\Text4000Effect.h" />
+    <ClInclude Include="Castlevania\Model\GameObject\Stage\Effect\Death1Effect.h" />
+    <ClInclude Include="Castlevania\Model\GameObject\Stage\Effect\Death2Effect.h" />
+    <ClInclude Include="Castlevania\Model\GameObject\Stage\Effect\Death3Effect.h" />
+    <ClInclude Include="Castlevania\Model\GameObject\Stage\Pickup\Bonus\MoneyBag100.h" />
+    <ClInclude Include="Castlevania\Model\GameObject\Stage\Pickup\Bonus\MoneyBag1000.h" />
+    <ClInclude Include="Castlevania\Model\GameObject\Stage\Pickup\Bonus\MoneyBag400.h" />
+    <ClInclude Include="Castlevania\Model\GameObject\Stage\Pickup\Bonus\MoneyBag700.h" />
+    <ClInclude Include="Castlevania\Model\GameObject\Stage\Prop\Door.h" />
+    <ClInclude Include="Castlevania\Model\GameObject\Stage\Enemy\Ghost\GhostSpawnZone.h" />
+    <ClInclude Include="Castlevania\Model\GameObject\Stage\Map\Stage1.h" />
+    <ClInclude Include="Castlevania\Model\GameObject\Stage\Map\Stage2A.h" />
+    <ClInclude Include="Castlevania\Model\GameObject\Stage\Map\Stage2B.h" />
+    <ClInclude Include="Castlevania\Model\GameObject\Stage\Map\Stage3A.h" />
+    <ClInclude Include="Castlevania\Model\GameObject\Stage\Map\Stage3B.h" />
+    <ClInclude Include="Castlevania\Model\GameObject\Stage\Map\Stage4.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Xml Include="Castlevania\Content\Data\GameData.xml" />
+    <Xml Include="Castlevania\Content\Data\Scene\GameOver.xml" />
+    <Xml Include="Castlevania\Content\Data\Scene\Intro.xml" />
+    <Xml Include="Castlevania\Content\Data\Scene\Stage2A.xml" />
+    <Xml Include="Castlevania\Content\Data\Scene\Stage2B.xml" />
+    <Xml Include="Castlevania\Content\Data\Scene\Stage3A.xml" />
+    <Xml Include="Castlevania\Content\Data\Scene\Stage3B.xml" />
+    <Xml Include="Castlevania\Content\Data\Scene\Stage4.xml" />
+    <Xml Include="Castlevania\Content\Data\Scene\temp.xml" />
+    <Xml Include="Castlevania\Content\Data\Scene\Title.xml" />
+    <Xml Include="Castlevania\Content\Data\Scene\Stage1.xml" />
+    <Xml Include="Castlevania\Data\Scene\Demo.xml" />
+    <Xml Include="Castlevania\Data\Scene\Intro.xml" />
+    <Xml Include="Castlevania\Data\Scene\Stage1.xml" />
+    <Xml Include="Castlevania\Data\Scene\Stage2A.xml" />
+    <Xml Include="Castlevania\Data\Scene\Stage2B.xml" />
+    <Xml Include="Castlevania\Data\Scene\Stage3A.xml" />
+    <Xml Include="Castlevania\Data\Scene\Stage3B.xml" />
+    <Xml Include="Castlevania\Data\Scene\Stage4.xml" />
+    <Xml Include="Castlevania\Data\Scene\Title.xml" />
+    <Xml Include="Castlevania\Data\GameData.xml" />
+    <Xml Include="sprites.xml" />
+    <Xml Include="template.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Castlevania\Content\Texture\Actors\Bosses.png" />
+    <Image Include="Castlevania\Content\Texture\Actors\Enemies.png" />
+    <Image Include="Castlevania\Content\Texture\Actors\Items.png" />
+    <Image Include="Castlevania\Content\Texture\Actors\SimonBelmont.png" />
+    <Image Include="Castlevania\Content\Texture\Levels\Stage1_bank.png" />
+    <Image Include="Castlevania\Content\Texture\Levels\Stage2A_bank.png" />
+    <Image Include="Castlevania\Content\Texture\Levels\Stage2B_bank.png" />
+    <Image Include="Castlevania\Content\Texture\Levels\Stage3A_bank.png" />
+    <Image Include="Castlevania\Content\Texture\Levels\Stage3B_bank.png" />
+    <Image Include="Castlevania\Content\Texture\Levels\Stage4_bank.png" />
+    <Image Include="Castlevania\Content\Texture\Mics\CutScene.png" />
+    <Image Include="Castlevania\Content\Texture\Mics\HUD.png" />
+    <Image Include="Castlevania\Content\Texture\Mics\TitleScene.png" />
+    <Image Include="Castlevania\Content\Texture\Tileset\Stage1.png" />
+    <Image Include="Castlevania\Content\Texture\Tileset\Stage2A.png" />
+    <Image Include="Castlevania\Content\Texture\Tileset\Stage2B.png" />
+    <Image Include="Castlevania\Content\Texture\Tileset\Stage3A.png" />
+    <Image Include="Castlevania\Content\Texture\Tileset\Stage3B.png" />
+    <Image Include="Castlevania\Content\Texture\Tileset\Stage4.png" />
+    <Image Include="Castlevania\Content\Texture\Misc\CutScene.png" />
+    <Image Include="Castlevania\Content\Texture\Misc\TitleScene.png" />
+    <Image Include="Castlevania\Content\Texture\Simon\Simon_0.png" />
+    <Image Include="Castlevania\Content\Texture\Simon\Simon_1.png" />
+    <Image Include="Castlevania\Content\Texture\Simon\Simon_2.png" />
+    <Image Include="Castlevania\Content\Texture\Simon\Simon_3.png" />
+    <Image Include="Castlevania\Content\Texture\Simon\Simon_4.png" />
+    <Image Include="Castlevania\Content\Texture\Effect.png" />
+    <Image Include="Castlevania\Content\Texture\Enemy.png" />
+    <Image Include="Castlevania\Content\Texture\HUD.png" />
+    <Image Include="Castlevania\Content\Texture\Item.png" />
+    <Image Include="Castlevania\Content\Texture\Weapon.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Castlevania\Content\Texture\Levels\Stage1_map.tmx" />
@@ -83,402 +320,8 @@
     <None Include="Castlevania\Content\Texture\Levels\Stage3A_map.tmx" />
     <None Include="Castlevania\Content\Texture\Levels\Stage3B_map.tmx" />
     <None Include="Castlevania\Content\Texture\Levels\Stage4_map.tmx" />
-    <None Include="DirectXGame\Library\directx\Include\D3DX_DXGIFormatConvert.inl">
-      <Filter>Header Files</Filter>
-    </None>
-    <None Include="DirectXGame\Library\directx\Include\d3dx9math.inl">
-      <Filter>Header Files</Filter>
-    </None>
-    <None Include="DirectXGame\Library\directx\Include\D3DX10math.inl">
-      <Filter>Header Files</Filter>
-    </None>
-    <None Include="DirectXGame\Library\directx\Include\xnamathconvert.inl">
-      <Filter>Header Files</Filter>
-    </None>
-    <None Include="DirectXGame\Library\directx\Include\xnamathmatrix.inl">
-      <Filter>Header Files</Filter>
-    </None>
-    <None Include="DirectXGame\Library\directx\Include\xnamathmisc.inl">
-      <Filter>Header Files</Filter>
-    </None>
-    <None Include="DirectXGame\Library\directx\Include\xnamathvector.inl">
-      <Filter>Header Files</Filter>
-    </None>
   </ItemGroup>
   <ItemGroup>
-    <Image Include="Castlevania\Content\Texture\Levels\Stage1_bank.png">
-      <Filter>Resource Files</Filter>
-    </Image>
-    <Image Include="Castlevania\Content\Texture\Levels\Stage2A_bank.png">
-      <Filter>Resource Files</Filter>
-    </Image>
-    <Image Include="Castlevania\Content\Texture\Levels\Stage2B_bank.png">
-      <Filter>Resource Files</Filter>
-    </Image>
-    <Image Include="Castlevania\Content\Texture\Levels\Stage3A_bank.png">
-      <Filter>Resource Files</Filter>
-    </Image>
-    <Image Include="Castlevania\Content\Texture\Levels\Stage3B_bank.png">
-      <Filter>Resource Files</Filter>
-    </Image>
-    <Image Include="Castlevania\Content\Texture\Levels\Stage4_bank.png">
-      <Filter>Resource Files</Filter>
-    </Image>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="DirectXGame\Game.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="DirectXGame\Include.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="DirectXGame\Framework\Application.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="DirectXGame\Framework\Graphics.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="DirectXGame\Framework\Input.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="DirectXGame\Framework\Math.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="DirectXGame\Framework\Resource.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="DirectXGame\Framework\Time.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="DirectXGame\Framework\Ultilities.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="DirectXGame\Framework\Content\Texture.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="DirectXGame\Logic\GameObject.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="DirectXGame\Logic\Scene.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="DirectXGame\Logic\Sprite.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="DirectXGame\Library\directx\Include\audiodefs.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="DirectXGame\Library\directx\Include\comdecl.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="DirectXGame\Library\directx\Include\D2D1.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="DirectXGame\Library\directx\Include\D2D1Helper.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="DirectXGame\Library\directx\Include\D2DBaseTypes.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="DirectXGame\Library\directx\Include\D2Derr.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="DirectXGame\Library\directx\Include\d3d9.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="DirectXGame\Library\directx\Include\d3d9caps.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="DirectXGame\Library\directx\Include\d3d9types.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="DirectXGame\Library\directx\Include\D3D10.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="DirectXGame\Library\directx\Include\D3D10_1.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="DirectXGame\Library\directx\Include\D3D10_1shader.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="DirectXGame\Library\directx\Include\D3D10effect.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="DirectXGame\Library\directx\Include\d3d10misc.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="DirectXGame\Library\directx\Include\d3d10sdklayers.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="DirectXGame\Library\directx\Include\D3D10shader.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="DirectXGame\Library\directx\Include\D3D11.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="DirectXGame\Library\directx\Include\D3D11SDKLayers.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="DirectXGame\Library\directx\Include\D3D11Shader.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="DirectXGame\Library\directx\Include\D3Dcommon.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="DirectXGame\Library\directx\Include\D3Dcompiler.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="DirectXGame\Library\directx\Include\D3DCSX.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="DirectXGame\Library\directx\Include\d3dx9.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="DirectXGame\Library\directx\Include\d3dx9anim.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="DirectXGame\Library\directx\Include\d3dx9core.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="DirectXGame\Library\directx\Include\d3dx9effect.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="DirectXGame\Library\directx\Include\d3dx9math.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="DirectXGame\Library\directx\Include\d3dx9mesh.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="DirectXGame\Library\directx\Include\d3dx9shader.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="DirectXGame\Library\directx\Include\d3dx9shape.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="DirectXGame\Library\directx\Include\d3dx9tex.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="DirectXGame\Library\directx\Include\d3dx9xof.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="DirectXGame\Library\directx\Include\D3DX10.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="DirectXGame\Library\directx\Include\d3dx10async.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="DirectXGame\Library\directx\Include\D3DX10core.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="DirectXGame\Library\directx\Include\D3DX10math.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="DirectXGame\Library\directx\Include\D3DX10mesh.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="DirectXGame\Library\directx\Include\D3DX10tex.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="DirectXGame\Library\directx\Include\D3DX11.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="DirectXGame\Library\directx\Include\D3DX11async.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="DirectXGame\Library\directx\Include\D3DX11core.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="DirectXGame\Library\directx\Include\D3DX11tex.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="DirectXGame\Library\directx\Include\Dcommon.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="DirectXGame\Library\directx\Include\dinput.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="DirectXGame\Library\directx\Include\dinputd.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="DirectXGame\Library\directx\Include\dsconf.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="DirectXGame\Library\directx\Include\dsetup.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="DirectXGame\Library\directx\Include\dsound.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="DirectXGame\Library\directx\Include\DWrite.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="DirectXGame\Library\directx\Include\dxdiag.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="DirectXGame\Library\directx\Include\DxErr.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="DirectXGame\Library\directx\Include\dxfile.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="DirectXGame\Library\directx\Include\DXGI.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="DirectXGame\Library\directx\Include\DXGIFormat.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="DirectXGame\Library\directx\Include\DXGIType.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="DirectXGame\Library\directx\Include\dxsdkver.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="DirectXGame\Library\directx\Include\gameux.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="DirectXGame\Library\directx\Include\PIXPlugin.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="DirectXGame\Library\directx\Include\rmxfguid.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="DirectXGame\Library\directx\Include\rmxftmpl.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="DirectXGame\Library\directx\Include\rpcsal.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="DirectXGame\Library\directx\Include\X3DAudio.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="DirectXGame\Library\directx\Include\xact3.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="DirectXGame\Library\directx\Include\xact3d3.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="DirectXGame\Library\directx\Include\xact3wb.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="DirectXGame\Library\directx\Include\XAPO.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="DirectXGame\Library\directx\Include\XAPOBase.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="DirectXGame\Library\directx\Include\XAPOFX.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="DirectXGame\Library\directx\Include\XAudio2.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="DirectXGame\Library\directx\Include\XAudio2fx.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="DirectXGame\Library\directx\Include\XDSP.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="DirectXGame\Library\directx\Include\XInput.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="DirectXGame\Library\directx\Include\xma2defs.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="DirectXGame\Library\directx\Include\xnamath.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="DirectXGame\Library\pugixml\pugiconfig.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="DirectXGame\Library\pugixml\pugixml.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="DirectXGame\Logic\Component.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="DirectXGame\Logic\Transform.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Castlevania\Castlevania.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Castlevania\Model\Scene\MenuScene.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Castlevania\Model\Scene\Stage1Scene.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Castlevania\Model\GameObject\Simon\Simon.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Castlevania\Include.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <Library Include="DirectXGame\Library\directx\Lib\x64\d2d1.lib" />
-    <Library Include="DirectXGame\Library\directx\Lib\x64\d3d9.lib" />
-    <Library Include="DirectXGame\Library\directx\Lib\x64\d3d10.lib" />
-    <Library Include="DirectXGame\Library\directx\Lib\x64\d3d10_1.lib" />
-    <Library Include="DirectXGame\Library\directx\Lib\x64\d3d11.lib" />
-    <Library Include="DirectXGame\Library\directx\Lib\x64\d3dcompiler.lib" />
-    <Library Include="DirectXGame\Library\directx\Lib\x64\D3DCSX.lib" />
-    <Library Include="DirectXGame\Library\directx\Lib\x64\D3DCSXd.lib" />
-    <Library Include="DirectXGame\Library\directx\Lib\x64\d3dx9.lib" />
-    <Library Include="DirectXGame\Library\directx\Lib\x64\d3dx9d.lib" />
-    <Library Include="DirectXGame\Library\directx\Lib\x64\d3dx10.lib" />
-    <Library Include="DirectXGame\Library\directx\Lib\x64\d3dx10d.lib" />
-    <Library Include="DirectXGame\Library\directx\Lib\x64\d3dx11.lib" />
-    <Library Include="DirectXGame\Library\directx\Lib\x64\d3dx11d.lib" />
-    <Library Include="DirectXGame\Library\directx\Lib\x64\d3dxof.lib" />
-    <Library Include="DirectXGame\Library\directx\Lib\x64\dinput8.lib" />
-    <Library Include="DirectXGame\Library\directx\Lib\x64\dsound.lib" />
-    <Library Include="DirectXGame\Library\directx\Lib\x64\dwrite.lib" />
-    <Library Include="DirectXGame\Library\directx\Lib\x64\DxErr.lib" />
-    <Library Include="DirectXGame\Library\directx\Lib\x64\dxgi.lib" />
-    <Library Include="DirectXGame\Library\directx\Lib\x64\dxguid.lib" />
-    <Library Include="DirectXGame\Library\directx\Lib\x64\X3DAudio.lib" />
-    <Library Include="DirectXGame\Library\directx\Lib\x64\xapobase.lib" />
-    <Library Include="DirectXGame\Library\directx\Lib\x64\xapobased.lib" />
-    <Library Include="DirectXGame\Library\directx\Lib\x64\XAPOFX.lib" />
-    <Library Include="DirectXGame\Library\directx\Lib\x64\XInput.lib" />
-    <Library Include="DirectXGame\Library\directx\Lib\x86\d2d1.lib" />
-    <Library Include="DirectXGame\Library\directx\Lib\x86\d3d9.lib" />
-    <Library Include="DirectXGame\Library\directx\Lib\x86\d3d10.lib" />
-    <Library Include="DirectXGame\Library\directx\Lib\x86\d3d10_1.lib" />
-    <Library Include="DirectXGame\Library\directx\Lib\x86\d3d11.lib" />
-    <Library Include="DirectXGame\Library\directx\Lib\x86\d3dcompiler.lib" />
-    <Library Include="DirectXGame\Library\directx\Lib\x86\D3DCSX.lib" />
-    <Library Include="DirectXGame\Library\directx\Lib\x86\D3DCSXd.lib" />
-    <Library Include="DirectXGame\Library\directx\Lib\x86\d3dx9.lib" />
-    <Library Include="DirectXGame\Library\directx\Lib\x86\d3dx9d.lib" />
-    <Library Include="DirectXGame\Library\directx\Lib\x86\d3dx10.lib" />
-    <Library Include="DirectXGame\Library\directx\Lib\x86\d3dx10d.lib" />
-    <Library Include="DirectXGame\Library\directx\Lib\x86\d3dx11.lib" />
-    <Library Include="DirectXGame\Library\directx\Lib\x86\d3dx11d.lib" />
-    <Library Include="DirectXGame\Library\directx\Lib\x86\d3dxof.lib" />
-    <Library Include="DirectXGame\Library\directx\Lib\x86\dinput8.lib" />
-    <Library Include="DirectXGame\Library\directx\Lib\x86\dsetup.lib" />
-    <Library Include="DirectXGame\Library\directx\Lib\x86\dsound.lib" />
-    <Library Include="DirectXGame\Library\directx\Lib\x86\dwrite.lib" />
-    <Library Include="DirectXGame\Library\directx\Lib\x86\DxErr.lib" />
-    <Library Include="DirectXGame\Library\directx\Lib\x86\dxgi.lib" />
-    <Library Include="DirectXGame\Library\directx\Lib\x86\dxguid.lib" />
-    <Library Include="DirectXGame\Library\directx\Lib\x86\X3DAudio.lib" />
-    <Library Include="DirectXGame\Library\directx\Lib\x86\xapobase.lib" />
-    <Library Include="DirectXGame\Library\directx\Lib\x86\xapobased.lib" />
-    <Library Include="DirectXGame\Library\directx\Lib\x86\XAPOFX.lib" />
-    <Library Include="DirectXGame\Library\directx\Lib\x86\XInput.lib" />
-  </ItemGroup>
-  <ItemGroup>
-    <Xml Include="Castlevania\Content\Data\Stage1.xml" />
-    <Xml Include="Castlevania\Content\Data\GameContent.xml" />
-    <Xml Include="Castlevania\Content\Data\GameData.xml" />
-    <Xml Include="Castlevania\Content\Data\Stage2.xml" />
-    <Xml Include="Castlevania\Content\Data\Stage3.xml" />
-    <Xml Include="Castlevania\Content\Data\Stage4.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Text Include="hello.txt" />
+    <Text Include="temp.txt" />
   </ItemGroup>
 </Project>

@@ -1,0 +1,40 @@
+<Prefab layer ="0">
+  <Components>
+
+    <Component componentType="0">
+      <SpriteRenderer ui ="false">
+        <Palette paletteNo ="0" textureID ="item"/>
+        <Palette paletteNo ="1" textureID ="bbox"/>
+        <Sprite spriteID ="door1" paletting ="false" paletteNo ="0"
+        left = "448" top = "4" right = "511" bottom ="195"
+        offsetX ="0" offsetY ="0"/>
+        <Sprite spriteID ="door2" paletting ="false" paletteNo ="0"
+        left = "516" top = "4" right = "611" bottom ="195"
+        offsetX ="0" offsetY ="0"/>
+        <Sprite spriteID="bbox" paletting="false" paletteNo="1"
+        left="0" top="0" right="0" bottom="0"
+        offsetX="0" offsetY="0" />
+      </SpriteRenderer>
+    </Component>
+
+
+    <Component componentType ="1">
+      <Animator>
+        <Animation animationID ="open">
+          <AnimationFrame spriteID="door1" frameTime="750"/>
+          <AnimationFrame spriteID="door2" frameTime="750"/>
+        </Animation>
+        <Animation animationID ="close">
+          <AnimationFrame spriteID="door2" frameTime="750"/>
+          <AnimationFrame spriteID="door1" frameTime="750"/>
+        </Animation>
+      </Animator>
+    </Component>
+
+    <Component componentType ="5">
+      <Physics/>
+    </Component>
+
+  </Components>
+</Prefab>
+
