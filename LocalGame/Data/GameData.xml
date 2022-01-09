@@ -1,0 +1,8 @@
+<GameData>
+	<GameSettings
+		title ="Game Skeleton Test"
+		windowWidth ="800"
+		windowHeight ="600"
+		framePerSecond ="144"
+		/>
+</GameData>

@@ -1,6 +1,4 @@
-#include "Engine/Application.h"
-#include "Engine/Time.h"
-#include "Engine/Debug.h"
+#include "Engine/Game.h"
 
 int WINAPI WinMain(
 	_In_ HINSTANCE hInstance,
@@ -9,23 +7,7 @@ int WINAPI WinMain(
 	_In_ int nCmdShow
 )
 {
-	auto app = new CApplication();
-	auto time = new CTime();
-
-	std::wstring title = L"Time Test";
-	unsigned int width = 800;
-	unsigned int height = 600;
-	float exitCountdown = 5000;
-
-	app->CreateGameWindow(hInstance, title, width, height);
-	time->Start();
-
-	while (!app->HandleMessage())
-	{
-		DebugOut(L"Tick\n");
-		time->Tick();
-
-		if (exitCountdown > 0) exitCountdown -= time->GetElapsedMs();
-		else app->Exit();
-	}
+	auto game = new CGame();
+	game->Load(hInstance, "Data/GameData.xml");
+	game->Run();
 }
