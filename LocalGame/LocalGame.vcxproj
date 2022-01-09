@@ -145,6 +145,7 @@
   <ItemGroup>
     <ClCompile Include="Engine\Application.cpp" />
     <ClCompile Include="Engine\Debug.cpp" />
+    <ClCompile Include="Engine\Time.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Engine\pugixml.cpp" />
   </ItemGroup>
@@ -153,6 +154,7 @@
     <ClInclude Include="Engine\Debug.h" />
     <ClInclude Include="Engine\pugiconfig.hpp" />
     <ClInclude Include="Engine\pugixml.hpp" />
+    <ClInclude Include="Engine\Time.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

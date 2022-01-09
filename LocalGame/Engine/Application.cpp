@@ -46,11 +46,13 @@ HWND CApplication::CreateGameWindow(HINSTANCE hInstance, std::wstring title, uns
 	if (!_hWnd)
 	{
 		DebugOut(L"[FRAMEWORK] Application - Create game window failed.\n");
+
 		return NULL;
 	}
 	else
 	{
 		DebugOut(L"[FRAMEWORK] Application - Create game window successed.\n");
+
 		ShowWindow(_hWnd, SW_SHOWNORMAL);
 		UpdateWindow(_hWnd);
 		return _hWnd;
@@ -64,6 +66,7 @@ HWND CApplication::CreateGameWindow(HINSTANCE hInstance, std::wstring title, uns
 void CApplication::Exit()
 {
 	DebugOut(L"[FRAMEWORK] Application - Exit message called.\n");
+
 	SendMessage(_hWnd, WM_DESTROY, 0, 0);
 }
 

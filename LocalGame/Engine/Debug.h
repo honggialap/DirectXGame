@@ -1,5 +1,6 @@
 #pragma once
 #ifndef __DEBUG_H__
+#define __DEBUG_H__
 
 #pragma region INCLUDE
 #include <windows.h>
