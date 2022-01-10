@@ -1,8 +1,10 @@
 <GameData>
 	<GameSettings
-		title ="Game Skeleton Test"
+		title ="Direct3D 10 Test"
 		windowWidth ="800"
 		windowHeight ="600"
 		framePerSecond ="144"
 		/>
+	
+	<Texture id="1" source="Data/Texture/MarioSample.png"/>
 </GameData>

@@ -5,6 +5,7 @@
 #pragma region INCLUDE
 #include "Application.h"
 #include "Time.h"
+#include "Graphics.h"
 #include "pugixml.hpp"
 #pragma endregion
 
@@ -17,6 +18,7 @@ private:
 	/* Framework */
 	pApplication _application;
 	pTime _time;
+	pGraphics _graphics;
 
 	/* Stats */
 	unsigned int _framePerSecond = 0;
@@ -28,6 +30,9 @@ public:
 	/* Game loop */
 	void Load(HINSTANCE hInstance, std::string gameDataPath);
 	void Run();
+	void Update(float elapsedMs);
+	void Render();
+	void Shutdown();
 };
 typedef CGame* pGame;
 

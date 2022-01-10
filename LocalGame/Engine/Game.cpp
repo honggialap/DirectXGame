@@ -7,11 +7,18 @@ CGame::CGame()
 {
 	_application = new CApplication();
 	_time = new CTime();
+	_graphics = new CGraphics();
 }
 
 
 CGame::~CGame()
 {
+	if (_graphics != nullptr)
+	{
+		delete _graphics;
+		_graphics = nullptr;
+	}
+
 	if (_time != nullptr)
 	{
 		delete _time;
@@ -51,6 +58,22 @@ void CGame::Load(HINSTANCE hInstance, std::string gameDataPath)
 		gameSettingsNode.attribute("windowWidth").as_uint(),
 		gameSettingsNode.attribute("windowHeight").as_uint()
 	);
+	_graphics->Initialize(
+		_application->GetWindow()
+	);
+
+	/* Texture */
+	for (pugi::xml_node textureNode = gameDataDoc.child("GameData").child("Texture");
+		textureNode;
+		textureNode = textureNode.next_sibling("Texture"))
+	{
+		_graphics->LoadTexture(
+			textureNode.attribute("id").as_uint(),
+			std::wstring_convert<std::codecvt_utf8<wchar_t>>().from_bytes(
+				textureNode.attribute("source").as_string()
+			)
+		);
+	}
 }
 
 
@@ -71,11 +94,39 @@ void CGame::Run()
 
 		if (elapsedMs >= msPerFrame)
 		{
-			DebugOut(L"Game Tick: %f \n", elapsedMs);
+			Update(elapsedMs);
+			Render();
 			elapsedMs = 0;
 		}
 		else Sleep(DWORD(msPerFrame - elapsedMs));
 		
 		done = _application->HandleMessage();
 	}
+	Shutdown();
+}
+
+void CGame::Update(float elapsedMs)
+{
+}
+
+void CGame::Render()
+{
+	_graphics->GetDevice()->ClearRenderTargetView(
+		_graphics->GetRenderTargetView(),
+		D3DXCOLOR(200.0f / 255, 200.0f / 255, 255.0f / 255, 0.0f)
+	);
+	_graphics->GetSpriteHandler()->Begin(D3DX10_SPRITE_SORT_TEXTURE);
+
+	FLOAT NewBlendFactor[4] = { 0,0,0,0 };
+	_graphics->GetDevice()->OMSetBlendState(_graphics->GetBlendStateAlpha(), NewBlendFactor, 0xffffffff);
+
+	//Render calls
+
+	_graphics->GetSpriteHandler()->End();
+	_graphics->GetSwapChain()->Present(0, 0);
+}
+
+void CGame::Shutdown()
+{
+	_graphics->Shutdown();
 }
