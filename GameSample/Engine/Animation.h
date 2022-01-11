@@ -16,6 +16,7 @@ class CAnimation
 {
 public:
 	CAnimation(pGameObject gameObject);
+	~CAnimation();
 
 private:
 	pGameObject _gameObject;

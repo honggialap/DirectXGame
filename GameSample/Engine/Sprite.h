@@ -13,6 +13,10 @@ typedef CGameObject* pGameObject;
 
 class CSprite
 {
+public:
+	CSprite(pGameObject gameObject, int left, int top, int width, int height, int offsetX, int offsetY, pTexture texture);
+	~CSprite();
+
 private:
 	pGameObject _gameObject;
 
@@ -28,7 +32,6 @@ private:
 	D3DXMATRIX _matScaling;
 
 public:
-	CSprite(pGameObject gameObject, int left, int top, int width, int height, int offsetX, int offsetY, pTexture texture);
 	void Render(float x, float y, bool isUI);
 };
 typedef CSprite* pSprite;

@@ -27,6 +27,11 @@ CSprite::CSprite(pGameObject gameObject, int left, int top, int width, int heigh
 	D3DXMatrixScaling(&_matScaling, (FLOAT)_width, (FLOAT)_height, 1.0f);
 }
 
+CSprite::~CSprite()
+{
+	_gameObject = nullptr;
+}
+
 void CSprite::Render(float x, float y, bool isUI)
 {
 	auto graphics = _gameObject->GetGame()->GetGraphics();

@@ -13,10 +13,37 @@ CGameObject::CGameObject(pGame game, pScene scene, unsigned int id, std::string 
 	_gx = gridX;
 	_gy = gridY;
 	_layer = layer;
+	_collider = new CCollider(this);
 }
 
 CGameObject::~CGameObject()
 {
+	if (_collider != nullptr)
+	{
+		delete _collider;
+		_collider = nullptr;
+	}
+
+	for (auto soundClip : _soundClips)
+	{
+		delete soundClip.second;
+		soundClip.second = nullptr;
+	}
+	_soundClips.clear();
+
+	for (auto animation : _animations)
+	{
+		delete animation.second;
+		animation.second = nullptr;
+	}
+	_animations.clear();
+
+	for (auto sprite : _sprites)
+	{
+		delete sprite.second;
+		sprite.second = nullptr;
+	}
+	_sprites.clear();
 }
 
 void CGameObject::Load()
@@ -84,4 +111,5 @@ void CGameObject::Load()
 
 void CGameObject::Destroy()
 {
+	_destroy = true;
 }

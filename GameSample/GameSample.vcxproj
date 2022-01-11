@@ -143,8 +143,10 @@
   <ItemGroup>
     <ClCompile Include="Actor\BrickSample.cpp" />
     <ClCompile Include="Actor\CoinSample.cpp" />
+    <ClCompile Include="Actor\GameMasterSample.cpp" />
     <ClCompile Include="Actor\GoombaSample.cpp" />
     <ClCompile Include="Actor\MarioSample.cpp" />
+    <ClCompile Include="Actor\PortalSample.cpp" />
     <ClCompile Include="Engine\Animation.cpp" />
     <ClCompile Include="Engine\Application.cpp" />
     <ClCompile Include="Engine\Audio.cpp" />
@@ -163,8 +165,10 @@
   <ItemGroup>
     <ClInclude Include="Actor\BrickSample.h" />
     <ClInclude Include="Actor\CoinSample.h" />
+    <ClInclude Include="Actor\GameMasterSample.h" />
     <ClInclude Include="Actor\GoombaSample.h" />
     <ClInclude Include="Actor\MarioSample.h" />
+    <ClInclude Include="Actor\PortalSample.h" />
     <ClInclude Include="Engine\Animation.h" />
     <ClInclude Include="Engine\Application.h" />
     <ClInclude Include="Engine\Audio.h" />
@@ -181,14 +185,23 @@
     <ClInclude Include="GameSample.h" />
   </ItemGroup>
   <ItemGroup>
+    <Image Include="Data\Texture\BrickSample.png" />
+    <Image Include="Data\Texture\CoinSample.png" />
+    <Image Include="Data\Texture\GoombaSample.png" />
     <Image Include="Data\Texture\MarioSample.png" />
   </ItemGroup>
   <ItemGroup>
     <Xml Include="Data\Asset\BrickSample.xml" />
     <Xml Include="Data\Asset\CoinSample.xml" />
+    <Xml Include="Data\Asset\GameMasterSample.xml" />
     <Xml Include="Data\Asset\GoombaSample.xml" />
     <Xml Include="Data\Asset\MarioSample.xml" />
+    <Xml Include="Data\Asset\PortalSample1.xml" />
+    <Xml Include="Data\Asset\PortalSample2.xml" />
     <Xml Include="Data\GameData.xml" />
+    <Xml Include="Data\Scene\MainGameSample.xml" />
+    <Xml Include="Data\Scene\SampleScene1.xml" />
+    <Xml Include="Data\Scene\SampleScene2.xml" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

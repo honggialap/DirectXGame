@@ -6,6 +6,12 @@ CAnimation::CAnimation(pGameObject gameObject)
 	_gameObject = gameObject;
 }
 
+CAnimation::~CAnimation()
+{
+	_animationFrames.clear();
+	_gameObject = nullptr;
+}
+
 void CAnimation::AddFrame(unsigned int spriteId, float frameTime)
 {
 	_animationFrames.push_back(std::make_pair(spriteId, frameTime));

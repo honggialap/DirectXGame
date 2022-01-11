@@ -69,6 +69,12 @@
     <ClCompile Include="GameSample.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Actor\PortalSample.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Actor\GameMasterSample.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Engine\Animation.h">
@@ -125,9 +131,24 @@
     <ClInclude Include="GameSample.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Actor\PortalSample.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Actor\GameMasterSample.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Image Include="Data\Texture\MarioSample.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Data\Texture\GoombaSample.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Data\Texture\BrickSample.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Data\Texture\CoinSample.png">
       <Filter>Resource Files</Filter>
     </Image>
   </ItemGroup>
@@ -137,6 +158,12 @@
     <Xml Include="Data\Asset\CoinSample.xml" />
     <Xml Include="Data\Asset\GoombaSample.xml" />
     <Xml Include="Data\Asset\MarioSample.xml" />
+    <Xml Include="Data\Asset\PortalSample1.xml" />
+    <Xml Include="Data\Asset\PortalSample2.xml" />
+    <Xml Include="Data\Asset\GameMasterSample.xml" />
+    <Xml Include="Data\Scene\SampleScene1.xml" />
+    <Xml Include="Data\Scene\SampleScene2.xml" />
+    <Xml Include="Data\Scene\MainGameSample.xml" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

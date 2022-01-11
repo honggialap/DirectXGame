@@ -6,8 +6,20 @@
 #include "Engine/Game.h"
 #pragma endregion
 
+#pragma region DEFINE
+/* ACTOR ID*/
+#define ACT_GAMEMASTER_SAMPLE	1001
+#define ACT_MARIO_SAMPLE		2001
+#define ACT_GOOMBA_SAMPLE		3001
+#define ACT_COIN_SAMPLE			4001
+#define ACT_BRICK_SAMPLE		5001
+#define ACT_PORTAL_SAMPLE		6001
+#pragma endregion
+
 class CGameSample : public CGame
 {
+public:
+
 };
 
 #endif // !__GAME_SAMPLE_H__

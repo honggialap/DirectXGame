@@ -115,7 +115,15 @@ public:
 
 	/* Collision */
 protected:
+	pCollider _collider = nullptr;
+
 public:
+	virtual void GetBoundingBox(float& left, float& top, float& right, float& bottom) = 0;
+	virtual int IsCollidable() { return 0; };
+	virtual int IsBlocking() { return 0; }
+	virtual void OnNoCollision(float elapsedMs) {};
+	virtual void OnCollisionWith(pCollision e) {};
+	
 
 	/* Layer */
 protected:

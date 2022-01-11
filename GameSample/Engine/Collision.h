@@ -11,6 +11,11 @@ class CGameObject;
 typedef CGameObject* pGameObject;
 #pragma endregion
 
+#pragma region DEFINE
+#define BLOCK_PUSH_FACTOR 0.4f
+#pragma endregion
+
+
 
 struct CCollision
 {
@@ -49,13 +54,15 @@ typedef CCollision* pCollision;
 
 class CCollider
 {
+public:
+	CCollider(pGameObject gameObject);
+	~CCollider();
+
 private:
 	pGameObject _gameObject;
 	std::vector<pCollision> _collisions;
 
 public:
-	CCollider(pGameObject gameObject);
-	
 	static void SweptAABB
 	(
 		float ml,			// move left
@@ -73,19 +80,19 @@ public:
 		float& ny
 	);
 
-	pCollision Overlap(pGameObject collidables);
+	pCollision Overlap(pGameObject collidable);
 	void ScanOverlap(std::vector<pGameObject>* collidables);
 
 	pCollision SweptAABB(float elapsedMs, pGameObject collidable);
-	void ScanSweptAABB(float elapsedMs, pGameObject collidable);
+	void ScanSweptAABB(float elapsedMs, std::vector<pGameObject>* collidables);
 
 	void Filter
 	(
 		pCollision& colX,
 		pCollision& colY,
-		int filterBlock,
-		int filterX,
-		int filterY
+		int filterBlock = 1,
+		int filterX = 1,
+		int filterY = 1
 	);
 
 	void Process(
