@@ -139,6 +139,10 @@
   </ItemGroup>
   <ItemGroup>
     <Xml Include="Data\GameData.xml" />
+    <Xml Include="Data\Asset\BrickSample.xml" />
+    <Xml Include="Data\Asset\CoinSample.xml" />
+    <Xml Include="Data\Asset\GoombaSample.xml" />
+    <Xml Include="Data\Asset\MarioSample.xml" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

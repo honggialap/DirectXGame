@@ -235,6 +235,18 @@ bool CGame::IsKeyReleased(int keyCode)
 		&& !_currentButtonState[keyCode];
 }
 
+void CGame::PlayScene(unsigned int id)
+{
+}
+
+void CGame::StopScene(unsigned int id)
+{
+}
+
+void CGame::LoadScene()
+{
+}
+
 
 #pragma endregion
 

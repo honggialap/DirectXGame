@@ -13,8 +13,8 @@
 class CApplication
 {
 private:
-	HINSTANCE	_hInstance	= NULL;
-	HWND		_hWnd		= NULL;
+	HINSTANCE _hInstance = NULL;
+	HWND _hWnd = NULL;
 
 public:
 	HINSTANCE GetInstance() { return _hInstance; }

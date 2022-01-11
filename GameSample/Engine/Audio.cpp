@@ -75,10 +75,16 @@ void CAudio::Shutdown()
 	_secondaryBuffers.clear();
 
 	if (_primaryBuffer != NULL)
+	{
 		_primaryBuffer->Release();
+		_primaryBuffer = NULL;
+	}
 
 	if (_directSound != NULL)
+	{
 		_directSound->Release();
+		_directSound = NULL;
+	}
 }
 
 void CAudio::LoadSoundClip(unsigned int id, std::string source)
