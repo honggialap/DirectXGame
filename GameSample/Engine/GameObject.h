@@ -2,18 +2,6 @@
 #ifndef __GAMEOBJECT_H__
 #define __GAMEOBJECT_H__
 
-
-#pragma region PRE DEFINE
-
-class CGame;
-typedef CGame* pGame;
-
-struct CScene;
-typedef CScene* pScene;
-
-#pragma endregion
-
-
 #pragma region INCLUDE
 
 #include "Sprite.h"
@@ -25,6 +13,18 @@ typedef CScene* pScene;
 #include <string>
 
 #pragma endregion
+
+
+#pragma region PRE DEFINE
+
+class CGame;
+typedef CGame* pGame;
+
+struct CScene;
+typedef CScene* pScene;
+
+#pragma endregion
+
 
 class CGameObject
 {
@@ -44,6 +44,12 @@ protected:
 	unsigned int _id = 0;
 	std::string _name;
 	std::string _source;
+	
+public:
+	pGame GetGame() { return _game; }
+	pScene GetScene() { return _scene; }
+	unsigned int GetId() { return _id; }
+	std::string GetName() { return _name; }
 
 
 	/* Lifecycle */
@@ -86,11 +92,17 @@ protected:
 
 public:
 	void AddSprite(unsigned int id, pSprite sprite) { _sprites[id] = sprite; }
+	pSprite GetSprite(unsigned int id) { return _sprites[id]; }
 
 
 	/* Animation */
 protected:
+	std::unordered_map<unsigned int, pAnimation> _animations;
+
 public:
+	void AddAnimation(unsigned int id, pAnimation animation) { _animations[id] = animation; }
+	pAnimation GetAnimation(unsigned int id) { return _animations[id]; }
+
 
 	/* Audio source */
 protected:

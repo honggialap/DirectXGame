@@ -134,7 +134,10 @@ protected:
 	std::map<std::pair<int, int>, std::vector<unsigned int>> _grid;
 
 public:
-
+	void AddGrid(unsigned int gameObjectId);
+	void RemoveGrid(unsigned int gameObjectId);
+	void UpdateGrid(unsigned int gameObjectId);
+	std::vector<pGameObject> GetLocal(unsigned int gameObjectId);
 };
 typedef CGame* pGame;
 

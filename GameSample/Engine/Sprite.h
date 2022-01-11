@@ -3,24 +3,32 @@
 #define __SPRITE_H__
 
 #pragma region INCLUDE
-#include "Game.h"
 #include "Graphics.h"
+#pragma endregion
+
+#pragma region PRE DEFINE
+class CGameObject;
+typedef CGameObject* pGameObject;
 #pragma endregion
 
 class CSprite
 {
 private:
+	pGameObject _gameObject;
+
 	int _left	= 0;
 	int _top	= 0;
-	int _right	= 0;
-	int _bottom	= 0;
+	int _width	= 0;
+	int _height	= 0;
+	int _offsetX = 0;
+	int	_offsetY = 0;
 
-	pTexture _texture;
+	pTexture _texture = nullptr;
 	D3DX10_SPRITE _sprite;
 	D3DXMATRIX _matScaling;
 
 public:
-	CSprite(int left, int top, int right, int bottom, pTexture texture);
+	CSprite(pGameObject gameObject, int left, int top, int width, int height, int offsetX, int offsetY, pTexture texture);
 	void Render(float x, float y, bool isUI);
 };
 typedef CSprite* pSprite;

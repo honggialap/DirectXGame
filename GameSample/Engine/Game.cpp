@@ -247,6 +247,42 @@ void CGame::LoadScene()
 {
 }
 
+pGameObject CGame::Create()
+{
+	return pGameObject();
+}
+
+pGameObject CGame::Get(unsigned int id)
+{
+	return pGameObject();
+}
+
+pGameObject CGame::Get(std::string name)
+{
+	return pGameObject();
+}
+
+void CGame::Purge()
+{
+}
+
+void CGame::AddGrid(unsigned int gameObjectId)
+{
+}
+
+void CGame::RemoveGrid(unsigned int gameObjectId)
+{
+}
+
+void CGame::UpdateGrid(unsigned int gameObjectId)
+{
+}
+
+std::vector<pGameObject> CGame::GetLocal(unsigned int gameObjectId)
+{
+	return std::vector<pGameObject>();
+}
+
 
 #pragma endregion
 
