@@ -109,15 +109,6 @@ void CGame::Load(HINSTANCE hInstance, std::string gameDataPath)
 			)
 		);
 
-
-	/* Sound Clip */
-	for (pugi::xml_node soundClipNode = gameDataDoc.child("GameData").child("SoundClip");
-		soundClipNode;
-		soundClipNode = soundClipNode.next_sibling("SoundClip"))
-		_audio->LoadSoundClip(
-			soundClipNode.attribute("id").as_uint(),
-			soundClipNode.attribute("source").as_string()
-		);
 }
 
 

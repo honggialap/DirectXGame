@@ -17,6 +17,7 @@ struct CSoundClip
 	LPDIRECTSOUNDBUFFER8 _secondaryBuffer = NULL;
 
 	~CSoundClip();
+	bool Play();
 };
 typedef CSoundClip* pSoundClip;
 
@@ -45,13 +46,11 @@ private:
 	LPDIRECTSOUNDBUFFER _primaryBuffer = NULL;
 	std::unordered_map<unsigned int, pSoundClip> _secondaryBuffers;
 
-
 public:
 	void Initialize(HWND hWnd);
 	void Shutdown();
 
-	void LoadSoundClip(unsigned int id, std::string source);
-	pSoundClip GetSoundClip(unsigned int id);
+	pSoundClip LoadSoundClip(std::string source);
 };
 typedef CAudio* pAudio;
 

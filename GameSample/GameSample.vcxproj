@@ -148,7 +148,6 @@
     <ClCompile Include="Engine\Animation.cpp" />
     <ClCompile Include="Engine\Application.cpp" />
     <ClCompile Include="Engine\Audio.cpp" />
-    <ClCompile Include="Engine\AudioSource.cpp" />
     <ClCompile Include="Engine\Collision.cpp" />
     <ClCompile Include="Engine\Debug.cpp" />
     <ClCompile Include="Engine\Game.cpp" />
@@ -169,7 +168,6 @@
     <ClInclude Include="Engine\Animation.h" />
     <ClInclude Include="Engine\Application.h" />
     <ClInclude Include="Engine\Audio.h" />
-    <ClInclude Include="Engine\AudioSource.h" />
     <ClInclude Include="Engine\Collision.h" />
     <ClInclude Include="Engine\Debug.h" />
     <ClInclude Include="Engine\Game.h" />

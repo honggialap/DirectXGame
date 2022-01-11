@@ -6,7 +6,7 @@
 
 #include "Sprite.h"
 #include "Animation.h"
-#include "AudioSource.h"
+#include "Audio.h"
 #include "Collision.h"
 #include "pugixml.hpp"
 
@@ -104,9 +104,14 @@ public:
 	pAnimation GetAnimation(unsigned int id) { return _animations[id]; }
 
 
-	/* Audio source */
+	/* Sound clip */
 protected:
-	//pAudioSource _audioSources;
+	std::unordered_map<unsigned, pSoundClip> _soundClips;
+
+public:
+	void AddSoundClip(unsigned int id, pSoundClip soundClip) { _soundClips[id] = soundClip; }
+	pSoundClip GetSoundClip(unsigned int id) { return _soundClips[id]; }
+
 
 	/* Collision */
 protected:
