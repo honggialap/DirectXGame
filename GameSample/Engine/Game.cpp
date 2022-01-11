@@ -80,11 +80,22 @@ void CGame::Load(HINSTANCE hInstance, std::string gameDataPath)
 		_application->GetWindow()
 	);
 
+	_audio->Initialize(
+		_application->GetWindow()
+	);
+
 	_input->Initialize(
 		_application->GetInstance(),
 		_application->GetWindow(),
 		this
 	);
+
+
+	/* Button */
+	for (pugi::xml_node buttonNode = gameDataDoc.child("GameData").child("Button");
+		buttonNode;
+		buttonNode = buttonNode.next_sibling("Button"))
+		BindKey(buttonNode.attribute("keyCode").as_int());
 
 
 	/* Texture */
@@ -103,15 +114,10 @@ void CGame::Load(HINSTANCE hInstance, std::string gameDataPath)
 	for (pugi::xml_node soundClipNode = gameDataDoc.child("GameData").child("SoundClip");
 		soundClipNode;
 		soundClipNode = soundClipNode.next_sibling("SoundClip"))
-	{
-	}
-
-
-	/* Button */
-	for (pugi::xml_node buttonNode = gameDataDoc.child("GameData").child("Button");
-		buttonNode;
-		buttonNode = buttonNode.next_sibling("Button"))
-		BindKey(buttonNode.attribute("keyCode").as_int());
+		_audio->LoadSoundClip(
+			soundClipNode.attribute("id").as_uint(),
+			soundClipNode.attribute("source").as_string()
+		);
 }
 
 
@@ -176,10 +182,12 @@ void CGame::Shutdown()
 	_input->Shutdown();
 }
 
+
 #pragma endregion
 
 
 #pragma region Button
+
 
 void CGame::KeyState()
 {
@@ -226,6 +234,7 @@ bool CGame::IsKeyReleased(int keyCode)
 		_previousButtonState[keyCode]
 		&& !_currentButtonState[keyCode];
 }
+
 
 #pragma endregion
 

@@ -35,8 +35,8 @@ public:
 private:
 	LPDIRECTINPUT8 _directInput = NULL;
 	LPDIRECTINPUTDEVICE8 _device = NULL;
-	BYTE _keyState[CInput::KEYBOARD_BUFFER_SIZE];
-	DIDEVICEOBJECTDATA _keyEvents[CInput::KEYBOARD_STATE_SIZE];
+	BYTE _keyState[CInput::KEYBOARD_BUFFER_SIZE] = {};
+	DIDEVICEOBJECTDATA _keyEvents[CInput::KEYBOARD_STATE_SIZE] = {};
 	pKeyHandler _keyHandler = nullptr;
 
 public:

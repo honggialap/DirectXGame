@@ -16,8 +16,17 @@ CTexture::CTexture(ID3D10Texture2D* texture, ID3D10ShaderResourceView* srview)
 
 CTexture::~CTexture()
 {
-	if (_srview != NULL) _srview->Release();
-	if (_texture != NULL) _texture->Release();
+	if (_srview != NULL)
+	{
+		_srview->Release();
+		_srview = NULL;
+	}
+
+	if (_texture != NULL)
+	{
+		_texture->Release();
+		_texture = NULL;
+	}
 }
 
 
@@ -162,11 +171,42 @@ void CGraphics::Initialize(HWND hWnd)
 /// </summary>
 void CGraphics::Shutdown()
 {
-	_blendStateAlpha->Release();
-	_spriteHandler->Release();
-	_renderTargetView->Release();
-	_swapChain->Release();
-	_device->Release();
+	for (auto texture : _textures)
+	{
+		delete texture.second;
+		texture.second = nullptr;
+	}
+	_textures.clear();
+
+	if (_blendStateAlpha != NULL)
+	{
+		_blendStateAlpha->Release();
+		_blendStateAlpha = NULL;
+	}
+
+	if (_spriteHandler != NULL)
+	{
+		_spriteHandler->Release();
+		_spriteHandler = NULL;
+	}
+
+	if (_renderTargetView != NULL)
+	{
+		_renderTargetView->Release();
+		_renderTargetView = NULL;
+	}
+
+	if (_swapChain != NULL)
+	{
+		_swapChain->Release();
+		_swapChain = NULL;
+	}
+
+	if (_device != NULL)
+	{
+		_device->Release();
+		_device = NULL;
+	}
 }
 
 

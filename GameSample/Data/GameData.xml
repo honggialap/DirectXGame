@@ -1,10 +1,17 @@
 <GameData>
 	<GameSettings
 		title ="Direct3D 10 Test"
-		windowWidth ="800"
-		windowHeight ="600"
+		windowWidth ="512"
+		windowHeight ="480"
 		framePerSecond ="144"
 		/>
 	
+	<!--Buttons-->
+	<Button keyCode ="10"/>
+	
+	<!--Textures-->
 	<Texture id="1" source="Data/Texture/MarioSample.png"/>
+	
+	<!--SoundClip-->
+	<SoundClip id="1" source="Data/SoundClip/MarioJump.wav"/>
 </GameData>
