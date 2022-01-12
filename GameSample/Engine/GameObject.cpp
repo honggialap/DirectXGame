@@ -1,7 +1,7 @@
 #include "GameObject.h"
 #include "Game.h"
 
-CGameObject::CGameObject(pGame game, pScene scene, unsigned int id, std::string name, std::string source, float x, float y, int gridX, int gridY, unsigned int layer)
+CGameObject::CGameObject(pGame game, pScene scene, unsigned int id, std::string name, std::string source, float x, float y, int gx, int gy, unsigned int layer)
 {
 	_game = game;
 	_scene = scene;
@@ -10,8 +10,8 @@ CGameObject::CGameObject(pGame game, pScene scene, unsigned int id, std::string 
 	_source = source;
 	_x = x;
 	_y = y;
-	_gx = gridX;
-	_gy = gridY;
+	_gx = gx;
+	_gy = gy;
 	_layer = layer;
 	_collider = new CCollider(this);
 }

@@ -1,10 +1,5 @@
 <Prefab>
-	<Sprite id="" textureId="" left="" top="" width="" height="" offsetX ="" offsetY=""/>
+	<Sprite id="9990" textureId="0" left="0" top="0" width="32" height="32" offsetX ="0" offsetY="16"/>
 
-	<Animation id="">
-		<Frame id="" time=""/>
-	</Animation>
-
-	<SoundClip id="" source=""/>
-
+	<Body render="true" width="32" height="32" offsetX ="0" offsetY="16"/>
 </Prefab>

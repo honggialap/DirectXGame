@@ -1,6 +1,7 @@
 #include "Input.h"
 #include "Debug.h"
 
+
 void CInput::Initialize(HINSTANCE hInstance, HWND hWnd, pKeyHandler keyHandler)
 {
 	_keyHandler = keyHandler;
@@ -61,26 +62,28 @@ void CInput::Initialize(HINSTANCE hInstance, HWND hWnd, pKeyHandler keyHandler)
 	DebugOut(L"[Input] Keyboard has been initialized successfully\n");
 }
 
+
 void CInput::Shutdown()
 {
-	if (_device != NULL)
+	if (_device)
 	{
 		_device->Unacquire();
 		_device->Release();
 	}
 
-	if (_directInput != NULL)
+	if (_directInput)
 	{
 		_directInput->Release();
 	}
 }
 
-void CInput::ProcessKeyboard()
+
+void CInput::Process()
 {
 	HRESULT hr;
 
 	// Collect all key states first
-	hr = _device->GetDeviceState(sizeof(_keyState), _keyState);
+	hr = _device->GetDeviceState(sizeof(_keyStates), _keyStates);
 	if (FAILED(hr))
 	{
 		// If the keyboard lost focus or was not acquired then try to get control back.

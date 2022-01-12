@@ -2,10 +2,10 @@
 #include "Debug.h"
 
 
-CTexture::CTexture(ID3D10Texture2D* texture, ID3D10ShaderResourceView* srview)
+CTexture::CTexture(ID3D10Texture2D* texture, ID3D10ShaderResourceView* rsview)
 {
 	_texture = texture;
-	_srview = srview;
+	_rsview = rsview;
 
 	D3D10_TEXTURE2D_DESC desc;
 	_texture->GetDesc(&desc);
@@ -16,36 +16,24 @@ CTexture::CTexture(ID3D10Texture2D* texture, ID3D10ShaderResourceView* srview)
 
 CTexture::~CTexture()
 {
-	if (_srview != NULL)
-	{
-		_srview->Release();
-		_srview = NULL;
-	}
-
-	if (_texture != NULL)
-	{
-		_texture->Release();
-		_texture = NULL;
-	}
+	if (_rsview != NULL) this->_rsview->Release();
+	if (_texture != NULL) this->_texture->Release();
 }
 
 
-/// <summary>
-/// 
-/// </summary>
-/// <param name="hWnd"></param>
 void CGraphics::Initialize(HWND hWnd)
 {
 	/* Back buffer */
-	RECT rect;
-	GetClientRect(hWnd, &rect);
-	_backBufferWidth = rect.right + 1;
-	_backBufferHeight = rect.bottom + 1;
+	RECT r;
+	GetClientRect(hWnd, &r);
+	_backBufferWidth = r.right + 1;
+	_backBufferHeight = r.bottom + 1;
 
-
-	/* Swap chain */
+	// Create & clear the DXGI_SWAP_CHAIN_DESC structure
 	DXGI_SWAP_CHAIN_DESC swapChainDesc;
 	ZeroMemory(&swapChainDesc, sizeof(swapChainDesc));
+
+	// Fill in the needed values
 	swapChainDesc.BufferCount = 1;
 	swapChainDesc.BufferDesc.Width = _backBufferWidth;
 	swapChainDesc.BufferDesc.Height = _backBufferHeight;
@@ -58,6 +46,7 @@ void CGraphics::Initialize(HWND hWnd)
 	swapChainDesc.SampleDesc.Quality = 0;
 	swapChainDesc.Windowed = TRUE;
 
+	// Create the D3D device and the swap chain
 	HRESULT hr = D3D10CreateDeviceAndSwapChain(NULL,
 		D3D10_DRIVER_TYPE_REFERENCE,
 		NULL,
@@ -69,32 +58,33 @@ void CGraphics::Initialize(HWND hWnd)
 
 	if (hr != S_OK)
 	{
-		DebugOut(L"[ERROR] D3D10CreateDeviceAndSwapChain has failed.\n");
+		DebugOut(L"[Graphics] D3D10CreateDeviceAndSwapChain has failed.\n");
 		return;
 	}
 
-
-	/* Get backbuffer from swap chain*/
+	// Get the back buffer from the swapchain
 	ID3D10Texture2D* pBackBuffer;
 	hr = _swapChain->GetBuffer(0, __uuidof(ID3D10Texture2D), (LPVOID*)&pBackBuffer);
 	if (hr != S_OK)
 	{
-		DebugOut(L"[ERROR] pSwapChain->GetBuffer has failed.\n");
+		DebugOut(L"[Graphics] SwapChain->GetBuffer has failed.\n");
 		return;
 	}
 
-	
-	/* Render target view */
+	// create the render target view
 	hr = _device->CreateRenderTargetView(pBackBuffer, NULL, &_renderTargetView);
+
 	pBackBuffer->Release();
 	if (hr != S_OK)
 	{
-		DebugOut(L"[ERROR] CreateRenderTargetView has failed.\n");
+		DebugOut(L"[Graphics] CreateRenderTargetView has failed.\n");
 		return;
 	}
 
-	
-	/* Viewport */
+	// set the render target
+	_device->OMSetRenderTargets(1, &_renderTargetView, NULL);
+
+	// create and set the viewport
 	D3D10_VIEWPORT viewPort;
 	viewPort.Width = _backBufferWidth;
 	viewPort.Height = _backBufferHeight;
@@ -104,8 +94,6 @@ void CGraphics::Initialize(HWND hWnd)
 	viewPort.TopLeftY = 0;
 	_device->RSSetViewports(1, &viewPort);
 
-
-	/* Sampler State */
 	D3D10_SAMPLER_DESC desc;
 	desc.Filter = D3D10_FILTER_MIN_MAG_POINT_MIP_LINEAR;
 	desc.AddressU = D3D10_TEXTURE_ADDRESS_CLAMP;
@@ -120,23 +108,24 @@ void CGraphics::Initialize(HWND hWnd)
 	desc.BorderColor[3] = 1.0f;
 	desc.MinLOD = -FLT_MAX;
 	desc.MaxLOD = FLT_MAX;
+
 	_device->CreateSamplerState(&desc, &this->_pointSamplerState);
 	_device->VSSetSamplers(0, 1, &_pointSamplerState);
 	_device->GSSetSamplers(0, 1, &_pointSamplerState);
 	_device->PSSetSamplers(0, 1, &_pointSamplerState);
 
-
-	/* Sprite handlder */
+	// create the sprite object to handle sprite drawing 
 	hr = D3DX10CreateSprite(_device, 0, &_spriteHandler);
+
 	if (hr != S_OK)
 	{
-		DebugOut(L"[ERROR] D3DX10CreateSprite has failed.\n");
+		DebugOut(L"[Graphics] D3DX10CreateSprite has failed.\n");
 		return;
 	}
 
-
-	/* Projection matrix */
 	D3DXMATRIX matProjection;
+
+	// Create the projection matrix using the values in the viewport
 	D3DXMatrixOrthoOffCenterLH(&matProjection,
 		(float)viewPort.TopLeftX,
 		(float)viewPort.Width,
@@ -146,7 +135,7 @@ void CGraphics::Initialize(HWND hWnd)
 		10);
 	hr = _spriteHandler->SetProjectionTransform(&matProjection);
 
-	/* Blend state */
+	// Initialize the blend state for alpha drawing
 	D3D10_BLEND_DESC StateDesc;
 	ZeroMemory(&StateDesc, sizeof(D3D10_BLEND_DESC));
 	StateDesc.AlphaToCoverageEnable = FALSE;
@@ -158,17 +147,12 @@ void CGraphics::Initialize(HWND hWnd)
 	StateDesc.DestBlendAlpha = D3D10_BLEND_ZERO;
 	StateDesc.BlendOpAlpha = D3D10_BLEND_OP_ADD;
 	StateDesc.RenderTargetWriteMask[0] = D3D10_COLOR_WRITE_ENABLE_ALL;
-	_device->CreateBlendState(&StateDesc, &this->_blendStateAlpha);
+	_device->CreateBlendState(&StateDesc, &_blendStateAlpha);
 
-	DebugOut(L"[INFO] InitDirectX has been successful\n");
-
-	return;
+	DebugOut(L"[Graphics] InitDirectX has been successful\n");
 }
 
 
-/// <summary>
-/// 
-/// </summary>
 void CGraphics::Shutdown()
 {
 	for (auto texture : _textures)
@@ -178,56 +162,26 @@ void CGraphics::Shutdown()
 	}
 	_textures.clear();
 
-	if (_blendStateAlpha != NULL)
-	{
-		_blendStateAlpha->Release();
-		_blendStateAlpha = NULL;
-	}
-
-	if (_spriteHandler != NULL)
-	{
-		_spriteHandler->Release();
-		_spriteHandler = NULL;
-	}
-
-	if (_renderTargetView != NULL)
-	{
-		_renderTargetView->Release();
-		_renderTargetView = NULL;
-	}
-
-	if (_swapChain != NULL)
-	{
-		_swapChain->Release();
-		_swapChain = NULL;
-	}
-
-	if (_device != NULL)
-	{
-		_device->Release();
-		_device = NULL;
-	}
+	_blendStateAlpha->Release();
+	_spriteHandler->Release();
+	_renderTargetView->Release();
+	_swapChain->Release();
+	_device->Release();
 }
 
-
-/// <summary>
-/// 
-/// </summary>
-/// <param name="id"></param>
-/// <param name="texturePath"></param>
 void CGraphics::LoadTexture(unsigned int id, std::wstring texturePath)
 {
-	if (GetTexture(id) == nullptr)
+	if (_textures.find(id) == _textures.end())
 	{
-		ID3D10Resource* resource = NULL;
+		ID3D10Resource* pD3D10Resource = NULL;
 		ID3D10Texture2D* tex = NULL;
 
-		/* Image information */
+		// Retrieve image information first 
 		D3DX10_IMAGE_INFO imageInfo;
 		HRESULT hr = D3DX10GetImageInfoFromFile(texturePath.c_str(), NULL, &imageInfo, NULL);
 		if (FAILED(hr))
 		{
-			DebugOut(L"[ERROR] D3DX10GetImageInfoFromFile failed for  file: %s with error: %d\n", texturePath.c_str(), hr);
+			DebugOut(L"[Texture] D3DX10GetImageInfoFromFile failed for  file: %s with error: %d\n", texturePath, hr);
 			return;
 		}
 
@@ -252,22 +206,22 @@ void CGraphics::LoadTexture(unsigned int id, std::wstring texturePath)
 			texturePath.c_str(),
 			&info,
 			NULL,
-			&resource,
+			&pD3D10Resource,
 			NULL);
 
 		// Make sure the texture was loaded successfully
 		if (FAILED(hr))
 		{
-			DebugOut((wchar_t*)L"[ERROR] Failed to load texture file: %s with error: %d\n", texturePath.c_str(), hr);
+			DebugOut(L"[Textures] Failed to load texture file: %s with error: %d\n", texturePath, hr);
 			return;
 		}
 
 		// Translates the ID3D10Resource object into a ID3D10Texture2D object
-		resource->QueryInterface(__uuidof(ID3D10Texture2D), (LPVOID*)&tex);
-		resource->Release();
+		pD3D10Resource->QueryInterface(__uuidof(ID3D10Texture2D), (LPVOID*)&tex);
+		pD3D10Resource->Release();
 
 		if (!tex) {
-			DebugOut((wchar_t*)L"[ERROR] Failed to convert from ID3D10Resource to ID3D10Texture2D \n");
+			DebugOut(L"[Textures] Failed to convert from ID3D10Resource to ID3D10Texture2D \n");
 			return;
 		}
 
@@ -295,7 +249,7 @@ void CGraphics::LoadTexture(unsigned int id, std::wstring texturePath)
 
 		_device->CreateShaderResourceView(tex, &SRVDesc, &gSpriteTextureRV);
 
-		DebugOut(L"[INFO] Texture loaded Ok from file: %s \n", texturePath.c_str());
+		DebugOut(L"[Textures] Texture loaded Ok from file: %s \n", texturePath.c_str());
 
 		_textures[id] = new CTexture(tex, gSpriteTextureRV);
 	}
@@ -309,8 +263,5 @@ void CGraphics::LoadTexture(unsigned int id, std::wstring texturePath)
 /// <returns></returns>
 pTexture CGraphics::GetTexture(unsigned int id)
 {
-	if (_textures.find(id) != _textures.end())
-		return _textures[id];
-	else
-		return nullptr;
+	return _textures[id];
 }

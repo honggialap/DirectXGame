@@ -32,7 +32,7 @@ public:
 	CGameObject(
 		pGame game, pScene scene,
 		unsigned int id, std::string name, std::string source,
-		float x, float y, int gridX, int gridY, unsigned int layer
+		float x, float y, int gx, int gy, unsigned int layer
 	);
 	~CGameObject();
 
