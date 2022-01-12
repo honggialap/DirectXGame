@@ -151,6 +151,9 @@
     <Image Include="Data\Texture\CoinSample.png">
       <Filter>Resource Files</Filter>
     </Image>
+    <Image Include="Data\Texture\BBox.png">
+      <Filter>Resource Files</Filter>
+    </Image>
   </ItemGroup>
   <ItemGroup>
     <Xml Include="Data\GameData.xml" />

@@ -32,7 +32,7 @@ private:
 	D3DXMATRIX _matScaling;
 
 public:
-	void Render(float x, float y, bool isUI);
+	void Render(float x, float y, bool isUI = false);
 };
 typedef CSprite* pSprite;
 
