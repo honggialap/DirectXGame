@@ -68,7 +68,7 @@ public:
 protected:
 	unsigned int _framePerSecond = 0;
 	std::vector<unsigned int> _updateQueue;
-	std::vector<pGameObject> _renderQueue;
+	std::vector<unsigned int> _renderQueue;
 
 public:
 	void Load(HINSTANCE hInstance, std::string gameDataPath);
@@ -82,10 +82,8 @@ public:
 protected:
 	float _cameraX = 0;
 	float _cameraY = 0;
-	float _cameraBuffer = 0;
 
 public:
-	float GetCameraBuffer() { return _cameraBuffer; }
 	void GetCamera(float& x, float& y) { x = _cameraX; y = _cameraY; }
 	void MoveCameraTo(float x, float y) { _cameraX = x; _cameraY = y; }
 	void MoveCameraBy(float x, float y) { _cameraX += x; _cameraY += y; }
@@ -109,9 +107,7 @@ public:
 
 	/* Scene */
 protected:
-	std::map<unsigned int, pScene> _scenes;
-	bool _load = false;
-	unsigned int _startScene = 0;
+	std::map<unsigned int, pScene> _scene;
 
 public:
 	void PlayScene(unsigned int id);
@@ -126,13 +122,7 @@ protected:
 	std::unordered_map<std::string, unsigned int> _dictionary;
 
 public:
-	virtual pGameObject Create(
-		pScene scene,
-		unsigned int actorID, std::string name, std::string prefabSource,
-		float posX, float posY, int gridX, int gridY,
-		unsigned int layer
-	) = 0;
-	void Add(pGameObject gameObject);
+	pGameObject Create();
 	pGameObject Get(unsigned int id);
 	pGameObject Get(std::string name);
 	void Purge();

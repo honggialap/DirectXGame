@@ -1,35 +1,3 @@
 <Scene>
-	<GameObject actor="2001" name="mario" source="Data/Asset/MarioSample.xml" x="0" y="0" gx="0" gy="0" layer="0"/>
-
-	<GameObject actor="3001" name="goomba1" source="Data/Asset/GoombaSample.xml" x="0" y="0" gx="0" gy="0" layer="0"/>
-	<GameObject actor="3001" name="goomba2" source="Data/Asset/GoombaSample.xml" x="0" y="0" gx="0" gy="0" layer="0"/>
-	<GameObject actor="3001" name="goomba1" source="Data/Asset/GoombaSample.xml" x="0" y="0" gx="0" gy="0" layer="0"/>
-
-	<GameObject actor="4001" name="coin1" source="Data/Asset/CoinSample.xml" x="0" y="0" gx="0" gy="0" layer="0"/>
-	<GameObject actor="4001" name="coin2" source="Data/Asset/CoinSample.xml" x="0" y="0" gx="0" gy="0" layer="0"/>
-	<GameObject actor="4001" name="coin3" source="Data/Asset/CoinSample.xml" x="0" y="0" gx="0" gy="0" layer="0"/>
-	<GameObject actor="4001" name="coin4" source="Data/Asset/CoinSample.xml" x="0" y="0" gx="0" gy="0" layer="0"/>
-
-	<GameObject actor="5001" name="brick1" source="Data/Asset/BrickSample.xml" x="0" y="0" gx="0" gy="0" layer="0"/>
-	<GameObject actor="5001" name="brick2" source="Data/Asset/BrickSample.xml" x="0" y="0" gx="0" gy="0" layer="0"/>
-	<GameObject actor="5001" name="brick3" source="Data/Asset/BrickSample.xml" x="0" y="0" gx="0" gy="0" layer="0"/>
-	<GameObject actor="5001" name="brick4" source="Data/Asset/BrickSample.xml" x="0" y="0" gx="0" gy="0" layer="0"/>
-	<GameObject actor="5001" name="brick5" source="Data/Asset/BrickSample.xml" x="0" y="0" gx="0" gy="0" layer="0"/>
-	<GameObject actor="5001" name="brick6" source="Data/Asset/BrickSample.xml" x="0" y="0" gx="0" gy="0" layer="0"/>
-	<GameObject actor="5001" name="brick7" source="Data/Asset/BrickSample.xml" x="0" y="0" gx="0" gy="0" layer="0"/>
-	<GameObject actor="5001" name="brick8" source="Data/Asset/BrickSample.xml" x="0" y="0" gx="0" gy="0" layer="0"/>
-	<GameObject actor="5001" name="brick9" source="Data/Asset/BrickSample.xml" x="0" y="0" gx="0" gy="0" layer="0"/>
-	<GameObject actor="5001" name="brick10" source="Data/Asset/BrickSample.xml" x="0" y="0" gx="0" gy="0" layer="0"/>
-	<GameObject actor="5001" name="brick11" source="Data/Asset/BrickSample.xml" x="0" y="0" gx="0" gy="0" layer="0"/>
-	<GameObject actor="5001" name="brick12" source="Data/Asset/BrickSample.xml" x="0" y="0" gx="0" gy="0" layer="0"/>
-	<GameObject actor="5001" name="brick13" source="Data/Asset/BrickSample.xml" x="0" y="0" gx="0" gy="0" layer="0"/>
-	<GameObject actor="5001" name="brick14" source="Data/Asset/BrickSample.xml" x="0" y="0" gx="0" gy="0" layer="0"/>
-	<GameObject actor="5001" name="brick15" source="Data/Asset/BrickSample.xml" x="0" y="0" gx="0" gy="0" layer="0"/>
-	<GameObject actor="5001" name="brick16" source="Data/Asset/BrickSample.xml" x="0" y="0" gx="0" gy="0" layer="0"/>
-	<GameObject actor="5001" name="brick17" source="Data/Asset/BrickSample.xml" x="0" y="0" gx="0" gy="0" layer="0"/>
-	<GameObject actor="5001" name="brick18" source="Data/Asset/BrickSample.xml" x="0" y="0" gx="0" gy="0" layer="0"/>
-	<GameObject actor="5001" name="brick19" source="Data/Asset/BrickSample.xml" x="0" y="0" gx="0" gy="0" layer="0"/>
-	<GameObject actor="5001" name="brick20" source="Data/Asset/BrickSample.xml" x="0" y="0" gx="0" gy="0" layer="0"/>
-
-	<GameObject actor="6001" name="portal" source="Data/Asset/PortalSample2.xml" x="0" y="0" gx="0" gy="0" layer="0"/>
+	<GameObject actor="" name="" source="" x="" y="" gridX="" gridY="" layer=""/>
 </Scene>

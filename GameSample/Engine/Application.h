@@ -7,6 +7,9 @@
 #include <string>
 #pragma endregion
 
+/// <summary>
+/// Handling window creation, Window Message Loop and Window Procedure callback function.
+/// </summary>
 class CApplication
 {
 private:

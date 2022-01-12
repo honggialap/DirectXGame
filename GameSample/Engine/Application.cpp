@@ -1,11 +1,19 @@
 #include "Application.h"
 #include "Debug.h"
 
-
+/// <summary>
+/// Create game window.
+/// </summary>
+/// <param name="hInstance">- Window process handler, pass by WinMain.</param>
+/// <param name="title">- Window title.</param>
+/// <param name="width">- Window width, border included.</param>
+/// <param name="height">- Window height, border included.</param>
+/// <returns>If create success return window handler, else return NULL</returns>
 HWND CApplication::CreateGameWindow(HINSTANCE hInstance, std::wstring title, unsigned int width, unsigned int height)
 {
 	_hInstance = hInstance;
 
+	/* Register Window Class */
 	WNDCLASSEX wcex;
 	wcex = {};
 	wcex.cbSize = sizeof(WNDCLASSEX);
@@ -21,7 +29,9 @@ HWND CApplication::CreateGameWindow(HINSTANCE hInstance, std::wstring title, uns
 	wcex.hIconSm = NULL;
 	RegisterClassEx(&wcex);
 
-	_hWnd = CreateWindowEx(
+	/* Create Window */
+	_hWnd = CreateWindowEx
+	(
 		0,
 		L"GameWindow",
 		title.c_str(),
@@ -35,23 +45,28 @@ HWND CApplication::CreateGameWindow(HINSTANCE hInstance, std::wstring title, uns
 
 	if (!_hWnd)
 	{
-		DebugOut(L"[Application] Create game window failed.\n");
+		DebugOut(L"[FRAMEWORK] Application - Create game window failed.\n");
+
 		return NULL;
 	}
 	else
 	{
+		DebugOut(L"[FRAMEWORK] Application - Create game window successed.\n");
+
 		ShowWindow(_hWnd, SW_SHOWNORMAL);
 		UpdateWindow(_hWnd);
-
-		DebugOut(L"[Application] Create game window success.\n");
 		return _hWnd;
 	}
 }
 
 
+/// <summary>
+/// Send Exit code to Window Message Loop.
+/// </summary>
 void CApplication::Exit()
 {
-	DebugOut(L"[Application] Exit called.\n");
+	DebugOut(L"[FRAMEWORK] Application - Exit message called.\n");
+
 	SendMessage(_hWnd, WM_DESTROY, 0, 0);
 }
 
@@ -63,17 +78,18 @@ void CApplication::Exit()
 bool CApplication::HandleMessage()
 {
 	MSG msg = {};
-	bool isDone = false;
+	bool done = false;
 
 	if (PeekMessage(&msg, NULL, 0, 0, PM_REMOVE))
 	{
-		if (msg.message == WM_QUIT) isDone = true;
+		if (msg.message == WM_QUIT)
+			done = true;
 
 		TranslateMessage(&msg);
 		DispatchMessage(&msg);
 	}
 
-	return isDone;
+	return done;
 }
 
 
@@ -86,6 +102,7 @@ LRESULT CApplication::WinProc(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam
 	{
 	case WM_DESTROY:
 		PostQuitMessage(0);
+		return 0;
 		break;
 
 	default:

@@ -1,30 +1,10 @@
 <Prefab>
-	<!--BBOX-->
-	<Sprite id="9990" textureId="0" left="0" top="0" width="32" height="32" offsetX ="0" offsetY="16"/>
+	<Sprite id="" textureId="" left="" top="" width="" height="" offsetX ="" offsetY=""/>
 
-	<!--MARIO-->
-	<Sprite id="1001" textureId="2" left="2" top="2" width="32" height="32" offsetX ="0" offsetY="16"/>
-	<Sprite id="1002" textureId="2" left="36" top="2" width="32" height="32" offsetX ="0" offsetY="16"/>
-	<Sprite id="1003" textureId="2" left="70" top="2" width="32" height="32" offsetX ="0" offsetY="16"/>
-
-	<Sprite id="1101" textureId="2" left="2"  top="2" width="32" height="32" offsetX ="0" offsetY="16"/>
-	<Sprite id="1102" textureId="2" left="36" top="2" width="32" height="32" offsetX ="0" offsetY="16"/>
-	<Sprite id="1103" textureId="2" left="70" top="2" width="32" height="32" offsetX ="0" offsetY="16"/>
-
-	<Animation id="1001">
-		<Frame id="1001" time="150"/>
-		<Frame id="1002" time="150"/>
+	<Animation id="">
+		<Frame id="" time=""/>
 	</Animation>
 
-	<Animation id="1101">
-		<Frame id="1101" time="150"/>
-		<Frame id="1102" time="150"/>
-	</Animation>
-
-	<SoundClip id="1001" source="Data/SoundClip/MarioJump.wav"/>
-
-
-	<!--BODY-->
-	<Body render="true" width="32" height="32" offsetX ="0" offsetY="16"/>
+	<SoundClip id="" source=""/>
 
 </Prefab>

@@ -185,7 +185,6 @@
     <ClInclude Include="GameSample.h" />
   </ItemGroup>
   <ItemGroup>
-    <Image Include="Data\Texture\BBox.png" />
     <Image Include="Data\Texture\BrickSample.png" />
     <Image Include="Data\Texture\CoinSample.png" />
     <Image Include="Data\Texture\GoombaSample.png" />

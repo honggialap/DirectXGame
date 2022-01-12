@@ -10,6 +10,9 @@
 #include <dinput.h>
 #pragma endregion
 
+/// <summary>
+/// 
+/// </summary>
 class IKeyHandler
 {
 public:
@@ -27,20 +30,20 @@ class CInput
 {
 public:
 	static const unsigned int KEYBOARD_BUFFER_SIZE = 1024;
-	static const unsigned int KEYBOARD_STATE_SIZE = 256;
+	static const unsigned int KEYBOARD_STATE_SIZE = 1024;
 
 private:
 	LPDIRECTINPUT8 _directInput = NULL;
 	LPDIRECTINPUTDEVICE8 _device = NULL;
-	BYTE _keyStates[CInput::KEYBOARD_STATE_SIZE];
-	DIDEVICEOBJECTDATA _keyEvents[CInput::KEYBOARD_BUFFER_SIZE];
+	BYTE _keyState[CInput::KEYBOARD_BUFFER_SIZE] = {};
+	DIDEVICEOBJECTDATA _keyEvents[CInput::KEYBOARD_STATE_SIZE] = {};
 	pKeyHandler _keyHandler = nullptr;
 
 public:
 	void Initialize(HINSTANCE hInstance, HWND hWnd, pKeyHandler keyHandler);
 	void Shutdown();
 
-	void Process();
+	void ProcessKeyboard();
 };
 typedef CInput* pInput;
 
