@@ -18,6 +18,10 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BattleTankServer", "BattleT
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GridMaker", "GridMaker\GridMaker.vcxproj", "{6E008111-8363-409E-BFE6-36E069E2B5D6}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Castlevania", "Castlevania\Castlevania.vcxproj", "{21A736DA-D691-4E00-B3F9-0E8241836BA8}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SuperMetroid", "SuperMetroid\SuperMetroid.vcxproj", "{0C54622F-BF0A-4496-8064-8FACD805D91C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -66,6 +70,22 @@ Global
 		{6E008111-8363-409E-BFE6-36E069E2B5D6}.Release|x64.Build.0 = Release|x64
 		{6E008111-8363-409E-BFE6-36E069E2B5D6}.Release|x86.ActiveCfg = Release|Win32
 		{6E008111-8363-409E-BFE6-36E069E2B5D6}.Release|x86.Build.0 = Release|Win32
+		{21A736DA-D691-4E00-B3F9-0E8241836BA8}.Debug|x64.ActiveCfg = Debug|x64
+		{21A736DA-D691-4E00-B3F9-0E8241836BA8}.Debug|x64.Build.0 = Debug|x64
+		{21A736DA-D691-4E00-B3F9-0E8241836BA8}.Debug|x86.ActiveCfg = Debug|Win32
+		{21A736DA-D691-4E00-B3F9-0E8241836BA8}.Debug|x86.Build.0 = Debug|Win32
+		{21A736DA-D691-4E00-B3F9-0E8241836BA8}.Release|x64.ActiveCfg = Release|x64
+		{21A736DA-D691-4E00-B3F9-0E8241836BA8}.Release|x64.Build.0 = Release|x64
+		{21A736DA-D691-4E00-B3F9-0E8241836BA8}.Release|x86.ActiveCfg = Release|Win32
+		{21A736DA-D691-4E00-B3F9-0E8241836BA8}.Release|x86.Build.0 = Release|Win32
+		{0C54622F-BF0A-4496-8064-8FACD805D91C}.Debug|x64.ActiveCfg = Debug|x64
+		{0C54622F-BF0A-4496-8064-8FACD805D91C}.Debug|x64.Build.0 = Debug|x64
+		{0C54622F-BF0A-4496-8064-8FACD805D91C}.Debug|x86.ActiveCfg = Debug|Win32
+		{0C54622F-BF0A-4496-8064-8FACD805D91C}.Debug|x86.Build.0 = Debug|Win32
+		{0C54622F-BF0A-4496-8064-8FACD805D91C}.Release|x64.ActiveCfg = Release|x64
+		{0C54622F-BF0A-4496-8064-8FACD805D91C}.Release|x64.Build.0 = Release|x64
+		{0C54622F-BF0A-4496-8064-8FACD805D91C}.Release|x86.ActiveCfg = Release|Win32
+		{0C54622F-BF0A-4496-8064-8FACD805D91C}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
