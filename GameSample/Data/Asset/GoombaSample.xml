@@ -1,10 +1,25 @@
 <Prefab>
-	<Sprite id="" textureId="" left="" top="" width="" height="" offsetX ="" offsetY=""/>
+	<!--BBOX-->
+	<Sprite id="9990" textureId="0" left="0" top="0" width="32" height="32" offsetX ="0" offsetY="16"/>
 
-	<Animation id="">
-		<Frame id="" time=""/>
+	<!--GOOMBA-->
+	<Sprite id="1001" textureId="2" left="2" top="2" width="32" height="32" offsetX ="0" offsetY="16"/>
+	<Sprite id="1002" textureId="2" left="38" top="2" width="32" height="32" offsetX ="0" offsetY="16"/>
+	<Sprite id="1003" textureId="2" left="74" top="2" width="32" height="32" offsetX ="0" offsetY="16"/>
+	<Sprite id="1004" textureId="2" left="110" top="2" width="48" height="32" offsetX ="0" offsetY="16"/>
+	<Sprite id="1005" textureId="2" left="162" top="2" width="48" height="32" offsetX ="0" offsetY="16"/>
+
+	<Animation id="1001">
+		<Frame id="1001" time="150"/>
+		<Frame id="1002" time="150"/>
 	</Animation>
 
-	<SoundClip id="" source=""/>
+	<Animation id="1002">
+		<Frame id="1004" time="150"/>
+		<Frame id="1005" time="150"/>
+	</Animation>
+
+	<!--BODY-->
+	<Body render="true" width="32" height="32" offsetX ="0" offsetY="16"/>
 
 </Prefab>

@@ -23,11 +23,9 @@ void CTime::Tick()
 	_previousTimeStamp = _currentTimeStamp;
 	_currentTimeStamp = _clock.now();
 
-	_elapsedMs = std::chrono::duration_cast<
-		std::chrono::duration<float, std::milli>>
+	_elapsedMs = std::chrono::duration_cast<std::chrono::duration<float, std::milli>>
 		(_currentTimeStamp - _previousTimeStamp).count();
 
-	_totalElapsedMs = std::chrono::duration_cast<
-		std::chrono::duration<float, std::milli>>
+	_totalElapsedMs = std::chrono::duration_cast<std::chrono::duration<float, std::milli>>
 		(_currentTimeStamp - _startTimeStamp).count();
 }

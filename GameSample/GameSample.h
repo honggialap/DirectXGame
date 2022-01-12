@@ -19,7 +19,12 @@
 class CGameSample : public CGame
 {
 public:
-
+	pGameObject Create(
+		pScene scene,
+		unsigned int actor, std::string name, std::string source,
+		float posX, float posY, int gridX, int gridY,
+		unsigned int layer
+	);
 };
 
 #endif // !__GAME_SAMPLE_H__

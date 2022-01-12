@@ -16,7 +16,7 @@ CSprite::CSprite(pGameObject gameObject, int left, int top, int width, int heigh
 	float texWidth = (float)_texture->_width;
 	float texHeight = (float)_texture->_height;
 
-	_sprite.pTexture = _texture->_srview;
+	_sprite.pTexture = _texture->_rsview;
 	_sprite.TexCoord.x = _left / texWidth;
 	_sprite.TexCoord.y = _top / texHeight;
 	_sprite.TexSize.x = _width / texWidth;
@@ -38,6 +38,7 @@ void CSprite::Render(float x, float y, bool isUI)
 	
 	float cameraX = 0;
 	float cameraY = 0;
+	float cameraBuffer = _gameObject->GetGame()->GetCameraBuffer();
 	_gameObject->GetGame()->GetCamera(cameraX, cameraY);
 	cameraX = (FLOAT)floor(cameraX);
 	cameraY = (FLOAT)floor(cameraY);
@@ -48,11 +49,19 @@ void CSprite::Render(float x, float y, bool isUI)
 	y = (FLOAT)floor(y) + _offsetY;
 
 	if (isUI)
+	{
 		D3DXMatrixTranslation(&matTranslation, x, graphics->GetBackBufferHeight() + y, 0.1f);
+		_sprite.matWorld = (_matScaling * matTranslation);
+		graphics->GetSpriteHandler()->DrawSpritesImmediate(&_sprite, 1, 0, 0);
+	}
 	else
-		D3DXMatrixTranslation(&matTranslation, x - cameraX, graphics->GetBackBufferHeight() + y - cameraY, 0.1f);
-
-	_sprite.matWorld = (_matScaling * matTranslation);
-
-	graphics->GetSpriteHandler()->DrawSpritesImmediate(&_sprite, 1, 0, 0);
+	{
+		if (x > cameraX - cameraBuffer && x < cameraX + graphics->GetBackBufferWidth() + cameraBuffer
+			&& y < cameraY + cameraBuffer && y > cameraY - graphics->GetBackBufferWidth() - cameraBuffer)
+		{
+			D3DXMatrixTranslation(&matTranslation, x - cameraX, graphics->GetBackBufferHeight() + y - cameraY, 0.1f);
+			_sprite.matWorld = (_matScaling * matTranslation);
+			graphics->GetSpriteHandler()->DrawSpritesImmediate(&_sprite, 1, 0, 0);
+		}
+	}
 }
