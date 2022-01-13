@@ -37,7 +37,6 @@
     <ClCompile Include="Engine\Animation.cpp">
       <Filter>Engine\Component</Filter>
     </ClCompile>
-    <ClCompile Include="main.cpp" />
     <ClCompile Include="SuperMarioBros3.cpp">
       <Filter>Game</Filter>
     </ClCompile>
@@ -104,7 +103,7 @@
     <ClCompile Include="Actor\Character\BoomBoom\BoomBoom.cpp">
       <Filter>Actor\Character\BoomBoom</Filter>
     </ClCompile>
-    <ClCompile Include="Actor\Character\LarryKoopa\Larry.cpp">
+    <ClCompile Include="Actor\Character\Larry\Larry.cpp">
       <Filter>Actor\Character\Larry</Filter>
     </ClCompile>
     <ClCompile Include="Actor\Character\Brother\Boomerang.cpp">
@@ -227,6 +226,42 @@
     <ClCompile Include="Actor\Prop\Water.cpp">
       <Filter>Actor\Prop\Water</Filter>
     </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="Actor\Prop\BigCannon.cpp">
+      <Filter>Actor\Prop\BigCannon</Filter>
+    </ClCompile>
+    <ClCompile Include="Actor\Misc\BrickFragEffect.cpp">
+      <Filter>Actor\Mics\BrickFragEffect</Filter>
+    </ClCompile>
+    <ClCompile Include="Actor\Misc\DeathEffect.cpp">
+      <Filter>Actor\Mics\DeathEffect</Filter>
+    </ClCompile>
+    <ClCompile Include="Actor\Misc\BubbleEffect.cpp">
+      <Filter>Actor\Mics\BubbleEffect</Filter>
+    </ClCompile>
+    <ClCompile Include="Actor\Misc\CannonSmokeEffect.cpp">
+      <Filter>Actor\Mics\CannonSmokeEffect</Filter>
+    </ClCompile>
+    <ClCompile Include="Actor\Misc\LavaEffect.cpp">
+      <Filter>Actor\Mics\LavaEffect</Filter>
+    </ClCompile>
+    <ClCompile Include="Actor\Misc\Score.cpp">
+      <Filter>Actor\Mics\Score</Filter>
+    </ClCompile>
+    <ClCompile Include="Actor\Misc\WaterEffect.cpp">
+      <Filter>Actor\Mics\WaterEffect</Filter>
+    </ClCompile>
+    <ClCompile Include="Actor\Character\Larry\LarryProjectile.cpp">
+      <Filter>Actor\Character\Larry</Filter>
+    </ClCompile>
+    <ClCompile Include="Actor\Prop\SmallCannon.cpp">
+      <Filter>Actor\Prop\SmallCannon</Filter>
+    </ClCompile>
+    <ClCompile Include="Actor\Prop\BulletBillCannon.cpp">
+      <Filter>Actor\Prop\BulletBillCannon</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Engine\Game.h">
@@ -328,7 +363,7 @@
     <ClInclude Include="Actor\Character\BoomBoom\BoomBoom.h">
       <Filter>Actor\Character\BoomBoom</Filter>
     </ClInclude>
-    <ClInclude Include="Actor\Character\LarryKoopa\Larry.h">
+    <ClInclude Include="Actor\Character\Larry\Larry.h">
       <Filter>Actor\Character\Larry</Filter>
     </ClInclude>
     <ClInclude Include="Actor\Character\Brother\Boomerang.h">
@@ -445,6 +480,39 @@
     <ClInclude Include="Actor\Prop\Water.h">
       <Filter>Actor\Prop\Water</Filter>
     </ClInclude>
+    <ClInclude Include="Actor\Prop\BigCannon.h">
+      <Filter>Actor\Prop\BigCannon</Filter>
+    </ClInclude>
+    <ClInclude Include="Actor\Misc\BrickFragEffect.h">
+      <Filter>Actor\Mics\BrickFragEffect</Filter>
+    </ClInclude>
+    <ClInclude Include="Actor\Misc\DeathEffect.h">
+      <Filter>Actor\Mics\DeathEffect</Filter>
+    </ClInclude>
+    <ClInclude Include="Actor\Misc\BubbleEffect.h">
+      <Filter>Actor\Mics\BubbleEffect</Filter>
+    </ClInclude>
+    <ClInclude Include="Actor\Misc\CannonSmokeEffect.h">
+      <Filter>Actor\Mics\CannonSmokeEffect</Filter>
+    </ClInclude>
+    <ClInclude Include="Actor\Misc\LavaEffect.h">
+      <Filter>Actor\Mics\LavaEffect</Filter>
+    </ClInclude>
+    <ClInclude Include="Actor\Misc\Score.h">
+      <Filter>Actor\Mics\Score</Filter>
+    </ClInclude>
+    <ClInclude Include="Actor\Misc\WaterEffect.h">
+      <Filter>Actor\Mics\WaterEffect</Filter>
+    </ClInclude>
+    <ClInclude Include="Actor\Character\Larry\LarryProjectile.h">
+      <Filter>Actor\Character\Larry</Filter>
+    </ClInclude>
+    <ClInclude Include="Actor\Prop\SmallCannon.h">
+      <Filter>Actor\Prop\SmallCannon</Filter>
+    </ClInclude>
+    <ClInclude Include="Actor\Prop\BulletBillCannon.h">
+      <Filter>Actor\Prop\BulletBillCannon</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Engine">
@@ -546,9 +614,6 @@
     <Filter Include="Actor\Mics\HItEffect">
       <UniqueIdentifier>{a6fcad6b-bdea-4047-a997-d412e0ebcb02}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Actor\Mics\DamageEffect">
-      <UniqueIdentifier>{9aa4441c-d2a9-4f09-919e-dedfe198a854}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Resource">
       <UniqueIdentifier>{6c581331-5247-4407-9643-074cfbd7fef9}</UniqueIdentifier>
     </Filter>
@@ -645,9 +710,36 @@
     <Filter Include="Actor\Prop\Water">
       <UniqueIdentifier>{1eb86298-4c82-49b2-92bb-bc04b10d998a}</UniqueIdentifier>
     </Filter>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="packages.config" />
+    <Filter Include="Actor\Mics\BrickFragEffect">
+      <UniqueIdentifier>{44b8be67-6351-47e6-b156-d10c4bb181a4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Actor\Mics\DeathEffect">
+      <UniqueIdentifier>{9aa4441c-d2a9-4f09-919e-dedfe198a854}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Actor\Mics\BubbleEffect">
+      <UniqueIdentifier>{f8fea833-9a72-453b-a43e-551453094abf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Actor\Mics\CannonSmokeEffect">
+      <UniqueIdentifier>{b7f70009-c0f0-4b44-b542-4a5dbc9b8f98}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Actor\Mics\LavaEffect">
+      <UniqueIdentifier>{5770aad6-3810-477a-854c-4a246956bfe0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Actor\Mics\Score">
+      <UniqueIdentifier>{d1c0fa00-7951-4051-a455-881787a52f75}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Actor\Mics\WaterEffect">
+      <UniqueIdentifier>{caf7e4e9-d41d-4733-8a37-1bd2f533fc42}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Actor\Prop\BigCannon">
+      <UniqueIdentifier>{f9596f8b-0d17-4a7e-bd9f-b98a0188fb8a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Actor\Prop\SmallCannon">
+      <UniqueIdentifier>{0a6ccabf-f937-487c-8810-9576b7556a5a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Actor\Prop\BulletBillCannon">
+      <UniqueIdentifier>{a9606339-cad9-4d5b-b734-63ec4f5a70b8}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Xml Include="Data\GameData.xml">
@@ -767,7 +859,7 @@
     <Xml Include="Data\Asset\Character\BoomBoom\BoomBoom.xml">
       <Filter>Actor\Character\BoomBoom</Filter>
     </Xml>
-    <Xml Include="Data\Asset\Character\LarryKoopa\Larry.xml">
+    <Xml Include="Data\Asset\Character\Larry\Larry.xml">
       <Filter>Actor\Character\Larry</Filter>
     </Xml>
     <Xml Include="Data\Asset\Character\Brother\Boomerang.xml">
@@ -946,5 +1038,10 @@
     <Image Include="Data\Texture\Plant.png">
       <Filter>Resource\Texture</Filter>
     </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config">
+      <Filter>Game</Filter>
+    </None>
   </ItemGroup>
 </Project>
