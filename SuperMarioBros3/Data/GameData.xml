@@ -1,0 +1,48 @@
+<GameData>
+	<GameSettings
+		title ="SUPER MARIO BROS 3"
+		windowWidth ="512"
+		windowHeight ="480"
+		framePerSecond ="144"
+		gridWidth ="256"
+		gridHeight ="240"
+		cameraBuffer ="16"
+		startScene ="0"
+		/>
+	
+	<!--Buttons-->
+	<!--https://community.bistudio.com/wiki/DIK_KeyCodes-->
+	<!--LEFT-->
+	<Button keyCode ="203"/>
+	<!--UP-->
+	<Button keyCode ="200"/>
+	<!--RIGHT-->
+	<Button keyCode ="205"/>
+	<!--DOWN-->
+	<Button keyCode ="208"/>
+	<!--A-->
+	<Button keyCode ="30"/>
+	<!--B-->
+	<Button keyCode ="31"/>
+	<!--HOT1-->
+	<Button keyCode ="2"/>
+	<!--HOT2-->
+	<Button keyCode ="3"/>
+	<!--HOT3-->
+	<Button keyCode ="4"/>
+	<!--HOT4-->
+	<Button keyCode ="5"/>
+	<!--HOT5-->
+	<Button keyCode ="6"/>
+	<!--HOT6-->
+	<Button keyCode ="7"/>
+
+	<Texture id="0" source="Data/Texture/BBox.png"/>
+	<Texture id="1001" source="Data/Texture/Mario.png"/>
+	<Texture id="1002" source="Data/Texture/BBox.png"/>
+	<Texture id="1003" source="Data/Texture/BBox.png"/>
+	<Texture id="1004" source="Data/Texture/BBox.png"/>
+	<Texture id="1005" source="Data/Texture/BBox.png"/>
+
+	<Scene id="0" source="Data/Scene/Sandbox.xml"/>
+</GameData>

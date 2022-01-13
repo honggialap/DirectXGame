@@ -142,15 +142,14 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Actor\Character\BoomBoom\BoomBoom.cpp" />
-    <ClCompile Include="Actor\Character\BoomerangBrother\Boomerang.cpp" />
-    <ClCompile Include="Actor\Character\BoomerangBrother\BoomerangBrother.cpp" />
+    <ClCompile Include="Actor\Character\Brother\Boomerang.cpp" />
+    <ClCompile Include="Actor\Character\Brother\Brother.cpp" />
     <ClCompile Include="Actor\Character\BulletBill\BulletBill.cpp" />
     <ClCompile Include="Actor\Character\BuzzyBeetle\BuzzyBeetle.cpp" />
     <ClCompile Include="Actor\Character\Cannonball\Cannonball.cpp" />
     <ClCompile Include="Actor\Character\DryBones\DryBones.cpp" />
     <ClCompile Include="Actor\Character\Goomba\Goomba.cpp" />
-    <ClCompile Include="Actor\Character\HammerBrother\Hammer.cpp" />
-    <ClCompile Include="Actor\Character\HammerBrother\HammerBrother.cpp" />
+    <ClCompile Include="Actor\Character\Brother\Hammer.cpp" />
     <ClCompile Include="Actor\Character\Koopa\Koopa.cpp" />
     <ClCompile Include="Actor\Character\Koopa\KoopaSensor.cpp" />
     <ClCompile Include="Actor\Character\LarryKoopa\LarryKoopa.cpp" />
@@ -161,7 +160,6 @@
     <ClCompile Include="Actor\Character\Piranha\Piranha.cpp" />
     <ClCompile Include="Actor\Character\Piranha\PiranhaSensor.cpp" />
     <ClCompile Include="Actor\Character\Podoboo\Podoboo.cpp" />
-    <ClCompile Include="Actor\Character\Toad\Toad.cpp" />
     <ClCompile Include="Actor\Character\Venus\Venus.cpp" />
     <ClCompile Include="Actor\Character\Venus\Fireball.cpp" />
     <ClCompile Include="Actor\Character\Venus\VenusSensor.cpp" />
@@ -174,7 +172,9 @@
     <ClCompile Include="Actor\Item\FireFlower.cpp" />
     <ClCompile Include="Actor\Item\SuperLeaf.cpp" />
     <ClCompile Include="Actor\Item\SuperMushroom.cpp" />
+    <ClCompile Include="Actor\Item\SuperStar.cpp" />
     <ClCompile Include="Actor\Misc\Background.cpp" />
+    <ClCompile Include="Actor\Misc\HitEffect.cpp" />
     <ClCompile Include="Actor\Misc\HUD.cpp" />
     <ClCompile Include="Actor\Misc\PowerBar.cpp" />
     <ClCompile Include="Actor\Prop\Block.cpp" />
@@ -218,15 +218,14 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Actor\Character\BoomBoom\BoomBoom.h" />
-    <ClInclude Include="Actor\Character\BoomerangBrother\Boomerang.h" />
-    <ClInclude Include="Actor\Character\BoomerangBrother\BoomerangBrother.h" />
+    <ClInclude Include="Actor\Character\Brother\Boomerang.h" />
+    <ClInclude Include="Actor\Character\Brother\Brother.h" />
     <ClInclude Include="Actor\Character\BulletBill\BulletBill.h" />
     <ClInclude Include="Actor\Character\BuzzyBeetle\BuzzyBeetle.h" />
     <ClInclude Include="Actor\Character\Cannonball\Cannonball.h" />
     <ClInclude Include="Actor\Character\DryBones\DryBones.h" />
     <ClInclude Include="Actor\Character\Goomba\Goomba.h" />
-    <ClInclude Include="Actor\Character\HammerBrother\Hammer.h" />
-    <ClInclude Include="Actor\Character\HammerBrother\HammerBrother.h" />
+    <ClInclude Include="Actor\Character\Brother\Hammer.h" />
     <ClInclude Include="Actor\Character\Koopa\Koopa.h" />
     <ClInclude Include="Actor\Character\Koopa\KoopaSensor.h" />
     <ClInclude Include="Actor\Character\LarryKoopa\LarryKoopa.h" />
@@ -237,7 +236,6 @@
     <ClInclude Include="Actor\Character\Piranha\Piranha.h" />
     <ClInclude Include="Actor\Character\Piranha\PiranhaSensor.h" />
     <ClInclude Include="Actor\Character\Podoboo\Podoboo.h" />
-    <ClInclude Include="Actor\Character\Toad\Toad.h" />
     <ClInclude Include="Actor\Character\Venus\Venus.h" />
     <ClInclude Include="Actor\Character\Venus\Fireball.h" />
     <ClInclude Include="Actor\Character\Venus\VenusSensor.h" />
@@ -250,7 +248,9 @@
     <ClInclude Include="Actor\Item\FireFlower.h" />
     <ClInclude Include="Actor\Item\SuperLeaf.h" />
     <ClInclude Include="Actor\Item\SuperMushroom.h" />
+    <ClInclude Include="Actor\Item\SuperStar.h" />
     <ClInclude Include="Actor\Misc\Background.h" />
+    <ClInclude Include="Actor\Misc\HitEffect.h" />
     <ClInclude Include="Actor\Misc\HUD.h" />
     <ClInclude Include="Actor\Misc\PowerBar.h" />
     <ClInclude Include="Actor\Prop\Block.h" />
@@ -295,15 +295,15 @@
   </ItemGroup>
   <ItemGroup>
     <Xml Include="Data\Asset\Character\BoomBoom\BoomBoom.xml" />
-    <Xml Include="Data\Asset\Character\BoomerangBrother\Boomerang.xml" />
-    <Xml Include="Data\Asset\Character\BoomerangBrother\BoomerangBrother.xml" />
+    <Xml Include="Data\Asset\Character\Brother\Boomerang.xml" />
+    <Xml Include="Data\Asset\Character\Brother\BoomerangBrother.xml" />
     <Xml Include="Data\Asset\Character\BulletBill\BulletBill.xml" />
     <Xml Include="Data\Asset\Character\BuzzyBeetle\BuzzyBeetle.xml" />
     <Xml Include="Data\Asset\Character\Cannonball\Cannonball.xml" />
     <Xml Include="Data\Asset\Character\DryBones\DryBones.xml" />
     <Xml Include="Data\Asset\Character\Goomba\Goomba.xml" />
-    <Xml Include="Data\Asset\Character\HammerBrother\Hammer.xml" />
-    <Xml Include="Data\Asset\Character\HammerBrother\HammerBrother.xml" />
+    <Xml Include="Data\Asset\Character\Brother\Hammer.xml" />
+    <Xml Include="Data\Asset\Character\Brother\HammerBrother.xml" />
     <Xml Include="Data\Asset\Character\Koopa\Koopa.xml" />
     <Xml Include="Data\Asset\Character\Koopa\KoopaSensor.xml" />
     <Xml Include="Data\Asset\Character\LarryKoopa\LarryKoopa.xml" />
@@ -313,7 +313,6 @@
     <Xml Include="Data\Asset\Character\Piranha\Piranha.xml" />
     <Xml Include="Data\Asset\Character\Piranha\PiranhaSensor.xml" />
     <Xml Include="Data\Asset\Character\Podoboo\Podoboo.xml" />
-    <Xml Include="Data\Asset\Character\Toad\Toad.xml" />
     <Xml Include="Data\Asset\Character\Venus\Fireball.xml" />
     <Xml Include="Data\Asset\Character\Venus\Venus.xml" />
     <Xml Include="Data\Asset\Character\Venus\VenusSensor.xml" />
@@ -326,6 +325,8 @@
     <Xml Include="Data\Asset\Item\FireFlower.xml" />
     <Xml Include="Data\Asset\Item\SuperLeaf.xml" />
     <Xml Include="Data\Asset\Item\SuperMushroom.xml" />
+    <Xml Include="Data\Asset\Item\SuperStar.xml" />
+    <Xml Include="Data\Asset\Misc\HitEffect.xml" />
     <Xml Include="Data\Asset\Misc\HUD.xml" />
     <Xml Include="Data\Asset\Misc\PowerBar.xml" />
     <Xml Include="Data\Asset\Misc\World11MainBG.xml" />
@@ -355,6 +356,7 @@
     <Xml Include="Data\Asset\WorldMap\WorldMapPortal.xml" />
     <Xml Include="Data\GameData.xml" />
     <Xml Include="Data\Scene\MainGame.xml" />
+    <Xml Include="Data\Scene\Sandbox.xml" />
     <Xml Include="Data\Scene\Title.xml" />
     <Xml Include="Data\Scene\World11.xml" />
     <Xml Include="Data\Scene\World12.xml" />
@@ -367,6 +369,15 @@
     <Xml Include="Data\Scene\World1SP.xml" />
     <Xml Include="Data\Scene\World1TH1.xml" />
     <Xml Include="Data\Scene\WorldMap1.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Data\Texture\BBox.png" />
+    <Image Include="Data\Texture\Block.png" />
+    <Image Include="Data\Texture\Goomba.png" />
+    <Image Include="Data\Texture\Item.png" />
+    <Image Include="Data\Texture\Koopa.png" />
+    <Image Include="Data\Texture\Mario.png" />
+    <Image Include="Data\Texture\Plant.png" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
