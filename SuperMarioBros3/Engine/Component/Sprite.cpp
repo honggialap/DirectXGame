@@ -1,6 +1,6 @@
 #include "Sprite.h"
-#include "Game.h"
-#include "Graphics.h"
+#include "../Game.h"
+#include "../Framework/Graphics.h"
 
 CSprite::CSprite(pGameObject gameObject, int left, int top, int width, int height, int offsetX, int offsetY, pTexture texture)
 {

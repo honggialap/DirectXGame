@@ -1,21 +1,20 @@
 #pragma once
-#ifndef __SUPER_STAR_H__
-#define __SUPER_STAR_H__
+#ifndef __PLATFORM_H__
+#define __PLATFORM_H__
 
 #pragma region INCLUDE
-#include "../../Engine/GameObject.h"
+#include "../../../Engine/GameObject.h"
 #pragma endregion
 
 #pragma region DEFINE
 /* SPRITE ID */
-/* ANIMATION ID */
-/* SOUNDCLIP ID */
+#define SPR_BBOX			999901
 #pragma endregion
 
-class CSuperStar : public CGameObject
+class CPlatform : public CGameObject
 {
 public:
-	CSuperStar(
+	CPlatform(
 		pGame game, pScene scene,
 		unsigned int id, std::string name, std::string source,
 		float x, float y, int gx, int gy, unsigned int layer
@@ -27,10 +26,29 @@ public:
 	virtual void Update(float elapsedMs);
 	virtual void Render();
 
+#pragma region LOGIC
+
+	/* Body */
+	bool _renderBody = false;
+	float BODY_WIDTH = 0;
+	float BODY_HEIGHT = 0;
+	float BODY_OFFSETX = 0;
+	float BODY_OFFSETY = 0;
+
+	/* Stats */
+	bool _solid = false;
+
+#pragma endregion
+
+#pragma region COLLISION
+
 	virtual int IsCollidable();
 	virtual int IsBlocking();
 	virtual void GetBoundingBox(float& left, float& top, float& right, float& bottom);
-};
-typedef CSuperStar* pSuperStar;
 
-#endif // !__SUPER_STAR_H__
+#pragma endregion
+
+};
+typedef CPlatform* pPlatform;
+
+#endif // !__PLATFORM_H__

@@ -1,6 +1,6 @@
 #pragma once
-#ifndef __WORLD_PORTAL_H__
-#define __WORLD_PORTAL_H__
+#ifndef __STARMAN_H__
+#define __STARMAN_H__
 
 #pragma region INCLUDE
 #include "../../Engine/GameObject.h"
@@ -12,10 +12,10 @@
 /* SOUNDCLIP ID */
 #pragma endregion
 
-class CWorldPortal : public CGameObject
+class CStarman : public CGameObject
 {
 public:
-	CWorldPortal(
+	CStarman(
 		pGame game, pScene scene,
 		unsigned int id, std::string name, std::string source,
 		float x, float y, int gx, int gy, unsigned int layer
@@ -31,6 +31,6 @@ public:
 	virtual int IsBlocking();
 	virtual void GetBoundingBox(float& left, float& top, float& right, float& bottom);
 };
-typedef CWorldPortal* pWorldPortal;
+typedef CStarman* pStarman;
 
-#endif // !__WORLD_PORTAL_H__
+#endif // !__STARMAN_H__

@@ -4,14 +4,15 @@
 		windowWidth ="512"
 		windowHeight ="480"
 		framePerSecond ="144"
-		gridWidth ="256"
-		gridHeight ="240"
+		gridWidth ="512"
+		gridHeight ="480"
 		cameraBuffer ="16"
 		startScene ="0"
 		/>
 	
 	<!--Buttons-->
 	<!--https://community.bistudio.com/wiki/DIK_KeyCodes-->
+	
 	<!--LEFT-->
 	<Button keyCode ="203"/>
 	<!--UP-->
@@ -24,6 +25,7 @@
 	<Button keyCode ="30"/>
 	<!--B-->
 	<Button keyCode ="31"/>
+	
 	<!--HOT1-->
 	<Button keyCode ="2"/>
 	<!--HOT2-->
@@ -37,12 +39,19 @@
 	<!--HOT6-->
 	<Button keyCode ="7"/>
 
+	<!--KEYPAD LEFT-->
+	<Button keyCode ="75"/>
+	<!--KEYPAD UP-->
+	<Button keyCode ="72"/>
+	<!--KEYPAD RIGHT-->
+	<Button keyCode ="77"/>
+	<!--KEYPAD DOWN-->
+	<Button keyCode ="80"/>
+
+	<!-- Textures -->
 	<Texture id="0" source="Data/Texture/BBox.png"/>
 	<Texture id="1001" source="Data/Texture/Mario.png"/>
-	<Texture id="1002" source="Data/Texture/BBox.png"/>
-	<Texture id="1003" source="Data/Texture/BBox.png"/>
-	<Texture id="1004" source="Data/Texture/BBox.png"/>
-	<Texture id="1005" source="Data/Texture/BBox.png"/>
 
+	<!-- Scenes -->
 	<Scene id="0" source="Data/Scene/Sandbox.xml"/>
 </GameData>

@@ -1,6 +1,6 @@
 #pragma region INCLUDE
 #include "Collision.h"
-#include "GameObject.h"
+#include "../GameObject.h"
 #include <algorithm>
 #include <Windows.h>
 #pragma endregion

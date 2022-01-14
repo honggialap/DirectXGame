@@ -8,7 +8,7 @@ typedef CGameObject* pGameObject;
 #pragma endregion
 
 #pragma region INCLUDE
-#include "Graphics.h"
+#include "../Framework/Graphics.h"
 #pragma endregion
 
 class CSprite

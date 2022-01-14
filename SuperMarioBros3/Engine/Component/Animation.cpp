@@ -1,6 +1,6 @@
 #pragma region INCLUDE
 #include "Animation.h"
-#include "GameObject.h"
+#include "../GameObject.h"
 #pragma endregion
 
 CAnimation::CAnimation(pGameObject gameObject)

@@ -39,6 +39,11 @@ HWND CApplication::CreateGameWindow(HINSTANCE hInstance, std::wstring title, uns
 	}
 	else
 	{
+		DWORD dwStyle = GetWindowLongPtr(_hWnd, GWL_STYLE);
+		DWORD dwExStyle = GetWindowLongPtr(_hWnd, GWL_EXSTYLE);
+		RECT rect = { 0, 0, width, height };
+		AdjustWindowRectEx(&rect, dwStyle, FALSE, dwExStyle);
+
 		ShowWindow(_hWnd, SW_SHOWNORMAL);
 		UpdateWindow(_hWnd);
 

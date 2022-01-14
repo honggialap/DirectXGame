@@ -1,6 +1,6 @@
 #pragma once
-#ifndef __PLATFORM_H__
-#define __PLATFORM_H__
+#ifndef __PANEL_H__
+#define __PANEL_H__
 
 #pragma region INCLUDE
 #include "../../Engine/GameObject.h"
@@ -12,10 +12,10 @@
 /* SOUNDCLIP ID */
 #pragma endregion
 
-class CPlatform : public CGameObject
+class CPanel : public CGameObject
 {
 public:
-	CPlatform(
+	CPanel(
 		pGame game, pScene scene,
 		unsigned int id, std::string name, std::string source,
 		float x, float y, int gx, int gy, unsigned int layer
@@ -31,6 +31,6 @@ public:
 	virtual int IsBlocking();
 	virtual void GetBoundingBox(float& left, float& top, float& right, float& bottom);
 };
-typedef CPlatform* pPlatform;
+typedef CPanel* pPanel;
 
-#endif // !__PLATFORM_H__
+#endif // !__PANEL_H__

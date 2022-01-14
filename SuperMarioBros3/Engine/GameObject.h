@@ -10,11 +10,11 @@ typedef CScene* pScene;
 #pragma endregion
 
 #pragma region INCLUDE
-#include "Sprite.h"
-#include "Animation.h"
-#include "Audio.h"
-#include "Collision.h"
-#include "pugixml.hpp"
+#include "Component/Sprite.h"
+#include "Component/Animation.h"
+#include "Framework/Audio.h"
+#include "Component/Collision.h"
+#include "Framework/pugixml.hpp"
 #include <string>
 #pragma endregion
 

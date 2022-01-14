@@ -7,68 +7,41 @@
     <ClCompile Include="Engine\GameObject.cpp">
       <Filter>Engine</Filter>
     </ClCompile>
-    <ClCompile Include="Engine\Application.cpp">
+    <ClCompile Include="Engine\Framework\Application.cpp">
       <Filter>Engine\Framework</Filter>
     </ClCompile>
-    <ClCompile Include="Engine\Audio.cpp">
+    <ClCompile Include="Engine\Framework\Audio.cpp">
       <Filter>Engine\Framework</Filter>
     </ClCompile>
-    <ClCompile Include="Engine\Debug.cpp">
+    <ClCompile Include="Engine\Framework\Debug.cpp">
       <Filter>Engine\Framework</Filter>
     </ClCompile>
-    <ClCompile Include="Engine\Graphics.cpp">
+    <ClCompile Include="Engine\Framework\Graphics.cpp">
       <Filter>Engine\Framework</Filter>
     </ClCompile>
-    <ClCompile Include="Engine\Input.cpp">
+    <ClCompile Include="Engine\Framework\Input.cpp">
       <Filter>Engine\Framework</Filter>
     </ClCompile>
-    <ClCompile Include="Engine\pugixml.cpp">
+    <ClCompile Include="Engine\Framework\pugixml.cpp">
       <Filter>Engine\Framework</Filter>
     </ClCompile>
-    <ClCompile Include="Engine\Time.cpp">
+    <ClCompile Include="Engine\Framework\Time.cpp">
       <Filter>Engine\Framework</Filter>
     </ClCompile>
-    <ClCompile Include="Engine\Sprite.cpp">
+    <ClCompile Include="Engine\Component\Sprite.cpp">
       <Filter>Engine\Component</Filter>
     </ClCompile>
-    <ClCompile Include="Engine\Collision.cpp">
+    <ClCompile Include="Engine\Component\Collision.cpp">
       <Filter>Engine\Component</Filter>
     </ClCompile>
-    <ClCompile Include="Engine\Animation.cpp">
+    <ClCompile Include="Engine\Component\Animation.cpp">
       <Filter>Engine\Component</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Game</Filter>
     </ClCompile>
     <ClCompile Include="SuperMarioBros3.cpp">
       <Filter>Game</Filter>
-    </ClCompile>
-    <ClCompile Include="Actor\Controller\GameMaster.cpp">
-      <Filter>Actor\Controller\GameMaster</Filter>
-    </ClCompile>
-    <ClCompile Include="Actor\Controller\World.cpp">
-      <Filter>Actor\Controller\World</Filter>
-    </ClCompile>
-    <ClCompile Include="Data\Scene\World1ToadHouse2.xml">
-      <Filter>Scene</Filter>
-    </ClCompile>
-    <ClCompile Include="Actor\Misc\Background.cpp">
-      <Filter>Actor\Mics\Background</Filter>
-    </ClCompile>
-    <ClCompile Include="Data\Asset\Prop\Block.xml">
-      <Filter>Actor\Prop\Block</Filter>
-    </ClCompile>
-    <ClCompile Include="Actor\Prop\Block.cpp">
-      <Filter>Actor\Prop\Block</Filter>
-    </ClCompile>
-    <ClCompile Include="Actor\Prop\Brick.cpp">
-      <Filter>Actor\Prop\Brick</Filter>
-    </ClCompile>
-    <ClCompile Include="Actor\Item\Coin.cpp">
-      <Filter>Actor\Item\Coin</Filter>
-    </ClCompile>
-    <ClCompile Include="Actor\Item\ExtraLifeMushroom.cpp">
-      <Filter>Actor\Item\ExtraLifeMushroom</Filter>
-    </ClCompile>
-    <ClCompile Include="Actor\Item\FireFlower.cpp">
-      <Filter>Actor\Item\FireFlower</Filter>
     </ClCompile>
     <ClCompile Include="Actor\Character\Mario\Mario.cpp">
       <Filter>Actor\Character\Mario</Filter>
@@ -79,188 +52,8 @@
     <ClCompile Include="Actor\Character\Mario\MarioTail.cpp">
       <Filter>Actor\Character\Mario</Filter>
     </ClCompile>
-    <ClCompile Include="Actor\Character\Goomba\MicroGoomba.cpp">
-      <Filter>Actor\Character\Goomba</Filter>
-    </ClCompile>
-    <ClCompile Include="Actor\Character\Goomba\Goomba.cpp">
-      <Filter>Actor\Character\Goomba</Filter>
-    </ClCompile>
-    <ClCompile Include="Actor\Character\Koopa\KoopaSensor.cpp">
-      <Filter>Actor\Character\Koopa</Filter>
-    </ClCompile>
-    <ClCompile Include="Actor\Character\Koopa\Koopa.cpp">
-      <Filter>Actor\Character\Koopa</Filter>
-    </ClCompile>
-    <ClCompile Include="Actor\Item\SuperLeaf.cpp">
-      <Filter>Actor\Item\SuperLeaf</Filter>
-    </ClCompile>
-    <ClCompile Include="Actor\Item\SuperStar.cpp">
-      <Filter>Actor\Item\SuperStar</Filter>
-    </ClCompile>
-    <ClCompile Include="Actor\Item\SuperMushroom.cpp">
-      <Filter>Actor\Item\SuperMushroom</Filter>
-    </ClCompile>
-    <ClCompile Include="Actor\Character\BoomBoom\BoomBoom.cpp">
-      <Filter>Actor\Character\BoomBoom</Filter>
-    </ClCompile>
-    <ClCompile Include="Actor\Character\Larry\Larry.cpp">
-      <Filter>Actor\Character\Larry</Filter>
-    </ClCompile>
-    <ClCompile Include="Actor\Character\Brother\Boomerang.cpp">
-      <Filter>Actor\Character\Brother</Filter>
-    </ClCompile>
-    <ClCompile Include="Actor\Character\Brother\Hammer.cpp">
-      <Filter>Actor\Character\Brother</Filter>
-    </ClCompile>
-    <ClCompile Include="Actor\Character\Brother\Brother.cpp">
-      <Filter>Actor\Character\Brother</Filter>
-    </ClCompile>
-    <ClCompile Include="Actor\Character\Venus\Fireball.cpp">
-      <Filter>Actor\Character\Venus</Filter>
-    </ClCompile>
-    <ClCompile Include="Actor\Character\Venus\Venus.cpp">
-      <Filter>Actor\Character\Venus</Filter>
-    </ClCompile>
-    <ClCompile Include="Actor\Character\Venus\VenusSensor.cpp">
-      <Filter>Actor\Character\Venus</Filter>
-    </ClCompile>
-    <ClCompile Include="Actor\Character\Piranha\Piranha.cpp">
-      <Filter>Actor\Character\Pirannha</Filter>
-    </ClCompile>
-    <ClCompile Include="Actor\Character\Piranha\PiranhaSensor.cpp">
-      <Filter>Actor\Character\Pirannha</Filter>
-    </ClCompile>
-    <ClCompile Include="Actor\Character\BuzzyBeetle\BuzzyBeetle.cpp">
-      <Filter>Actor\Character\BuzzyBeetle</Filter>
-    </ClCompile>
-    <ClCompile Include="Actor\Character\BulletBill\BulletBill.cpp">
-      <Filter>Actor\Character\BulletBill</Filter>
-    </ClCompile>
-    <ClCompile Include="Actor\Character\Cannonball\Cannonball.cpp">
-      <Filter>Actor\Character\Cannonball</Filter>
-    </ClCompile>
-    <ClCompile Include="Actor\Character\Podoboo\Podoboo.cpp">
-      <Filter>Actor\Character\Podoboo</Filter>
-    </ClCompile>
-    <ClCompile Include="Actor\Character\DryBones\DryBones.cpp">
-      <Filter>Actor\Character\DryBones</Filter>
-    </ClCompile>
-    <ClCompile Include="Actor\Controller\WorldMap.cpp">
-      <Filter>Actor\Controller\WorldMap</Filter>
-    </ClCompile>
-    <ClCompile Include="Actor\Prop\Platform.cpp">
+    <ClCompile Include="Actor\Prop\Platform\Platform.cpp">
       <Filter>Actor\Prop\Platform</Filter>
-    </ClCompile>
-    <ClCompile Include="Actor\Prop\BounceBlock.cpp">
-      <Filter>Actor\Prop\BounceBlock</Filter>
-    </ClCompile>
-    <ClCompile Include="Actor\Prop\DeadZone.cpp">
-      <Filter>Actor\Prop\DeadZone</Filter>
-    </ClCompile>
-    <ClCompile Include="Actor\Prop\DropCeiling.cpp">
-      <Filter>Actor\Prop\DropCeiling</Filter>
-    </ClCompile>
-    <ClCompile Include="Actor\Misc\HitEffect.cpp">
-      <Filter>Actor\Mics\HItEffect</Filter>
-    </ClCompile>
-    <ClCompile Include="Actor\Misc\HUD.cpp">
-      <Filter>Actor\Mics\HUD</Filter>
-    </ClCompile>
-    <ClCompile Include="Actor\Controller\Title.cpp">
-      <Filter>Actor\Controller\Title</Filter>
-    </ClCompile>
-    <ClCompile Include="Actor\Prop\TransportBounceBlock.cpp">
-      <Filter>Actor\Prop\TransportBounceBlock</Filter>
-    </ClCompile>
-    <ClCompile Include="Actor\Prop\TransportDoor.cpp">
-      <Filter>Actor\Prop\TransportDoor</Filter>
-    </ClCompile>
-    <ClCompile Include="Actor\Prop\TransportPipe.cpp">
-      <Filter>Actor\Prop\TransportPipe</Filter>
-    </ClCompile>
-    <ClCompile Include="Actor\Prop\Pipe.cpp">
-      <Filter>Actor\Prop\Pipe</Filter>
-    </ClCompile>
-    <ClCompile Include="Actor\Prop\MovingPlatform.cpp">
-      <Filter>Actor\Prop\MovingPlatform</Filter>
-    </ClCompile>
-    <ClCompile Include="Actor\Prop\SemiPlatform.cpp">
-      <Filter>Actor\Prop\SemiPlatform</Filter>
-    </ClCompile>
-    <ClCompile Include="Actor\WorldMap\Kactus.cpp">
-      <Filter>Actor\WorldMap\Kactus</Filter>
-    </ClCompile>
-    <ClCompile Include="Actor\WorldMap\WorldMapMario.cpp">
-      <Filter>Actor\WorldMap\WorldMapMario</Filter>
-    </ClCompile>
-    <ClCompile Include="Actor\Misc\PowerBar.cpp">
-      <Filter>Actor\Mics\PowerBar</Filter>
-    </ClCompile>
-    <ClCompile Include="Actor\Prop\Pusher.cpp">
-      <Filter>Actor\Prop\Pusher</Filter>
-    </ClCompile>
-    <ClCompile Include="Actor\Prop\SpawnZone.cpp">
-      <Filter>Actor\Prop\SpawnZone</Filter>
-    </ClCompile>
-    <ClCompile Include="Actor\Prop\WorldGoal.cpp">
-      <Filter>Actor\Prop\WorldGoal</Filter>
-    </ClCompile>
-    <ClCompile Include="Actor\WorldMap\WorldPortal.cpp">
-      <Filter>Actor\WorldMap\WorldMapPortal</Filter>
-    </ClCompile>
-    <ClCompile Include="Data\Asset\WorldMap\World12Portal.xml">
-      <Filter>Actor\WorldMap\WorldMapPortal</Filter>
-    </ClCompile>
-    <ClCompile Include="Data\Asset\WorldMap\World13Portal.xml">
-      <Filter>Actor\WorldMap\WorldMapPortal</Filter>
-    </ClCompile>
-    <ClCompile Include="Actor\Prop\Roto.cpp">
-      <Filter>Actor\Prop\Roto</Filter>
-    </ClCompile>
-    <ClCompile Include="Actor\Prop\Slope.cpp">
-      <Filter>Actor\Prop\Slope</Filter>
-    </ClCompile>
-    <ClCompile Include="Actor\Prop\TreasureBox.cpp">
-      <Filter>Actor\Prop\TreasureBox</Filter>
-    </ClCompile>
-    <ClCompile Include="Actor\Prop\Water.cpp">
-      <Filter>Actor\Prop\Water</Filter>
-    </ClCompile>
-    <ClCompile Include="main.cpp">
-      <Filter>Game</Filter>
-    </ClCompile>
-    <ClCompile Include="Actor\Prop\BigCannon.cpp">
-      <Filter>Actor\Prop\BigCannon</Filter>
-    </ClCompile>
-    <ClCompile Include="Actor\Misc\BrickFragEffect.cpp">
-      <Filter>Actor\Mics\BrickFragEffect</Filter>
-    </ClCompile>
-    <ClCompile Include="Actor\Misc\DeathEffect.cpp">
-      <Filter>Actor\Mics\DeathEffect</Filter>
-    </ClCompile>
-    <ClCompile Include="Actor\Misc\BubbleEffect.cpp">
-      <Filter>Actor\Mics\BubbleEffect</Filter>
-    </ClCompile>
-    <ClCompile Include="Actor\Misc\CannonSmokeEffect.cpp">
-      <Filter>Actor\Mics\CannonSmokeEffect</Filter>
-    </ClCompile>
-    <ClCompile Include="Actor\Misc\LavaEffect.cpp">
-      <Filter>Actor\Mics\LavaEffect</Filter>
-    </ClCompile>
-    <ClCompile Include="Actor\Misc\Score.cpp">
-      <Filter>Actor\Mics\Score</Filter>
-    </ClCompile>
-    <ClCompile Include="Actor\Misc\WaterEffect.cpp">
-      <Filter>Actor\Mics\WaterEffect</Filter>
-    </ClCompile>
-    <ClCompile Include="Actor\Character\Larry\LarryProjectile.cpp">
-      <Filter>Actor\Character\Larry</Filter>
-    </ClCompile>
-    <ClCompile Include="Actor\Prop\SmallCannon.cpp">
-      <Filter>Actor\Prop\SmallCannon</Filter>
-    </ClCompile>
-    <ClCompile Include="Actor\Prop\BulletBillCannon.cpp">
-      <Filter>Actor\Prop\BulletBillCannon</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -270,65 +63,41 @@
     <ClInclude Include="Engine\GameObject.h">
       <Filter>Engine</Filter>
     </ClInclude>
-    <ClInclude Include="Engine\Application.h">
+    <ClInclude Include="Engine\Framework\Application.h">
       <Filter>Engine\Framework</Filter>
     </ClInclude>
-    <ClInclude Include="Engine\Audio.h">
+    <ClInclude Include="Engine\Framework\Audio.h">
       <Filter>Engine\Framework</Filter>
     </ClInclude>
-    <ClInclude Include="Engine\Debug.h">
+    <ClInclude Include="Engine\Framework\Debug.h">
       <Filter>Engine\Framework</Filter>
     </ClInclude>
-    <ClInclude Include="Engine\Graphics.h">
+    <ClInclude Include="Engine\Framework\Graphics.h">
       <Filter>Engine\Framework</Filter>
     </ClInclude>
-    <ClInclude Include="Engine\Input.h">
+    <ClInclude Include="Engine\Framework\Input.h">
       <Filter>Engine\Framework</Filter>
     </ClInclude>
-    <ClInclude Include="Engine\pugixml.hpp">
+    <ClInclude Include="Engine\Framework\pugixml.hpp">
       <Filter>Engine\Framework</Filter>
     </ClInclude>
-    <ClInclude Include="Engine\pugiconfig.hpp">
+    <ClInclude Include="Engine\Framework\pugiconfig.hpp">
       <Filter>Engine\Framework</Filter>
     </ClInclude>
-    <ClInclude Include="Engine\Time.h">
+    <ClInclude Include="Engine\Framework\Time.h">
       <Filter>Engine\Framework</Filter>
     </ClInclude>
-    <ClInclude Include="Engine\Sprite.h">
+    <ClInclude Include="Engine\Component\Sprite.h">
       <Filter>Engine\Component</Filter>
     </ClInclude>
-    <ClInclude Include="Engine\Collision.h">
+    <ClInclude Include="Engine\Component\Collision.h">
       <Filter>Engine\Component</Filter>
     </ClInclude>
-    <ClInclude Include="Engine\Animation.h">
+    <ClInclude Include="Engine\Component\Animation.h">
       <Filter>Engine\Component</Filter>
     </ClInclude>
     <ClInclude Include="SuperMarioBros3.h">
       <Filter>Game</Filter>
-    </ClInclude>
-    <ClInclude Include="Actor\Controller\GameMaster.h">
-      <Filter>Actor\Controller\GameMaster</Filter>
-    </ClInclude>
-    <ClInclude Include="Actor\Controller\World.h">
-      <Filter>Actor\Controller\World</Filter>
-    </ClInclude>
-    <ClInclude Include="Actor\Misc\Background.h">
-      <Filter>Actor\Mics\Background</Filter>
-    </ClInclude>
-    <ClInclude Include="Actor\Prop\Block.h">
-      <Filter>Actor\Prop\Block</Filter>
-    </ClInclude>
-    <ClInclude Include="Actor\Prop\Brick.h">
-      <Filter>Actor\Prop\Brick</Filter>
-    </ClInclude>
-    <ClInclude Include="Actor\Item\Coin.h">
-      <Filter>Actor\Item\Coin</Filter>
-    </ClInclude>
-    <ClInclude Include="Actor\Item\ExtraLifeMushroom.h">
-      <Filter>Actor\Item\ExtraLifeMushroom</Filter>
-    </ClInclude>
-    <ClInclude Include="Actor\Item\FireFlower.h">
-      <Filter>Actor\Item\FireFlower</Filter>
     </ClInclude>
     <ClInclude Include="Actor\Character\Mario\Mario.h">
       <Filter>Actor\Character\Mario</Filter>
@@ -339,179 +108,11 @@
     <ClInclude Include="Actor\Character\Mario\MarioTail.h">
       <Filter>Actor\Character\Mario</Filter>
     </ClInclude>
-    <ClInclude Include="Actor\Character\Goomba\MicroGoomba.h">
-      <Filter>Actor\Character\Goomba</Filter>
-    </ClInclude>
-    <ClInclude Include="Actor\Character\Goomba\Goomba.h">
-      <Filter>Actor\Character\Goomba</Filter>
-    </ClInclude>
-    <ClInclude Include="Actor\Character\Koopa\KoopaSensor.h">
-      <Filter>Actor\Character\Koopa</Filter>
-    </ClInclude>
-    <ClInclude Include="Actor\Character\Koopa\Koopa.h">
-      <Filter>Actor\Character\Koopa</Filter>
-    </ClInclude>
-    <ClInclude Include="Actor\Item\SuperLeaf.h">
-      <Filter>Actor\Item\SuperLeaf</Filter>
-    </ClInclude>
-    <ClInclude Include="Actor\Item\SuperStar.h">
-      <Filter>Actor\Item\SuperStar</Filter>
-    </ClInclude>
-    <ClInclude Include="Actor\Item\SuperMushroom.h">
-      <Filter>Actor\Item\SuperMushroom</Filter>
-    </ClInclude>
-    <ClInclude Include="Actor\Character\BoomBoom\BoomBoom.h">
-      <Filter>Actor\Character\BoomBoom</Filter>
-    </ClInclude>
-    <ClInclude Include="Actor\Character\Larry\Larry.h">
-      <Filter>Actor\Character\Larry</Filter>
-    </ClInclude>
-    <ClInclude Include="Actor\Character\Brother\Boomerang.h">
-      <Filter>Actor\Character\Brother</Filter>
-    </ClInclude>
-    <ClInclude Include="Actor\Character\Brother\Hammer.h">
-      <Filter>Actor\Character\Brother</Filter>
-    </ClInclude>
-    <ClInclude Include="Actor\Character\Brother\Brother.h">
-      <Filter>Actor\Character\Brother</Filter>
-    </ClInclude>
-    <ClInclude Include="Actor\Character\Venus\Fireball.h">
-      <Filter>Actor\Character\Venus</Filter>
-    </ClInclude>
-    <ClInclude Include="Actor\Character\Venus\Venus.h">
-      <Filter>Actor\Character\Venus</Filter>
-    </ClInclude>
-    <ClInclude Include="Actor\Character\Venus\VenusSensor.h">
-      <Filter>Actor\Character\Venus</Filter>
-    </ClInclude>
-    <ClInclude Include="Actor\Character\Piranha\Piranha.h">
-      <Filter>Actor\Character\Pirannha</Filter>
-    </ClInclude>
-    <ClInclude Include="Actor\Character\Piranha\PiranhaSensor.h">
-      <Filter>Actor\Character\Pirannha</Filter>
-    </ClInclude>
-    <ClInclude Include="Actor\Character\BuzzyBeetle\BuzzyBeetle.h">
-      <Filter>Actor\Character\BuzzyBeetle</Filter>
-    </ClInclude>
-    <ClInclude Include="Actor\Character\BulletBill\BulletBill.h">
-      <Filter>Actor\Character\BulletBill</Filter>
-    </ClInclude>
-    <ClInclude Include="Actor\Character\Cannonball\Cannonball.h">
-      <Filter>Actor\Character\Cannonball</Filter>
-    </ClInclude>
-    <ClInclude Include="Actor\Character\Podoboo\Podoboo.h">
-      <Filter>Actor\Character\Podoboo</Filter>
-    </ClInclude>
-    <ClInclude Include="Actor\Character\DryBones\DryBones.h">
-      <Filter>Actor\Character\DryBones</Filter>
-    </ClInclude>
-    <ClInclude Include="Actor\Controller\WorldMap.h">
-      <Filter>Actor\Controller\WorldMap</Filter>
-    </ClInclude>
-    <ClInclude Include="Actor\Prop\Platform.h">
+    <ClInclude Include="Actor\Prop\Platform\Platform.h">
       <Filter>Actor\Prop\Platform</Filter>
     </ClInclude>
-    <ClInclude Include="Actor\Prop\BounceBlock.h">
-      <Filter>Actor\Prop\BounceBlock</Filter>
-    </ClInclude>
-    <ClInclude Include="Actor\Prop\DeadZone.h">
-      <Filter>Actor\Prop\DeadZone</Filter>
-    </ClInclude>
-    <ClInclude Include="Actor\Prop\DropCeiling.h">
-      <Filter>Actor\Prop\DropCeiling</Filter>
-    </ClInclude>
-    <ClInclude Include="Actor\Misc\HitEffect.h">
-      <Filter>Actor\Mics\HItEffect</Filter>
-    </ClInclude>
-    <ClInclude Include="Actor\Misc\HUD.h">
-      <Filter>Actor\Mics\HUD</Filter>
-    </ClInclude>
-    <ClInclude Include="Actor\Controller\Title.h">
-      <Filter>Actor\Controller\Title</Filter>
-    </ClInclude>
-    <ClInclude Include="Actor\Prop\TransportBounceBlock.h">
-      <Filter>Actor\Prop\TransportBounceBlock</Filter>
-    </ClInclude>
-    <ClInclude Include="Actor\Prop\TransportDoor.h">
-      <Filter>Actor\Prop\TransportDoor</Filter>
-    </ClInclude>
-    <ClInclude Include="Actor\Prop\TransportPipe.h">
-      <Filter>Actor\Prop\TransportPipe</Filter>
-    </ClInclude>
-    <ClInclude Include="Actor\Prop\Pipe.h">
-      <Filter>Actor\Prop\Pipe</Filter>
-    </ClInclude>
-    <ClInclude Include="Actor\Prop\MovingPlatform.h">
-      <Filter>Actor\Prop\MovingPlatform</Filter>
-    </ClInclude>
-    <ClInclude Include="Actor\Prop\SemiPlatform.h">
-      <Filter>Actor\Prop\SemiPlatform</Filter>
-    </ClInclude>
-    <ClInclude Include="Actor\WorldMap\Kactus.h">
-      <Filter>Actor\WorldMap\Kactus</Filter>
-    </ClInclude>
-    <ClInclude Include="Actor\WorldMap\WorldMapMario.h">
-      <Filter>Actor\WorldMap\WorldMapMario</Filter>
-    </ClInclude>
-    <ClInclude Include="Actor\Misc\PowerBar.h">
-      <Filter>Actor\Mics\PowerBar</Filter>
-    </ClInclude>
-    <ClInclude Include="Actor\Prop\Pusher.h">
-      <Filter>Actor\Prop\Pusher</Filter>
-    </ClInclude>
-    <ClInclude Include="Actor\Prop\SpawnZone.h">
-      <Filter>Actor\Prop\SpawnZone</Filter>
-    </ClInclude>
-    <ClInclude Include="Actor\Prop\WorldGoal.h">
-      <Filter>Actor\Prop\WorldGoal</Filter>
-    </ClInclude>
-    <ClInclude Include="Actor\WorldMap\WorldPortal.h">
-      <Filter>Actor\WorldMap\WorldMapPortal</Filter>
-    </ClInclude>
-    <ClInclude Include="Actor\Prop\Roto.h">
-      <Filter>Actor\Prop\Roto</Filter>
-    </ClInclude>
-    <ClInclude Include="Actor\Prop\Slope.h">
-      <Filter>Actor\Prop\Slope</Filter>
-    </ClInclude>
-    <ClInclude Include="Actor\Prop\TreasureBox.h">
-      <Filter>Actor\Prop\TreasureBox</Filter>
-    </ClInclude>
-    <ClInclude Include="Actor\Prop\Water.h">
-      <Filter>Actor\Prop\Water</Filter>
-    </ClInclude>
-    <ClInclude Include="Actor\Prop\BigCannon.h">
-      <Filter>Actor\Prop\BigCannon</Filter>
-    </ClInclude>
-    <ClInclude Include="Actor\Misc\BrickFragEffect.h">
-      <Filter>Actor\Mics\BrickFragEffect</Filter>
-    </ClInclude>
-    <ClInclude Include="Actor\Misc\DeathEffect.h">
-      <Filter>Actor\Mics\DeathEffect</Filter>
-    </ClInclude>
-    <ClInclude Include="Actor\Misc\BubbleEffect.h">
-      <Filter>Actor\Mics\BubbleEffect</Filter>
-    </ClInclude>
-    <ClInclude Include="Actor\Misc\CannonSmokeEffect.h">
-      <Filter>Actor\Mics\CannonSmokeEffect</Filter>
-    </ClInclude>
-    <ClInclude Include="Actor\Misc\LavaEffect.h">
-      <Filter>Actor\Mics\LavaEffect</Filter>
-    </ClInclude>
-    <ClInclude Include="Actor\Misc\Score.h">
-      <Filter>Actor\Mics\Score</Filter>
-    </ClInclude>
-    <ClInclude Include="Actor\Misc\WaterEffect.h">
-      <Filter>Actor\Mics\WaterEffect</Filter>
-    </ClInclude>
-    <ClInclude Include="Actor\Character\Larry\LarryProjectile.h">
-      <Filter>Actor\Character\Larry</Filter>
-    </ClInclude>
-    <ClInclude Include="Actor\Prop\SmallCannon.h">
-      <Filter>Actor\Prop\SmallCannon</Filter>
-    </ClInclude>
-    <ClInclude Include="Actor\Prop\BulletBillCannon.h">
-      <Filter>Actor\Prop\BulletBillCannon</Filter>
+    <ClInclude Include="Data\Asset\Prop\Platform\PlatformS11.xml">
+      <Filter>Actor\Prop\Platform</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -742,86 +343,13 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
+    <None Include="packages.config">
+      <Filter>Game</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
     <Xml Include="Data\GameData.xml">
       <Filter>Game</Filter>
-    </Xml>
-    <Xml Include="Data\Asset\Controller\GameMaster.xml">
-      <Filter>Actor\Controller\GameMaster</Filter>
-    </Xml>
-    <Xml Include="Data\Asset\Controller\World11.xml">
-      <Filter>Actor\Controller\World</Filter>
-    </Xml>
-    <Xml Include="Data\Asset\Controller\World12.xml">
-      <Filter>Actor\Controller\World</Filter>
-    </Xml>
-    <Xml Include="Data\Asset\Controller\World13.xml">
-      <Filter>Actor\Controller\World</Filter>
-    </Xml>
-    <Xml Include="Data\Asset\Controller\World14.xml">
-      <Filter>Actor\Controller\World</Filter>
-    </Xml>
-    <Xml Include="Data\Asset\Controller\World15.xml">
-      <Filter>Actor\Controller\World</Filter>
-    </Xml>
-    <Xml Include="Data\Asset\Controller\World16.xml">
-      <Filter>Actor\Controller\World</Filter>
-    </Xml>
-    <Xml Include="Data\Asset\Controller\World1Fortress.xml">
-      <Filter>Actor\Controller\World</Filter>
-    </Xml>
-    <Xml Include="Data\Scene\World16.xml">
-      <Filter>Scene</Filter>
-    </Xml>
-    <Xml Include="Data\Scene\World12.xml">
-      <Filter>Scene</Filter>
-    </Xml>
-    <Xml Include="Data\Scene\World13.xml">
-      <Filter>Scene</Filter>
-    </Xml>
-    <Xml Include="Data\Scene\World14.xml">
-      <Filter>Scene</Filter>
-    </Xml>
-    <Xml Include="Data\Scene\World15.xml">
-      <Filter>Scene</Filter>
-    </Xml>
-    <Xml Include="Data\Scene\World11.xml">
-      <Filter>Scene</Filter>
-    </Xml>
-    <Xml Include="Data\Scene\World1ToadHouse1.xml">
-      <Filter>Scene</Filter>
-    </Xml>
-    <Xml Include="Data\Scene\World1SpadePanel.xml">
-      <Filter>Scene</Filter>
-    </Xml>
-    <Xml Include="Data\Scene\World1Brother.xml">
-      <Filter>Scene</Filter>
-    </Xml>
-    <Xml Include="Data\Scene\World1Fortress.xml">
-      <Filter>Scene</Filter>
-    </Xml>
-    <Xml Include="Data\Asset\Misc\World1BG.xml">
-      <Filter>Actor\Mics\Background</Filter>
-    </Xml>
-    <Xml Include="Data\Asset\Misc\World11MainBG.xml">
-      <Filter>Actor\Mics\Background</Filter>
-    </Xml>
-    <Xml Include="Data\Asset\Misc\World11SubBG.xml">
-      <Filter>Actor\Mics\Background</Filter>
-    </Xml>
-    <Xml Include="Data\Asset\Prop\Brick.xml">
-      <Filter>Actor\Prop\Brick</Filter>
-    </Xml>
-    <Xml Include="Data\Asset\Item\Coin.xml">
-      <Filter>Actor\Item\Coin</Filter>
-    </Xml>
-    <Xml Include="Data\Asset\Item\ExtraLifeMushroom.xml">
-      <Filter>Actor\Item\ExtraLifeMushroom</Filter>
-    </Xml>
-    <Xml Include="Data\Asset\Item\FireFlower.xml">
-      <Filter>Actor\Item\FireFlower</Filter>
-    </Xml>
-    <Xml Include="Data\Asset\Character\Mario\Mario.xml">
-      <Filter>Actor\Character\Mario</Filter>
     </Xml>
     <Xml Include="Data\Asset\Character\Mario\MarioFireball.xml">
       <Filter>Actor\Character\Mario</Filter>
@@ -829,219 +357,75 @@
     <Xml Include="Data\Asset\Character\Mario\MarioTail.xml">
       <Filter>Actor\Character\Mario</Filter>
     </Xml>
-    <Xml Include="Data\Asset\Character\Goomba\MicroGoomba.xml">
-      <Filter>Actor\Character\Goomba</Filter>
+    <Xml Include="Data\Asset\Character\Mario\Mario.xml">
+      <Filter>Actor\Character\Mario</Filter>
     </Xml>
-    <Xml Include="Data\Asset\Character\Goomba\Goomba.xml">
-      <Filter>Actor\Character\Goomba</Filter>
-    </Xml>
-    <Xml Include="Data\Asset\Character\Goomba\BrownGoomba.xml">
-      <Filter>Actor\Character\Goomba</Filter>
-    </Xml>
-    <Xml Include="Data\Asset\Character\Goomba\RedGoomba.xml">
-      <Filter>Actor\Character\Goomba</Filter>
-    </Xml>
-    <Xml Include="Data\Asset\Character\Koopa\KoopaSensor.xml">
-      <Filter>Actor\Character\Koopa</Filter>
-    </Xml>
-    <Xml Include="Data\Asset\Character\Koopa\Koopa.xml">
-      <Filter>Actor\Character\Koopa</Filter>
-    </Xml>
-    <Xml Include="Data\Asset\Item\SuperLeaf.xml">
-      <Filter>Actor\Item\SuperLeaf</Filter>
-    </Xml>
-    <Xml Include="Data\Asset\Item\SuperStar.xml">
-      <Filter>Actor\Item\SuperStar</Filter>
-    </Xml>
-    <Xml Include="Data\Asset\Item\SuperMushroom.xml">
-      <Filter>Actor\Item\SuperMushroom</Filter>
-    </Xml>
-    <Xml Include="Data\Asset\Character\BoomBoom\BoomBoom.xml">
-      <Filter>Actor\Character\BoomBoom</Filter>
-    </Xml>
-    <Xml Include="Data\Asset\Character\Larry\Larry.xml">
-      <Filter>Actor\Character\Larry</Filter>
-    </Xml>
-    <Xml Include="Data\Asset\Character\Brother\Boomerang.xml">
-      <Filter>Actor\Character\Brother</Filter>
-    </Xml>
-    <Xml Include="Data\Asset\Character\Brother\BoomerangBrother.xml">
-      <Filter>Actor\Character\Brother</Filter>
-    </Xml>
-    <Xml Include="Data\Asset\Character\Brother\Hammer.xml">
-      <Filter>Actor\Character\Brother</Filter>
-    </Xml>
-    <Xml Include="Data\Asset\Character\Brother\HammerBrother.xml">
-      <Filter>Actor\Character\Brother</Filter>
-    </Xml>
-    <Xml Include="Data\Asset\Character\Venus\Fireball.xml">
-      <Filter>Actor\Character\Venus</Filter>
-    </Xml>
-    <Xml Include="Data\Asset\Character\Venus\Venus.xml">
-      <Filter>Actor\Character\Venus</Filter>
-    </Xml>
-    <Xml Include="Data\Asset\Character\Venus\VenusSensor.xml">
-      <Filter>Actor\Character\Venus</Filter>
-    </Xml>
-    <Xml Include="Data\Asset\Character\Piranha\Piranha.xml">
-      <Filter>Actor\Character\Pirannha</Filter>
-    </Xml>
-    <Xml Include="Data\Asset\Character\Piranha\PiranhaSensor.xml">
-      <Filter>Actor\Character\Pirannha</Filter>
-    </Xml>
-    <Xml Include="Data\Asset\Character\BuzzyBeetle\BuzzyBeetle.xml">
-      <Filter>Actor\Character\BuzzyBeetle</Filter>
-    </Xml>
-    <Xml Include="Data\Asset\Character\BulletBill\BulletBill.xml">
-      <Filter>Actor\Character\BulletBill</Filter>
-    </Xml>
-    <Xml Include="Data\Asset\Character\Cannonball\Cannonball.xml">
-      <Filter>Actor\Character\Cannonball</Filter>
-    </Xml>
-    <Xml Include="Data\Asset\Character\Podoboo\Podoboo.xml">
-      <Filter>Actor\Character\Podoboo</Filter>
-    </Xml>
-    <Xml Include="Data\Asset\Character\DryBones\DryBones.xml">
-      <Filter>Actor\Character\DryBones</Filter>
-    </Xml>
-    <Xml Include="Data\Asset\Controller\WorldMap1.xml">
-      <Filter>Actor\Controller\WorldMap</Filter>
-    </Xml>
-    <Xml Include="Data\Asset\Prop\BounceBlock.xml">
-      <Filter>Actor\Prop\BounceBlock</Filter>
-    </Xml>
-    <Xml Include="Data\Asset\Prop\DeadZone.xml">
-      <Filter>Actor\Prop\DeadZone</Filter>
-    </Xml>
-    <Xml Include="Data\Asset\Prop\DropCeiling.xml">
-      <Filter>Actor\Prop\DropCeiling</Filter>
-    </Xml>
-    <Xml Include="Data\Asset\Misc\HitEffect.xml">
-      <Filter>Actor\Mics\HItEffect</Filter>
-    </Xml>
-    <Xml Include="Data\Asset\Prop\HollowedPlatform.xml">
+    <Xml Include="Data\Asset\Prop\Platform\PlatformH11.xml">
       <Filter>Actor\Prop\Platform</Filter>
     </Xml>
-    <Xml Include="Data\Asset\Prop\SolidPlatform.xml">
+    <Xml Include="Data\Asset\Prop\Platform\PlatformH12.xml">
       <Filter>Actor\Prop\Platform</Filter>
     </Xml>
-    <Xml Include="Data\Asset\Misc\HUD.xml">
-      <Filter>Actor\Mics\HUD</Filter>
+    <Xml Include="Data\Asset\Prop\Platform\PlatformH14.xml">
+      <Filter>Actor\Prop\Platform</Filter>
     </Xml>
-    <Xml Include="Data\Scene\MainGame.xml">
-      <Filter>Scene</Filter>
+    <Xml Include="Data\Asset\Prop\Platform\PlatformH18.xml">
+      <Filter>Actor\Prop\Platform</Filter>
     </Xml>
-    <Xml Include="Data\Scene\Title.xml">
-      <Filter>Actor\Controller\Title</Filter>
+    <Xml Include="Data\Asset\Prop\Platform\PlatformH21.xml">
+      <Filter>Actor\Prop\Platform</Filter>
     </Xml>
-    <Xml Include="Data\Asset\Prop\TransportBounceBlock.xml">
-      <Filter>Actor\Prop\TransportBounceBlock</Filter>
+    <Xml Include="Data\Asset\Prop\Platform\PlatformH41.xml">
+      <Filter>Actor\Prop\Platform</Filter>
     </Xml>
-    <Xml Include="Data\Asset\Prop\TransportDoor.xml">
-      <Filter>Actor\Prop\TransportDoor</Filter>
+    <Xml Include="Data\Asset\Prop\Platform\PlatformH81.xml">
+      <Filter>Actor\Prop\Platform</Filter>
     </Xml>
-    <Xml Include="Data\Asset\Prop\TransportPipe.xml">
-      <Filter>Actor\Prop\TransportPipe</Filter>
+    <Xml Include="Data\Asset\Prop\Platform\PlatformH116.xml">
+      <Filter>Actor\Prop\Platform</Filter>
     </Xml>
-    <Xml Include="Data\Asset\Prop\Pipe.xml">
-      <Filter>Actor\Prop\Pipe</Filter>
+    <Xml Include="Data\Asset\Prop\Platform\PlatformH161.xml">
+      <Filter>Actor\Prop\Platform</Filter>
     </Xml>
-    <Xml Include="Data\Asset\Prop\MovingPlatform.xml">
-      <Filter>Actor\Prop\MovingPlatform</Filter>
+    <Xml Include="Data\Asset\Prop\Platform\PlatformS12.xml">
+      <Filter>Actor\Prop\Platform</Filter>
     </Xml>
-    <Xml Include="Data\Asset\Prop\SemiPlatform.xml">
-      <Filter>Actor\Prop\SemiPlatform</Filter>
+    <Xml Include="Data\Asset\Prop\Platform\PlatformS14.xml">
+      <Filter>Actor\Prop\Platform</Filter>
     </Xml>
-    <Xml Include="Data\Asset\WorldMap\Kactus.xml">
-      <Filter>Actor\WorldMap\Kactus</Filter>
+    <Xml Include="Data\Asset\Prop\Platform\PlatformS18.xml">
+      <Filter>Actor\Prop\Platform</Filter>
     </Xml>
-    <Xml Include="Data\Asset\WorldMap\WorldMapMario.xml">
-      <Filter>Actor\WorldMap\WorldMapMario</Filter>
+    <Xml Include="Data\Asset\Prop\Platform\PlatformS21.xml">
+      <Filter>Actor\Prop\Platform</Filter>
     </Xml>
-    <Xml Include="Data\Scene\WorldMap1.xml">
-      <Filter>Scene</Filter>
+    <Xml Include="Data\Asset\Prop\Platform\PlatformS41.xml">
+      <Filter>Actor\Prop\Platform</Filter>
     </Xml>
-    <Xml Include="Data\Asset\Controller\Title.xml">
-      <Filter>Scene</Filter>
+    <Xml Include="Data\Asset\Prop\Platform\PlatformS81.xml">
+      <Filter>Actor\Prop\Platform</Filter>
     </Xml>
-    <Xml Include="Data\Scene\World1AirShip.xml">
-      <Filter>Scene</Filter>
+    <Xml Include="Data\Asset\Prop\Platform\PlatformS116.xml">
+      <Filter>Actor\Prop\Platform</Filter>
     </Xml>
-    <Xml Include="Data\Asset\Misc\PowerBar.xml">
-      <Filter>Actor\Mics\PowerBar</Filter>
-    </Xml>
-    <Xml Include="Data\Asset\Prop\Pusher.xml">
-      <Filter>Actor\Prop\Pusher</Filter>
-    </Xml>
-    <Xml Include="Data\Asset\Prop\SpawnZone.xml">
-      <Filter>Actor\Prop\SpawnZone</Filter>
-    </Xml>
-    <Xml Include="Data\Asset\Prop\WorldGoal.xml">
-      <Filter>Actor\Prop\WorldGoal</Filter>
-    </Xml>
-    <Xml Include="Data\Asset\WorldMap\World11Portal.xml">
-      <Filter>Actor\WorldMap\WorldMapPortal</Filter>
-    </Xml>
-    <Xml Include="Data\Asset\WorldMap\World14Portal.xml">
-      <Filter>Actor\WorldMap\WorldMapPortal</Filter>
-    </Xml>
-    <Xml Include="Data\Asset\WorldMap\World15Portal.xml">
-      <Filter>Actor\WorldMap\WorldMapPortal</Filter>
-    </Xml>
-    <Xml Include="Data\Asset\WorldMap\World16Portal.xml">
-      <Filter>Actor\WorldMap\WorldMapPortal</Filter>
-    </Xml>
-    <Xml Include="Data\Asset\WorldMap\World1FortressPortal.xml">
-      <Filter>Actor\WorldMap\WorldMapPortal</Filter>
-    </Xml>
-    <Xml Include="Data\Asset\WorldMap\World1AirShipPortal.xml">
-      <Filter>Actor\WorldMap\WorldMapPortal</Filter>
-    </Xml>
-    <Xml Include="Data\Asset\Prop\Roto.xml">
-      <Filter>Actor\Prop\Roto</Filter>
+    <Xml Include="Data\Asset\Prop\Platform\PlatformS161.xml">
+      <Filter>Actor\Prop\Platform</Filter>
     </Xml>
     <Xml Include="Data\Scene\Sandbox.xml">
       <Filter>Scene</Filter>
     </Xml>
-    <Xml Include="Data\Asset\Prop\Slope.xml">
-      <Filter>Actor\Prop\Slope</Filter>
-    </Xml>
-    <Xml Include="Data\Asset\Prop\TreasureBox.xml">
-      <Filter>Actor\Prop\TreasureBox</Filter>
-    </Xml>
-    <Xml Include="Data\Asset\Prop\Water.xml">
-      <Filter>Actor\Prop\Water</Filter>
-    </Xml>
-    <Xml Include="Data\Asset\Controller\World1AirShip.xml">
-      <Filter>Actor\Controller\World</Filter>
-    </Xml>
   </ItemGroup>
   <ItemGroup>
-    <Image Include="Data\Texture\BBox.png">
-      <Filter>Resource\Texture</Filter>
-    </Image>
-    <Image Include="Data\Texture\Block.png">
-      <Filter>Resource\Texture</Filter>
-    </Image>
-    <Image Include="Data\Texture\Goomba.png">
-      <Filter>Resource\Texture</Filter>
-    </Image>
-    <Image Include="Data\Texture\Item.png">
-      <Filter>Resource\Texture</Filter>
-    </Image>
-    <Image Include="Data\Texture\Koopa.png">
-      <Filter>Resource\Texture</Filter>
-    </Image>
     <Image Include="Data\Texture\Mario.png">
       <Filter>Resource\Texture</Filter>
     </Image>
-    <Image Include="Data\Texture\Plant.png">
+    <Image Include="Data\Texture\BBox.png">
       <Filter>Resource\Texture</Filter>
     </Image>
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config">
-      <Filter>Game</Filter>
-    </None>
+    <Media Include="Data\SoundClip\MarioJump.wav">
+      <Filter>Resource\SoundClip</Filter>
+    </Media>
   </ItemGroup>
 </Project>
