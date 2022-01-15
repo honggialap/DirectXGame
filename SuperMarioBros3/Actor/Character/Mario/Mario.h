@@ -318,14 +318,14 @@
 #define ANI_MARIO_R_SPINJUMP_LEFT		4107
 #define ANI_MARIO_R_ATTACK_LEFT			4108
 // RACCOON - RIGHT
-#define ANI_MARIO_R_WALK_RIGHT			4101
-#define ANI_MARIO_R_HOVER_RIGHT			4102
-#define ANI_MARIO_R_RUN_RIGHT			4103
-#define ANI_MARIO_R_FLY_RIGHT			4104
-#define ANI_MARIO_R_HOLD_WALK_RIGHT		4105
-#define ANI_MARIO_R_SWIM_RIGHT			4106
-#define ANI_MARIO_R_SPINJUMP_RIGHT		4107
-#define ANI_MARIO_R_ATTACK_RIGHT		4108
+#define ANI_MARIO_R_WALK_RIGHT			4201
+#define ANI_MARIO_R_HOVER_RIGHT			4202
+#define ANI_MARIO_R_RUN_RIGHT			4203
+#define ANI_MARIO_R_FLY_RIGHT			4204
+#define ANI_MARIO_R_HOLD_WALK_RIGHT		4205
+#define ANI_MARIO_R_SWIM_RIGHT			4206
+#define ANI_MARIO_R_SPINJUMP_RIGHT		4207
+#define ANI_MARIO_R_ATTACK_RIGHT		4208
 
 // TRANSFORMATION - LEFT
 #define ANI_MARIO_SHRINK_LEFT			5101
@@ -416,26 +416,53 @@ public:
 	bool _left = false;
 	bool _ground = false;
 	
-	bool _run = false;
 	bool _fullSpeed = false;
 	float _walkSpeedFactor = 0;
 	float _momentum = 0;
 
 	bool _fall = false;
+	bool _falling = false;
 	bool _fly = false;
 	float _jumpLimit = 0;
 	float _flyTimeout = 0;
 
 #pragma endregion
 
+
+#pragma region CHEAT
+
+	/* Cheat (for dev) */
+	bool _cheat = false;
+	int HOTKEY_SMALL = 0;
+	int HOTKEY_LARGE = 0;
+	int HOTKEY_FIRE = 0;
+	int HOTKEY_RACCOON = 0;
+	void PowerControlCheat();
+
+#pragma endregion
+
+
 #pragma region STATE MACHINE
 
 	enum class EAction
 	{
 		IDLE,
+		CROUNCH,
 		WALK,
 		RUN,
-		JUMP
+		DRIFT,
+		JUMP,
+		FLY,
+		HOVER,
+		KICK,
+		SPIN,
+		FIRE,
+		GROW,
+		SHRINK,
+		POWER_FIRE,
+		POWER_TAIL,
+		POWER_DOWN,
+		DIE
 	};
 	EAction _action = EAction::IDLE;
 	EAction _nextAction = EAction::IDLE;
@@ -466,15 +493,28 @@ public:
 
 	void HandleAction(float elapsedMs);
 	void Idle(float elapsedMs);
+	void Crounch(float elapsedMs);
 	void Walk(float elapsedMs);
 	void Run(float elapsedMs);
+	void Drift(float elapsedMs);
 	void Jump(float elapsedMs);
+	void Fly(float elapsedMs);
+	void Hover(float elapsedMs);
+	void Kick(float elapsedMs);
+	void Spin(float elapsedMs);
+	void Fire(float elapsedMs);
+	void Grow(float elapsedMs);
+	void Shrink(float elapsedMs);
+	void PowerFire(float elapsedMs);
+	void PowerTail(float elapsedMs);
+	void PowerDown(float elapsedMs);
+	void Die(float elapsedMs);
 
+	void UpdateGravity(float elapsedMs);
 	void UpdateMomentum(float elapsedMs);
 
 	// temporary function for development
 	void CameraControl();
-	void PowerControl();
 #pragma endregion
 
 
