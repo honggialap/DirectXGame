@@ -259,8 +259,8 @@
 
 	<!--SMALL - LEFT -->
 	<Animation id="1101">
-		<Frame id="110101" time="50"/>
-		<Frame id="110201" time="50"/>
+		<Frame id="110101" time="100"/>
+		<Frame id="110201" time="100"/>
 	</Animation>
 	<Animation id="1102">
 		<Frame id="110401" time="100"/>
@@ -279,8 +279,8 @@
 
 	<!--SMALL - RIGHT -->
 	<Animation id="1201">
-		<Frame id="120101" time="50"/>
-		<Frame id="120201" time="50"/>
+		<Frame id="120101" time="100"/>
+		<Frame id="120201" time="100"/>
 	</Animation>
 	<Animation id="1202">
 		<Frame id="120401" time="100"/>
@@ -576,13 +576,23 @@
 		/>
 	
 	<MovementStats
-		GRAVITY					="1.0"
+		GRAVITY					="0.001"
 		DRAG					="0.9"
+		
 		WALK_ACCELERATION		="0.001"
-		WALK_SPEED_LIMIT		="0.3"
+		WALK_SPEED_LIMIT		="0.15"
+		
 		RUN_ACCELERATION		="0.002"
-		RUN_SPEED_LIMIT			="0.6"
-		IDLE_THRESHOLD			="0.01"
+		RUN_SPEED_LIMIT			="0.3"
+		
+		FULL_ACCELERATION		="0.003"
+		FULL_SPEED_LIMIT		="0.45"
+
+		MOMENTUM_INCREASE_RATE	="0.3"
+		MOMENTUM_DECREASE_RATE	="0.1"
+		MOMENTUM_LIMIT			="200"
+		
+		IDLE_THRESHOLD			="0.005"
 		/>
 
 

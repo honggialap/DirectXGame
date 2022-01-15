@@ -393,10 +393,20 @@ public:
 	/* Movement Stats */
 	float GRAVITY = 0;
 	float DRAG = 0;
+
 	float WALK_ACCELERATION = 0;
 	float WALK_SPEED_LIMIT = 0;
+
 	float RUN_ACCELERATION = 0;
 	float RUN_SPEED_LIMIT = 0;
+
+	float FULL_ACCELERATION = 0;
+	float FULL_SPEED_LIMIT = 0;
+
+	float MOMENTUM_INCREASE_RATE = 0;
+	float MOMENTUM_DECREASE_RATE = 0;
+	float MOMENTUM_LIMIT = 0;
+
 	float IDLE_THRESHOLD = 0;
 
 	/* Movement Logic */
@@ -404,6 +414,7 @@ public:
 	bool _ground = false;
 	bool _fullSpeed = false;
 	float _walkSpeedFactor = 0;
+	float _momentum = 0;
 
 #pragma endregion
 

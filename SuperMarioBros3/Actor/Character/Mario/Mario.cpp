@@ -51,6 +51,13 @@ void CMario::Load()
 	RUN_ACCELERATION = movementStatsNode.attribute("RUN_ACCELERATION").as_float();
 	RUN_SPEED_LIMIT = movementStatsNode.attribute("RUN_SPEED_LIMIT").as_float();
 
+	FULL_ACCELERATION = movementStatsNode.attribute("FULL_ACCELERATION").as_float();
+	FULL_SPEED_LIMIT = movementStatsNode.attribute("FULL_SPEED_LIMIT").as_float();
+
+	MOMENTUM_INCREASE_RATE = movementStatsNode.attribute("MOMENTUM_INCREASE_RATE").as_float();
+	MOMENTUM_DECREASE_RATE = movementStatsNode.attribute("MOMENTUM_DECREASE_RATE").as_float();
+	MOMENTUM_LIMIT = movementStatsNode.attribute("MOMENTUM_LIMIT").as_float();
+
 	IDLE_THRESHOLD = movementStatsNode.attribute("IDLE_THRESHOLD").as_float();	
 }
 
@@ -67,12 +74,17 @@ void CMario::Update(float elapsedMs)
 	_vy -= GRAVITY * elapsedMs;
 	if (_ground) _vx *= DRAG;
 
-	std::vector<pGameObject> collidables = _game->GetLocal(_id);
-	_collider->Process(elapsedMs, &collidables);
+	_momentum -= MOMENTUM_DECREASE_RATE * elapsedMs;
+	if (_momentum < 0) _momentum = 0;
 
 	HandleAction(elapsedMs);
 
-	DebugOut(L"vx %f \n", _vx);
+	std::vector<pGameObject> collidables = _game->GetLocal(_id);
+	_collider->Process(elapsedMs, &collidables);
+
+
+	DebugOut(L"vx %f | ", _vx);
+	DebugOut(L"momentum %f \n", _momentum);
 }
 
 void CMario::Render()
@@ -152,57 +164,58 @@ void CMario::Render()
 		{
 		case CMario::EPower::SMALL:
 		{
-			if (!_fullSpeed)
-			{
-				if (_left)	_animations[ANI_MARIO_S_WALK_LEFT]->Render(_x, _y);
-				else		_animations[ANI_MARIO_S_WALK_RIGHT]->Render(_x, _y);
-			}
-			else
+			if (_fullSpeed)
 			{
 				if (_left)	_animations[ANI_MARIO_S_RUN_LEFT]->Render(_x, _y);
 				else		_animations[ANI_MARIO_S_RUN_RIGHT]->Render(_x, _y);
+			}
+			else
+			{
+				if (_left)	_animations[ANI_MARIO_S_WALK_LEFT]->Render(_x, _y);
+				else		_animations[ANI_MARIO_S_WALK_RIGHT]->Render(_x, _y);
+
 			}
 		}
 		break;
 		case CMario::EPower::LARGE:
 		{
-			if (!_fullSpeed)
-			{
-				if (_left)	_animations[ANI_MARIO_L_WALK_LEFT]->Render(_x, _y);
-				else		_animations[ANI_MARIO_L_WALK_RIGHT]->Render(_x, _y);
-			}
-			else
+			if (_fullSpeed)
 			{
 				if (_left)	_animations[ANI_MARIO_L_RUN_LEFT]->Render(_x, _y);
 				else		_animations[ANI_MARIO_L_RUN_RIGHT]->Render(_x, _y);
+			}
+			else
+			{
+				if (_left)	_animations[ANI_MARIO_L_WALK_LEFT]->Render(_x, _y);
+				else		_animations[ANI_MARIO_L_WALK_RIGHT]->Render(_x, _y);
 			}
 		}
 		break;
 		case CMario::EPower::FIRE:
 		{
-			if (!_fullSpeed)
-			{
-				if (_left)	_animations[ANI_MARIO_F_WALK_LEFT]->Render(_x, _y);
-				else		_animations[ANI_MARIO_F_WALK_RIGHT]->Render(_x, _y);
-			}
-			else
+			if (_fullSpeed)
 			{
 				if (_left)	_animations[ANI_MARIO_F_RUN_LEFT]->Render(_x, _y);
 				else		_animations[ANI_MARIO_F_RUN_RIGHT]->Render(_x, _y);
+			}
+			else
+			{
+				if (_left)	_animations[ANI_MARIO_F_WALK_LEFT]->Render(_x, _y);
+				else		_animations[ANI_MARIO_F_WALK_RIGHT]->Render(_x, _y);
 			}
 		}
 		break;
 		case CMario::EPower::RACCOON:
 		{
-			if (!_fullSpeed)
-			{
-				if (_left)	_animations[ANI_MARIO_R_WALK_LEFT]->Render(_x, _y);
-				else		_animations[ANI_MARIO_R_WALK_RIGHT]->Render(_x, _y);
-			}
-			else
+			if (_fullSpeed)
 			{
 				if (_left)	_animations[ANI_MARIO_R_RUN_LEFT]->Render(_x, _y);
 				else		_animations[ANI_MARIO_R_RUN_RIGHT]->Render(_x, _y);
+			}
+			else
+			{
+				if (_left)	_animations[ANI_MARIO_R_WALK_LEFT]->Render(_x, _y);
+				else		_animations[ANI_MARIO_R_WALK_RIGHT]->Render(_x, _y);
 			}
 		}
 		break;
@@ -218,13 +231,13 @@ void CMario::Render()
 		{
 			if (_fullSpeed)
 			{
-				if (_left)	_sprites[SPR_MARIO_S_JUMP_LEFT]->Render(_x, _y);
-				else		_sprites[SPR_MARIO_S_JUMP_RIGHT]->Render(_x, _y);
+				if (_left)	_sprites[SPR_MARIO_S_FLY_LEFT]->Render(_x, _y);
+				else		_sprites[SPR_MARIO_S_FLY_RIGHT]->Render(_x, _y);
 			}
 			else
 			{
-				if (_left)	_sprites[SPR_MARIO_S_FLY_LEFT]->Render(_x, _y);
-				else		_sprites[SPR_MARIO_S_FLY_RIGHT]->Render(_x, _y);
+				if (_left)	_sprites[SPR_MARIO_S_JUMP_LEFT]->Render(_x, _y);
+				else		_sprites[SPR_MARIO_S_JUMP_RIGHT]->Render(_x, _y);
 			}
 		}
 		break;
@@ -232,13 +245,13 @@ void CMario::Render()
 		{
 			if (_fullSpeed)
 			{
-				if (_left)	_sprites[SPR_MARIO_L_JUMP_LEFT]->Render(_x, _y);
-				else		_sprites[SPR_MARIO_L_JUMP_RIGHT]->Render(_x, _y);
+				if (_left)	_sprites[SPR_MARIO_L_FLY_LEFT]->Render(_x, _y);
+				else		_sprites[SPR_MARIO_L_FLY_RIGHT]->Render(_x, _y);
 			}
 			else
 			{
-				if (_left)	_sprites[SPR_MARIO_L_FLY_LEFT]->Render(_x, _y);
-				else		_sprites[SPR_MARIO_L_FLY_RIGHT]->Render(_x, _y);
+				if (_left)	_sprites[SPR_MARIO_L_JUMP_LEFT]->Render(_x, _y);
+				else		_sprites[SPR_MARIO_L_JUMP_RIGHT]->Render(_x, _y);
 			}
 		}
 		break;
@@ -246,13 +259,13 @@ void CMario::Render()
 		{
 			if (_fullSpeed)
 			{
-				if (_left)	_sprites[SPR_MARIO_F_JUMP_LEFT]->Render(_x, _y);
-				else		_sprites[SPR_MARIO_F_JUMP_RIGHT]->Render(_x, _y);
+				if (_left)	_sprites[SPR_MARIO_F_FLY_LEFT]->Render(_x, _y);
+				else		_sprites[SPR_MARIO_F_FLY_RIGHT]->Render(_x, _y);
 			}
 			else
 			{
-				if (_left)	_sprites[SPR_MARIO_F_FLY_LEFT]->Render(_x, _y);
-				else		_sprites[SPR_MARIO_F_FLY_RIGHT]->Render(_x, _y);
+				if (_left)	_sprites[SPR_MARIO_F_JUMP_LEFT]->Render(_x, _y);
+				else		_sprites[SPR_MARIO_F_JUMP_RIGHT]->Render(_x, _y);
 			}
 		}
 		break;
@@ -260,13 +273,13 @@ void CMario::Render()
 		{
 			if (_fullSpeed)
 			{
-				if (_left)	_sprites[SPR_MARIO_R_JUMP_LEFT]->Render(_x, _y);
-				else		_sprites[SPR_MARIO_R_JUMP_RIGHT]->Render(_x, _y);
+				if (_left)	_sprites[SPR_MARIO_R_FLY1_LEFT]->Render(_x, _y);
+				else		_sprites[SPR_MARIO_R_FLY1_RIGHT]->Render(_x, _y);
 			}
 			else
 			{
-				if (_left)	_sprites[SPR_MARIO_R_FLY1_LEFT]->Render(_x, _y);
-				else		_sprites[SPR_MARIO_R_FLY1_RIGHT]->Render(_x, _y);
+				if (_left)	_sprites[SPR_MARIO_R_JUMP_LEFT]->Render(_x, _y);
+				else		_sprites[SPR_MARIO_R_JUMP_RIGHT]->Render(_x, _y);
 			}
 		}
 		break;
@@ -307,7 +320,6 @@ void CMario::Idle(float elapsedMs)
 	{
 	case CMario::EActionStage::ENTRY:
 	{
-		_vx = 0;
 	}
 	_actionStage = EActionStage::PROGRESS;
 	break;
@@ -397,7 +409,8 @@ void CMario::Walk(float elapsedMs)
 					_vx -= WALK_ACCELERATION * elapsedMs;
 					if (_vx < -WALK_SPEED_LIMIT) _vx = -WALK_SPEED_LIMIT;
 				}
-				_walkSpeedFactor = abs(_vx / WALK_SPEED_LIMIT);
+				else _vx -= WALK_ACCELERATION * elapsedMs;
+				_walkSpeedFactor = abs(_vx / RUN_SPEED_LIMIT);
 			}
 		}
 		else if (_game->IsKeyDown(RIGHT) && !_game->IsKeyDown(LEFT))
@@ -411,7 +424,8 @@ void CMario::Walk(float elapsedMs)
 					_vx += WALK_ACCELERATION * elapsedMs;
 					if (_vx > WALK_SPEED_LIMIT) _vx = WALK_SPEED_LIMIT;
 				}
-				_walkSpeedFactor = abs(_vx / WALK_SPEED_LIMIT);
+				else _vx += WALK_ACCELERATION * elapsedMs;
+				_walkSpeedFactor = abs(_vx / RUN_SPEED_LIMIT);
 			}
 		}
 
@@ -544,16 +558,43 @@ void CMario::Run(float elapsedMs)
 
 	case CMario::EActionStage::PROGRESS:
 	{
+		if (_vx != 0)
+		{
+			_momentum += MOMENTUM_INCREASE_RATE * elapsedMs;
+			if (_momentum > MOMENTUM_LIMIT)
+			{
+				_momentum = MOMENTUM_LIMIT;
+				_fullSpeed = true;
+			}
+			else
+			{
+				_fullSpeed = false;
+			}
+		}
+		
 		if (_game->IsKeyDown(LEFT) && !_game->IsKeyDown(RIGHT))
 		{
 			_left = true;
 			if (!_game->IsKeyDown(ACTION)) SetNextAction(EAction::WALK);
 			else
 			{
-				if (_vx > -RUN_SPEED_LIMIT)
+				if (_fullSpeed)
 				{
-					_vx -= RUN_ACCELERATION * elapsedMs;
-					if (_vx < -RUN_SPEED_LIMIT) _vx = -RUN_SPEED_LIMIT;
+					if (_vx > -FULL_SPEED_LIMIT)
+					{
+						_vx -= FULL_ACCELERATION * elapsedMs;
+						if (_vx < -FULL_SPEED_LIMIT) _vx = -FULL_SPEED_LIMIT;
+					}
+					else _vx -= FULL_ACCELERATION * elapsedMs;
+				}
+				else
+				{
+					if (_vx > -RUN_SPEED_LIMIT)
+					{
+						_vx -= RUN_ACCELERATION * elapsedMs;
+						if (_vx < -RUN_SPEED_LIMIT) _vx = -RUN_SPEED_LIMIT;
+					}
+					else _vx -= RUN_ACCELERATION * elapsedMs;
 				}
 				_walkSpeedFactor = abs(_vx / WALK_SPEED_LIMIT);
 			}
@@ -564,10 +605,24 @@ void CMario::Run(float elapsedMs)
 			if (!_game->IsKeyDown(ACTION)) SetNextAction(EAction::WALK);
 			else
 			{
-				if (_vx < RUN_SPEED_LIMIT)
+				if (_fullSpeed)
 				{
-					_vx += RUN_ACCELERATION * elapsedMs;
-					if (_vx > RUN_SPEED_LIMIT) _vx = RUN_SPEED_LIMIT;
+					if (_vx < FULL_SPEED_LIMIT)
+					{
+						_vx += FULL_ACCELERATION * elapsedMs;
+						if (_vx > FULL_SPEED_LIMIT) _vx = FULL_SPEED_LIMIT;
+					}
+					else _vx += FULL_ACCELERATION * elapsedMs;
+
+				}
+				else
+				{
+					if (_vx < RUN_SPEED_LIMIT)
+					{
+						_vx += RUN_ACCELERATION * elapsedMs;
+						if (_vx > RUN_SPEED_LIMIT) _vx = RUN_SPEED_LIMIT;
+					}
+					else _vx += RUN_ACCELERATION * elapsedMs;
 				}
 				_walkSpeedFactor = abs(_vx / WALK_SPEED_LIMIT);
 			}
@@ -586,8 +641,8 @@ void CMario::Run(float elapsedMs)
 		{
 			_animations[ANI_MARIO_S_WALK_LEFT]->Update(elapsedMs * _walkSpeedFactor);
 			_animations[ANI_MARIO_S_WALK_RIGHT]->Update(elapsedMs * _walkSpeedFactor);
-			_animations[ANI_MARIO_S_RUN_LEFT]->Update(elapsedMs);
-			_animations[ANI_MARIO_S_RUN_RIGHT]->Update(elapsedMs);
+			_animations[ANI_MARIO_S_RUN_LEFT]->Update(elapsedMs * _walkSpeedFactor);
+			_animations[ANI_MARIO_S_RUN_RIGHT]->Update(elapsedMs * _walkSpeedFactor);
 		}
 		break;
 
@@ -595,8 +650,8 @@ void CMario::Run(float elapsedMs)
 		{
 			_animations[ANI_MARIO_L_WALK_LEFT]->Update(elapsedMs * _walkSpeedFactor);
 			_animations[ANI_MARIO_L_WALK_RIGHT]->Update(elapsedMs * _walkSpeedFactor);
-			_animations[ANI_MARIO_L_RUN_LEFT]->Update(elapsedMs);
-			_animations[ANI_MARIO_L_RUN_RIGHT]->Update(elapsedMs);
+			_animations[ANI_MARIO_L_RUN_LEFT]->Update(elapsedMs* _walkSpeedFactor);
+			_animations[ANI_MARIO_L_RUN_RIGHT]->Update(elapsedMs* _walkSpeedFactor);
 		}
 		break;
 
@@ -604,8 +659,8 @@ void CMario::Run(float elapsedMs)
 		{
 			_animations[ANI_MARIO_F_WALK_LEFT]->Update(elapsedMs * _walkSpeedFactor);
 			_animations[ANI_MARIO_F_WALK_RIGHT]->Update(elapsedMs * _walkSpeedFactor);
-			_animations[ANI_MARIO_F_RUN_LEFT]->Update(elapsedMs);
-			_animations[ANI_MARIO_F_RUN_RIGHT]->Update(elapsedMs);
+			_animations[ANI_MARIO_F_RUN_LEFT]->Update(elapsedMs* _walkSpeedFactor);
+			_animations[ANI_MARIO_F_RUN_RIGHT]->Update(elapsedMs* _walkSpeedFactor);
 		}
 		break;
 
@@ -613,8 +668,8 @@ void CMario::Run(float elapsedMs)
 		{
 			_animations[ANI_MARIO_R_WALK_LEFT]->Update(elapsedMs * _walkSpeedFactor);
 			_animations[ANI_MARIO_R_WALK_RIGHT]->Update(elapsedMs * _walkSpeedFactor);
-			_animations[ANI_MARIO_R_RUN_LEFT]->Update(elapsedMs);
-			_animations[ANI_MARIO_R_RUN_RIGHT]->Update(elapsedMs);
+			_animations[ANI_MARIO_R_RUN_LEFT]->Update(elapsedMs* _walkSpeedFactor);
+			_animations[ANI_MARIO_R_RUN_RIGHT]->Update(elapsedMs* _walkSpeedFactor);
 		}
 		break;
 		}
@@ -696,11 +751,10 @@ void CMario::Jump(float elapsedMs)
 
 void CMario::CameraControl()
 {
-	if (_game->IsKeyDown(72)) _game->MoveCameraBy(0, 10);
-	else if (_game->IsKeyDown(80)) _game->MoveCameraBy(0, -10);
-
-	if (_game->IsKeyDown(75)) _game->MoveCameraBy(-10, 0);
-	else if (_game->IsKeyDown(77)) _game->MoveCameraBy(10, 0);
+	_game->MoveCameraTo(
+		_x - _game->GetGraphics()->GetBackBufferWidth() / 2,
+		_y + _game->GetGraphics()->GetBackBufferHeight() / 2
+	);
 }
 
 #pragma endregion

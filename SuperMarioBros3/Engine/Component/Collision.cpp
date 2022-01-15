@@ -244,10 +244,7 @@ void CCollider::Process(float elapsedMs, std::vector<pGameObject>* collidables)
 		{
 			pCollision e = _collisions[i];
 			if (e->_destroy) continue;
-			if (e->_overlap)
-			{
-				_gameObject->OnCollisionWith(e);
-			}
+			if (e->_overlap) _gameObject->OnCollisionWith(e);
 			if (e->_target->IsBlocking()) continue;  // blocking collisions will be handled later, skip them
 		}
 		for (UINT i = 0; i < _collisions.size(); i++) delete _collisions[i];
