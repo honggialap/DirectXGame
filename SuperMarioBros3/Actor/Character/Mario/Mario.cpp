@@ -56,13 +56,14 @@ void CMario::Load()
 
 	MOMENTUM_INCREASE_RATE = movementStatsNode.attribute("MOMENTUM_INCREASE_RATE").as_float();
 	MOMENTUM_DECREASE_RATE = movementStatsNode.attribute("MOMENTUM_DECREASE_RATE").as_float();
+	MOMENTUM_THRESHOLD = movementStatsNode.attribute("MOMENTUM_THRESHOLD").as_float();
 	MOMENTUM_LIMIT = movementStatsNode.attribute("MOMENTUM_LIMIT").as_float();
 
 	JUMP_FORCE = movementStatsNode.attribute("JUMP_FORCE").as_float();
 	FULL_SPEED_JUMP_FORCE = movementStatsNode.attribute("FULL_SPEED_JUMP_FORCE").as_float();
 	JUMP_LIMIT = movementStatsNode.attribute("JUMP_LIMIT").as_float();
 
-	IDLE_THRESHOLD = movementStatsNode.attribute("IDLE_THRESHOLD").as_float();	
+	IDLE_THRESHOLD = movementStatsNode.attribute("IDLE_THRESHOLD").as_float();
 }
 
 void CMario::Start()
@@ -78,16 +79,14 @@ void CMario::Update(float elapsedMs)
 	_vy -= GRAVITY * elapsedMs;
 	if (_ground) _vx *= DRAG;
 
-	_momentum -= MOMENTUM_DECREASE_RATE * elapsedMs;
-	if (_momentum < 0) _momentum = 0;
+	UpdateMomentum(elapsedMs);
 
 	std::vector<pGameObject> collidables = _game->GetLocal(_id);
 	_collider->Process(elapsedMs, &collidables);
 
 	HandleAction(elapsedMs);
 
-	DebugOut(L"vx %f | ", _vx);
-	DebugOut(L"momentum %f \n", _momentum);
+	DebugOut(L"vx %f | momentum %f \n", _vx, _momentum);
 }
 
 void CMario::Render()
@@ -434,7 +433,7 @@ void CMario::Walk(float elapsedMs)
 			}
 		}
 
-		if ((_left && _vx > -IDLE_THRESHOLD) || (!_left && _vx < IDLE_THRESHOLD)) 
+		if ((_left && _vx > -IDLE_THRESHOLD) || (!_left && _vx < IDLE_THRESHOLD))
 			SetNextAction(EAction::IDLE);
 
 		if (_ground && _game->IsKeyPressed(JUMP))
@@ -564,20 +563,6 @@ void CMario::Run(float elapsedMs)
 
 	case CMario::EActionStage::PROGRESS:
 	{
-		if (_vx != 0)
-		{
-			_momentum += MOMENTUM_INCREASE_RATE * elapsedMs;
-			if (_momentum > MOMENTUM_LIMIT)
-			{
-				_momentum = MOMENTUM_LIMIT;
-				_fullSpeed = true;
-			}
-			else
-			{
-				_fullSpeed = false;
-			}
-		}
-		
 		if (_game->IsKeyDown(LEFT) && !_game->IsKeyDown(RIGHT))
 		{
 			_left = true;
@@ -619,7 +604,6 @@ void CMario::Run(float elapsedMs)
 						if (_vx > FULL_SPEED_LIMIT) _vx = FULL_SPEED_LIMIT;
 					}
 					else _vx += FULL_ACCELERATION * elapsedMs;
-
 				}
 				else
 				{
@@ -656,8 +640,8 @@ void CMario::Run(float elapsedMs)
 		{
 			_animations[ANI_MARIO_L_WALK_LEFT]->Update(elapsedMs * _walkSpeedFactor);
 			_animations[ANI_MARIO_L_WALK_RIGHT]->Update(elapsedMs * _walkSpeedFactor);
-			_animations[ANI_MARIO_L_RUN_LEFT]->Update(elapsedMs* _walkSpeedFactor);
-			_animations[ANI_MARIO_L_RUN_RIGHT]->Update(elapsedMs* _walkSpeedFactor);
+			_animations[ANI_MARIO_L_RUN_LEFT]->Update(elapsedMs * _walkSpeedFactor);
+			_animations[ANI_MARIO_L_RUN_RIGHT]->Update(elapsedMs * _walkSpeedFactor);
 		}
 		break;
 
@@ -665,8 +649,8 @@ void CMario::Run(float elapsedMs)
 		{
 			_animations[ANI_MARIO_F_WALK_LEFT]->Update(elapsedMs * _walkSpeedFactor);
 			_animations[ANI_MARIO_F_WALK_RIGHT]->Update(elapsedMs * _walkSpeedFactor);
-			_animations[ANI_MARIO_F_RUN_LEFT]->Update(elapsedMs* _walkSpeedFactor);
-			_animations[ANI_MARIO_F_RUN_RIGHT]->Update(elapsedMs* _walkSpeedFactor);
+			_animations[ANI_MARIO_F_RUN_LEFT]->Update(elapsedMs * _walkSpeedFactor);
+			_animations[ANI_MARIO_F_RUN_RIGHT]->Update(elapsedMs * _walkSpeedFactor);
 		}
 		break;
 
@@ -674,8 +658,8 @@ void CMario::Run(float elapsedMs)
 		{
 			_animations[ANI_MARIO_R_WALK_LEFT]->Update(elapsedMs * _walkSpeedFactor);
 			_animations[ANI_MARIO_R_WALK_RIGHT]->Update(elapsedMs * _walkSpeedFactor);
-			_animations[ANI_MARIO_R_RUN_LEFT]->Update(elapsedMs* _walkSpeedFactor);
-			_animations[ANI_MARIO_R_RUN_RIGHT]->Update(elapsedMs* _walkSpeedFactor);
+			_animations[ANI_MARIO_R_RUN_LEFT]->Update(elapsedMs * _walkSpeedFactor);
+			_animations[ANI_MARIO_R_RUN_RIGHT]->Update(elapsedMs * _walkSpeedFactor);
 		}
 		break;
 		}
@@ -735,10 +719,11 @@ void CMario::Jump(float elapsedMs)
 	{
 	case CMario::EActionStage::ENTRY:
 	{
+		_run = false;
 		_fall = false;
 		_ground = false;
 		_jumpLimit = JUMP_LIMIT;
-		if(_fullSpeed) _vy = FULL_SPEED_JUMP_FORCE;
+		if (_fullSpeed) _vy = FULL_SPEED_JUMP_FORCE;
 		else _vy = JUMP_FORCE;
 	}
 	_actionStage = EActionStage::PROGRESS;
@@ -747,7 +732,7 @@ void CMario::Jump(float elapsedMs)
 	case CMario::EActionStage::PROGRESS:
 	{
 		if (!_fall)
-		{			
+		{
 			if (_game->IsKeyReleased(JUMP)) _fall = true;
 
 			if (_game->IsKeyDown(JUMP) && _jumpLimit > 0)
@@ -759,48 +744,51 @@ void CMario::Jump(float elapsedMs)
 			else _fall = true;
 		}
 
-		if (_game->IsKeyDown(LEFT))
+		if (_game->IsKeyDown(LEFT) && !_game->IsKeyDown(RIGHT))
 		{
 			_left = true;
 
-			if (_fullSpeed)
+			if (_vx >= -WALK_SPEED_LIMIT)
 			{
-				if (_vx > -FULL_SPEED_LIMIT) _vx -= WALK_ACCELERATION * elapsedMs;
-				else _vx = -FULL_SPEED_LIMIT;
+				_vx -= WALK_ACCELERATION * elapsedMs;
+				if (_vx < -WALK_SPEED_LIMIT) _vx = -WALK_SPEED_LIMIT;
 			}
-			else if (_run)
+			else if (_vx >= -RUN_SPEED_LIMIT)
 			{
-				if (_vx > -RUN_SPEED_LIMIT) _vx -= WALK_ACCELERATION * elapsedMs;
-				else _vx = -RUN_SPEED_LIMIT;
+				_vx -= WALK_ACCELERATION * elapsedMs;
+				if (_vx < -RUN_SPEED_LIMIT) _vx = -RUN_SPEED_LIMIT;
 			}
-			else if (!_run && !_fullSpeed)
+			else if (_vx >= -FULL_SPEED_LIMIT)
 			{
-				if (_vx > -WALK_SPEED_LIMIT) _vx -= WALK_ACCELERATION * elapsedMs;
-				else _vx = -WALK_SPEED_LIMIT;
+				_vx -= WALK_ACCELERATION * elapsedMs;
+				if (_vx < -FULL_SPEED_LIMIT) _vx = -FULL_SPEED_LIMIT;
 			}
 		}
-		else if (_game->IsKeyDown(RIGHT))
+		else if (_game->IsKeyDown(RIGHT) && !_game->IsKeyDown(LEFT))
 		{
 			_left = false;
 
-			if (_fullSpeed)
+			if (_vx <= WALK_SPEED_LIMIT)
 			{
-				if (_vx < FULL_SPEED_LIMIT) _vx += WALK_ACCELERATION * elapsedMs;
-				else _vx = FULL_SPEED_LIMIT;
+				_vx += WALK_ACCELERATION * elapsedMs;
+				if (_vx > WALK_SPEED_LIMIT) _vx = WALK_SPEED_LIMIT;
 			}
-			else if (_run)
+			else if (_vx <= RUN_SPEED_LIMIT)
 			{
-				if (_vx < RUN_SPEED_LIMIT) _vx += WALK_ACCELERATION * elapsedMs;
-				else _vx = RUN_SPEED_LIMIT;
+				_vx += WALK_ACCELERATION * elapsedMs;
+				if (_vx > RUN_SPEED_LIMIT) _vx = RUN_SPEED_LIMIT;
 			}
-			else if (!_run && !_fullSpeed)
+			else if (_vx <= FULL_SPEED_LIMIT)
 			{
-				if (_vx < WALK_SPEED_LIMIT) _vx += WALK_ACCELERATION * elapsedMs;
-				else _vx = WALK_SPEED_LIMIT;
+				_vx += WALK_ACCELERATION * elapsedMs;
+				if (_vx > FULL_SPEED_LIMIT) _vx = FULL_SPEED_LIMIT;
 			}
 		}
 
-		if (_ground) SetNextAction(EAction::IDLE);
+		if (_ground)
+		{
+			SetNextAction(EAction::IDLE);
+		}
 	}
 	break;
 
@@ -812,12 +800,37 @@ void CMario::Jump(float elapsedMs)
 	}
 }
 
+void CMario::UpdateMomentum(float elapsedMs)
+{
+	if (_action != EAction::JUMP || !_fullSpeed)
+	{
+		_momentum -= MOMENTUM_DECREASE_RATE * elapsedMs;
+		if (_momentum < 0) _momentum = 0;
+	}
+
+	if (_game->IsKeyDown(ACTION) && _ground && (_vx < -MOMENTUM_THRESHOLD || _vx > MOMENTUM_THRESHOLD))
+	{
+		_momentum += MOMENTUM_INCREASE_RATE * elapsedMs;
+		if (_momentum > MOMENTUM_LIMIT)
+		{
+			_momentum = MOMENTUM_LIMIT;
+			_fullSpeed = true;
+		}
+	}
+
+	if (_momentum < MOMENTUM_LIMIT) _fullSpeed = false;
+}
+
 void CMario::CameraControl()
 {
 	_game->MoveCameraTo(
 		_x - _game->GetGraphics()->GetBackBufferWidth() / 2,
 		_y + _game->GetGraphics()->GetBackBufferHeight() / 2
 	);
+}
+
+void CMario::PowerControl()
+{
 }
 
 #pragma endregion

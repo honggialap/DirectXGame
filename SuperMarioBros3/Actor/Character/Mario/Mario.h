@@ -403,6 +403,7 @@ public:
 
 	float MOMENTUM_INCREASE_RATE = 0;
 	float MOMENTUM_DECREASE_RATE = 0;
+	float MOMENTUM_THRESHOLD = 0;
 	float MOMENTUM_LIMIT = 0;
 
 	float JUMP_FORCE = 0;
@@ -421,6 +422,7 @@ public:
 	float _momentum = 0;
 
 	bool _fall = false;
+	bool _fly = false;
 	float _jumpLimit = 0;
 	float _flyTimeout = 0;
 
@@ -468,8 +470,11 @@ public:
 	void Run(float elapsedMs);
 	void Jump(float elapsedMs);
 
+	void UpdateMomentum(float elapsedMs);
+
 	// temporary function for development
 	void CameraControl();
+	void PowerControl();
 #pragma endregion
 
 
