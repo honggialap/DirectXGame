@@ -396,10 +396,8 @@ public:
 
 	float WALK_ACCELERATION = 0;
 	float WALK_SPEED_LIMIT = 0;
-
 	float RUN_ACCELERATION = 0;
 	float RUN_SPEED_LIMIT = 0;
-
 	float FULL_ACCELERATION = 0;
 	float FULL_SPEED_LIMIT = 0;
 
@@ -407,14 +405,24 @@ public:
 	float MOMENTUM_DECREASE_RATE = 0;
 	float MOMENTUM_LIMIT = 0;
 
+	float JUMP_FORCE = 0;
+	float FULL_SPEED_JUMP_FORCE = 0;
+	float JUMP_LIMIT = 0;
+
 	float IDLE_THRESHOLD = 0;
 
 	/* Movement Logic */
 	bool _left = false;
 	bool _ground = false;
+	
+	bool _run = false;
 	bool _fullSpeed = false;
 	float _walkSpeedFactor = 0;
 	float _momentum = 0;
+
+	bool _fall = false;
+	float _jumpLimit = 0;
+	float _flyTimeout = 0;
 
 #pragma endregion
 
