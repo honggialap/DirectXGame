@@ -410,7 +410,19 @@ public:
 	float FULL_SPEED_JUMP_FORCE = 0;
 	float JUMP_LIMIT = 0;
 
+	float HOVER_GRAVITY = 0;
+	float HOVER_COUNTDOWN = 0;
+	float HOVER_ACCELERATION = 0;
+	float HOVER_SPEED_LIMIT = 0;
+
+	float FLY_GRAVITY = 0;
+	float FLY_COUNTDOWN = 0;
+	float FLY_TIMEOUT_LIMIT = 0;
+	float FLY_ACCELERATION = 0;
+	float FLY_SPEED_LIMIT = 0;
+
 	float IDLE_THRESHOLD = 0;
+	float DRIFT_THRESHOLD = 0;
 
 	/* Movement Logic */
 	bool _left = false;
@@ -422,9 +434,15 @@ public:
 
 	bool _fall = false;
 	bool _falling = false;
-	bool _fly = false;
 	float _jumpLimit = 0;
-	float _flyTimeout = 0;
+	bool _crounchJump = false;
+
+	bool _hover = false;
+	float _hoverCountdown = 0;
+
+	bool _fly = false;
+	float _flyCountdown = 0;
+	float _flyTimeOut = 0;
 
 #pragma endregion
 
@@ -512,6 +530,7 @@ public:
 
 	void UpdateGravity(float elapsedMs);
 	void UpdateMomentum(float elapsedMs);
+	void UpdateFlyTimeout(float elapsedMs);
 
 	// temporary function for development
 	void CameraControl();
