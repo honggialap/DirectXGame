@@ -248,14 +248,14 @@
 	<Sprite id="400104" textureId="1001" left="1742" top="346" width="48" height="64" offsetX="-8" offsetY="32"/>
 
 	<!--EFFECT-->
-	<Sprite id="510101" textureId="1001" left="802" top="2" width="32" height="32" offsetX="0" offsetY="16"/>
-	<Sprite id="510102" textureId="1001" left="838" top="2" width="32" height="32" offsetX="0" offsetY="16"/>
-	<Sprite id="510103" textureId="1001" left="874" top="2" width="32" height="32" offsetX="0" offsetY="16"/>
-	<Sprite id="510104" textureId="1001" left="910" top="2" width="32" height="32" offsetX="0" offsetY="16"/>
-	<Sprite id="520101" textureId="1001" left="802" top="38" width="32" height="32" offsetX="0" offsetY="16"/>
-	<Sprite id="520102" textureId="1001" left="838" top="38" width="32" height="32" offsetX="0" offsetY="16"/>
-	<Sprite id="520103" textureId="1001" left="874" top="38" width="32" height="32" offsetX="0" offsetY="16"/>
-	<Sprite id="520104" textureId="1001" left="910" top="38" width="32" height="32" offsetX="0" offsetY="16"/>
+	<Sprite id="510101" textureId="1001" left="802" top="2" width="32" height="32" offsetX="0" offsetY="24"/>
+	<Sprite id="510102" textureId="1001" left="838" top="2" width="32" height="32" offsetX="0" offsetY="24"/>
+	<Sprite id="510103" textureId="1001" left="874" top="2" width="32" height="32" offsetX="0" offsetY="24"/>
+	<Sprite id="510104" textureId="1001" left="910" top="2" width="32" height="32" offsetX="0" offsetY="24"/>
+	<Sprite id="520101" textureId="1001" left="802" top="38" width="32" height="32" offsetX="0" offsetY="24"/>
+	<Sprite id="520102" textureId="1001" left="838" top="38" width="32" height="32" offsetX="0" offsetY="24"/>
+	<Sprite id="520103" textureId="1001" left="874" top="38" width="32" height="32" offsetX="0" offsetY="24"/>
+	<Sprite id="520104" textureId="1001" left="910" top="38" width="32" height="32" offsetX="0" offsetY="24"/>
 
 	<!--SMALL - LEFT -->
 	<Animation id="1101">
@@ -267,14 +267,14 @@
 		<Frame id="110402" time="100"/>
 	</Animation>
 	<Animation id="1103">
-		<Frame id="110701" time="200"/>
-		<Frame id="110801" time="200"/>
+		<Frame id="110701" time="100"/>
+		<Frame id="110801" time="100"/>
 	</Animation>
 	<Animation id="1104">
-		<Frame id="111101" time="200"/>
-		<Frame id="111102" time="200"/>
-		<Frame id="111103" time="200"/>
-		<Frame id="111104" time="200"/>
+		<Frame id="111101" time="50"/>
+		<Frame id="111102" time="50"/>
+		<Frame id="111103" time="50"/>
+		<Frame id="111104" time="50"/>
 	</Animation>
 
 	<!--SMALL - RIGHT -->
@@ -287,14 +287,14 @@
 		<Frame id="120402" time="100"/>
 	</Animation>
 	<Animation id="1203">
-		<Frame id="120701" time="200"/>
-		<Frame id="120801" time="200"/>
+		<Frame id="120701" time="100"/>
+		<Frame id="120801" time="100"/>
 	</Animation>
 	<Animation id="1204">
-		<Frame id="121101" time="200"/>
-		<Frame id="121102" time="200"/>
-		<Frame id="121103" time="200"/>
-		<Frame id="121104" time="200"/>
+		<Frame id="121101" time="50"/>
+		<Frame id="121102" time="50"/>
+		<Frame id="121103" time="50"/>
+		<Frame id="121104" time="50"/>
 	</Animation>
 	
 	<!--LARGE - LEFT -->
@@ -311,26 +311,26 @@
 		<Frame id="210502" time="50"/>
 	</Animation>
 	<Animation id="2103">
-		<Frame id="210801" time="200"/>
-		<Frame id="210901" time="200"/>
-		<Frame id="210902" time="200"/>
-		<Frame id="210901" time="200"/>
+		<Frame id="210801" time="50"/>
+		<Frame id="210901" time="50"/>
+		<Frame id="210902" time="50"/>
+		<Frame id="210901" time="50"/>
 	</Animation>
 	<Animation id="2104">
-		<Frame id="211201" time="200"/>
-		<Frame id="211202" time="200"/>
-		<Frame id="211203" time="200"/>
-		<Frame id="211204" time="200"/>
+		<Frame id="211201" time="50"/>
+		<Frame id="211202" time="50"/>
+		<Frame id="211203" time="50"/>
+		<Frame id="211204" time="50"/>
 	</Animation>
 	<Animation id="2105">
-		<Frame id="211401" time="100"/>
-		<Frame id="211402" time="100"/>
-		<Frame id="211403" time="100"/>
-		<Frame id="211404" time="100"/>
-		<Frame id="211405" time="100"/>
-		<Frame id="211406" time="100"/>
-		<Frame id="211407" time="100"/>
-		<Frame id="211408" time="100"/>
+		<Frame id="211401" time="25"/>
+		<Frame id="211402" time="25"/>
+		<Frame id="211403" time="25"/>
+		<Frame id="211404" time="25"/>
+		<Frame id="211405" time="25"/>
+		<Frame id="211406" time="25"/>
+		<Frame id="211407" time="25"/>
+		<Frame id="211408" time="25"/>
 	</Animation>
 	
 	<!--LARGE - RIGHT -->
@@ -347,26 +347,26 @@
 		<Frame id="220502" time="50"/>
 	</Animation>
 	<Animation id="2203">
-		<Frame id="220801" time="200"/>
-		<Frame id="220901" time="200"/>
-		<Frame id="220902" time="200"/>
-		<Frame id="220901" time="200"/>
+		<Frame id="220801" time="50"/>
+		<Frame id="220901" time="50"/>
+		<Frame id="220902" time="50"/>
+		<Frame id="220901" time="50"/>
 	</Animation>
 	<Animation id="2204">
-		<Frame id="221201" time="200"/>
-		<Frame id="221202" time="200"/>
-		<Frame id="221203" time="200"/>
-		<Frame id="221204" time="200"/>
+		<Frame id="221201" time="50"/>
+		<Frame id="221202" time="50"/>
+		<Frame id="221203" time="50"/>
+		<Frame id="221204" time="50"/>
 	</Animation>
 	<Animation id="2205">
-		<Frame id="221401" time="100"/>
-		<Frame id="221402" time="100"/>
-		<Frame id="221403" time="100"/>
-		<Frame id="221404" time="100"/>
-		<Frame id="221405" time="100"/>
-		<Frame id="221406" time="100"/>
-		<Frame id="221407" time="100"/>
-		<Frame id="221408" time="100"/>
+		<Frame id="221401" time="25"/>
+		<Frame id="221402" time="25"/>
+		<Frame id="221403" time="25"/>
+		<Frame id="221404" time="25"/>
+		<Frame id="221405" time="25"/>
+		<Frame id="221406" time="25"/>
+		<Frame id="221407" time="25"/>
+		<Frame id="221408" time="25"/>
 	</Animation>
 
 	<!--FIRE - LEFT -->
@@ -383,26 +383,26 @@
 		<Frame id="310502" time="50"/>
 	</Animation>
 	<Animation id="3103">
-		<Frame id="310801" time="200"/>
-		<Frame id="310901" time="200"/>
-		<Frame id="310902" time="200"/>
-		<Frame id="310901" time="200"/>
+		<Frame id="310801" time="50"/>
+		<Frame id="310901" time="50"/>
+		<Frame id="310902" time="50"/>
+		<Frame id="310901" time="50"/>
 	</Animation>
 	<Animation id="3104">
-		<Frame id="311201" time="200"/>
-		<Frame id="311202" time="200"/>
-		<Frame id="311203" time="200"/>
-		<Frame id="311204" time="200"/>
+		<Frame id="311201" time="50"/>
+		<Frame id="311202" time="50"/>
+		<Frame id="311203" time="50"/>
+		<Frame id="311204" time="50"/>
 	</Animation>
 	<Animation id="3105">
-		<Frame id="311401" time="100"/>
-		<Frame id="311402" time="100"/>
-		<Frame id="311403" time="100"/>
-		<Frame id="311404" time="100"/>
-		<Frame id="311405" time="100"/>
-		<Frame id="311406" time="100"/>
-		<Frame id="311407" time="100"/>
-		<Frame id="311408" time="100"/>
+		<Frame id="311401" time="25"/>
+		<Frame id="311402" time="25"/>
+		<Frame id="311403" time="25"/>
+		<Frame id="311404" time="25"/>
+		<Frame id="311405" time="25"/>
+		<Frame id="311406" time="25"/>
+		<Frame id="311407" time="25"/>
+		<Frame id="311408" time="25"/>
 	</Animation>
 	<Animation id="3106">
 		<Frame id="311501" time="100"/>
@@ -427,26 +427,26 @@
 		<Frame id="320502" time="50"/>
 	</Animation>
 	<Animation id="3203">
-		<Frame id="320801" time="200"/>
-		<Frame id="320901" time="200"/>
-		<Frame id="320902" time="200"/>
-		<Frame id="320901" time="200"/>
+		<Frame id="320801" time="50"/>
+		<Frame id="320901" time="50"/>
+		<Frame id="320902" time="50"/>
+		<Frame id="320901" time="50"/>
 	</Animation>
 	<Animation id="3204">
-		<Frame id="321201" time="200"/>
-		<Frame id="321202" time="200"/>
-		<Frame id="321203" time="200"/>
-		<Frame id="321204" time="200"/>
+		<Frame id="321201" time="50"/>
+		<Frame id="321202" time="50"/>
+		<Frame id="321203" time="50"/>
+		<Frame id="321204" time="50"/>
 	</Animation>
 	<Animation id="3205">
-		<Frame id="321401" time="100"/>
-		<Frame id="321402" time="100"/>
-		<Frame id="321403" time="100"/>
-		<Frame id="321404" time="100"/>
-		<Frame id="321405" time="100"/>
-		<Frame id="321406" time="100"/>
-		<Frame id="321407" time="100"/>
-		<Frame id="321408" time="100"/>
+		<Frame id="321401" time="25"/>
+		<Frame id="321402" time="25"/>
+		<Frame id="321403" time="25"/>
+		<Frame id="321404" time="25"/>
+		<Frame id="321405" time="25"/>
+		<Frame id="321406" time="25"/>
+		<Frame id="321407" time="25"/>
+		<Frame id="321408" time="25"/>
 	</Animation>
 	<Animation id="3206">
 		<Frame id="321501" time="100"/>
@@ -475,38 +475,38 @@
 		<Frame id="410602" time="50"/>
 	</Animation>
 	<Animation id="4104">
-		<Frame id="410701" time="100"/>
-		<Frame id="410702" time="100"/>
-		<Frame id="410703" time="100"/>
-		<Frame id="410702" time="100"/>
+		<Frame id="410701" time="50"/>
+		<Frame id="410702" time="50"/>
+		<Frame id="410703" time="50"/>
+		<Frame id="410702" time="50"/>
 	</Animation>
 	<Animation id="4105">
-		<Frame id="410901" time="200"/>
-		<Frame id="411001" time="200"/>
-		<Frame id="411002" time="200"/>
-		<Frame id="411001" time="200"/>
+		<Frame id="410901" time="50"/>
+		<Frame id="411001" time="50"/>
+		<Frame id="411002" time="50"/>
+		<Frame id="411001" time="50"/>
 	</Animation>
 	<Animation id="4106">
-		<Frame id="411301" time="100"/>
-		<Frame id="411302" time="100"/>
-		<Frame id="411303" time="100"/>
-		<Frame id="411304" time="100"/>
+		<Frame id="411301" time="50"/>
+		<Frame id="411302" time="50"/>
+		<Frame id="411303" time="50"/>
+		<Frame id="411304" time="50"/>
 	</Animation>
 	<Animation id="4107">
-		<Frame id="411501" time="100"/>
-		<Frame id="411502" time="100"/>
-		<Frame id="411503" time="100"/>
-		<Frame id="411504" time="100"/>
-		<Frame id="411505" time="100"/>
-		<Frame id="411506" time="100"/>
-		<Frame id="411507" time="100"/>
-		<Frame id="411508" time="100"/>
+		<Frame id="411501" time="25"/>
+		<Frame id="411502" time="25"/>
+		<Frame id="411503" time="25"/>
+		<Frame id="411504" time="25"/>
+		<Frame id="411505" time="25"/>
+		<Frame id="411506" time="25"/>
+		<Frame id="411507" time="25"/>
+		<Frame id="411508" time="25"/>
 	</Animation>
 	<Animation id="4108">
-		<Frame id="400102" time="100"/>
-		<Frame id="400101" time="100"/>
-		<Frame id="400104" time="100"/>
-		<Frame id="400103" time="100"/>
+		<Frame id="400102" time="50"/>
+		<Frame id="400101" time="50"/>
+		<Frame id="400104" time="50"/>
+		<Frame id="400103" time="50"/>
 	</Animation>
 
 	<!--RACCOON - RIGHT -->
@@ -527,40 +527,80 @@
 		<Frame id="420602" time="50"/>
 	</Animation>
 	<Animation id="4204">
-		<Frame id="420701" time="100"/>
-		<Frame id="420702" time="100"/>
-		<Frame id="420703" time="100"/>
-		<Frame id="420702" time="100"/>
+		<Frame id="420701" time="50"/>
+		<Frame id="420702" time="50"/>
+		<Frame id="420703" time="50"/>
+		<Frame id="420702" time="50"/>
 	</Animation>
 	<Animation id="4205">
-		<Frame id="420901" time="200"/>
-		<Frame id="421001" time="200"/>
-		<Frame id="421002" time="200"/>
-		<Frame id="421001" time="200"/>
+		<Frame id="420901" time="50"/>
+		<Frame id="421001" time="50"/>
+		<Frame id="421002" time="50"/>
+		<Frame id="421001" time="50"/>
 	</Animation>
 	<Animation id="4206">
-		<Frame id="421301" time="100"/>
-		<Frame id="421302" time="100"/>
-		<Frame id="421303" time="100"/>
-		<Frame id="421304" time="100"/>
+		<Frame id="421301" time="50"/>
+		<Frame id="421302" time="50"/>
+		<Frame id="421303" time="50"/>
+		<Frame id="421304" time="50"/>
 	</Animation>
 	<Animation id="4207">
-		<Frame id="421501" time="100"/>
-		<Frame id="421502" time="100"/>
-		<Frame id="421503" time="100"/>
-		<Frame id="421504" time="100"/>
-		<Frame id="421505" time="100"/>
-		<Frame id="421506" time="100"/>
-		<Frame id="421507" time="100"/>
-		<Frame id="421508" time="100"/>
+		<Frame id="421501" time="25"/>
+		<Frame id="421502" time="25"/>
+		<Frame id="421503" time="25"/>
+		<Frame id="421504" time="25"/>
+		<Frame id="421505" time="25"/>
+		<Frame id="421506" time="25"/>
+		<Frame id="421507" time="25"/>
+		<Frame id="421508" time="25"/>
 	</Animation>
 	<Animation id="4208">
-		<Frame id="400104" time="100"/>
-		<Frame id="400101" time="100"/>
-		<Frame id="400102" time="100"/>
-		<Frame id="400103" time="100"/>
+		<Frame id="400104" time="50"/>
+		<Frame id="400101" time="50"/>
+		<Frame id="400102" time="50"/>
+		<Frame id="400103" time="50"/>
+	</Animation>
+
+	<!--TRANFORMATION - LEFT -->
+	<Animation id="5101">
+		<Frame id="211501" time="50"/>
+		<Frame id="210101" time="50"/>
+		<Frame id="211501" time="50"/>
+		<Frame id="110101" time="50"/>
+	</Animation>
+	<Animation id="5102">
+		<Frame id="211501" time="50"/>
+		<Frame id="110101" time="50"/>
+		<Frame id="211501" time="50"/>
+		<Frame id="210101" time="50"/>
+	</Animation>
+	<Animation id="5103">
+		<Frame id="510101" time="50"/>
+		<Frame id="510102" time="50"/>
+		<Frame id="510103" time="50"/>
+		<Frame id="510104" time="50"/>
 	</Animation>
 	
+	<!--TRANFORMATION - RIGHT -->
+	<Animation id="5201">
+		<Frame id="221501" time="50"/>
+		<Frame id="220101" time="50"/>
+		<Frame id="221501" time="50"/>
+		<Frame id="120101" time="50"/>
+	</Animation>
+	<Animation id="5202">
+		<Frame id="221501" time="50"/>
+		<Frame id="120101" time="50"/>
+		<Frame id="221501" time="50"/>
+		<Frame id="220101" time="50"/>
+	</Animation>
+	<Animation id="5203">
+		<Frame id="520101" time="50"/>
+		<Frame id="520102" time="50"/>
+		<Frame id="520103" time="50"/>
+		<Frame id="520104" time="50"/>
+	</Animation>
+
 	<SoundClip id="1001" source="Data/SoundClip/MarioJump.wav"/>
 
 	<SmallBody render="true" width="24" height="30" offsetX="0" offsetY="15"/>
@@ -619,6 +659,8 @@
 		IDLE_THRESHOLD			="0.005"
 		DRIFT_THRESHOLD			="0.010"
 		/>
-
+	
+	<TransformationStats
+		TRANSFORMATION_TIMEOUT ="200"/>
 
 </Prefab>

@@ -84,6 +84,10 @@ void CMario::Load()
 
 	IDLE_THRESHOLD = movementStatsNode.attribute("IDLE_THRESHOLD").as_float();
 	DRIFT_THRESHOLD = movementStatsNode.attribute("DRIFT_THRESHOLD").as_float();
+
+	/* Tranformation */
+	pugi::xml_node transformationStatsNode = prefab.child("Prefab").child("TransformationStats");
+	TRANSFORMATION_TIMEOUT = transformationStatsNode.attribute("TRANSFORMATION_TIMEOUT").as_float();
 }
 
 void CMario::Start()
@@ -510,7 +514,8 @@ void CMario::Render()
 		{
 		case CMario::EPower::SMALL:
 		{
-
+			if (_left)	_animations[ANI_MARIO_GROW_LEFT]->Render(_x, _y);
+			else		_animations[ANI_MARIO_GROW_RIGHT]->Render(_x, _y);
 		}
 		break;
 		}
@@ -523,6 +528,8 @@ void CMario::Render()
 		{
 		case CMario::EPower::LARGE:
 		{
+			if (_left)	_animations[ANI_MARIO_SHRINK_LEFT]->Render(_x, _y);
+			else		_animations[ANI_MARIO_SHRINK_RIGHT]->Render(_x, _y);
 
 		}
 		break;
@@ -537,7 +544,8 @@ void CMario::Render()
 		case CMario::EPower::LARGE:
 		case CMario::EPower::RACCOON:
 		{
-
+			if (_left)	_animations[ANI_MARIO_TRANSFORM_LEFT]->Render(_x, _y);
+			else		_animations[ANI_MARIO_TRANSFORM_RIGHT]->Render(_x, _y);
 		}
 		break;
 		}
@@ -551,7 +559,8 @@ void CMario::Render()
 		case CMario::EPower::LARGE:
 		case CMario::EPower::FIRE:
 		{
-
+			if (_left)	_animations[ANI_MARIO_TRANSFORM_LEFT]->Render(_x, _y);
+			else		_animations[ANI_MARIO_TRANSFORM_RIGHT]->Render(_x, _y);
 		}
 		break;
 		}
@@ -565,7 +574,8 @@ void CMario::Render()
 		case CMario::EPower::RACCOON:
 		case CMario::EPower::FIRE:
 		{
-
+			if (_left)	_animations[ANI_MARIO_TRANSFORM_LEFT]->Render(_x, _y);
+			else		_animations[ANI_MARIO_TRANSFORM_RIGHT]->Render(_x, _y);
 		}
 		break;
 		}
@@ -578,7 +588,7 @@ void CMario::Render()
 		{
 		case CMario::EPower::SMALL:
 		{
-
+			_sprites[SPR_MARIO_S_DIE]->Render(_x, _y);
 		}
 		break;
 		}
@@ -1629,20 +1639,42 @@ void CMario::Grow(float elapsedMs)
 	{
 	case CMario::EActionStage::ENTRY:
 	{
-
+		_transformationTimeOut = TRANSFORMATION_TIMEOUT;
+		/* Animation Start */
+		{
+			_animations[ANI_MARIO_GROW_LEFT]->Play();
+			_animations[ANI_MARIO_GROW_RIGHT]->Play();
+		}
 	}
 	_actionStage = EActionStage::PROGRESS;
 	break;
 
 	case CMario::EActionStage::PROGRESS:
 	{
+		/* Animation Update */
+		{
+			_animations[ANI_MARIO_GROW_LEFT]->Update(elapsedMs);
+			_animations[ANI_MARIO_GROW_RIGHT]->Update(elapsedMs);
+		}
 
+		if (_transformationTimeOut > 0) _transformationTimeOut -= elapsedMs;
+		else
+		{
+			_transformationTimeOut = 0;
+			SetNextAction(EAction::IDLE);
+			break;
+		}
 	}
 	break;
 
 	case CMario::EActionStage::EXIT:
 	{
-
+		_power = EPower::LARGE;
+		/* Animation Stop */
+		{
+			_animations[ANI_MARIO_GROW_LEFT]->Stop();
+			_animations[ANI_MARIO_GROW_RIGHT]->Stop();
+		}
 	}
 	NextAction();
 	break;
@@ -1654,21 +1686,43 @@ void CMario::Shrink(float elapsedMs)
 	switch (_actionStage)
 	{
 	case CMario::EActionStage::ENTRY:
-	{
-
+	{		
+		_transformationTimeOut = TRANSFORMATION_TIMEOUT;
+		/* Animation Start */
+		{
+			_animations[ANI_MARIO_SHRINK_LEFT]->Play();
+			_animations[ANI_MARIO_SHRINK_RIGHT]->Play();
+		}
 	}
 	_actionStage = EActionStage::PROGRESS;
 	break;
 
 	case CMario::EActionStage::PROGRESS:
 	{
+		/* Animation Update */
+		{
+			_animations[ANI_MARIO_SHRINK_LEFT]->Update(elapsedMs);
+			_animations[ANI_MARIO_SHRINK_RIGHT]->Update(elapsedMs);
+		}
 
+		if (_transformationTimeOut > 0) _transformationTimeOut -= elapsedMs;
+		else
+		{
+			_transformationTimeOut = 0;
+			SetNextAction(EAction::IDLE);
+			break;
+		}
 	}
 	break;
 
 	case CMario::EActionStage::EXIT:
 	{
-
+		_power = EPower::SMALL;
+		/* Animation Stop */
+		{
+			_animations[ANI_MARIO_SHRINK_LEFT]->Stop();
+			_animations[ANI_MARIO_SHRINK_RIGHT]->Stop();
+		}
 	}
 	NextAction();
 	break;
@@ -1681,20 +1735,42 @@ void CMario::PowerFire(float elapsedMs)
 	{
 	case CMario::EActionStage::ENTRY:
 	{
-
+		_transformationTimeOut = TRANSFORMATION_TIMEOUT;
+		/* Animation Start */
+		{
+			_animations[ANI_MARIO_TRANSFORM_LEFT]->Play();
+			_animations[ANI_MARIO_TRANSFORM_RIGHT]->Play();
+		}
 	}
 	_actionStage = EActionStage::PROGRESS;
 	break;
 
 	case CMario::EActionStage::PROGRESS:
 	{
+		/* Animation Update */
+		{
+			_animations[ANI_MARIO_TRANSFORM_LEFT]->Update(elapsedMs);
+			_animations[ANI_MARIO_TRANSFORM_RIGHT]->Update(elapsedMs);
+		}
 
+		if (_transformationTimeOut > 0) _transformationTimeOut -= elapsedMs;
+		else
+		{
+			_transformationTimeOut = 0;
+			SetNextAction(EAction::IDLE);
+			break;
+		}
 	}
 	break;
 
 	case CMario::EActionStage::EXIT:
 	{
-
+		_power = EPower::FIRE;
+		/* Animation Stop */
+		{
+			_animations[ANI_MARIO_TRANSFORM_LEFT]->Stop();
+			_animations[ANI_MARIO_TRANSFORM_RIGHT]->Stop();
+		}
 	}
 	NextAction();
 	break;
@@ -1707,20 +1783,42 @@ void CMario::PowerTail(float elapsedMs)
 	{
 	case CMario::EActionStage::ENTRY:
 	{
-
+		_transformationTimeOut = TRANSFORMATION_TIMEOUT;
+		/* Animation Start */
+		{
+			_animations[ANI_MARIO_TRANSFORM_LEFT]->Play();
+			_animations[ANI_MARIO_TRANSFORM_RIGHT]->Play();
+		}
 	}
 	_actionStage = EActionStage::PROGRESS;
 	break;
 
 	case CMario::EActionStage::PROGRESS:
 	{
+		/* Animation Update */
+		{
+			_animations[ANI_MARIO_TRANSFORM_LEFT]->Update(elapsedMs);
+			_animations[ANI_MARIO_TRANSFORM_RIGHT]->Update(elapsedMs);
+		}
 
+		if (_transformationTimeOut > 0) _transformationTimeOut -= elapsedMs;
+		else
+		{
+			_transformationTimeOut = 0;
+			SetNextAction(EAction::IDLE);
+			break;
+		}
 	}
 	break;
 
 	case CMario::EActionStage::EXIT:
 	{
-
+		_power = EPower::RACCOON;
+		/* Animation Stop */
+		{
+			_animations[ANI_MARIO_TRANSFORM_LEFT]->Stop();
+			_animations[ANI_MARIO_TRANSFORM_RIGHT]->Stop();
+		}
 	}
 	NextAction();
 	break;
@@ -1734,20 +1832,42 @@ void CMario::PowerDown(float elapsedMs)
 	{
 	case CMario::EActionStage::ENTRY:
 	{
-
+		_transformationTimeOut = TRANSFORMATION_TIMEOUT;
+		/* Animation Start */
+		{
+			_animations[ANI_MARIO_TRANSFORM_LEFT]->Play();
+			_animations[ANI_MARIO_TRANSFORM_RIGHT]->Play();
+		}
 	}
 	_actionStage = EActionStage::PROGRESS;
 	break;
 
 	case CMario::EActionStage::PROGRESS:
 	{
+		/* Animation Update */
+		{
+			_animations[ANI_MARIO_TRANSFORM_LEFT]->Update(elapsedMs);
+			_animations[ANI_MARIO_TRANSFORM_RIGHT]->Update(elapsedMs);
+		}
 
+		if (_transformationTimeOut > 0) _transformationTimeOut -= elapsedMs;
+		else
+		{
+			_transformationTimeOut = 0;
+			SetNextAction(EAction::IDLE);
+			break;
+		}
 	}
 	break;
 
 	case CMario::EActionStage::EXIT:
 	{
-
+		_power = EPower::LARGE;
+		/* Animation Stop */
+		{
+			_animations[ANI_MARIO_TRANSFORM_LEFT]->Stop();
+			_animations[ANI_MARIO_TRANSFORM_RIGHT]->Stop();
+		}
 	}
 	NextAction();
 	break;
@@ -1826,10 +1946,28 @@ void CMario::CameraControl()
 
 void CMario::PowerControlCheat()
 {
-	if (_game->IsKeyPressed(HOTKEY_SMALL)) _power = EPower::SMALL;
-	else if (_game->IsKeyPressed(HOTKEY_LARGE)) _power = EPower::LARGE;
-	else if (_game->IsKeyPressed(HOTKEY_FIRE)) _power = EPower::FIRE;
-	else if (_game->IsKeyPressed(HOTKEY_RACCOON)) _power = EPower::RACCOON;
+	if (_game->IsKeyPressed(HOTKEY_SMALL))
+	{
+		if (_power == EPower::LARGE) 
+			SetNextAction(EAction::SHRINK);
+	}
+	else if (_game->IsKeyPressed(HOTKEY_LARGE))
+	{
+		if (_power == EPower::SMALL) 
+			SetNextAction(EAction::GROW);
+		else if (_power == EPower::FIRE || _power == EPower::RACCOON)
+			SetNextAction(EAction::POWER_DOWN);
+	}
+	else if (_game->IsKeyPressed(HOTKEY_FIRE))
+	{
+		if (_power == EPower::LARGE || _power == EPower::RACCOON)
+			SetNextAction(EAction::POWER_FIRE);
+	}
+	else if (_game->IsKeyPressed(HOTKEY_RACCOON))
+	{
+		if (_power == EPower::LARGE || _power == EPower::FIRE)
+			SetNextAction(EAction::POWER_TAIL);
+	}
 }
 
 #pragma endregion

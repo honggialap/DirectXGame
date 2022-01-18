@@ -390,6 +390,8 @@ public:
 	};
 	EPower _power = EPower::SMALL;
 
+#pragma region MOVEMENT
+
 	/* Movement Stats */
 	float GRAVITY = 0;
 	float DRAG = 0;
@@ -427,7 +429,7 @@ public:
 	/* Movement Logic */
 	bool _left = false;
 	bool _ground = false;
-	
+
 	bool _fullSpeed = false;
 	float _walkSpeedFactor = 0;
 	float _momentum = 0;
@@ -443,6 +445,20 @@ public:
 	bool _fly = false;
 	float _flyCountdown = 0;
 	float _flyTimeOut = 0;
+
+#pragma endregion
+
+#pragma region TRANSFORMATION
+
+	/* Stats */
+	float TRANSFORMATION_TIMEOUT = 0;
+
+	/* Logic */
+	float _transformationTimeOut = 0;
+
+#pragma endregion
+
+	
 
 #pragma endregion
 
