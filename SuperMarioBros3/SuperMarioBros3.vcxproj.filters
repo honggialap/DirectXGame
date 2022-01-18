@@ -516,6 +516,9 @@
     <Xml Include="Data\Asset\Character\Piranha\RedPiranha.xml">
       <Filter>Actor\Character\Pirannha</Filter>
     </Xml>
+    <Xml Include="Data\Asset\Character\Goomba\RedGoomba.xml">
+      <Filter>Actor\Character\Goomba</Filter>
+    </Xml>
   </ItemGroup>
   <ItemGroup>
     <Image Include="Data\Texture\Mario.png">

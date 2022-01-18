@@ -8,8 +8,9 @@
 
 #pragma region DEFINE
 /* SPRITE ID */
-/* ANIMATION ID */
-/* SOUNDCLIP ID */
+#define SPR_BBOX					999901
+#define SPR_MICRO_GOOMBA_LEFT		110101
+#define SPR_MICRO_GOOMBA_RIGHT		120101
 #pragma endregion
 
 class CMicroGoomba : public CGameObject

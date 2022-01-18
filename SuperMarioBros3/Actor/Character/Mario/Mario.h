@@ -7,7 +7,7 @@
 #pragma endregion
 
 #pragma region DEFINE
-/* SPRITE ID - {state - direction - action - sequence} */
+/* SPRITE ID */
 
 // BBOX
 #define SPR_MARIO_S_BBOX				999901
@@ -392,7 +392,7 @@ public:
 
 #pragma region MOVEMENT
 
-	/* Movement Stats */
+	/* Stats */
 	float GRAVITY = 0;
 	float DRAG = 0;
 
@@ -426,7 +426,7 @@ public:
 	float IDLE_THRESHOLD = 0;
 	float DRIFT_THRESHOLD = 0;
 
-	/* Movement Logic */
+	/* Logic */
 	bool _left = false;
 	bool _ground = false;
 

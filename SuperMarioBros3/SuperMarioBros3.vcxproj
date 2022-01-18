@@ -206,6 +206,7 @@
     <Xml Include="Data\Asset\Character\Goomba\Goomba.xml" />
     <Xml Include="Data\Asset\Character\Goomba\MicroGoomba.xml" />
     <Xml Include="Data\Asset\Character\Goomba\ParaGoomba.xml" />
+    <Xml Include="Data\Asset\Character\Goomba\RedGoomba.xml" />
     <Xml Include="Data\Asset\Character\Goomba\RedParaGoomba.xml" />
     <Xml Include="Data\Asset\Character\Koopa\Koopa.xml" />
     <Xml Include="Data\Asset\Character\Koopa\KoopaSensor.xml" />

@@ -21,7 +21,7 @@
 	<Sprite id="310101" textureId="1002" left="2"	top="146" width="48" height="32" offsetX="0" offsetY="24"/>
 	<Sprite id="310102" textureId="1002" left="54"	top="146" width="48" height="32" offsetX="0" offsetY="24"/>
 
-	
+
 	<!--ANIMATIONS-->
 	<!--GOOMBA-->
 	<Animation id="1101">
@@ -32,7 +32,7 @@
 		<Frame id="120101" time="100"/>
 		<Frame id="120102" time="100"/>
 	</Animation>
-	
+
 	<!--RED GOOMBA-->
 	<Animation id="2101">
 		<Frame id="210101" time="100"/>
@@ -42,7 +42,7 @@
 		<Frame id="220101" time="100"/>
 		<Frame id="220102" time="100"/>
 	</Animation>
-	
+
 	<!--WING-->
 	<Animation id="3101">
 		<Frame id="310101" time="100"/>
@@ -56,14 +56,14 @@
 	<!--BODY-->
 	<Body render="true" width="28" height="28" offsetX="0" offsetY="14"/>
 
-	<!--STATS-->	
+	<!--STATS-->
 	<LogicStats
-		type						="0"
+		type						="1"
 		wing						="false"
 		targetName					="mario"
 		DECAY_TIMEOUT				="200"
 		/>
-	
+
 	<MovementStats
 		GRAVITY						="0.001"
 		WALK_SPEED					="0.1"
@@ -82,5 +82,5 @@
 		/>
 
 	<MicroGoomba actor="20202" name="micro" source="Data/Asset/Character/Goomba/MicroGoomba.xml" />
-	
+
 </Prefab>
