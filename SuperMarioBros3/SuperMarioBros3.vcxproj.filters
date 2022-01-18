@@ -55,6 +55,33 @@
     <ClCompile Include="Actor\Prop\Platform\Platform.cpp">
       <Filter>Actor\Prop\Platform</Filter>
     </ClCompile>
+    <ClCompile Include="Actor\Character\Goomba\Goomba.cpp">
+      <Filter>Actor\Character\Goomba</Filter>
+    </ClCompile>
+    <ClCompile Include="Actor\Character\Goomba\MicroGoomba.cpp">
+      <Filter>Actor\Character\Goomba</Filter>
+    </ClCompile>
+    <ClCompile Include="Actor\Character\Koopa\Koopa.cpp">
+      <Filter>Actor\Character\Koopa</Filter>
+    </ClCompile>
+    <ClCompile Include="Actor\Character\Koopa\KoopaSensor.cpp">
+      <Filter>Actor\Character\Koopa</Filter>
+    </ClCompile>
+    <ClCompile Include="Actor\Character\Venus\Fireball.cpp">
+      <Filter>Actor\Character\Venus</Filter>
+    </ClCompile>
+    <ClCompile Include="Actor\Character\Venus\Venus.cpp">
+      <Filter>Actor\Character\Venus</Filter>
+    </ClCompile>
+    <ClCompile Include="Actor\Character\Venus\VenusSensor.cpp">
+      <Filter>Actor\Character\Venus</Filter>
+    </ClCompile>
+    <ClCompile Include="Actor\Character\Piranha\Piranha.cpp">
+      <Filter>Actor\Character\Pirannha</Filter>
+    </ClCompile>
+    <ClCompile Include="Actor\Character\Piranha\PiranhaSensor.cpp">
+      <Filter>Actor\Character\Pirannha</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Engine\Game.h">
@@ -113,6 +140,33 @@
     </ClInclude>
     <ClInclude Include="Data\Asset\Prop\Platform\PlatformS11.xml">
       <Filter>Actor\Prop\Platform</Filter>
+    </ClInclude>
+    <ClInclude Include="Actor\Character\Goomba\Goomba.h">
+      <Filter>Actor\Character\Goomba</Filter>
+    </ClInclude>
+    <ClInclude Include="Actor\Character\Goomba\MicroGoomba.h">
+      <Filter>Actor\Character\Goomba</Filter>
+    </ClInclude>
+    <ClInclude Include="Actor\Character\Koopa\Koopa.h">
+      <Filter>Actor\Character\Koopa</Filter>
+    </ClInclude>
+    <ClInclude Include="Actor\Character\Koopa\KoopaSensor.h">
+      <Filter>Actor\Character\Koopa</Filter>
+    </ClInclude>
+    <ClInclude Include="Actor\Character\Venus\Fireball.h">
+      <Filter>Actor\Character\Venus</Filter>
+    </ClInclude>
+    <ClInclude Include="Actor\Character\Venus\Venus.h">
+      <Filter>Actor\Character\Venus</Filter>
+    </ClInclude>
+    <ClInclude Include="Actor\Character\Venus\VenusSensor.h">
+      <Filter>Actor\Character\Venus</Filter>
+    </ClInclude>
+    <ClInclude Include="Actor\Character\Piranha\Piranha.h">
+      <Filter>Actor\Character\Pirannha</Filter>
+    </ClInclude>
+    <ClInclude Include="Actor\Character\Piranha\PiranhaSensor.h">
+      <Filter>Actor\Character\Pirannha</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -414,12 +468,69 @@
     <Xml Include="Data\Scene\Sandbox.xml">
       <Filter>Scene</Filter>
     </Xml>
+    <Xml Include="Data\Asset\Character\Goomba\Goomba.xml">
+      <Filter>Actor\Character\Goomba</Filter>
+    </Xml>
+    <Xml Include="Data\Asset\Character\Goomba\MicroGoomba.xml">
+      <Filter>Actor\Character\Goomba</Filter>
+    </Xml>
+    <Xml Include="Data\Asset\Character\Goomba\ParaGoomba.xml">
+      <Filter>Actor\Character\Goomba</Filter>
+    </Xml>
+    <Xml Include="Data\Asset\Character\Goomba\RedParaGoomba.xml">
+      <Filter>Actor\Character\Goomba</Filter>
+    </Xml>
+    <Xml Include="Data\Asset\Character\Koopa\Koopa.xml">
+      <Filter>Actor\Character\Koopa</Filter>
+    </Xml>
+    <Xml Include="Data\Asset\Character\Koopa\KoopaSensor.xml">
+      <Filter>Actor\Character\Koopa</Filter>
+    </Xml>
+    <Xml Include="Data\Asset\Character\Koopa\ParaKoopa.xml">
+      <Filter>Actor\Character\Koopa</Filter>
+    </Xml>
+    <Xml Include="Data\Asset\Character\Koopa\RedKoopa.xml">
+      <Filter>Actor\Character\Koopa</Filter>
+    </Xml>
+    <Xml Include="Data\Asset\Character\Koopa\RedParaKoopa.xml">
+      <Filter>Actor\Character\Koopa</Filter>
+    </Xml>
+    <Xml Include="Data\Asset\Character\Venus\Fireball.xml">
+      <Filter>Actor\Character\Venus</Filter>
+    </Xml>
+    <Xml Include="Data\Asset\Character\Venus\RedVenus.xml">
+      <Filter>Actor\Character\Venus</Filter>
+    </Xml>
+    <Xml Include="Data\Asset\Character\Venus\Venus.xml">
+      <Filter>Actor\Character\Venus</Filter>
+    </Xml>
+    <Xml Include="Data\Asset\Character\Venus\VenusSensor.xml">
+      <Filter>Actor\Character\Venus</Filter>
+    </Xml>
+    <Xml Include="Data\Asset\Character\Piranha\Piranha.xml">
+      <Filter>Actor\Character\Pirannha</Filter>
+    </Xml>
+    <Xml Include="Data\Asset\Character\Piranha\PiranhaSensor.xml">
+      <Filter>Actor\Character\Pirannha</Filter>
+    </Xml>
+    <Xml Include="Data\Asset\Character\Piranha\RedPiranha.xml">
+      <Filter>Actor\Character\Pirannha</Filter>
+    </Xml>
   </ItemGroup>
   <ItemGroup>
     <Image Include="Data\Texture\Mario.png">
       <Filter>Resource\Texture</Filter>
     </Image>
     <Image Include="Data\Texture\BBox.png">
+      <Filter>Resource\Texture</Filter>
+    </Image>
+    <Image Include="Data\Texture\Koopa.png">
+      <Filter>Resource\Texture</Filter>
+    </Image>
+    <Image Include="Data\Texture\Goomba.png">
+      <Filter>Resource\Texture</Filter>
+    </Image>
+    <Image Include="Data\Texture\Plant.png">
       <Filter>Resource\Texture</Filter>
     </Image>
   </ItemGroup>

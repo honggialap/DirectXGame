@@ -51,6 +51,9 @@
 	<!-- Textures -->
 	<Texture id="0" source="Data/Texture/BBox.png"/>
 	<Texture id="1001" source="Data/Texture/Mario.png"/>
+	<Texture id="1002" source="Data/Texture/Goomba.png"/>
+	<Texture id="1003" source="Data/Texture/Koopa.png"/>
+	<Texture id="1004" source="Data/Texture/Plant.png"/>
 
 	<!-- Scenes -->
 	<Scene id="0" source="Data/Scene/Sandbox.xml"/>

@@ -141,9 +141,18 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Actor\Character\Goomba\Goomba.cpp" />
+    <ClCompile Include="Actor\Character\Goomba\MicroGoomba.cpp" />
+    <ClCompile Include="Actor\Character\Koopa\Koopa.cpp" />
+    <ClCompile Include="Actor\Character\Koopa\KoopaSensor.cpp" />
     <ClCompile Include="Actor\Character\Mario\Mario.cpp" />
     <ClCompile Include="Actor\Character\Mario\MarioFireball.cpp" />
     <ClCompile Include="Actor\Character\Mario\MarioTail.cpp" />
+    <ClCompile Include="Actor\Character\Piranha\Piranha.cpp" />
+    <ClCompile Include="Actor\Character\Piranha\PiranhaSensor.cpp" />
+    <ClCompile Include="Actor\Character\Venus\Fireball.cpp" />
+    <ClCompile Include="Actor\Character\Venus\Venus.cpp" />
+    <ClCompile Include="Actor\Character\Venus\VenusSensor.cpp" />
     <ClCompile Include="Actor\Prop\Platform\Platform.cpp" />
     <ClCompile Include="Engine\Component\Animation.cpp" />
     <ClCompile Include="Engine\Framework\Application.cpp" />
@@ -161,9 +170,18 @@
     <ClCompile Include="SuperMarioBros3.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Actor\Character\Goomba\Goomba.h" />
+    <ClInclude Include="Actor\Character\Goomba\MicroGoomba.h" />
+    <ClInclude Include="Actor\Character\Koopa\Koopa.h" />
+    <ClInclude Include="Actor\Character\Koopa\KoopaSensor.h" />
     <ClInclude Include="Actor\Character\Mario\Mario.h" />
     <ClInclude Include="Actor\Character\Mario\MarioFireball.h" />
     <ClInclude Include="Actor\Character\Mario\MarioTail.h" />
+    <ClInclude Include="Actor\Character\Piranha\Piranha.h" />
+    <ClInclude Include="Actor\Character\Piranha\PiranhaSensor.h" />
+    <ClInclude Include="Actor\Character\Venus\Fireball.h" />
+    <ClInclude Include="Actor\Character\Venus\Venus.h" />
+    <ClInclude Include="Actor\Character\Venus\VenusSensor.h" />
     <ClInclude Include="Actor\Prop\Platform\Platform.h" />
     <ClInclude Include="Data\Asset\Prop\Platform\PlatformS11.xml" />
     <ClInclude Include="Engine\Component\Animation.h" />
@@ -185,9 +203,25 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <Xml Include="Data\Asset\Character\Goomba\Goomba.xml" />
+    <Xml Include="Data\Asset\Character\Goomba\MicroGoomba.xml" />
+    <Xml Include="Data\Asset\Character\Goomba\ParaGoomba.xml" />
+    <Xml Include="Data\Asset\Character\Goomba\RedParaGoomba.xml" />
+    <Xml Include="Data\Asset\Character\Koopa\Koopa.xml" />
+    <Xml Include="Data\Asset\Character\Koopa\KoopaSensor.xml" />
+    <Xml Include="Data\Asset\Character\Koopa\ParaKoopa.xml" />
+    <Xml Include="Data\Asset\Character\Koopa\RedKoopa.xml" />
+    <Xml Include="Data\Asset\Character\Koopa\RedParaKoopa.xml" />
     <Xml Include="Data\Asset\Character\Mario\Mario.xml" />
     <Xml Include="Data\Asset\Character\Mario\MarioFireball.xml" />
     <Xml Include="Data\Asset\Character\Mario\MarioTail.xml" />
+    <Xml Include="Data\Asset\Character\Piranha\Piranha.xml" />
+    <Xml Include="Data\Asset\Character\Piranha\PiranhaSensor.xml" />
+    <Xml Include="Data\Asset\Character\Piranha\RedPiranha.xml" />
+    <Xml Include="Data\Asset\Character\Venus\Fireball.xml" />
+    <Xml Include="Data\Asset\Character\Venus\RedVenus.xml" />
+    <Xml Include="Data\Asset\Character\Venus\Venus.xml" />
+    <Xml Include="Data\Asset\Character\Venus\VenusSensor.xml" />
     <Xml Include="Data\Asset\Prop\Platform\PlatformS116.xml" />
     <Xml Include="Data\Asset\Prop\Platform\PlatformH11.xml" />
     <Xml Include="Data\Asset\Prop\Platform\PlatformH116.xml" />
@@ -210,7 +244,10 @@
   </ItemGroup>
   <ItemGroup>
     <Image Include="Data\Texture\BBox.png" />
+    <Image Include="Data\Texture\Goomba.png" />
+    <Image Include="Data\Texture\Koopa.png" />
     <Image Include="Data\Texture\Mario.png" />
+    <Image Include="Data\Texture\Plant.png" />
   </ItemGroup>
   <ItemGroup>
     <Media Include="Data\SoundClip\MarioJump.wav" />
