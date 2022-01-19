@@ -124,6 +124,7 @@ void CGoomba::Render()
 	case CGoomba::EAction::TAKEOFF:
 	{
 		if (_wing) _animations[ANI_GOOMBA_WING_FLAP_FAST]->Render(_x, _y);
+		
 		switch (_type)
 		{
 		case CGoomba::EType::BROWN:

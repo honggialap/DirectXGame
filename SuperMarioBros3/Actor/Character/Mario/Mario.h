@@ -390,75 +390,71 @@ public:
 	};
 	EPower _power = EPower::SMALL;
 
-#pragma region MOVEMENT
-
-	/* Stats */
+	/* Gravity */
 	float GRAVITY = 0;
 	float DRAG = 0;
+	bool _ground = false;
 
+	/* Move */
 	float WALK_ACCELERATION = 0;
 	float WALK_SPEED_LIMIT = 0;
 	float RUN_ACCELERATION = 0;
 	float RUN_SPEED_LIMIT = 0;
 	float FULL_ACCELERATION = 0;
 	float FULL_SPEED_LIMIT = 0;
+	float IDLE_THRESHOLD = 0;
+	float DRIFT_THRESHOLD = 0;
+	bool _left = false;
+	bool _fullSpeed = false;
+	float _walkSpeedFactor = 0;
 
+	/* Momentum */
 	float MOMENTUM_INCREASE_RATE = 0;
 	float MOMENTUM_DECREASE_RATE = 0;
 	float MOMENTUM_THRESHOLD = 0;
 	float MOMENTUM_LIMIT = 0;
+	float _momentum = 0;
 
+	/* Jump */
 	float JUMP_FORCE = 0;
 	float FULL_SPEED_JUMP_FORCE = 0;
 	float JUMP_LIMIT = 0;
-
-	float HOVER_GRAVITY = 0;
-	float HOVER_COUNTDOWN = 0;
-	float HOVER_ACCELERATION = 0;
-	float HOVER_SPEED_LIMIT = 0;
-
-	float FLY_GRAVITY = 0;
-	float FLY_COUNTDOWN = 0;
-	float FLY_TIMEOUT_LIMIT = 0;
-	float FLY_ACCELERATION = 0;
-	float FLY_SPEED_LIMIT = 0;
-
-	float IDLE_THRESHOLD = 0;
-	float DRIFT_THRESHOLD = 0;
-
-	/* Logic */
-	bool _left = false;
-	bool _ground = false;
-
-	bool _fullSpeed = false;
-	float _walkSpeedFactor = 0;
-	float _momentum = 0;
-
 	bool _fall = false;
 	bool _falling = false;
 	float _jumpLimit = 0;
 	bool _crounchJump = false;
 
+	/* Hover */
+	float HOVER_GRAVITY = 0;
+	float HOVER_COUNTDOWN = 0;
+	float HOVER_ACCELERATION = 0;
+	float HOVER_SPEED_LIMIT = 0;
 	bool _hover = false;
 	float _hoverCountdown = 0;
 
+	/* Fly */
+	float FLY_GRAVITY = 0;
+	float FLY_COUNTDOWN = 0;
+	float FLY_TIMEOUT_LIMIT = 0;
+	float FLY_ACCELERATION = 0;
+	float FLY_SPEED_LIMIT = 0;
 	bool _fly = false;
 	float _flyCountdown = 0;
-	float _flyTimeOut = 0;
+	float _flyTimeout = 0;
 
-#pragma endregion
+	/* Invincible */
+	float INVINCIBLE_TIMEOUT = 0;
+	float _invincibleTimeout = 0;
+	bool _invincible = false;
+	bool _blink = false;
 
-#pragma region TRANSFORMATION
+	/* Hit */
+	float HIT_DEFLECT_HORIZONTAL_FORCE = 0;
+	float HIT_DEFLECT_VERTICAL_FORCE = 0;
 
-	/* Stats */
+	/* Tranformation */
 	float TRANSFORMATION_TIMEOUT = 0;
-
-	/* Logic */
-	float _transformationTimeOut = 0;
-
-#pragma endregion
-
-	
+	float _transformationTimeout = 0;
 
 #pragma endregion
 
@@ -547,6 +543,9 @@ public:
 	void UpdateGravity(float elapsedMs);
 	void UpdateMomentum(float elapsedMs);
 	void UpdateFlyTimeout(float elapsedMs);
+	void UpdateInvincible(float elapsedMs);
+
+	void Hit();
 
 	// temporary function for development
 	void CameraControl();
@@ -561,6 +560,9 @@ public:
 
 	void OnNoCollision(float elapsedMs);
 	void OnCollisionWith(pCollision collision);
+
+	void OnCollisionWithGoomba(pCollision collision);
+
 	void OnCollisionWithPlatform(pCollision collision);
 
 #pragma endregion
