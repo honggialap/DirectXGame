@@ -1,26 +1,517 @@
 #pragma region INCLUDE
 #include "Koopa.h"
+#include "../../../SuperMarioBros3.h"
+
+#include "../../Character/Goomba/Goomba.h"
+#include "../../Prop/Platform/Platform.h"
+
+#include "../../../Engine/Framework/Debug.h"
 #pragma endregion
 
 void CKoopa::Load()
 {
+	CGameObject::Load();
+
+	/* Read file */
+	pugi::xml_document prefab;
+	prefab.load_file(_source.c_str());
+
+	/* Body */
+	pugi::xml_node body = prefab.child("Prefab").child("Body");
+	_renderBody = body.attribute("render").as_bool();
+	BODY_WIDTH = body.attribute("width").as_float();
+	BODY_HEIGHT = body.attribute("height").as_float();
+	BODY_OFFSETX = body.attribute("offsetX").as_float();
+	BODY_OFFSETY = body.attribute("offsetY").as_float();
+
+	/* Type */
+	pugi::xml_node type = prefab.child("Prefab").child("Type");
+	_type = EType(type.attribute("type").as_int());
+	_wing = type.attribute("wing").as_bool();
+
+	/* Sensor */
+	pugi::xml_node sensor = prefab.child("Prefab").child("Sensor");
+	std::string sensorName = _name + sensor.attribute("name").as_string();
+	_sensor = dynamic_cast<pKoopaSensor>(
+		_game->Create(
+			_scene,
+			sensor.attribute("actor").as_int(),
+			sensorName,
+			sensor.attribute("source").as_string(),
+			_x, _y, _gx, _gy, _layer
+		)
+		);
+
+	/* Gravity */
+	pugi::xml_node gravity = prefab.child("Prefab").child("Gravity");
+	GRAVITY = gravity.attribute("GRAVITY").as_float();
+
+	/* Move */
+	pugi::xml_node move = prefab.child("Prefab").child("Move");
+	WALK_SPEED = move.attribute("WALK_SPEED").as_float();
+
+	/* Jump */
+	pugi::xml_node jump = prefab.child("Prefab").child("Jump");
+	JUMP_FORCE = jump.attribute("JUMP_FORCE").as_float();
+
+	/* Hit */
+	pugi::xml_node hit = prefab.child("Prefab").child("Hit");
+	HORIZONTAL_DEFLECT_FORCE = hit.attribute("HORIZONTAL_DEFLECT_FORCE").as_float();
+	VERTICAL_DEFLECT_FORCE = hit.attribute("VERTICAL_DEFLECT_FORCE").as_float();
+	DECAY_TIMEOUT = hit.attribute("DECAY_TIMEOUT").as_float();
 }
 
 void CKoopa::Start()
 {
+	CGameObject::Start();
 }
 
 void CKoopa::Update(float elapsedMs)
 {
+	if (!_start) Start();
+
+	UpdateGravity(elapsedMs);
+	UpdateSensor(elapsedMs);
+
+	std::vector<pGameObject> collidables = _game->GetLocal(_id);
+	_collider->Process(elapsedMs, &collidables);
+
+	HandleAction(elapsedMs);
 }
 
 void CKoopa::Render()
 {
+	switch (_action)
+	{
+	case CKoopa::EAction::MOVE:
+	{
+		switch (_type)
+		{
+		case CKoopa::EType::GREEN:
+		{
+			if (_left)	_animations[ANI_KOOPA_WALK_UP_LEFT]->Render(_x, _y);
+			else		_animations[ANI_KOOPA_WALK_UP_RIGHT]->Render(_x, _y);
+		}
+		break;
+
+		case CKoopa::EType::RED:
+		{
+			if (_left)	_animations[ANI_RED_KOOPA_WALK_UP_LEFT]->Render(_x, _y);
+			else		_animations[ANI_RED_KOOPA_WALK_UP_RIGHT]->Render(_x, _y);
+		}
+		break;
+		}
+	}
+	break;
+
+	case CKoopa::EAction::JUMP:
+	{
+		switch (_type)
+		{
+		case CKoopa::EType::GREEN:
+		{
+			if (_left)	_animations[ANI_KOOPA_WALK_UP_LEFT]->Render(_x, _y);
+			else		_animations[ANI_KOOPA_WALK_UP_RIGHT]->Render(_x, _y);
+		}
+		break;
+
+		case CKoopa::EType::RED:
+		{
+			if (_left)	_animations[ANI_RED_KOOPA_WALK_UP_LEFT]->Render(_x, _y);
+			else		_animations[ANI_RED_KOOPA_WALK_UP_RIGHT]->Render(_x, _y);
+		}
+		break;
+		}
+
+		if (_wing)
+		{
+			if (_left)	_animations[ANI_KOOPA_WING_FLAP_SLOW_LEFT]->Render(_x, _y);
+			else		_animations[ANI_KOOPA_WING_FLAP_SLOW_RIGHT]->Render(_x, _y);
+		}
+	}
+	break;
+
+	case CKoopa::EAction::FLY:
+	{
+		switch (_type)
+		{
+		case CKoopa::EType::GREEN:
+		{
+			if (_left)	_animations[ANI_KOOPA_WALK_UP_LEFT]->Render(_x, _y);
+			else		_animations[ANI_KOOPA_WALK_UP_RIGHT]->Render(_x, _y);
+		}
+		break;
+
+		case CKoopa::EType::RED:
+		{
+			if (_left)	_animations[ANI_RED_KOOPA_WALK_UP_LEFT]->Render(_x, _y);
+			else		_animations[ANI_RED_KOOPA_WALK_UP_RIGHT]->Render(_x, _y);
+		}
+		break;
+		}
+
+		if (_wing)
+		{
+			if (_vy > 0)
+			{
+				if (_left)	_animations[ANI_KOOPA_WING_FLAP_FAST_LEFT]->Render(_x, _y);
+				else		_animations[ANI_KOOPA_WING_FLAP_FAST_RIGHT]->Render(_x, _y);
+			}
+			else
+			{
+				if (_left)	_animations[ANI_KOOPA_WING_FLAP_SLOW_LEFT]->Render(_x, _y);
+				else		_animations[ANI_KOOPA_WING_FLAP_SLOW_RIGHT]->Render(_x, _y);
+			}
+		}
+	}
+	break;
+
+	case CKoopa::EAction::SHELL:
+	{
+		switch (_type)
+		{
+		case CKoopa::EType::GREEN:
+		{
+			if (_kick)
+			{
+				if (_up)
+				{
+					if (_left)	_animations[ANI_KOOPA_SHELL_SPIN_UP_LEFT]->Render(_x, _y);
+					else		_animations[ANI_KOOPA_SHELL_SPIN_UP_RIGHT]->Render(_x, _y);
+				}
+				else
+				{
+					if (_left)	_animations[ANI_KOOPA_SHELL_SPIN_DOWN_LEFT]->Render(_x, _y);
+					else		_animations[ANI_KOOPA_SHELL_SPIN_DOWN_RIGHT]->Render(_x, _y);
+				}
+			}
+			else
+			{
+				if (_up)	_sprites[SPR_KOOPA_SHELL1_UP]->Render(_x, _y);
+				else		_sprites[SPR_KOOPA_SHELL1_DOWN]->Render(_x, _y);
+			}
+		}
+		break;
+
+		case CKoopa::EType::RED:
+		{
+			if (_kick)
+			{
+				if (_up)
+				{
+					if (_left)	_animations[ANI_RED_KOOPA_SHELL_SPIN_UP_LEFT]->Render(_x, _y);
+					else		_animations[ANI_RED_KOOPA_SHELL_SPIN_UP_RIGHT]->Render(_x, _y);
+				}
+				else
+				{
+					if (_left)	_animations[ANI_RED_KOOPA_SHELL_SPIN_DOWN_LEFT]->Render(_x, _y);
+					else		_animations[ANI_RED_KOOPA_SHELL_SPIN_DOWN_RIGHT]->Render(_x, _y);
+				}
+			}
+			else
+			{
+				if (_up)	_sprites[SPR_RED_KOOPA_SHELL1_UP]->Render(_x, _y);
+				else		_sprites[SPR_RED_KOOPA_SHELL1_DOWN]->Render(_x, _y);
+			}
+		}
+		break;
+		}
+	}
+	break;
+
+	case CKoopa::EAction::RETRACT:
+	{
+
+	}
+	break;
+
+	case CKoopa::EAction::DIE:
+	{
+
+	}
+	break;
+
+	case CKoopa::EAction::THROWN:
+	{
+
+	}
+	break;
+
+	case CKoopa::EAction::DEADZONED:
+	{
+
+	}
+	break;
+
+	}
 }
+
+#pragma region STATE MACHINE
+
+void CKoopa::HandleAction(float elapsedMs)
+{
+	switch (_action)
+	{
+	case CKoopa::EAction::MOVE:
+		Move(elapsedMs);
+		break;
+
+	case CKoopa::EAction::JUMP:
+		Jump(elapsedMs);
+		break;
+
+	case CKoopa::EAction::FLY:
+		Fly(elapsedMs);
+		break;
+
+	case CKoopa::EAction::SHELL:
+		Shell(elapsedMs);
+		break;
+
+	case CKoopa::EAction::RETRACT:
+		Retract(elapsedMs);
+		break;
+
+	case CKoopa::EAction::DIE:
+		Die(elapsedMs);
+		break;
+
+	case CKoopa::EAction::THROWN:
+		Thrown(elapsedMs);
+		break;
+
+	case CKoopa::EAction::DEADZONED:
+		DeadZoned(elapsedMs);
+		break;
+	}
+}
+
+void CKoopa::Move(float elapsedMs)
+{
+	switch (_actionStage)
+	{
+	case CKoopa::EActionStage::ENTRY:
+	{
+	}
+	_actionStage = EActionStage::PROGRESS;
+	break;
+
+	case CKoopa::EActionStage::PROGRESS:
+	{
+	}
+	break;
+
+	case CKoopa::EActionStage::EXIT:
+	{
+	}
+	NextAction();
+	break;
+	}
+}
+
+void CKoopa::Jump(float elapsedMs)
+{
+	switch (_actionStage)
+	{
+	case CKoopa::EActionStage::ENTRY:
+	{
+	}
+	_actionStage = EActionStage::PROGRESS;
+	break;
+
+	case CKoopa::EActionStage::PROGRESS:
+	{
+	}
+	break;
+
+	case CKoopa::EActionStage::EXIT:
+	{
+	}
+	NextAction();
+	break;
+	}
+}
+
+void CKoopa::Fly(float elapsedMs)
+{
+	switch (_actionStage)
+	{
+	case CKoopa::EActionStage::ENTRY:
+	{
+	}
+	_actionStage = EActionStage::PROGRESS;
+	break;
+
+	case CKoopa::EActionStage::PROGRESS:
+	{
+	}
+	break;
+
+	case CKoopa::EActionStage::EXIT:
+	{
+	}
+	NextAction();
+	break;
+	}
+}
+
+void CKoopa::Shell(float elapsedMs)
+{
+	switch (_actionStage)
+	{
+	case CKoopa::EActionStage::ENTRY:
+	{
+	}
+	_actionStage = EActionStage::PROGRESS;
+	break;
+
+	case CKoopa::EActionStage::PROGRESS:
+	{
+	}
+	break;
+
+	case CKoopa::EActionStage::EXIT:
+	{
+	}
+	NextAction();
+	break;
+	}
+}
+
+void CKoopa::Retract(float elapsedMs)
+{
+	switch (_actionStage)
+	{
+	case CKoopa::EActionStage::ENTRY:
+	{
+	}
+	_actionStage = EActionStage::PROGRESS;
+	break;
+
+	case CKoopa::EActionStage::PROGRESS:
+	{
+	}
+	break;
+
+	case CKoopa::EActionStage::EXIT:
+	{
+	}
+	NextAction();
+	break;
+	}
+}
+
+void CKoopa::Die(float elapsedMs)
+{
+	switch (_actionStage)
+	{
+	case CKoopa::EActionStage::ENTRY:
+	{
+	}
+	_actionStage = EActionStage::PROGRESS;
+	break;
+
+	case CKoopa::EActionStage::PROGRESS:
+	{
+	}
+	break;
+
+	case CKoopa::EActionStage::EXIT:
+	{
+	}
+	NextAction();
+	break;
+	}
+}
+
+void CKoopa::Thrown(float elapsedMs)
+{
+	switch (_actionStage)
+	{
+	case CKoopa::EActionStage::ENTRY:
+	{
+	}
+	_actionStage = EActionStage::PROGRESS;
+	break;
+
+	case CKoopa::EActionStage::PROGRESS:
+	{
+	}
+	break;
+
+	case CKoopa::EActionStage::EXIT:
+	{
+	}
+	NextAction();
+	break;
+	}
+}
+
+void CKoopa::DeadZoned(float elapsedMs)
+{
+	switch (_actionStage)
+	{
+	case CKoopa::EActionStage::ENTRY:
+	{
+	}
+	_actionStage = EActionStage::PROGRESS;
+	break;
+
+	case CKoopa::EActionStage::PROGRESS:
+	{
+	}
+	break;
+
+	case CKoopa::EActionStage::EXIT:
+	{
+	}
+	NextAction();
+	break;
+	}
+}
+
+void CKoopa::UpdateGravity(float elapsedMs)
+{
+}
+
+void CKoopa::UpdateSensor(float elapsedMs)
+{
+}
+
+void CKoopa::HitTop(bool left)
+{
+}
+
+void CKoopa::HitSide(bool left)
+{
+}
+
+void CKoopa::Kick(bool left)
+{
+}
+
+#pragma endregion
+
+#pragma region COLLISION
 
 int CKoopa::IsCollidable()
 {
-	return 0;
+	switch (_action)
+	{
+	case CKoopa::EAction::MOVE:
+	case CKoopa::EAction::JUMP:
+	case CKoopa::EAction::FLY:
+	case CKoopa::EAction::SHELL:
+	case CKoopa::EAction::RETRACT:
+		return 1;
+		break;
+
+	case CKoopa::EAction::DIE:
+	case CKoopa::EAction::THROWN:
+	case CKoopa::EAction::DEADZONED:
+		return 0;
+		break;
+	}
 }
 
 int CKoopa::IsBlocking()
@@ -30,4 +521,73 @@ int CKoopa::IsBlocking()
 
 void CKoopa::GetBoundingBox(float& left, float& top, float& right, float& bottom)
 {
+	switch (_action)
+	{
+	case CKoopa::EAction::MOVE:
+	case CKoopa::EAction::JUMP:
+	case CKoopa::EAction::FLY:
+	case CKoopa::EAction::SHELL:
+	case CKoopa::EAction::RETRACT:
+	{
+		left = _x + BODY_OFFSETX - (BODY_WIDTH / 2);
+		right = _x + BODY_OFFSETX + (BODY_WIDTH / 2);
+		top = _y + BODY_OFFSETY + (BODY_HEIGHT / 2);
+		bottom = _y + BODY_OFFSETY - (BODY_HEIGHT / 2);
+	}
+	break;
+	}
 }
+
+void CKoopa::OnNoCollision(float elapsedMs)
+{
+	_x += _vx * elapsedMs;
+	_y += _vy * elapsedMs;
+}
+
+void CKoopa::OnCollisionWith(pCollision collision)
+{
+	if (dynamic_cast<pGoomba>(collision->_target))
+		OnCollisionWithGoomba(collision);
+	else if (dynamic_cast<pPlatform>(collision->_target))
+		OnCollisionWithPlatform(collision);
+}
+
+void CKoopa::OnCollisionWithGoomba(pCollision collision)
+{
+	auto goomba = dynamic_cast<pGoomba>(collision->_target);
+
+}
+
+void CKoopa::OnCollisionWithPlatform(pCollision collision)
+{
+	auto platform = dynamic_cast<pPlatform>(collision->_target);
+	if (platform->_solid)
+	{
+		if (collision->_ny != 0 && collision->_target->IsBlocking())
+		{
+			_vy = 0;
+			if (collision->_ny > 0) _ground = true;
+		}
+
+		if (collision->_nx != 0 && collision->_target->IsBlocking())
+		{
+			_vx = 0;
+			_left = !_left;
+		}
+	}
+	else
+	{
+		if (collision->_ny != 0 && !collision->_target->IsBlocking())
+		{
+			float top = 0;
+			float temp = 0;
+			collision->_target->GetBoundingBox(temp, top, temp, temp);
+
+			_y = top + BLOCK_PUSH_FACTOR;
+			_vy = 0;
+			_ground = true;
+		}
+	}
+}
+
+#pragma endregion

@@ -129,7 +129,7 @@ void CMario::Update(float elapsedMs)
 	HandleAction(elapsedMs);
 
 	/* Dev helper */
-	DebugOut(L"vx %f | momentum %f \n", _vx, _momentum);
+	//DebugOut(L"vx %f | momentum %f \n", _vx, _momentum);
 	CameraControl();
 	if (_cheat) PowerControlCheat();
 }
@@ -249,7 +249,6 @@ void CMario::Render()
 				{
 					if (_left)	_animations[ANI_MARIO_S_WALK_LEFT]->Render(_x, _y);
 					else		_animations[ANI_MARIO_S_WALK_RIGHT]->Render(_x, _y);
-
 				}
 			}
 			break;

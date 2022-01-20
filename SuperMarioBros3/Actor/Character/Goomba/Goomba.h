@@ -62,6 +62,7 @@ public:
 	float BODY_OFFSETX = 0;
 	float BODY_OFFSETY = 0;
 
+	/* Type */
 	enum class EType
 	{
 		BROWN,
@@ -69,44 +70,40 @@ public:
 	};
 	EType _type = EType::BROWN;
 	bool _wing = false;
+	bool _spawn = false;
 
+	/* Target */
 	std::string _targetName;
-	float _targetX;
-	float _targetY;
+	float _targetX = 0;
+	float _targetY = 0;
 
-	float DECAY_TIMEOUT = 0;
-	float _decayTimeout = 0;
-
-#pragma endregion
-
-#pragma region MOVEMENT
-
-	/* Stats */
+	/* Gravity */
 	float GRAVITY = 0;
+	bool _ground = false;
+
+	/* Move */
 	float WALK_SPEED = 0;
+	bool _left = false;
 	
+	/* Jump */
 	float SMALL_JUMP_FORCE = 0;
 	float LARGE_JUMP_FORCE = 0;
 	float JUMP_INTERVAL = 0;
+	float _jumpInterval = 0;
 
+	/* Fly */
 	float TAKE_OFF_SPEED = 0;
 	float TARGET_FLY_OFFSET = 0;
 	float FLY_TIMEOUT = 0;
 	float CHANGE_DIRECTION_COUNTDOWN = 0;
-
-	float HORIZONTAL_DEFLECT_FORCE = 0;
-	float VERTICAL_DEFLECT_FORCE = 0;
-
-	/* Logic */
-	bool _left = false;
-	bool _ground = false;
-
-	float _jumpInterval = 0;
-	
 	float _flyTimeout = 0;
-	bool _spawn = false;
 	float _changeDirectionCountdown = 0;
 
+	/* Hit */
+	float HORIZONTAL_DEFLECT_FORCE = 0;
+	float VERTICAL_DEFLECT_FORCE = 0;
+	float DECAY_TIMEOUT = 0;
+	float _decayTimeout = 0;
 
 #pragma endregion
 
@@ -179,12 +176,10 @@ public:
 
 	void OnNoCollision(float elapsedMs);
 	void OnCollisionWith(pCollision collision);
+
 	void OnCollisionWithPlatform(pCollision collision);
 
 #pragma endregion
-
-
-
 
 };
 typedef CGoomba* pGoomba;
