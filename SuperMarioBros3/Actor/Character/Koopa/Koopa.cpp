@@ -31,6 +31,8 @@ void CKoopa::Load()
 
 	/* Sensor */
 	pugi::xml_node sensor = prefab.child("Prefab").child("Sensor");
+	SENSOR_OFFSETX = sensor.attribute("OffsetX").as_float();
+	SENSOR_OFFSETY = sensor.attribute("OffsetY").as_float();
 	std::string sensorName = _name + sensor.attribute("name").as_string();
 	_sensor = dynamic_cast<pKoopaSensor>(
 		_game->Create(
@@ -54,6 +56,12 @@ void CKoopa::Load()
 	pugi::xml_node jump = prefab.child("Prefab").child("Jump");
 	JUMP_FORCE = jump.attribute("JUMP_FORCE").as_float();
 
+	/* Fly */
+	pugi::xml_node fly = prefab.child("Prefab").child("Fly");
+	FLY_LIMIT = fly.attribute("FLY_LIMIT").as_float();
+	FLY_ACCELERATION = fly.attribute("FLY_ACCELERATION").as_float();
+	FLY_MAX_SPEED = fly.attribute("FLY_MAX_SPEED").as_float();
+
 	/* Hit */
 	pugi::xml_node hit = prefab.child("Prefab").child("Hit");
 	HORIZONTAL_DEFLECT_FORCE = hit.attribute("HORIZONTAL_DEFLECT_FORCE").as_float();
@@ -64,6 +72,20 @@ void CKoopa::Load()
 void CKoopa::Start()
 {
 	CGameObject::Start();
+	if (_wing)
+	{
+		switch (_type)
+		{
+		case CKoopa::EType::GREEN:
+			SetAction(EAction::JUMP);
+			break;
+
+		case CKoopa::EType::RED:
+			SetAction(EAction::FLY);
+			break;
+		}
+	}
+
 }
 
 void CKoopa::Update(float elapsedMs)
@@ -71,16 +93,18 @@ void CKoopa::Update(float elapsedMs)
 	if (!_start) Start();
 
 	UpdateGravity(elapsedMs);
-	UpdateSensor(elapsedMs);
 
 	std::vector<pGameObject> collidables = _game->GetLocal(_id);
 	_collider->Process(elapsedMs, &collidables);
 
 	HandleAction(elapsedMs);
+	UpdateSensor(elapsedMs);
 }
 
 void CKoopa::Render()
 {
+	if (_renderBody) _sprites[SPR_BBOX]->Render(_x, _y);
+
 	switch (_action)
 	{
 	case CKoopa::EAction::MOVE:
@@ -114,13 +138,6 @@ void CKoopa::Render()
 			else		_animations[ANI_KOOPA_WALK_UP_RIGHT]->Render(_x, _y);
 		}
 		break;
-
-		case CKoopa::EType::RED:
-		{
-			if (_left)	_animations[ANI_RED_KOOPA_WALK_UP_LEFT]->Render(_x, _y);
-			else		_animations[ANI_RED_KOOPA_WALK_UP_RIGHT]->Render(_x, _y);
-		}
-		break;
 		}
 
 		if (_wing)
@@ -135,13 +152,6 @@ void CKoopa::Render()
 	{
 		switch (_type)
 		{
-		case CKoopa::EType::GREEN:
-		{
-			if (_left)	_animations[ANI_KOOPA_WALK_UP_LEFT]->Render(_x, _y);
-			else		_animations[ANI_KOOPA_WALK_UP_RIGHT]->Render(_x, _y);
-		}
-		break;
-
 		case CKoopa::EType::RED:
 		{
 			if (_left)	_animations[ANI_RED_KOOPA_WALK_UP_LEFT]->Render(_x, _y);
@@ -221,25 +231,46 @@ void CKoopa::Render()
 
 	case CKoopa::EAction::RETRACT:
 	{
+		switch (_type)
+		{
+		case CKoopa::EType::GREEN:
+		{
+			if (_up)	_animations[ANI_KOOPA_SHELL_RETRACT_UP]->Render(_x, _y);
+			else		_animations[ANI_KOOPA_SHELL_RETRACT_DOWN]->Render(_x, _y);
+		}
+		break;
 
-	}
-	break;
-
-	case CKoopa::EAction::DIE:
-	{
-
+		case CKoopa::EType::RED:
+		{
+			if (_up)	_animations[ANI_RED_KOOPA_SHELL_RETRACT_UP]->Render(_x, _y);
+			else		_animations[ANI_RED_KOOPA_SHELL_RETRACT_DOWN]->Render(_x, _y);
+		}
+		break;
+		}
 	}
 	break;
 
 	case CKoopa::EAction::THROWN:
 	{
+		switch (_type)
+		{
+		case CKoopa::EType::GREEN:
+		{
+			_sprites[SPR_KOOPA_SHELL1_DOWN]->Render(_x, _y);
+		}
+		break;
 
+		case CKoopa::EType::RED:
+		{
+			_sprites[SPR_RED_KOOPA_SHELL1_DOWN]->Render(_x, _y);
+		}
+		break;
+		}
 	}
 	break;
 
 	case CKoopa::EAction::DEADZONED:
 	{
-
 	}
 	break;
 
@@ -272,10 +303,6 @@ void CKoopa::HandleAction(float elapsedMs)
 		Retract(elapsedMs);
 		break;
 
-	case CKoopa::EAction::DIE:
-		Die(elapsedMs);
-		break;
-
 	case CKoopa::EAction::THROWN:
 		Thrown(elapsedMs);
 		break;
@@ -292,17 +319,84 @@ void CKoopa::Move(float elapsedMs)
 	{
 	case CKoopa::EActionStage::ENTRY:
 	{
+		/* Animation Start */
+		{
+			switch (_type)
+			{
+			case CKoopa::EType::GREEN:
+			{
+				_animations[ANI_KOOPA_WALK_UP_LEFT]->Play(true);
+				_animations[ANI_KOOPA_WALK_UP_RIGHT]->Play(true);
+			}
+			break;
+
+			case CKoopa::EType::RED:
+			{
+				_animations[ANI_RED_KOOPA_WALK_UP_LEFT]->Play(true);
+				_animations[ANI_RED_KOOPA_WALK_UP_RIGHT]->Play(true);
+			}
+			break;
+			}
+		}
 	}
 	_actionStage = EActionStage::PROGRESS;
 	break;
 
 	case CKoopa::EActionStage::PROGRESS:
 	{
+		/* Animation Update */
+		{
+			switch (_type)
+			{
+			case CKoopa::EType::GREEN:
+			{
+				_animations[ANI_KOOPA_WALK_UP_LEFT]->Update(elapsedMs);
+				_animations[ANI_KOOPA_WALK_UP_RIGHT]->Update(elapsedMs);
+			}
+			break;
+
+			case CKoopa::EType::RED:
+			{
+				_animations[ANI_RED_KOOPA_WALK_UP_LEFT]->Update(elapsedMs);
+				_animations[ANI_RED_KOOPA_WALK_UP_RIGHT]->Update(elapsedMs);
+			}
+			break;
+			}
+		}
+
+		if (_type == EType::RED
+			&& _sensor->_triggered
+			&& _ground)
+		{
+			_left = !_left;
+		}
+
+		if (_left)	_vx = -WALK_SPEED;
+		else		_vx = WALK_SPEED;
 	}
 	break;
 
 	case CKoopa::EActionStage::EXIT:
 	{
+		/* Animation Stop */
+		{
+			switch (_type)
+			{
+			case CKoopa::EType::GREEN:
+			{
+				_animations[ANI_KOOPA_WALK_UP_LEFT]->Stop();
+				_animations[ANI_KOOPA_WALK_UP_RIGHT]->Stop();
+			}
+			break;
+
+			case CKoopa::EType::RED:
+			{
+				_animations[ANI_RED_KOOPA_WALK_UP_LEFT]->Stop();
+				_animations[ANI_RED_KOOPA_WALK_UP_RIGHT]->Stop();
+			}
+			break;
+			}
+		}
 	}
 	NextAction();
 	break;
@@ -315,17 +409,68 @@ void CKoopa::Jump(float elapsedMs)
 	{
 	case CKoopa::EActionStage::ENTRY:
 	{
+		/* Animation Start */
+		{
+			switch (_type)
+			{
+			case CKoopa::EType::GREEN:
+			{
+				_animations[ANI_KOOPA_WALK_UP_LEFT]->Play(true);
+				_animations[ANI_KOOPA_WALK_UP_RIGHT]->Play(true);
+				_animations[ANI_KOOPA_WING_FLAP_SLOW_LEFT]->Play(true);
+				_animations[ANI_KOOPA_WING_FLAP_SLOW_RIGHT]->Play(true);
+			}
+			break;
+			}
+		}
 	}
 	_actionStage = EActionStage::PROGRESS;
 	break;
 
 	case CKoopa::EActionStage::PROGRESS:
 	{
+		/* Animation Update */
+		{
+			switch (_type)
+			{
+			case CKoopa::EType::GREEN:
+			{
+				_animations[ANI_KOOPA_WALK_UP_LEFT]->Update(elapsedMs);
+				_animations[ANI_KOOPA_WALK_UP_RIGHT]->Update(elapsedMs);
+				_animations[ANI_KOOPA_WING_FLAP_SLOW_LEFT]->Update(elapsedMs);
+				_animations[ANI_KOOPA_WING_FLAP_SLOW_RIGHT]->Update(elapsedMs);
+			}
+			break;
+			}
+		}
+
+		if (_ground)
+		{
+			_vy = JUMP_FORCE;
+			_ground = false;
+		}
+
+		if (_left)	_vx = -WALK_SPEED;
+		else		_vx = WALK_SPEED;
 	}
 	break;
 
 	case CKoopa::EActionStage::EXIT:
 	{
+		/* Animation Stop */
+		{
+			switch (_type)
+			{
+			case CKoopa::EType::GREEN:
+			{
+				_animations[ANI_KOOPA_WALK_UP_LEFT]->Stop();
+				_animations[ANI_KOOPA_WALK_UP_RIGHT]->Stop();
+				_animations[ANI_KOOPA_WING_FLAP_SLOW_LEFT]->Stop();
+				_animations[ANI_KOOPA_WING_FLAP_SLOW_RIGHT]->Stop();
+			}
+			break;
+			}
+		}
 	}
 	NextAction();
 	break;
@@ -338,17 +483,94 @@ void CKoopa::Fly(float elapsedMs)
 	{
 	case CKoopa::EActionStage::ENTRY:
 	{
+		/* Animation Start */
+		{
+			switch (_type)
+			{
+			case CKoopa::EType::RED:
+			{
+				_animations[ANI_RED_KOOPA_WALK_UP_LEFT]->Play(true);
+				_animations[ANI_RED_KOOPA_WALK_UP_RIGHT]->Play(true);
+				_animations[ANI_KOOPA_WING_FLAP_SLOW_LEFT]->Play(true);
+				_animations[ANI_KOOPA_WING_FLAP_SLOW_RIGHT]->Play(true);
+				_animations[ANI_KOOPA_WING_FLAP_FAST_LEFT]->Play(true);
+				_animations[ANI_KOOPA_WING_FLAP_FAST_RIGHT]->Play(true);
+			}
+			break;
+			}
+		}
+
+		_flyOrigin = _y;
+		_flyLimit = _y + FLY_LIMIT;
+		_flyUp = true;
 	}
 	_actionStage = EActionStage::PROGRESS;
 	break;
 
 	case CKoopa::EActionStage::PROGRESS:
 	{
+		/* Animation Update */
+		{
+			switch (_type)
+			{
+			case CKoopa::EType::RED:
+			{
+				_animations[ANI_RED_KOOPA_WALK_UP_LEFT]->Update(elapsedMs);
+				_animations[ANI_RED_KOOPA_WALK_UP_RIGHT]->Update(elapsedMs);
+				_animations[ANI_KOOPA_WING_FLAP_SLOW_LEFT]->Update(elapsedMs);
+				_animations[ANI_KOOPA_WING_FLAP_SLOW_RIGHT]->Update(elapsedMs);
+				_animations[ANI_KOOPA_WING_FLAP_FAST_LEFT]->Update(elapsedMs);
+				_animations[ANI_KOOPA_WING_FLAP_FAST_RIGHT]->Update(elapsedMs);
+			}
+			break;
+			}
+		}
+
+		if (_flyUp)
+		{
+			if (_y <= _flyLimit)
+			{
+				_vy += FLY_ACCELERATION * elapsedMs;
+				if (_vy > FLY_MAX_SPEED) _vy = FLY_MAX_SPEED;
+			}
+			else
+			{
+				_flyUp = false;
+			}
+		}
+		else
+		{
+			if (_y >= _flyOrigin)
+			{
+				_vy -= FLY_ACCELERATION * elapsedMs;
+				if (_vy < -FLY_MAX_SPEED) _vy = -FLY_MAX_SPEED;
+			}
+			else
+			{
+				_flyUp = true;
+			}
+		}
 	}
 	break;
 
 	case CKoopa::EActionStage::EXIT:
 	{
+		/* Animation Stop */
+		{
+			switch (_type)
+			{
+			case CKoopa::EType::RED:
+			{
+				_animations[ANI_RED_KOOPA_WALK_UP_LEFT]->Stop();
+				_animations[ANI_RED_KOOPA_WALK_UP_RIGHT]->Stop();
+				_animations[ANI_KOOPA_WING_FLAP_SLOW_LEFT]->Stop();
+				_animations[ANI_KOOPA_WING_FLAP_SLOW_RIGHT]->Stop();
+				_animations[ANI_KOOPA_WING_FLAP_FAST_LEFT]->Stop();
+				_animations[ANI_KOOPA_WING_FLAP_FAST_RIGHT]->Stop();
+			}
+			break;
+			}
+		}
 	}
 	NextAction();
 	break;
@@ -361,17 +583,86 @@ void CKoopa::Shell(float elapsedMs)
 	{
 	case CKoopa::EActionStage::ENTRY:
 	{
+		/* Animation Start */
+		{
+			switch (_type)
+			{
+			case CKoopa::EType::GREEN:
+			{
+				_animations[ANI_KOOPA_SHELL_SPIN_UP_LEFT]->Play(true);
+				_animations[ANI_KOOPA_SHELL_SPIN_UP_RIGHT]->Play(true);
+				_animations[ANI_KOOPA_SHELL_SPIN_DOWN_LEFT]->Play(true);
+				_animations[ANI_KOOPA_SHELL_SPIN_DOWN_RIGHT]->Play(true);
+			}
+			break;
+
+			case CKoopa::EType::RED:
+			{
+				_animations[ANI_RED_KOOPA_SHELL_SPIN_UP_LEFT]->Play(true);
+				_animations[ANI_RED_KOOPA_SHELL_SPIN_UP_RIGHT]->Play(true);
+				_animations[ANI_RED_KOOPA_SHELL_SPIN_DOWN_LEFT]->Play(true);
+				_animations[ANI_RED_KOOPA_SHELL_SPIN_DOWN_RIGHT]->Play(true);
+			}
+			break;
+			}
+		}
 	}
 	_actionStage = EActionStage::PROGRESS;
 	break;
 
 	case CKoopa::EActionStage::PROGRESS:
 	{
+		/* Animation Update */
+		{
+			switch (_type)
+			{
+			case CKoopa::EType::GREEN:
+			{
+				_animations[ANI_KOOPA_SHELL_SPIN_UP_LEFT]->Update(elapsedMs);
+				_animations[ANI_KOOPA_SHELL_SPIN_UP_RIGHT]->Update(elapsedMs);
+				_animations[ANI_KOOPA_SHELL_SPIN_DOWN_LEFT]->Update(elapsedMs);
+				_animations[ANI_KOOPA_SHELL_SPIN_DOWN_RIGHT]->Update(elapsedMs);
+			}
+			break;
+
+			case CKoopa::EType::RED:
+			{
+				_animations[ANI_RED_KOOPA_SHELL_SPIN_UP_LEFT]->Update(elapsedMs);
+				_animations[ANI_RED_KOOPA_SHELL_SPIN_UP_RIGHT]->Update(elapsedMs);
+				_animations[ANI_RED_KOOPA_SHELL_SPIN_DOWN_LEFT]->Update(elapsedMs);
+				_animations[ANI_RED_KOOPA_SHELL_SPIN_DOWN_RIGHT]->Update(elapsedMs);
+			}
+			break;
+			}
+		}
 	}
 	break;
 
 	case CKoopa::EActionStage::EXIT:
 	{
+		/* Animation Stop */
+		{
+			switch (_type)
+			{
+			case CKoopa::EType::GREEN:
+			{
+				_animations[ANI_KOOPA_SHELL_SPIN_UP_LEFT]->Stop();
+				_animations[ANI_KOOPA_SHELL_SPIN_UP_RIGHT]->Stop();
+				_animations[ANI_KOOPA_SHELL_SPIN_DOWN_LEFT]->Stop();
+				_animations[ANI_KOOPA_SHELL_SPIN_DOWN_RIGHT]->Stop();
+			}
+			break;
+
+			case CKoopa::EType::RED:
+			{
+				_animations[ANI_RED_KOOPA_SHELL_SPIN_UP_LEFT]->Stop();
+				_animations[ANI_RED_KOOPA_SHELL_SPIN_UP_RIGHT]->Stop();
+				_animations[ANI_RED_KOOPA_SHELL_SPIN_DOWN_LEFT]->Stop();
+				_animations[ANI_RED_KOOPA_SHELL_SPIN_DOWN_RIGHT]->Stop();
+			}
+			break;
+			}
+		}
 	}
 	NextAction();
 	break;
@@ -384,40 +675,74 @@ void CKoopa::Retract(float elapsedMs)
 	{
 	case CKoopa::EActionStage::ENTRY:
 	{
+		/* Animation Start */
+		{
+			switch (_type)
+			{
+			case CKoopa::EType::GREEN:
+			{
+				_animations[ANI_KOOPA_SHELL_RETRACT_UP]->Play(true);
+				_animations[ANI_KOOPA_SHELL_RETRACT_DOWN]->Play(true);
+			}
+			break;
+
+			case CKoopa::EType::RED:
+			{
+				_animations[ANI_RED_KOOPA_SHELL_RETRACT_UP]->Play(true);
+				_animations[ANI_RED_KOOPA_SHELL_RETRACT_DOWN]->Play(true);
+			}
+			break;
+			}
+		}
 	}
 	_actionStage = EActionStage::PROGRESS;
 	break;
 
 	case CKoopa::EActionStage::PROGRESS:
 	{
+		/* Animation Update */
+		{
+			switch (_type)
+			{
+			case CKoopa::EType::GREEN:
+			{
+				_animations[ANI_KOOPA_SHELL_RETRACT_UP]->Update(elapsedMs);
+				_animations[ANI_KOOPA_SHELL_RETRACT_DOWN]->Update(elapsedMs);
+			}
+			break;
+
+			case CKoopa::EType::RED:
+			{
+				_animations[ANI_RED_KOOPA_SHELL_RETRACT_UP]->Update(elapsedMs);
+				_animations[ANI_RED_KOOPA_SHELL_RETRACT_DOWN]->Update(elapsedMs);
+			}
+			break;
+			}
+		}
 	}
 	break;
 
 	case CKoopa::EActionStage::EXIT:
 	{
-	}
-	NextAction();
-	break;
-	}
-}
+		/* Animation Stop */
+		{
+			switch (_type)
+			{
+			case CKoopa::EType::GREEN:
+			{
+				_animations[ANI_KOOPA_SHELL_RETRACT_UP]->Stop();
+				_animations[ANI_KOOPA_SHELL_RETRACT_DOWN]->Stop();
+			}
+			break;
 
-void CKoopa::Die(float elapsedMs)
-{
-	switch (_actionStage)
-	{
-	case CKoopa::EActionStage::ENTRY:
-	{
-	}
-	_actionStage = EActionStage::PROGRESS;
-	break;
-
-	case CKoopa::EActionStage::PROGRESS:
-	{
-	}
-	break;
-
-	case CKoopa::EActionStage::EXIT:
-	{
+			case CKoopa::EType::RED:
+			{
+				_animations[ANI_RED_KOOPA_SHELL_RETRACT_UP]->Stop();
+				_animations[ANI_RED_KOOPA_SHELL_RETRACT_DOWN]->Stop();
+			}
+			break;
+			}
+		}
 	}
 	NextAction();
 	break;
@@ -472,10 +797,19 @@ void CKoopa::DeadZoned(float elapsedMs)
 
 void CKoopa::UpdateGravity(float elapsedMs)
 {
+	if (_action != EAction::FLY)
+	{
+		_vy -= GRAVITY * elapsedMs;
+	}
 }
 
 void CKoopa::UpdateSensor(float elapsedMs)
 {
+	if (_sensor != nullptr)
+	{
+		if (_left)	_sensor->SetPosition(_x - SENSOR_OFFSETX, _y + SENSOR_OFFSETY);
+		else		_sensor->SetPosition(_x + SENSOR_OFFSETX, _y + SENSOR_OFFSETY);
+	}
 }
 
 void CKoopa::HitTop(bool left)
@@ -506,9 +840,12 @@ int CKoopa::IsCollidable()
 		return 1;
 		break;
 
-	case CKoopa::EAction::DIE:
 	case CKoopa::EAction::THROWN:
 	case CKoopa::EAction::DEADZONED:
+		return 0;
+		break;
+
+	default:
 		return 0;
 		break;
 	}
@@ -577,7 +914,7 @@ void CKoopa::OnCollisionWithPlatform(pCollision collision)
 	}
 	else
 	{
-		if (collision->_ny != 0 && !collision->_target->IsBlocking())
+		if (collision->_ny > 0 && !collision->_target->IsBlocking())
 		{
 			float top = 0;
 			float temp = 0;

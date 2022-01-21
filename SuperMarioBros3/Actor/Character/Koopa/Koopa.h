@@ -131,6 +131,8 @@ public:
 	bool _wing = false;
 
 	/* Sensor */
+	float SENSOR_OFFSETX = 0;
+	float SENSOR_OFFSETY = 0;
 	pKoopaSensor _sensor = nullptr;
 
 	/* Gravity */
@@ -144,6 +146,14 @@ public:
 
 	/* Jump */
 	float JUMP_FORCE = 0;
+
+	/* fly */
+	float FLY_LIMIT = 0;
+	float FLY_ACCELERATION = 0;
+	float FLY_MAX_SPEED = 0;
+	float _flyOrigin = 0;
+	float _flyLimit = 0;
+	bool _flyUp = false;
 
 	/* Hit */
 	float HORIZONTAL_DEFLECT_FORCE = 0;
@@ -164,7 +174,6 @@ public:
 		FLY,
 		SHELL,
 		RETRACT,
-		DIE,
 		THROWN,
 		DEADZONED
 	};
@@ -201,7 +210,6 @@ public:
 	void Fly(float elapsedMs);
 	void Shell(float elapsedMs);
 	void Retract(float elapsedMs);
-	void Die(float elapsedMs);
 	void Thrown(float elapsedMs);
 	void DeadZoned(float elapsedMs);
 

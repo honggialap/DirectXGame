@@ -2197,7 +2197,7 @@ void CMario::OnCollisionWithPlatform(pCollision collision)
 	}
 	else
 	{
-		if (collision->_ny != 0 && !collision->_target->IsBlocking())
+		if (collision->_ny > 0 && !collision->_target->IsBlocking())
 		{
 			float top = 0;
 			float temp = 0;
