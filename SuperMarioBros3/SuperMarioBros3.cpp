@@ -16,12 +16,9 @@
 #include "Actor/Character/Koopa/Koopa.h"
 #include "Actor/Character/Koopa/KoopaSensor.h"
 
-#include "Actor/Character/Piranha/Piranha.h"
-#include "Actor/Character/Piranha/PiranhaSensor.h"
-
-#include "Actor/Character/Venus/Venus.h"
-#include "Actor/Character/Venus/VenusSensor.h"
-#include "Actor/Character/Venus/Fireball.h"
+#include "Actor/Character/Plant/Plant.h"
+#include "Actor/Character/Plant/PlantSensor.h"
+#include "Actor/Character/Plant/PlantFireball.h"
 
 /* Item */
 /* Prop */
@@ -134,10 +131,10 @@ pGameObject CSuperMarioBros3::Create(pScene scene, unsigned int actor, std::stri
 	}
 	break;
 
-	// PIRANHA
-	case ACT_PIRANHA:
+	// PLANT
+	case ACT_PLANT:
 	{
-		auto gameObject = new CPiranha(
+		auto gameObject = new CPlant(
 			this, scene, nextId++,
 			name, source,
 			x, y, gx, gy, layer
@@ -148,9 +145,9 @@ pGameObject CSuperMarioBros3::Create(pScene scene, unsigned int actor, std::stri
 	}
 	break;
 
-	case ACT_PIRANHA_SENSOR:
+	case ACT_PLANT_SENSOR:
 	{
-		auto gameObject = new CPiranhaSensor(
+		auto gameObject = new CPlantSensor(
 			this, scene, nextId++,
 			name, source,
 			x, y, gx, gy, layer
@@ -161,36 +158,9 @@ pGameObject CSuperMarioBros3::Create(pScene scene, unsigned int actor, std::stri
 	}
 	break;
 
-	// VENUS
-	case ACT_VENUS:
+	case ACT_PLANT_FIREBALL:
 	{
-		auto gameObject = new CVenus(
-			this, scene, nextId++,
-			name, source,
-			x, y, gx, gy, layer
-		);
-		Add(gameObject);
-		gameObject->Load();
-		return gameObject;
-	}
-	break;
-
-	case ACT_VENUS_SENSOR:
-	{
-		auto gameObject = new CVenusSensor(
-			this, scene, nextId++,
-			name, source,
-			x, y, gx, gy, layer
-		);
-		Add(gameObject);
-		gameObject->Load();
-		return gameObject;
-	}
-	break;
-
-	case ACT_VENUS_FIREBALL:
-	{
-		auto gameObject = new CFireball(
+		auto gameObject = new CPlantFireball(
 			this, scene, nextId++,
 			name, source,
 			x, y, gx, gy, layer

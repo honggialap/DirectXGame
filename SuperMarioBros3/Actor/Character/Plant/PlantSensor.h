@@ -1,6 +1,6 @@
 #pragma once
-#ifndef __PIRANHA_SENSOR_H__
-#define __PIRANHA_SENSOR_H__
+#ifndef __PLANT_SENSOR_H__
+#define __PLANT_SENSOR_H__
 
 #pragma region INCLUDE
 #include "../../../Engine/GameObject.h"
@@ -8,14 +8,13 @@
 
 #pragma region DEFINE
 /* SPRITE ID */
-/* ANIMATION ID */
-/* SOUNDCLIP ID */
+#define SPR_BBOX									999901
 #pragma endregion
 
-class CPiranhaSensor : public CGameObject
+class CPlantSensor : public CGameObject
 {
 public:
-	CPiranhaSensor(
+	CPlantSensor(
 		pGame game, pScene scene,
 		unsigned int id, std::string name, std::string source,
 		float x, float y, int gx, int gy, unsigned int layer
@@ -27,10 +26,34 @@ public:
 	virtual void Update(float elapsedMs);
 	virtual void Render();
 
+#pragma region LOGIC
+
+	/* Body */
+	bool _renderBody = false;
+	float BODY_WIDTH = 0;
+	float BODY_HEIGHT = 0;
+	float BODY_OFFSETX = 0;
+	float BODY_OFFSETY = 0;
+
+	/* Sensor */
+	bool _triggered = false;
+
+#pragma endregion
+
+#pragma region COLLISION
+
 	virtual int IsCollidable();
 	virtual int IsBlocking();
 	virtual void GetBoundingBox(float& left, float& top, float& right, float& bottom);
-};
-typedef CPiranhaSensor* pPiranhaSensor;
 
-#endif // !__PIRANHA_SENSOR_H__
+	void OnNoCollision(float elapsedMs);
+	void OnCollisionWith(pCollision collision);
+
+	void OnCollisionWithMario(pCollision collision);
+
+#pragma endregion
+
+};
+typedef CPlantSensor* pPlantSensor;
+
+#endif // !__PLANT_SENSOR_H__

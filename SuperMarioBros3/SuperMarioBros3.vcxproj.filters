@@ -67,20 +67,14 @@
     <ClCompile Include="Actor\Character\Koopa\KoopaSensor.cpp">
       <Filter>Actor\Character\Koopa</Filter>
     </ClCompile>
-    <ClCompile Include="Actor\Character\Venus\Fireball.cpp">
-      <Filter>Actor\Character\Venus</Filter>
+    <ClCompile Include="Actor\Character\Plant\Plant.cpp">
+      <Filter>Actor\Character\Plant</Filter>
     </ClCompile>
-    <ClCompile Include="Actor\Character\Venus\Venus.cpp">
-      <Filter>Actor\Character\Venus</Filter>
+    <ClCompile Include="Actor\Character\Plant\PlantSensor.cpp">
+      <Filter>Actor\Character\Plant</Filter>
     </ClCompile>
-    <ClCompile Include="Actor\Character\Venus\VenusSensor.cpp">
-      <Filter>Actor\Character\Venus</Filter>
-    </ClCompile>
-    <ClCompile Include="Actor\Character\Piranha\Piranha.cpp">
-      <Filter>Actor\Character\Pirannha</Filter>
-    </ClCompile>
-    <ClCompile Include="Actor\Character\Piranha\PiranhaSensor.cpp">
-      <Filter>Actor\Character\Pirannha</Filter>
+    <ClCompile Include="Actor\Character\Plant\PlantFireball.cpp">
+      <Filter>Actor\Character\Plant</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -153,20 +147,14 @@
     <ClInclude Include="Actor\Character\Koopa\KoopaSensor.h">
       <Filter>Actor\Character\Koopa</Filter>
     </ClInclude>
-    <ClInclude Include="Actor\Character\Venus\Fireball.h">
-      <Filter>Actor\Character\Venus</Filter>
+    <ClInclude Include="Actor\Character\Plant\Plant.h">
+      <Filter>Actor\Character\Plant</Filter>
     </ClInclude>
-    <ClInclude Include="Actor\Character\Venus\Venus.h">
-      <Filter>Actor\Character\Venus</Filter>
+    <ClInclude Include="Actor\Character\Plant\PlantSensor.h">
+      <Filter>Actor\Character\Plant</Filter>
     </ClInclude>
-    <ClInclude Include="Actor\Character\Venus\VenusSensor.h">
-      <Filter>Actor\Character\Venus</Filter>
-    </ClInclude>
-    <ClInclude Include="Actor\Character\Piranha\Piranha.h">
-      <Filter>Actor\Character\Pirannha</Filter>
-    </ClInclude>
-    <ClInclude Include="Actor\Character\Piranha\PiranhaSensor.h">
-      <Filter>Actor\Character\Pirannha</Filter>
+    <ClInclude Include="Actor\Character\Plant\PlantFireball.h">
+      <Filter>Actor\Character\Plant</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -211,12 +199,6 @@
     </Filter>
     <Filter Include="Actor\Character\Koopa">
       <UniqueIdentifier>{6663008b-631f-4bc8-a118-cf134f4c0557}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Actor\Character\Pirannha">
-      <UniqueIdentifier>{7a48566b-54b1-476e-b9e7-9e46fb674b9e}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Actor\Character\Venus">
-      <UniqueIdentifier>{fd1dda47-76e7-4283-a169-613717a1742d}</UniqueIdentifier>
     </Filter>
     <Filter Include="Actor\Controller\GameMaster">
       <UniqueIdentifier>{15a4c4e4-f7ea-4dba-b30d-e31cb3802e7e}</UniqueIdentifier>
@@ -395,6 +377,9 @@
     <Filter Include="Actor\Prop\BulletBillCannon">
       <UniqueIdentifier>{a9606339-cad9-4d5b-b734-63ec4f5a70b8}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Actor\Character\Plant">
+      <UniqueIdentifier>{7a48566b-54b1-476e-b9e7-9e46fb674b9e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config">
@@ -495,29 +480,38 @@
     <Xml Include="Data\Asset\Character\Koopa\RedParaKoopa.xml">
       <Filter>Actor\Character\Koopa</Filter>
     </Xml>
-    <Xml Include="Data\Asset\Character\Venus\Fireball.xml">
-      <Filter>Actor\Character\Venus</Filter>
+    <Xml Include="Data\Asset\Character\Plant\PiranhaUp.xml">
+      <Filter>Actor\Character\Plant</Filter>
     </Xml>
-    <Xml Include="Data\Asset\Character\Venus\RedVenus.xml">
-      <Filter>Actor\Character\Venus</Filter>
+    <Xml Include="Data\Asset\Character\Plant\PlantSensor.xml">
+      <Filter>Actor\Character\Plant</Filter>
     </Xml>
-    <Xml Include="Data\Asset\Character\Venus\Venus.xml">
-      <Filter>Actor\Character\Venus</Filter>
-    </Xml>
-    <Xml Include="Data\Asset\Character\Venus\VenusSensor.xml">
-      <Filter>Actor\Character\Venus</Filter>
-    </Xml>
-    <Xml Include="Data\Asset\Character\Piranha\Piranha.xml">
-      <Filter>Actor\Character\Pirannha</Filter>
-    </Xml>
-    <Xml Include="Data\Asset\Character\Piranha\PiranhaSensor.xml">
-      <Filter>Actor\Character\Pirannha</Filter>
-    </Xml>
-    <Xml Include="Data\Asset\Character\Piranha\RedPiranha.xml">
-      <Filter>Actor\Character\Pirannha</Filter>
+    <Xml Include="Data\Asset\Character\Plant\RedPiranhaUp.xml">
+      <Filter>Actor\Character\Plant</Filter>
     </Xml>
     <Xml Include="Data\Asset\Character\Goomba\RedGoomba.xml">
       <Filter>Actor\Character\Goomba</Filter>
+    </Xml>
+    <Xml Include="Data\Asset\Character\Plant\PiranhaDown.xml">
+      <Filter>Actor\Character\Plant</Filter>
+    </Xml>
+    <Xml Include="Data\Asset\Character\Plant\RedPiranhaDown.xml">
+      <Filter>Actor\Character\Plant</Filter>
+    </Xml>
+    <Xml Include="Data\Asset\Character\Plant\RedVenusUp.xml">
+      <Filter>Actor\Character\Plant</Filter>
+    </Xml>
+    <Xml Include="Data\Asset\Character\Plant\VenusUp.xml">
+      <Filter>Actor\Character\Plant</Filter>
+    </Xml>
+    <Xml Include="Data\Asset\Character\Plant\PlantFireball.xml">
+      <Filter>Actor\Character\Plant</Filter>
+    </Xml>
+    <Xml Include="Data\Asset\Character\Plant\RedVenusDown.xml">
+      <Filter>Actor\Character\Plant</Filter>
+    </Xml>
+    <Xml Include="Data\Asset\Character\Plant\VenusDown.xml">
+      <Filter>Actor\Character\Plant</Filter>
     </Xml>
   </ItemGroup>
   <ItemGroup>

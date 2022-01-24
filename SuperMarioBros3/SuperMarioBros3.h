@@ -20,12 +20,9 @@
 #define ACT_KOOPA				20301
 #define ACT_KOOPA_SENSOR		20302
 
-#define ACT_PIRANHA				20401
-#define ACT_PIRANHA_SENSOR		20402
-
-#define ACT_VENUS				20501
-#define ACT_VENUS_SENSOR		20502
-#define ACT_VENUS_FIREBALL		20503
+#define ACT_PLANT				20401
+#define ACT_PLANT_SENSOR		20402
+#define ACT_PLANT_FIREBALL		20403
 
 /* Item */
 /* Prop */

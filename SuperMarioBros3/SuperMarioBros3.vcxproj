@@ -148,11 +148,9 @@
     <ClCompile Include="Actor\Character\Mario\Mario.cpp" />
     <ClCompile Include="Actor\Character\Mario\MarioFireball.cpp" />
     <ClCompile Include="Actor\Character\Mario\MarioTail.cpp" />
-    <ClCompile Include="Actor\Character\Piranha\Piranha.cpp" />
-    <ClCompile Include="Actor\Character\Piranha\PiranhaSensor.cpp" />
-    <ClCompile Include="Actor\Character\Venus\Fireball.cpp" />
-    <ClCompile Include="Actor\Character\Venus\Venus.cpp" />
-    <ClCompile Include="Actor\Character\Venus\VenusSensor.cpp" />
+    <ClCompile Include="Actor\Character\Plant\Plant.cpp" />
+    <ClCompile Include="Actor\Character\Plant\PlantSensor.cpp" />
+    <ClCompile Include="Actor\Character\Plant\PlantFireball.cpp" />
     <ClCompile Include="Actor\Prop\Platform\Platform.cpp" />
     <ClCompile Include="Engine\Component\Animation.cpp" />
     <ClCompile Include="Engine\Framework\Application.cpp" />
@@ -177,11 +175,9 @@
     <ClInclude Include="Actor\Character\Mario\Mario.h" />
     <ClInclude Include="Actor\Character\Mario\MarioFireball.h" />
     <ClInclude Include="Actor\Character\Mario\MarioTail.h" />
-    <ClInclude Include="Actor\Character\Piranha\Piranha.h" />
-    <ClInclude Include="Actor\Character\Piranha\PiranhaSensor.h" />
-    <ClInclude Include="Actor\Character\Venus\Fireball.h" />
-    <ClInclude Include="Actor\Character\Venus\Venus.h" />
-    <ClInclude Include="Actor\Character\Venus\VenusSensor.h" />
+    <ClInclude Include="Actor\Character\Plant\Plant.h" />
+    <ClInclude Include="Actor\Character\Plant\PlantSensor.h" />
+    <ClInclude Include="Actor\Character\Plant\PlantFireball.h" />
     <ClInclude Include="Actor\Prop\Platform\Platform.h" />
     <ClInclude Include="Data\Asset\Prop\Platform\PlatformS11.xml" />
     <ClInclude Include="Engine\Component\Animation.h" />
@@ -216,13 +212,14 @@
     <Xml Include="Data\Asset\Character\Mario\Mario.xml" />
     <Xml Include="Data\Asset\Character\Mario\MarioFireball.xml" />
     <Xml Include="Data\Asset\Character\Mario\MarioTail.xml" />
-    <Xml Include="Data\Asset\Character\Piranha\Piranha.xml" />
-    <Xml Include="Data\Asset\Character\Piranha\PiranhaSensor.xml" />
-    <Xml Include="Data\Asset\Character\Piranha\RedPiranha.xml" />
-    <Xml Include="Data\Asset\Character\Venus\Fireball.xml" />
-    <Xml Include="Data\Asset\Character\Venus\RedVenus.xml" />
-    <Xml Include="Data\Asset\Character\Venus\Venus.xml" />
-    <Xml Include="Data\Asset\Character\Venus\VenusSensor.xml" />
+    <Xml Include="Data\Asset\Character\Plant\PiranhaUp.xml" />
+    <Xml Include="Data\Asset\Character\Plant\PlantSensor.xml" />
+    <Xml Include="Data\Asset\Character\Plant\RedPiranhaUp.xml" />
+    <Xml Include="Data\Asset\Character\Plant\PlantFireball.xml" />
+    <Xml Include="Data\Asset\Character\Plant\RedVenusDown.xml" />
+    <Xml Include="Data\Asset\Character\Plant\RedVenusUp.xml" />
+    <Xml Include="Data\Asset\Character\Plant\VenusDown.xml" />
+    <Xml Include="Data\Asset\Character\Plant\VenusUp.xml" />
     <Xml Include="Data\Asset\Prop\Platform\PlatformS116.xml" />
     <Xml Include="Data\Asset\Prop\Platform\PlatformH11.xml" />
     <Xml Include="Data\Asset\Prop\Platform\PlatformH116.xml" />
@@ -242,6 +239,8 @@
     <Xml Include="Data\Asset\Prop\Platform\PlatformS81.xml" />
     <Xml Include="Data\GameData.xml" />
     <Xml Include="Data\Scene\Sandbox.xml" />
+    <Xml Include="Data\Asset\Character\Plant\PiranhaDown.xml" />
+    <Xml Include="Data\Asset\Character\Plant\RedPiranhaDown.xml" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="Data\Texture\BBox.png" />
