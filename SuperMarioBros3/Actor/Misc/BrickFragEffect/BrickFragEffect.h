@@ -1,9 +1,9 @@
 #pragma once
-#ifndef __WORLD_GOAL_H__
-#define __WORLD_GOAL_H__
+#ifndef __BRICK_FRAG_EFFECT_H__
+#define __BRICK_FRAG_EFFECT_H__
 
 #pragma region INCLUDE
-#include "../../Engine/GameObject.h"
+#include "../../../Engine/GameObject.h"
 #pragma endregion
 
 #pragma region DEFINE
@@ -12,10 +12,10 @@
 /* SOUNDCLIP ID */
 #pragma endregion
 
-class CWorldGoal : public CGameObject
+class CBrickFragEffect : public CGameObject
 {
 public:
-	CWorldGoal(
+	CBrickFragEffect(
 		pGame game, pScene scene,
 		unsigned int id, std::string name, std::string source,
 		float x, float y, int gx, int gy, unsigned int layer
@@ -31,6 +31,6 @@ public:
 	virtual int IsBlocking();
 	virtual void GetBoundingBox(float& left, float& top, float& right, float& bottom);
 };
-typedef CWorldGoal* pWorldGoal;
+typedef CBrickFragEffect* pBrickFragEffect;
 
-#endif // !__WORLD_GOAL_H__
+#endif // !__BRICK_FRAG_EFFECT_H__

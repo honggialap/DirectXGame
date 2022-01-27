@@ -1,9 +1,9 @@
 #pragma once
-#ifndef __DEAD_ZONE_H__
-#define __DEAD_ZONE_H__
+#ifndef __PIPE_H__
+#define __PIPE_H__
 
 #pragma region INCLUDE
-#include "../../Engine/GameObject.h"
+#include "../../../Engine/GameObject.h"
 #pragma endregion
 
 #pragma region DEFINE
@@ -12,10 +12,10 @@
 /* SOUNDCLIP ID */
 #pragma endregion
 
-class CDeadZone : public CGameObject
+class CPipe : public CGameObject
 {
 public:
-	CDeadZone(
+	CPipe(
 		pGame game, pScene scene,
 		unsigned int id, std::string name, std::string source,
 		float x, float y, int gx, int gy, unsigned int layer
@@ -31,6 +31,6 @@ public:
 	virtual int IsBlocking();
 	virtual void GetBoundingBox(float& left, float& top, float& right, float& bottom);
 };
-typedef CDeadZone* pDeadZone;
+typedef CPipe* pPipe;
 
-#endif // !__DEAD_ZONE_H__
+#endif // !__PIPE_H__

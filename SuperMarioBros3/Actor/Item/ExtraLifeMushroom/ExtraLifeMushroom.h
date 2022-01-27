@@ -3,7 +3,7 @@
 #define __EXTRALIFE_MUSHROOM_H_
 
 #pragma region INCLUDE
-#include "../../Engine/GameObject.h"
+#include "../../../Engine/GameObject.h"
 #pragma endregion
 
 #pragma region DEFINE

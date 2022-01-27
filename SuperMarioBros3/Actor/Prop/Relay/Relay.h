@@ -1,6 +1,6 @@
 #pragma once
-#ifndef __WORLDMAP_H__
-#define __WORLDMAP_H__
+#ifndef __RELAY_H__
+#define __RELAY_H__
 
 #pragma region INCLUDE
 #include "../../../Engine/GameObject.h"
@@ -12,10 +12,10 @@
 /* SOUNDCLIP ID */
 #pragma endregion
 
-class CWorldMap : public CGameObject
+class CRelay : public CGameObject
 {
 public:
-	CWorldMap(
+	CRelay(
 		pGame game, pScene scene,
 		unsigned int id, std::string name, std::string source,
 		float x, float y, int gx, int gy, unsigned int layer
@@ -31,6 +31,6 @@ public:
 	virtual int IsBlocking();
 	virtual void GetBoundingBox(float& left, float& top, float& right, float& bottom);
 };
-typedef CWorldMap* pWorldMap;
+typedef CRelay* pRelay;
 
-#endif // !__WORLDMAP_H__
+#endif // !__RELAY_H__

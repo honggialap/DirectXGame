@@ -76,6 +76,81 @@
     <ClCompile Include="Actor\Character\Plant\PlantFireball.cpp">
       <Filter>Actor\Character\Plant</Filter>
     </ClCompile>
+    <ClCompile Include="Actor\Controller\GameMaster\GameMaster.cpp">
+      <Filter>Actor\Controller\GameMaster</Filter>
+    </ClCompile>
+    <ClCompile Include="Actor\Controller\World\World.cpp">
+      <Filter>Actor\Controller\World</Filter>
+    </ClCompile>
+    <ClCompile Include="Actor\Item\Coin\Coin.cpp">
+      <Filter>Actor\Item\Coin</Filter>
+    </ClCompile>
+    <ClCompile Include="Actor\Item\ExtraLifeMushroom\ExtraLifeMushroom.cpp">
+      <Filter>Actor\Item\ExtraLifeMushroom</Filter>
+    </ClCompile>
+    <ClCompile Include="Actor\Item\FireFlower\FireFlower.cpp">
+      <Filter>Actor\Item\FireFlower</Filter>
+    </ClCompile>
+    <ClCompile Include="Actor\Item\SuperLeaf\SuperLeaf.cpp">
+      <Filter>Actor\Item\SuperLeaf</Filter>
+    </ClCompile>
+    <ClCompile Include="Actor\Item\SuperMushroom\SuperMushroom.cpp">
+      <Filter>Actor\Item\SuperMushroom</Filter>
+    </ClCompile>
+    <ClCompile Include="Actor\Misc\Background\Background.cpp">
+      <Filter>Actor\Mics\Background</Filter>
+    </ClCompile>
+    <ClCompile Include="Actor\Prop\Brick\Brick.cpp">
+      <Filter>Actor\Prop\Brick</Filter>
+    </ClCompile>
+    <ClCompile Include="Actor\Prop\Block\Block.cpp">
+      <Filter>Actor\Prop\Block</Filter>
+    </ClCompile>
+    <ClCompile Include="Actor\Prop\DeadZone\DeadZone.cpp">
+      <Filter>Actor\Prop\DeadZone</Filter>
+    </ClCompile>
+    <ClCompile Include="Actor\Prop\SpawnZone\SpawnZone.cpp">
+      <Filter>Actor\Prop\SpawnZone</Filter>
+    </ClCompile>
+    <ClCompile Include="Actor\Misc\HUD\HUD.cpp">
+      <Filter>Actor\Mics\HUD</Filter>
+    </ClCompile>
+    <ClCompile Include="Actor\Misc\HUD\PowerBar.cpp">
+      <Filter>Actor\Mics\HUD</Filter>
+    </ClCompile>
+    <ClCompile Include="Actor\Prop\Goal\Goal.cpp">
+      <Filter>Actor\Prop\Goal</Filter>
+    </ClCompile>
+    <ClCompile Include="Actor\Prop\Pipe\Pipe.cpp">
+      <Filter>Actor\Prop\Pipe</Filter>
+    </ClCompile>
+    <ClCompile Include="Actor\Misc\BrickFragEffect\BrickFragEffect.cpp">
+      <Filter>Actor\Mics\BrickFragEffect</Filter>
+    </ClCompile>
+    <ClCompile Include="Actor\Misc\HitEffect\HitEffect.cpp">
+      <Filter>Actor\Mics\HItEffect</Filter>
+    </ClCompile>
+    <ClCompile Include="Actor\Misc\ScoreEffect\ScoreEffect.cpp">
+      <Filter>Actor\Mics\ScoreEffect</Filter>
+    </ClCompile>
+    <ClCompile Include="Actor\Misc\DeathEffect\DeathEffect.cpp">
+      <Filter>Actor\Mics\DeathEffect</Filter>
+    </ClCompile>
+    <ClCompile Include="Actor\Prop\Relay\Relay.cpp">
+      <Filter>Actor\Prop\Relay</Filter>
+    </ClCompile>
+    <ClCompile Include="Actor\Prop\Pipe\TransportPipe.cpp">
+      <Filter>Actor\Prop\Pipe</Filter>
+    </ClCompile>
+    <ClCompile Include="Actor\Item\Starman\Starman.cpp">
+      <Filter>Actor\Item\Starman</Filter>
+    </ClCompile>
+    <ClCompile Include="Actor\Controller\Title\Title.cpp">
+      <Filter>Actor\Controller\Title</Filter>
+    </ClCompile>
+    <ClCompile Include="Actor\Controller\WorldMap\WorldMap.cpp">
+      <Filter>Actor\Controller\WorldMap</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Engine\Game.h">
@@ -156,6 +231,81 @@
     <ClInclude Include="Actor\Character\Plant\PlantFireball.h">
       <Filter>Actor\Character\Plant</Filter>
     </ClInclude>
+    <ClInclude Include="Actor\Controller\GameMaster\GameMaster.h">
+      <Filter>Actor\Controller\GameMaster</Filter>
+    </ClInclude>
+    <ClInclude Include="Actor\Controller\World\World.h">
+      <Filter>Actor\Controller\World</Filter>
+    </ClInclude>
+    <ClInclude Include="Actor\Item\Coin\Coin.h">
+      <Filter>Actor\Item\Coin</Filter>
+    </ClInclude>
+    <ClInclude Include="Actor\Item\ExtraLifeMushroom\ExtraLifeMushroom.h">
+      <Filter>Actor\Item\ExtraLifeMushroom</Filter>
+    </ClInclude>
+    <ClInclude Include="Actor\Item\FireFlower\FireFlower.h">
+      <Filter>Actor\Item\FireFlower</Filter>
+    </ClInclude>
+    <ClInclude Include="Actor\Item\SuperLeaf\SuperLeaf.h">
+      <Filter>Actor\Item\SuperLeaf</Filter>
+    </ClInclude>
+    <ClInclude Include="Actor\Item\SuperMushroom\SuperMushroom.h">
+      <Filter>Actor\Item\SuperMushroom</Filter>
+    </ClInclude>
+    <ClInclude Include="Actor\Misc\Background\Background.h">
+      <Filter>Actor\Mics\Background</Filter>
+    </ClInclude>
+    <ClInclude Include="Actor\Prop\Brick\Brick.h">
+      <Filter>Actor\Prop\Brick</Filter>
+    </ClInclude>
+    <ClInclude Include="Actor\Prop\Block\Block.h">
+      <Filter>Actor\Prop\Block</Filter>
+    </ClInclude>
+    <ClInclude Include="Actor\Prop\DeadZone\DeadZone.h">
+      <Filter>Actor\Prop\DeadZone</Filter>
+    </ClInclude>
+    <ClInclude Include="Actor\Prop\SpawnZone\SpawnZone.h">
+      <Filter>Actor\Prop\SpawnZone</Filter>
+    </ClInclude>
+    <ClInclude Include="Actor\Misc\HUD\HUD.h">
+      <Filter>Actor\Mics\HUD</Filter>
+    </ClInclude>
+    <ClInclude Include="Actor\Misc\HUD\PowerBar.h">
+      <Filter>Actor\Mics\HUD</Filter>
+    </ClInclude>
+    <ClInclude Include="Actor\Prop\Goal\Goal.h">
+      <Filter>Actor\Prop\Goal</Filter>
+    </ClInclude>
+    <ClInclude Include="Actor\Prop\Pipe\Pipe.h">
+      <Filter>Actor\Prop\Pipe</Filter>
+    </ClInclude>
+    <ClInclude Include="Actor\Misc\BrickFragEffect\BrickFragEffect.h">
+      <Filter>Actor\Mics\BrickFragEffect</Filter>
+    </ClInclude>
+    <ClInclude Include="Actor\Misc\HitEffect\HitEffect.h">
+      <Filter>Actor\Mics\HItEffect</Filter>
+    </ClInclude>
+    <ClInclude Include="Actor\Misc\ScoreEffect\ScoreEffect.h">
+      <Filter>Actor\Mics\ScoreEffect</Filter>
+    </ClInclude>
+    <ClInclude Include="Actor\Misc\DeathEffect\DeathEffect.h">
+      <Filter>Actor\Mics\DeathEffect</Filter>
+    </ClInclude>
+    <ClInclude Include="Actor\Prop\Relay\Relay.h">
+      <Filter>Actor\Prop\Relay</Filter>
+    </ClInclude>
+    <ClInclude Include="Actor\Prop\Pipe\TransportPipe.h">
+      <Filter>Actor\Prop\Pipe</Filter>
+    </ClInclude>
+    <ClInclude Include="Actor\Item\Starman\Starman.h">
+      <Filter>Actor\Item\Starman</Filter>
+    </ClInclude>
+    <ClInclude Include="Actor\Controller\Title\Title.h">
+      <Filter>Actor\Controller\Title</Filter>
+    </ClInclude>
+    <ClInclude Include="Actor\Controller\WorldMap\WorldMap.h">
+      <Filter>Actor\Controller\WorldMap</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Engine">
@@ -226,9 +376,6 @@
     </Filter>
     <Filter Include="Actor\Item\FireFlower">
       <UniqueIdentifier>{02adbe7d-c837-4036-8f57-3c4026f954e4}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Actor\Item\SuperStar">
-      <UniqueIdentifier>{8649b7f1-1dbd-4f52-8b8c-a0074589e81f}</UniqueIdentifier>
     </Filter>
     <Filter Include="Actor\Prop\Platform">
       <UniqueIdentifier>{105549d9-df42-4e79-b025-28825bdb6bf5}</UniqueIdentifier>
@@ -302,9 +449,6 @@
     <Filter Include="Actor\Prop\Pipe">
       <UniqueIdentifier>{0b6cf4b9-93cf-4d9b-a0c3-a224bf7cb18e}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Actor\Prop\TransportPipe">
-      <UniqueIdentifier>{a65eacef-8809-4409-8b4c-310fb68b0dff}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Actor\Prop\TransportDoor">
       <UniqueIdentifier>{94f8a3ae-1caa-47da-8940-c4fc81113ade}</UniqueIdentifier>
     </Filter>
@@ -328,12 +472,6 @@
     </Filter>
     <Filter Include="Actor\Prop\SpawnZone">
       <UniqueIdentifier>{11db7a55-95a1-4a29-93fe-9c79dad90ba9}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Actor\Prop\WorldGoal">
-      <UniqueIdentifier>{28e576a5-b079-412c-941b-78fb2dd873cc}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Actor\WorldMap\WorldMapPortal">
-      <UniqueIdentifier>{4d728e7c-1dec-4589-8868-35ce22a42a9c}</UniqueIdentifier>
     </Filter>
     <Filter Include="Actor\Prop\Roto">
       <UniqueIdentifier>{28ad50a1-206a-4a05-993b-7f84fea6ad72}</UniqueIdentifier>
@@ -362,9 +500,6 @@
     <Filter Include="Actor\Mics\LavaEffect">
       <UniqueIdentifier>{5770aad6-3810-477a-854c-4a246956bfe0}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Actor\Mics\Score">
-      <UniqueIdentifier>{d1c0fa00-7951-4051-a455-881787a52f75}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Actor\Mics\WaterEffect">
       <UniqueIdentifier>{caf7e4e9-d41d-4733-8a37-1bd2f533fc42}</UniqueIdentifier>
     </Filter>
@@ -379,6 +514,21 @@
     </Filter>
     <Filter Include="Actor\Character\Plant">
       <UniqueIdentifier>{7a48566b-54b1-476e-b9e7-9e46fb674b9e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Actor\Item\Starman">
+      <UniqueIdentifier>{8649b7f1-1dbd-4f52-8b8c-a0074589e81f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Actor\Prop\Goal">
+      <UniqueIdentifier>{28e576a5-b079-412c-941b-78fb2dd873cc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Actor\Mics\ScoreEffect">
+      <UniqueIdentifier>{d1c0fa00-7951-4051-a455-881787a52f75}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Actor\Prop\Relay">
+      <UniqueIdentifier>{f537f6ef-29de-4ae9-b3bf-bd26cd8be67e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Actor\WorldMap\Panel">
+      <UniqueIdentifier>{4d728e7c-1dec-4589-8868-35ce22a42a9c}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -513,6 +663,96 @@
     <Xml Include="Data\Asset\Character\Plant\VenusDown.xml">
       <Filter>Actor\Character\Plant</Filter>
     </Xml>
+    <Xml Include="Data\Asset\Controller\GameMaster.xml">
+      <Filter>Actor\Controller\GameMaster</Filter>
+    </Xml>
+    <Xml Include="Data\Asset\Controller\World11.xml">
+      <Filter>Actor\Controller\World</Filter>
+    </Xml>
+    <Xml Include="Data\Asset\Item\Coin.xml">
+      <Filter>Actor\Item\Coin</Filter>
+    </Xml>
+    <Xml Include="Data\Asset\Item\ExtraLifeMushroom.xml">
+      <Filter>Actor\Item\ExtraLifeMushroom</Filter>
+    </Xml>
+    <Xml Include="Data\Asset\Item\FireFlower.xml">
+      <Filter>Actor\Item\FireFlower</Filter>
+    </Xml>
+    <Xml Include="Data\Asset\Item\SuperLeaf.xml">
+      <Filter>Actor\Item\SuperLeaf</Filter>
+    </Xml>
+    <Xml Include="Data\Asset\Item\SuperMushroom.xml">
+      <Filter>Actor\Item\SuperMushroom</Filter>
+    </Xml>
+    <Xml Include="Data\Asset\Misc\Background\World11SubBG.xml">
+      <Filter>Actor\Mics\Background</Filter>
+    </Xml>
+    <Xml Include="Data\Asset\Misc\Background\World11MainBG.xml">
+      <Filter>Actor\Mics\Background</Filter>
+    </Xml>
+    <Xml Include="Data\Asset\Prop\Brick\Brick.xml">
+      <Filter>Actor\Prop\Brick</Filter>
+    </Xml>
+    <Xml Include="Data\Asset\Prop\Block\BrickExtraLifeBlock.xml">
+      <Filter>Actor\Prop\Block</Filter>
+    </Xml>
+    <Xml Include="Data\Asset\Prop\Block\BrickSwitchBlock.xml">
+      <Filter>Actor\Prop\Block</Filter>
+    </Xml>
+    <Xml Include="Data\Asset\Prop\Block\QuestionCoinBlock.xml">
+      <Filter>Actor\Prop\Block</Filter>
+    </Xml>
+    <Xml Include="Data\Asset\Prop\Block\QuestionFireFlowerBlock.xml">
+      <Filter>Actor\Prop\Block</Filter>
+    </Xml>
+    <Xml Include="Data\Asset\Prop\Block\QuestionPowerUpBlock.xml">
+      <Filter>Actor\Prop\Block</Filter>
+    </Xml>
+    <Xml Include="Data\Asset\Prop\DeadZone\DeadZone.xml">
+      <Filter>Actor\Prop\DeadZone</Filter>
+    </Xml>
+    <Xml Include="Data\Asset\Prop\SpawnZone\SpawnZone.xml">
+      <Filter>Actor\Prop\SpawnZone</Filter>
+    </Xml>
+    <Xml Include="Data\Asset\Misc\HUD\HUD.xml">
+      <Filter>Actor\Mics\HUD</Filter>
+    </Xml>
+    <Xml Include="Data\Asset\Misc\HUD\PowerBar.xml">
+      <Filter>Actor\Mics\HUD</Filter>
+    </Xml>
+    <Xml Include="Data\Asset\Prop\Goal\Goal.xml">
+      <Filter>Actor\Prop\Goal</Filter>
+    </Xml>
+    <Xml Include="Data\Asset\Prop\Pipe\Pipe.xml">
+      <Filter>Actor\Prop\Pipe</Filter>
+    </Xml>
+    <Xml Include="Data\Asset\Misc\BrickFragEffect\BrickFragEffect.xml">
+      <Filter>Actor\Mics\BrickFragEffect</Filter>
+    </Xml>
+    <Xml Include="Data\Asset\Misc\HitEffect\HitEffect.xml">
+      <Filter>Actor\Mics\HItEffect</Filter>
+    </Xml>
+    <Xml Include="Data\Asset\Misc\ScoreEffect\ScoreEffect.xml">
+      <Filter>Actor\Mics\ScoreEffect</Filter>
+    </Xml>
+    <Xml Include="Data\Asset\Misc\DeathEffect\DeathEffect.xml">
+      <Filter>Actor\Mics\DeathEffect</Filter>
+    </Xml>
+    <Xml Include="Data\Asset\Prop\Relay\Relay.xml">
+      <Filter>Actor\Prop\Relay</Filter>
+    </Xml>
+    <Xml Include="Data\Asset\Prop\Pipe\TransportPipe.xml">
+      <Filter>Actor\Prop\Pipe</Filter>
+    </Xml>
+    <Xml Include="Data\Asset\Item\Starman.xml">
+      <Filter>Actor\Item\Starman</Filter>
+    </Xml>
+    <Xml Include="Data\Asset\Controller\Title.xml">
+      <Filter>Actor\Controller\Title</Filter>
+    </Xml>
+    <Xml Include="Data\Asset\Controller\WorldMapGrassland.xml">
+      <Filter>Actor\Controller\WorldMap</Filter>
+    </Xml>
   </ItemGroup>
   <ItemGroup>
     <Image Include="Data\Texture\Mario.png">
@@ -528,6 +768,12 @@
       <Filter>Resource\Texture</Filter>
     </Image>
     <Image Include="Data\Texture\Plant.png">
+      <Filter>Resource\Texture</Filter>
+    </Image>
+    <Image Include="Data\Texture\Block.png">
+      <Filter>Resource\Texture</Filter>
+    </Image>
+    <Image Include="Data\Texture\Item.png">
       <Filter>Resource\Texture</Filter>
     </Image>
   </ItemGroup>

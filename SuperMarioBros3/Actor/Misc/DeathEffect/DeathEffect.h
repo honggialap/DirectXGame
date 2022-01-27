@@ -1,9 +1,9 @@
 #pragma once
-#ifndef __SCORE_H__
-#define __SCORE_H__
+#ifndef __DEATH_EFFECT_H__
+#define __DEATH_EFFECT_H__
 
 #pragma region INCLUDE
-#include "../../Engine/GameObject.h"
+#include "../../../Engine/GameObject.h"
 #pragma endregion
 
 #pragma region DEFINE
@@ -12,10 +12,10 @@
 /* SOUNDCLIP ID */
 #pragma endregion
 
-class CScore : public CGameObject
+class CDeathEffect : public CGameObject
 {
 public:
-	CScore(
+	CDeathEffect(
 		pGame game, pScene scene,
 		unsigned int id, std::string name, std::string source,
 		float x, float y, int gx, int gy, unsigned int layer
@@ -31,6 +31,6 @@ public:
 	virtual int IsBlocking();
 	virtual void GetBoundingBox(float& left, float& top, float& right, float& bottom);
 };
-typedef CScore* pScore;
+typedef CDeathEffect* pDeathEffect;
 
-#endif // !__SCORE_H__
+#endif // !__DEATH_EFFECT_H__

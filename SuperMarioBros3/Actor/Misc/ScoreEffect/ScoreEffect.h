@@ -1,9 +1,9 @@
 #pragma once
-#ifndef __SPAWN_ZONE_H__
-#define __SPAWN_ZONE_H__
+#ifndef __SCORE_EFFECT_H__
+#define __SCORE_EFFECT_H__
 
 #pragma region INCLUDE
-#include "../../Engine/GameObject.h"
+#include "../../../Engine/GameObject.h"
 #pragma endregion
 
 #pragma region DEFINE
@@ -12,10 +12,10 @@
 /* SOUNDCLIP ID */
 #pragma endregion
 
-class CSpawnZone : public CGameObject
+class CScoreEffect : public CGameObject
 {
 public:
-	CSpawnZone(
+	CScoreEffect(
 		pGame game, pScene scene,
 		unsigned int id, std::string name, std::string source,
 		float x, float y, int gx, int gy, unsigned int layer
@@ -31,6 +31,6 @@ public:
 	virtual int IsBlocking();
 	virtual void GetBoundingBox(float& left, float& top, float& right, float& bottom);
 };
-typedef CSpawnZone* pSpawnZone;
+typedef CScoreEffect* pScoreEffect;
 
-#endif // !__SPAWN_ZONE_H__
+#endif // !__SCORE_EFFECT_H__
