@@ -48,6 +48,7 @@ void CExtraLifeMushroom::Update(float elapsedMs)
 
 void CExtraLifeMushroom::Render()
 {
+	if (_renderBody) _sprites[SPR_BBOX]->Render(_x, _y);
 	switch (_action)
 	{
 	case CExtraLifeMushroom::EAction::SPAWN:
