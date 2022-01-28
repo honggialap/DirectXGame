@@ -51,13 +51,13 @@
 /* Misc */
 #define ACT_BACKGROUND			50101
 
-#define ACT_HUD					50201
-#define ACT_POWER_BAR			50202
+#define ACT_HUD					60101
+#define ACT_POWER_BAR			60102
 
-#define ACT_SCORE_EFFECT		50301
-#define ACT_BRICK_FRAG_EFFECT	50302
-#define ACT_HIT_EFFECT			50303
-#define ACT_DEATH_EFFECT		50304
+#define ACT_SCORE_EFFECT		70101
+#define ACT_BRICK_FRAG_EFFECT	70201
+#define ACT_HIT_EFFECT			70301
+#define ACT_DEATH_EFFECT		70401
 
 /* Title */
 /* World Map */

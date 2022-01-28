@@ -1,60 +1,60 @@
 <Prefab>
 	<!--SPRITES-->
 	<!--BBOX-->
-	<Sprite id="999901" textureId="0" left="0" top="0" width="28" height="28" offsetX="0" offsetY="14"/>
+	<Sprite id="999901" textureId="101" left="0" top="0" width="28" height="28" offsetX="0" offsetY="14"/>
 
 	<!--KOOPA-->
-	<Sprite id="110101" textureId="1003" left="2" top="2" width="32" height="64" offsetX="0" offsetY="24"/>
-	<Sprite id="110102" textureId="1003" left="38" top="2" width="32" height="64" offsetX="0" offsetY="24"/>
-	<Sprite id="120101" textureId="1003" left="74" top="2" width="32" height="64" offsetX="0" offsetY="24"/>
-	<Sprite id="120102" textureId="1003" left="110" top="2" width="32" height="64" offsetX="0" offsetY="24"/>
+	<Sprite id="110101" textureId="203" left="2" top="2" width="32" height="64" offsetX="0" offsetY="24"/>
+	<Sprite id="110102" textureId="203" left="38" top="2" width="32" height="64" offsetX="0" offsetY="24"/>
+	<Sprite id="120101" textureId="203" left="74" top="2" width="32" height="64" offsetX="0" offsetY="24"/>
+	<Sprite id="120102" textureId="203" left="110" top="2" width="32" height="64" offsetX="0" offsetY="24"/>
 
-	<Sprite id="130101" textureId="1003" left="2" top="70" width="32" height="64" offsetX="0" offsetY="24"/>
-	<Sprite id="130102" textureId="1003" left="38" top="70" width="32" height="64" offsetX="0" offsetY="24"/>
-	<Sprite id="140101" textureId="1003" left="74" top="70" width="32" height="64" offsetX="0" offsetY="24"/>
-	<Sprite id="140102" textureId="1003" left="110" top="70" width="32" height="64" offsetX="0" offsetY="24"/>
+	<Sprite id="130101" textureId="203" left="2" top="70" width="32" height="64" offsetX="0" offsetY="24"/>
+	<Sprite id="130102" textureId="203" left="38" top="70" width="32" height="64" offsetX="0" offsetY="24"/>
+	<Sprite id="140101" textureId="203" left="74" top="70" width="32" height="64" offsetX="0" offsetY="24"/>
+	<Sprite id="140102" textureId="203" left="110" top="70" width="32" height="64" offsetX="0" offsetY="24"/>
 
-	<Sprite id="150101" textureId="1003" left="2" top="138" width="32" height="32" offsetX="0" offsetY="16"/>
-	<Sprite id="150102" textureId="1003" left="38" top="138" width="32" height="32" offsetX="0" offsetY="16"/>
-	<Sprite id="150103" textureId="1003" left="74" top="138" width="32" height="32" offsetX="0" offsetY="16"/>
-	<Sprite id="150104" textureId="1003" left="110" top="138" width="32" height="32" offsetX="0" offsetY="16"/>
-	<Sprite id="150201" textureId="1003" left="146" top="138" width="32" height="32" offsetX="0" offsetY="16"/>
+	<Sprite id="150101" textureId="203" left="2" top="138" width="32" height="32" offsetX="0" offsetY="16"/>
+	<Sprite id="150102" textureId="203" left="38" top="138" width="32" height="32" offsetX="0" offsetY="16"/>
+	<Sprite id="150103" textureId="203" left="74" top="138" width="32" height="32" offsetX="0" offsetY="16"/>
+	<Sprite id="150104" textureId="203" left="110" top="138" width="32" height="32" offsetX="0" offsetY="16"/>
+	<Sprite id="150201" textureId="203" left="146" top="138" width="32" height="32" offsetX="0" offsetY="16"/>
 
-	<Sprite id="160101" textureId="1003" left="2" top="174" width="32" height="32" offsetX="0" offsetY="16"/>
-	<Sprite id="160102" textureId="1003" left="38" top="174" width="32" height="32" offsetX="0" offsetY="16"/>
-	<Sprite id="160103" textureId="1003" left="74" top="174" width="32" height="32" offsetX="0" offsetY="16"/>
-	<Sprite id="160104" textureId="1003" left="110" top="174" width="32" height="32" offsetX="0" offsetY="16"/>
-	<Sprite id="160201" textureId="1003" left="146" top="174" width="32" height="32" offsetX="0" offsetY="16"/>
+	<Sprite id="160101" textureId="203" left="2" top="174" width="32" height="32" offsetX="0" offsetY="16"/>
+	<Sprite id="160102" textureId="203" left="38" top="174" width="32" height="32" offsetX="0" offsetY="16"/>
+	<Sprite id="160103" textureId="203" left="74" top="174" width="32" height="32" offsetX="0" offsetY="16"/>
+	<Sprite id="160104" textureId="203" left="110" top="174" width="32" height="32" offsetX="0" offsetY="16"/>
+	<Sprite id="160201" textureId="203" left="146" top="174" width="32" height="32" offsetX="0" offsetY="16"/>
 
 	<!--RED KOOPA-->
-	<Sprite id="210101" textureId="1003" left="2" top="210" width="32" height="64" offsetX="0" offsetY="24"/>
-	<Sprite id="210102" textureId="1003" left="38" top="210" width="32" height="64" offsetX="0" offsetY="24"/>
-	<Sprite id="220101" textureId="1003" left="74" top="210" width="32" height="64" offsetX="0" offsetY="24"/>
-	<Sprite id="220102" textureId="1003" left="110" top="210" width="32" height="64" offsetX="0" offsetY="24"/>
+	<Sprite id="210101" textureId="203" left="2" top="210" width="32" height="64" offsetX="0" offsetY="24"/>
+	<Sprite id="210102" textureId="203" left="38" top="210" width="32" height="64" offsetX="0" offsetY="24"/>
+	<Sprite id="220101" textureId="203" left="74" top="210" width="32" height="64" offsetX="0" offsetY="24"/>
+	<Sprite id="220102" textureId="203" left="110" top="210" width="32" height="64" offsetX="0" offsetY="24"/>
 
-	<Sprite id="230101" textureId="1003" left="2" top="278" width="32" height="64" offsetX="0" offsetY="24"/>
-	<Sprite id="230102" textureId="1003" left="38" top="278" width="32" height="64" offsetX="0" offsetY="24"/>
-	<Sprite id="240101" textureId="1003" left="74" top="278" width="32" height="64" offsetX="0" offsetY="24"/>
-	<Sprite id="240102" textureId="1003" left="110" top="278" width="32" height="64" offsetX="0" offsetY="24"/>
+	<Sprite id="230101" textureId="203" left="2" top="278" width="32" height="64" offsetX="0" offsetY="24"/>
+	<Sprite id="230102" textureId="203" left="38" top="278" width="32" height="64" offsetX="0" offsetY="24"/>
+	<Sprite id="240101" textureId="203" left="74" top="278" width="32" height="64" offsetX="0" offsetY="24"/>
+	<Sprite id="240102" textureId="203" left="110" top="278" width="32" height="64" offsetX="0" offsetY="24"/>
 
-	<Sprite id="250101" textureId="1003" left="2" top="346" width="32" height="32" offsetX="0" offsetY="16"/>
-	<Sprite id="250102" textureId="1003" left="38" top="346" width="32" height="32" offsetX="0" offsetY="16"/>
-	<Sprite id="250103" textureId="1003" left="74" top="346" width="32" height="32" offsetX="0" offsetY="16"/>
-	<Sprite id="250104" textureId="1003" left="110" top="346" width="32" height="32" offsetX="0" offsetY="16"/>
-	<Sprite id="250201" textureId="1003" left="146" top="346" width="32" height="32" offsetX="0" offsetY="16"/>
+	<Sprite id="250101" textureId="203" left="2" top="346" width="32" height="32" offsetX="0" offsetY="16"/>
+	<Sprite id="250102" textureId="203" left="38" top="346" width="32" height="32" offsetX="0" offsetY="16"/>
+	<Sprite id="250103" textureId="203" left="74" top="346" width="32" height="32" offsetX="0" offsetY="16"/>
+	<Sprite id="250104" textureId="203" left="110" top="346" width="32" height="32" offsetX="0" offsetY="16"/>
+	<Sprite id="250201" textureId="203" left="146" top="346" width="32" height="32" offsetX="0" offsetY="16"/>
 
-	<Sprite id="260101" textureId="1003" left="2" top="382" width="32" height="32" offsetX="0" offsetY="16"/>
-	<Sprite id="260102" textureId="1003" left="38" top="382" width="32" height="32" offsetX="0" offsetY="16"/>
-	<Sprite id="260103" textureId="1003" left="74" top="382" width="32" height="32" offsetX="0" offsetY="16"/>
-	<Sprite id="260104" textureId="1003" left="110" top="382" width="32" height="32" offsetX="0" offsetY="16"/>
-	<Sprite id="260201" textureId="1003" left="146" top="382" width="32" height="32" offsetX="0" offsetY="16"/>
+	<Sprite id="260101" textureId="203" left="2" top="382" width="32" height="32" offsetX="0" offsetY="16"/>
+	<Sprite id="260102" textureId="203" left="38" top="382" width="32" height="32" offsetX="0" offsetY="16"/>
+	<Sprite id="260103" textureId="203" left="74" top="382" width="32" height="32" offsetX="0" offsetY="16"/>
+	<Sprite id="260104" textureId="203" left="110" top="382" width="32" height="32" offsetX="0" offsetY="16"/>
+	<Sprite id="260201" textureId="203" left="146" top="382" width="32" height="32" offsetX="0" offsetY="16"/>
 
 	<!--WING-->
-	<Sprite id="310101" textureId="1003" left="2" top="418" width="16" height="32" offsetX="12" offsetY="32"/>
-	<Sprite id="310102" textureId="1003" left="22" top="418" width="16" height="32" offsetX="12" offsetY="32"/>
+	<Sprite id="310101" textureId="203" left="2" top="418" width="16" height="32" offsetX="12" offsetY="32"/>
+	<Sprite id="310102" textureId="203" left="22" top="418" width="16" height="32" offsetX="12" offsetY="32"/>
 
-	<Sprite id="320101" textureId="1003" left="62" top="418" width="16" height="32" offsetX="-12" offsetY="32"/>
-	<Sprite id="320102" textureId="1003" left="42" top="418" width="16" height="32" offsetX="-12" offsetY="32"/>
+	<Sprite id="320101" textureId="203" left="62" top="418" width="16" height="32" offsetX="-12" offsetY="32"/>
+	<Sprite id="320102" textureId="203" left="42" top="418" width="16" height="32" offsetX="-12" offsetY="32"/>
 
 	<!--ANIMATION-->
 	<!--GOOMBA-->

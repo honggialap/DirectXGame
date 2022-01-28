@@ -753,6 +753,18 @@
     <Xml Include="Data\Asset\Controller\WorldMapGrassland.xml">
       <Filter>Actor\Controller\WorldMap</Filter>
     </Xml>
+    <Xml Include="Data\Scene\MainGame.xml">
+      <Filter>Scene</Filter>
+    </Xml>
+    <Xml Include="Data\Scene\World11.xml">
+      <Filter>Scene</Filter>
+    </Xml>
+    <Xml Include="Data\Scene\WorldMapGrassland.xml">
+      <Filter>Scene</Filter>
+    </Xml>
+    <Xml Include="Data\Scene\Title.xml">
+      <Filter>Scene</Filter>
+    </Xml>
   </ItemGroup>
   <ItemGroup>
     <Image Include="Data\Texture\Mario.png">
@@ -774,6 +786,9 @@
       <Filter>Resource\Texture</Filter>
     </Image>
     <Image Include="Data\Texture\Item.png">
+      <Filter>Resource\Texture</Filter>
+    </Image>
+    <Image Include="Data\Texture\Effect.png">
       <Filter>Resource\Texture</Filter>
     </Image>
   </ItemGroup>

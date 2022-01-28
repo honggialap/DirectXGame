@@ -318,13 +318,18 @@
     <Xml Include="Data\Asset\Prop\SpawnZone\SpawnZone.xml" />
     <Xml Include="Data\Asset\Prop\Pipe\TransportPipe.xml" />
     <Xml Include="Data\GameData.xml" />
+    <Xml Include="Data\Scene\MainGame.xml" />
     <Xml Include="Data\Scene\Sandbox.xml" />
     <Xml Include="Data\Asset\Character\Plant\PiranhaDown.xml" />
     <Xml Include="Data\Asset\Character\Plant\RedPiranhaDown.xml" />
+    <Xml Include="Data\Scene\Title.xml" />
+    <Xml Include="Data\Scene\World11.xml" />
+    <Xml Include="Data\Scene\WorldMapGrassland.xml" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="Data\Texture\BBox.png" />
     <Image Include="Data\Texture\Block.png" />
+    <Image Include="Data\Texture\Effect.png" />
     <Image Include="Data\Texture\Goomba.png" />
     <Image Include="Data\Texture\Item.png" />
     <Image Include="Data\Texture\Koopa.png" />

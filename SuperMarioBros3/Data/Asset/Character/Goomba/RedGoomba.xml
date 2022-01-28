@@ -1,25 +1,25 @@
 <Prefab>
 	<!--SPRITES-->
 	<!--BBOX-->
-	<Sprite id="999901" textureId="0" left="0" top="0" width="28" height="28" offsetX="0" offsetY="14"/>
+	<Sprite id="999901" textureId="101" left="0" top="0" width="28" height="28" offsetX="0" offsetY="14"/>
 
 	<!--GOOMBA-->
-	<Sprite id="110101" textureId="1002" left="2"	top="2" width="32" height="32" offsetX="0" offsetY="16"/>
-	<Sprite id="110102" textureId="1002" left="38"	top="2" width="32" height="32" offsetX="0" offsetY="16"/>
-	<Sprite id="120101" textureId="1002" left="2"	top="38" width="32" height="32" offsetX="0" offsetY="16"/>
-	<Sprite id="120102" textureId="1002" left="38"	top="38" width="32" height="32" offsetX="0" offsetY="16"/>
-	<Sprite id="110201" textureId="1002" left="74"	top="2" width="32" height="32" offsetX="0" offsetY="16"/>
+	<Sprite id="110101" textureId="202" left="2"	top="2" width="32" height="32" offsetX="0" offsetY="16"/>
+	<Sprite id="110102" textureId="202" left="38"	top="2" width="32" height="32" offsetX="0" offsetY="16"/>
+	<Sprite id="120101" textureId="202" left="2"	top="38" width="32" height="32" offsetX="0" offsetY="16"/>
+	<Sprite id="120102" textureId="202" left="38"	top="38" width="32" height="32" offsetX="0" offsetY="16"/>
+	<Sprite id="110201" textureId="202" left="74"	top="2" width="32" height="32" offsetX="0" offsetY="16"/>
 
 	<!--RED GOOMBA-->
-	<Sprite id="210101" textureId="1002" left="2"	top="74" width="32" height="32" offsetX="0" offsetY="16"/>
-	<Sprite id="210102" textureId="1002" left="38"	top="74" width="32" height="32" offsetX="0" offsetY="16"/>
-	<Sprite id="220101" textureId="1002" left="2"	top="110" width="32" height="32" offsetX="0" offsetY="16"/>
-	<Sprite id="220102" textureId="1002" left="38"	top="110" width="32" height="32" offsetX="0" offsetY="16"/>
-	<Sprite id="210201" textureId="1002" left="74"	top="74" width="32" height="32" offsetX="0" offsetY="16"/>
+	<Sprite id="210101" textureId="202" left="2"	top="74" width="32" height="32" offsetX="0" offsetY="16"/>
+	<Sprite id="210102" textureId="202" left="38"	top="74" width="32" height="32" offsetX="0" offsetY="16"/>
+	<Sprite id="220101" textureId="202" left="2"	top="110" width="32" height="32" offsetX="0" offsetY="16"/>
+	<Sprite id="220102" textureId="202" left="38"	top="110" width="32" height="32" offsetX="0" offsetY="16"/>
+	<Sprite id="210201" textureId="202" left="74"	top="74" width="32" height="32" offsetX="0" offsetY="16"/>
 
 	<!--WING-->
-	<Sprite id="310101" textureId="1002" left="2"	top="146" width="48" height="32" offsetX="0" offsetY="24"/>
-	<Sprite id="310102" textureId="1002" left="54"	top="146" width="48" height="32" offsetX="0" offsetY="24"/>
+	<Sprite id="310101" textureId="202" left="2"	top="146" width="48" height="32" offsetX="0" offsetY="24"/>
+	<Sprite id="310102" textureId="202" left="54"	top="146" width="48" height="32" offsetX="0" offsetY="24"/>
 
 
 	<!--ANIMATIONS-->
