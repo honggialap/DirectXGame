@@ -564,6 +564,7 @@ public:
 	void OnCollisionWithGoomba(pCollision collision);
 
 	void OnCollisionWithPlatform(pCollision collision);
+	void OnCollisionWithBlock(pCollision collision);
 
 #pragma endregion
 };

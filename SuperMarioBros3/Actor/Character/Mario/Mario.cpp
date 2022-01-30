@@ -6,6 +6,7 @@
 #include "../../Character/Goomba/MicroGoomba.h"
 
 #include "../../Prop/Platform/Platform.h"
+#include "../../Prop/Block/Block.h"
 
 #include "../../../Engine/Framework/Debug.h"
 #pragma endregion
@@ -2163,6 +2164,9 @@ void CMario::OnCollisionWith(pCollision collision)
 
 	else if (dynamic_cast<pPlatform>(collision->_target))
 		OnCollisionWithPlatform(collision);
+
+	else if (dynamic_cast<pBlock>(collision->_target))
+		OnCollisionWithBlock(collision);
 }
 
 void CMario::OnCollisionWithGoomba(pCollision collision)
@@ -2207,6 +2211,25 @@ void CMario::OnCollisionWithPlatform(pCollision collision)
 			_vy = 0;
 			_ground = true;
 		}
+	}
+}
+
+void CMario::OnCollisionWithBlock(pCollision collision)
+{
+	auto block = dynamic_cast<pBlock>(collision->_target);
+	if (collision->_ny != 0 && collision->_target->IsBlocking())
+	{
+		_vy = 0;
+		if (collision->_ny > 0) _ground = true;
+		else if (collision->_ny < 0)
+		{
+			block->HitBottom();
+		}
+	}
+
+	if (collision->_nx != 0 && collision->_target->IsBlocking())
+	{
+		_vx = 0;
 	}
 }
 

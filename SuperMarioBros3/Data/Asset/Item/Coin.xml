@@ -33,9 +33,9 @@
 
 	<!--STATS-->
 	<Spin
-		GRAVITY			= "0.01"
-		BOUNCE_FORCE	= "0.1"
-		DECAY_INTERVAL	= "500"
+		GRAVITY			= "0.005"
+		BOUNCE_FORCE	= "1"
+		DECAY_INTERVAL	= "350"
 		spin			= "true"
 		/>
 		

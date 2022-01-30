@@ -21,8 +21,8 @@
 	<!--STATS-->
 	<Move
 		GRAVITY			= "0.001"
-		MOVE_SPEED		= "0.1"
-		JUMP_FORCE		= "0.1"
+		MOVE_SPEED		= "0.15"
+		JUMP_FORCE		= "0.4"
 		SPAWN_SPEED		= "0.1"
 		SPAWN_LIMIT		= "32"
 		targetName		= "mario"

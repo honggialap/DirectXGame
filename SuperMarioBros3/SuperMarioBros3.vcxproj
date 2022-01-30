@@ -289,10 +289,12 @@
     <Xml Include="Data\Asset\Misc\HUD\HUD.xml" />
     <Xml Include="Data\Asset\Misc\HUD\PowerBar.xml" />
     <Xml Include="Data\Asset\Prop\Block\BrickExtraLifeBlock.xml" />
-    <Xml Include="Data\Asset\Prop\Block\BrickSwitchBlock.xml" />
+    <Xml Include="Data\Asset\Prop\Block\BrickMultipleCoinBlock.xml" />
+    <Xml Include="Data\Asset\Prop\Block\BrickRelayBlock.xml" />
     <Xml Include="Data\Asset\Prop\Block\QuestionCoinBlock.xml" />
     <Xml Include="Data\Asset\Prop\Block\QuestionFireFlowerBlock.xml" />
     <Xml Include="Data\Asset\Prop\Block\QuestionPowerUpBlock.xml" />
+    <Xml Include="Data\Asset\Prop\Block\QuestionStarmanBlock.xml" />
     <Xml Include="Data\Asset\Prop\Brick\Brick.xml" />
     <Xml Include="Data\Asset\Prop\DeadZone\DeadZone.xml" />
     <Xml Include="Data\Asset\Prop\Goal\Goal.xml" />

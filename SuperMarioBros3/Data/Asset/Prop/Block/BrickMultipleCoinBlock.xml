@@ -36,9 +36,9 @@
 
 	<!--Type-->
 	<Type
-		type				="0"
-		spawn				="1"
-		spawnCount			="1"
+		type				="1"
+		spawn				="0"
+		spawnCount			="10"
 		/>
 
 	<!--BOUNCE-->

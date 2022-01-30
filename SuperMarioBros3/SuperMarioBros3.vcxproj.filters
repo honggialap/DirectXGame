@@ -696,7 +696,7 @@
     <Xml Include="Data\Asset\Prop\Block\BrickExtraLifeBlock.xml">
       <Filter>Actor\Prop\Block</Filter>
     </Xml>
-    <Xml Include="Data\Asset\Prop\Block\BrickSwitchBlock.xml">
+    <Xml Include="Data\Asset\Prop\Block\BrickRelayBlock.xml">
       <Filter>Actor\Prop\Block</Filter>
     </Xml>
     <Xml Include="Data\Asset\Prop\Block\QuestionCoinBlock.xml">
@@ -764,6 +764,12 @@
     </Xml>
     <Xml Include="Data\Scene\Title.xml">
       <Filter>Scene</Filter>
+    </Xml>
+    <Xml Include="Data\Asset\Prop\Block\QuestionStarmanBlock.xml">
+      <Filter>Actor\Prop\Block</Filter>
+    </Xml>
+    <Xml Include="Data\Asset\Prop\Block\BrickMultipleCoinBlock.xml">
+      <Filter>Actor\Prop\Block</Filter>
     </Xml>
   </ItemGroup>
   <ItemGroup>
