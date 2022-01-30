@@ -7,6 +7,7 @@
 
 #include "../../Prop/Platform/Platform.h"
 #include "../../Prop/Block/Block.h"
+#include "../../Prop/Brick/Brick.h"
 
 #include "../../../Engine/Framework/Debug.h"
 #pragma endregion
@@ -2167,6 +2168,9 @@ void CMario::OnCollisionWith(pCollision collision)
 
 	else if (dynamic_cast<pBlock>(collision->_target))
 		OnCollisionWithBlock(collision);
+
+	else if (dynamic_cast<pBrick>(collision->_target))
+		OnCollisionWithBrick(collision);
 }
 
 void CMario::OnCollisionWithGoomba(pCollision collision)
@@ -2224,6 +2228,32 @@ void CMario::OnCollisionWithBlock(pCollision collision)
 		else if (collision->_ny < 0)
 		{
 			block->HitBottom();
+		}
+	}
+
+	if (collision->_nx != 0 && collision->_target->IsBlocking())
+	{
+		_vx = 0;
+	}
+}
+
+void CMario::OnCollisionWithBrick(pCollision collision)
+{
+	auto brick = dynamic_cast<pBrick>(collision->_target);
+	if (collision->_ny != 0 && collision->_target->IsBlocking())
+	{
+		_vy = 0;
+		if (collision->_ny > 0) _ground = true;
+		else if (collision->_ny < 0)
+		{
+			if (_power == EPower::SMALL)
+			{
+				brick->HitBottom();
+			}
+			else
+			{
+				brick->Brake();
+			}
 		}
 	}
 

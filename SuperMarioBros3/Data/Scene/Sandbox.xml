@@ -32,8 +32,7 @@
 	<GameObject actor="30401" name="superLeaf" source="Data/Asset/Item/SuperLeaf.xml" x="300" y="100" gx="0" gy="0" layer="10"/>
 	<GameObject actor="30501" name="starman" source="Data/Asset/Item/Starman.xml" x="400" y="100" gx="0" gy="0" layer="10"/>
 	<GameObject actor="30601" name="extraLifeMushroom" source="Data/Asset/Item/ExtraLifeMushroom.xml" x="500" y="100" gx="0" gy="0" layer="10"/>
-	-->
-
+	
 	<GameObject actor="40201" name="brickExtraLifeBlock" source="Data/Asset/Prop/Block/BrickExtraLifeBlock.xml" x="200" y="100" gx="0" gy="0" layer="10"/>
 	<GameObject actor="40201" name="brickRelayBlock" source="Data/Asset/Prop/Block/BrickRelayBlock.xml" x="300" y="100" gx="0" gy="0" layer="10"/>
 	<GameObject actor="40201" name="brickMultipleCoinBlock" source="Data/Asset/Prop/Block/BrickMultipleCoinBlock.xml" x="400" y="100" gx="0" gy="0" layer="10"/>
@@ -41,14 +40,15 @@
 	<GameObject actor="40201" name="questionPowerUpBlock" source="Data/Asset/Prop/Block/QuestionPowerUpBlock.xml" x="600" y="100" gx="0" gy="0" layer="10"/>
 	<GameObject actor="40201" name="questionFireFlowerBlock" source="Data/Asset/Prop/Block/QuestionFireFlowerBlock.xml" x="700" y="100" gx="0" gy="0" layer="10"/>
 	<GameObject actor="40201" name="questionStarmanBlock" source="Data/Asset/Prop/Block/QuestionStarmanBlock.xml" x="800" y="100" gx="0" gy="0" layer="10"/>
+	-->
+	
+	<GameObject actor="40301" name="brick1" source="Data/Asset/Prop/Brick/Brick.xml" x="100" y="100" gx="0" gy="0" layer="10"/>
+	<GameObject actor="40301" name="brick2" source="Data/Asset/Prop/Brick/Brick.xml" x="200" y="100" gx="0" gy="0" layer="10"/>
+	<GameObject actor="40301" name="brick3" source="Data/Asset/Prop/Brick/Brick.xml" x="300" y="100" gx="0" gy="0" layer="10"/>
+	<GameObject actor="40301" name="brick4" source="Data/Asset/Prop/Brick/Brick.xml" x="400" y="100" gx="0" gy="0" layer="10"/>
+	<GameObject actor="40301" name="brick5" source="Data/Asset/Prop/Brick/Brick.xml" x="500" y="100" gx="0" gy="0" layer="10"/>
 	
 	<!--
-	<GameObject actor="40301" name="brick1" source="Data/Asset/Item/ExtraLifeMushroom.xml" x="500" y="100" gx="0" gy="0" layer="10"/>
-	<GameObject actor="40301" name="brick2" source="Data/Asset/Item/ExtraLifeMushroom.xml" x="500" y="100" gx="0" gy="0" layer="10"/>
-	<GameObject actor="40301" name="brick3" source="Data/Asset/Item/ExtraLifeMushroom.xml" x="500" y="100" gx="0" gy="0" layer="10"/>
-	<GameObject actor="40301" name="brick4" source="Data/Asset/Item/ExtraLifeMushroom.xml" x="500" y="100" gx="0" gy="0" layer="10"/>
-	<GameObject actor="40301" name="brick5" source="Data/Asset/Item/ExtraLifeMushroom.xml" x="500" y="100" gx="0" gy="0" layer="10"/>
-	
 	<GameObject actor="40401" name="emptyUpGreenPipe" source="Data/Asset/Item/ExtraLifeMushroom.xml" x="500" y="100" gx="0" gy="0" layer="10"/>
 	<GameObject actor="40401" name="emptyDownGreenPipe" source="Data/Asset/Item/ExtraLifeMushroom.xml" x="500" y="100" gx="0" gy="0" layer="10"/>
 	<GameObject actor="40401" name="emptyUpBlackPipe" source="Data/Asset/Item/ExtraLifeMushroom.xml" x="500" y="100" gx="0" gy="0" layer="10"/>
