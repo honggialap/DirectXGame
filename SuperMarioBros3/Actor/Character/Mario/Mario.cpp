@@ -8,6 +8,7 @@
 #include "../../Prop/Platform/Platform.h"
 #include "../../Prop/Block/Block.h"
 #include "../../Prop/Brick/Brick.h"
+#include "../../Prop/Pipe/Pipe.h"
 
 #include "../../../Engine/Framework/Debug.h"
 #pragma endregion
@@ -2171,6 +2172,10 @@ void CMario::OnCollisionWith(pCollision collision)
 
 	else if (dynamic_cast<pBrick>(collision->_target))
 		OnCollisionWithBrick(collision);
+
+	else if (dynamic_cast<pPipe>(collision->_target))
+		OnCollisionWithPipe(collision);
+
 }
 
 void CMario::OnCollisionWithGoomba(pCollision collision)
@@ -2260,6 +2265,49 @@ void CMario::OnCollisionWithBrick(pCollision collision)
 	if (collision->_nx != 0 && collision->_target->IsBlocking())
 	{
 		_vx = 0;
+	}
+}
+
+void CMario::OnCollisionWithPipe(pCollision collision)
+{
+	float pipeLeft = 0;
+	float pipeTop = 0;
+	float pipeRight = 0;
+	float pipeBottom = 0;
+	collision->_target->GetBoundingBox(pipeLeft, pipeTop, pipeRight, pipeBottom);
+
+	float left = 0;
+	float top = 0;
+	float right = 0;
+	float bottom = 0;
+	GetBoundingBox(left, top, right, bottom);
+
+	if (collision->_ny == 0 && collision->_nx != 0)
+	{
+		if (collision->_nx > 0)
+		{
+			_vx = 0;
+			_x = pipeRight + ((right - left) / 2) + BLOCK_PUSH_FACTOR;
+		}
+		else
+		{
+			_vx = 0;
+			_x = pipeLeft - ((right - left) / 2) - BLOCK_PUSH_FACTOR;
+		}
+	}
+	else if (collision->_ny != 0 && collision->_nx == 0)
+	{
+		if (collision->_ny > 0)
+		{
+			_vy = 0;
+			_ground = true;
+			_y = pipeTop + BLOCK_PUSH_FACTOR;
+		}
+		else
+		{
+			_vy = 0;
+			_y = pipeBottom - (top - bottom) - BLOCK_PUSH_FACTOR;
+		}
 	}
 }
 

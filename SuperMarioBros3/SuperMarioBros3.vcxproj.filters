@@ -723,9 +723,6 @@
     <Xml Include="Data\Asset\Prop\Goal\Goal.xml">
       <Filter>Actor\Prop\Goal</Filter>
     </Xml>
-    <Xml Include="Data\Asset\Prop\Pipe\Pipe.xml">
-      <Filter>Actor\Prop\Pipe</Filter>
-    </Xml>
     <Xml Include="Data\Asset\Misc\BrickFragEffect\BrickFragEffect.xml">
       <Filter>Actor\Mics\BrickFragEffect</Filter>
     </Xml>
@@ -740,9 +737,6 @@
     </Xml>
     <Xml Include="Data\Asset\Prop\Relay\Relay.xml">
       <Filter>Actor\Prop\Relay</Filter>
-    </Xml>
-    <Xml Include="Data\Asset\Prop\Pipe\TransportPipe.xml">
-      <Filter>Actor\Prop\Pipe</Filter>
     </Xml>
     <Xml Include="Data\Asset\Item\Starman.xml">
       <Filter>Actor\Item\Starman</Filter>
@@ -770,6 +764,36 @@
     </Xml>
     <Xml Include="Data\Asset\Prop\Block\BrickMultipleCoinBlock.xml">
       <Filter>Actor\Prop\Block</Filter>
+    </Xml>
+    <Xml Include="Data\Asset\Prop\Pipe\BlackDownPipe.xml">
+      <Filter>Actor\Prop\Pipe</Filter>
+    </Xml>
+    <Xml Include="Data\Asset\Prop\Pipe\BlackUpPipe.xml">
+      <Filter>Actor\Prop\Pipe</Filter>
+    </Xml>
+    <Xml Include="Data\Asset\Prop\Pipe\GreenDownPipe.xml">
+      <Filter>Actor\Prop\Pipe</Filter>
+    </Xml>
+    <Xml Include="Data\Asset\Prop\Pipe\GreenUpPipe.xml">
+      <Filter>Actor\Prop\Pipe</Filter>
+    </Xml>
+    <Xml Include="Data\Asset\Prop\Pipe\World11MainTransportPipe.xml">
+      <Filter>Actor\Prop\Pipe</Filter>
+    </Xml>
+    <Xml Include="Data\Asset\Prop\Pipe\World11SubTransportPipe.xml">
+      <Filter>Actor\Prop\Pipe</Filter>
+    </Xml>
+    <Xml Include="Data\Asset\Prop\Pipe\BlackLeftPipe.xml">
+      <Filter>Actor\Prop\Pipe</Filter>
+    </Xml>
+    <Xml Include="Data\Asset\Prop\Pipe\BlackRightPipe.xml">
+      <Filter>Actor\Prop\Pipe</Filter>
+    </Xml>
+    <Xml Include="Data\Asset\Prop\Pipe\GreenLeftPipe.xml">
+      <Filter>Actor\Prop\Pipe</Filter>
+    </Xml>
+    <Xml Include="Data\Asset\Prop\Pipe\GreenRightPipe.xml">
+      <Filter>Actor\Prop\Pipe</Filter>
     </Xml>
   </ItemGroup>
   <ItemGroup>

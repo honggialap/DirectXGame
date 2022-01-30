@@ -48,11 +48,16 @@
 	<GameObject actor="40301" name="brick5" source="Data/Asset/Prop/Brick/Brick.xml" x="500" y="100" gx="0" gy="0" layer="10"/>
 	-->
 	
-	<GameObject actor="40401" name="emptyUpGreenPipe" source="Data/Asset/Item/ExtraLifeMushroom.xml" x="500" y="100" gx="0" gy="0" layer="10"/>
-	<GameObject actor="40401" name="emptyDownGreenPipe" source="Data/Asset/Item/ExtraLifeMushroom.xml" x="500" y="100" gx="0" gy="0" layer="10"/>
-	<GameObject actor="40401" name="emptyUpBlackPipe" source="Data/Asset/Item/ExtraLifeMushroom.xml" x="500" y="100" gx="0" gy="0" layer="10"/>
-	<GameObject actor="40401" name="emptyDownBlackPipe" source="Data/Asset/Item/ExtraLifeMushroom.xml" x="500" y="100" gx="0" gy="0" layer="10"/>
+	<GameObject actor="40401" name="emptyLeftGreenPipe" source="Data/Asset/Prop/Pipe/GreenLeftPipe.xml" x="200" y="100" gx="0" gy="0" layer="10"/>
+	<GameObject actor="40401" name="emptyUpGreenPipe" source="Data/Asset/Prop/Pipe/GreenUpPipe.xml" x="300" y="100" gx="0" gy="0" layer="10"/>
+	<GameObject actor="40401" name="emptyRightGreenPipe" source="Data/Asset/Prop/Pipe/GreenRightPipe.xml" x="400" y="100" gx="0" gy="0" layer="10"/>
+	<GameObject actor="40401" name="emptyDownGreenPipe" source="Data/Asset/Prop/Pipe/GreenDownPipe.xml" x="500" y="100" gx="0" gy="0" layer="10"/>
+	<GameObject actor="40401" name="emptyLeftBlackPipe" source="Data/Asset/Prop/Pipe/BlackLeftPipe.xml" x="600" y="100" gx="0" gy="0" layer="10"/>
+	<GameObject actor="40401" name="emptyUpBlackPipe" source="Data/Asset/Prop/Pipe/BlackUpPipe.xml" x="700" y="100" gx="0" gy="0" layer="10"/>
+	<GameObject actor="40401" name="emptyRightBlackPipe" source="Data/Asset/Prop/Pipe/BlackRightPipe.xml" x="800" y="100" gx="0" gy="0" layer="10"/>
+	<GameObject actor="40401" name="emptyDownBlackPipe" source="Data/Asset/Prop/Pipe/BlackDownPipe.xml" x="900" y="100" gx="0" gy="0" layer="10"/>
 
+	<!--
 	<GameObject actor="40401" name="entryGreenPipe" source="Data/Asset/Item/ExtraLifeMushroom.xml" x="500" y="100" gx="0" gy="0" layer="10"/>
 	<GameObject actor="40401" name="exitBlackPipe" source="Data/Asset/Item/ExtraLifeMushroom.xml" x="500" y="100" gx="0" gy="0" layer="10"/>
 	<GameObject actor="40402" name="downTransportPipe" source="Data/Asset/Item/ExtraLifeMushroom.xml" x="500" y="100" gx="0" gy="0" layer="10"/>
@@ -61,14 +66,13 @@
 	<GameObject actor="40401" name="exitGreenPipe" source="Data/Asset/Item/ExtraLifeMushroom.xml" x="500" y="100" gx="0" gy="0" layer="10"/>
 	<GameObject actor="40402" name="upTranportPipe" source="Data/Asset/Item/ExtraLifeMushroom.xml" x="500" y="100" gx="0" gy="0" layer="10"/>
 	
-	<!--
 	<GameObject actor="40501" name="relay" source="Data/Asset/Item/ExtraLifeMushroom.xml" x="500" y="100" gx="0" gy="0" layer="10"/>
 	
-	<GameObject actor="40601" name="relay" source="Data/Asset/Item/ExtraLifeMushroom.xml" x="500" y="100" gx="0" gy="0" layer="10"/>
-	<GameObject actor="40601" name="relay" source="Data/Asset/Item/ExtraLifeMushroom.xml" x="500" y="100" gx="0" gy="0" layer="10"/>
+	<GameObject actor="40601" name="spawnZone1" source="Data/Asset/Item/ExtraLifeMushroom.xml" x="500" y="100" gx="0" gy="0" layer="10"/>
+	<GameObject actor="40601" name="spawnZone2" source="Data/Asset/Item/ExtraLifeMushroom.xml" x="500" y="100" gx="0" gy="0" layer="10"/>
 	
-	<GameObject actor="40701" name="relay" source="Data/Asset/Item/ExtraLifeMushroom.xml" x="500" y="100" gx="0" gy="0" layer="10"/>
-	<GameObject actor="40701" name="relay" source="Data/Asset/Item/ExtraLifeMushroom.xml" x="500" y="100" gx="0" gy="0" layer="10"/>
+	<GameObject actor="40701" name="deadZone1" source="Data/Asset/Item/ExtraLifeMushroom.xml" x="500" y="100" gx="0" gy="0" layer="10"/>
+	<GameObject actor="40701" name="deadZone2" source="Data/Asset/Item/ExtraLifeMushroom.xml" x="500" y="100" gx="0" gy="0" layer="10"/>
 	
 	<GameObject actor="40801" name="goal" source="Data/Asset/Item/ExtraLifeMushroom.xml" x="500" y="100" gx="0" gy="0" layer="10"/>
 	-->
