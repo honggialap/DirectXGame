@@ -48,7 +48,7 @@
 		target				="mario"
 		/>
 
-	<!--SPAWN-->
+	<!--SPAWNABLE-->
 	<Coin actor ="30101" name="coin" source="Data/Asset/Item/Coin.xml"/>
 	<SuperMushroom actor ="30201" name="superMushroom" source="Data/Asset/Item/SuperMushroom.xml"/>
 	<SuperLeaf actor ="30401" name="superLeaf" source="Data/Asset/Item/SuperLeaf.xml"/>

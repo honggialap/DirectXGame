@@ -119,6 +119,7 @@ public:
 	void Add(pGameObject gameObject);
 	pGameObject Get(unsigned int id);
 	pGameObject Get(std::string name);
+	std::vector<unsigned int> GetActives();
 	void Purge();
 
 	/* Grid */

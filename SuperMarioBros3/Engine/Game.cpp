@@ -347,6 +347,11 @@ pGameObject CGame::Get(std::string name)
 		return nullptr;
 }
 
+std::vector<unsigned int> CGame::GetActives()
+{
+	return _updateQueue;
+}
+
 void CGame::Purge()
 {
 	for (auto it = _gameObjects.begin(); it != _gameObjects.end();)

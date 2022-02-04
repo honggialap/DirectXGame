@@ -28,12 +28,11 @@ void CPlant::Load()
 
 	/* Sensor */
 	pugi::xml_node sensor = prefab.child("Prefab").child("Sensor");
-	std::string sensorName = _name + sensor.attribute("name").as_string();
 	_sensor = dynamic_cast<pPlantSensor>(
 		_game->Create(
 			_scene,
 			sensor.attribute("actor").as_int(),
-			sensorName,
+			_name + sensor.attribute("name").as_string(),
 			sensor.attribute("source").as_string(),
 			_x, _y, _gx, _gy, _layer
 		)

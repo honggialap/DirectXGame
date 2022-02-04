@@ -406,12 +406,11 @@ void CBlock::Spawn()
 	case CBlock::ESpawn::COIN:
 	{
 		pugi::xml_node coin = prefab.child("Prefab").child("Coin");
-		std::string coinName = _name + coin.attribute("name").as_string();
-		pCoin spawnedCoin = dynamic_cast<pCoin>(
+		auto spawnedCoin = dynamic_cast<pCoin>(
 			_game->Create(
 				_scene,
 				coin.attribute("actor").as_int(),
-				coinName,
+				_name + coin.attribute("name").as_string(),
 				coin.attribute("source").as_string(),
 				_x, _y, _gx, _gy, _layer - 1
 			)
@@ -424,16 +423,15 @@ void CBlock::Spawn()
 	{
 		if (_game->Get(_targetName) != nullptr)
 		{
-			pMario mario = dynamic_cast<pMario>(_game->Get(_targetName));
+			auto mario = dynamic_cast<pMario>(_game->Get(_targetName));
 			if (mario->_power == CMario::EPower::SMALL)
 			{
 				pugi::xml_node superMushroom = prefab.child("Prefab").child("SuperMushroom");
-				std::string superMushroomName = _name + superMushroom.attribute("name").as_string();
-				pSuperMushroom spawnedSuperMushroom = dynamic_cast<pSuperMushroom>(
+				auto spawnedSuperMushroom = dynamic_cast<pSuperMushroom>(
 					_game->Create(
 						_scene,
 						superMushroom.attribute("actor").as_int(),
-						superMushroomName,
+						_name + superMushroom.attribute("name").as_string(),
 						superMushroom.attribute("source").as_string(),
 						_x, _y, _gx, _gy, _layer - 1
 					)
@@ -443,12 +441,11 @@ void CBlock::Spawn()
 			else
 			{
 				pugi::xml_node superLeaf = prefab.child("Prefab").child("SuperLeaf");
-				std::string superLeafName = _name + superLeaf.attribute("name").as_string();
-				pSuperLeaf spawnedSuperLeaf = dynamic_cast<pSuperLeaf>(
+				auto spawnedSuperLeaf = dynamic_cast<pSuperLeaf>(
 					_game->Create(
 						_scene,
 						superLeaf.attribute("actor").as_int(),
-						superLeafName,
+						_name + superLeaf.attribute("name").as_string(),
 						superLeaf.attribute("source").as_string(),
 						_x, _y, _gx, _gy, _layer - 1
 					)
@@ -462,12 +459,11 @@ void CBlock::Spawn()
 	case CBlock::ESpawn::FIRE_FLOWER:
 	{
 		pugi::xml_node fireFlower = prefab.child("Prefab").child("FireFlower");
-		std::string fireFlowerName = _name + fireFlower.attribute("name").as_string();
-		pFireFlower spawnedFireFlower = dynamic_cast<pFireFlower>(
+		auto spawnedFireFlower = dynamic_cast<pFireFlower>(
 			_game->Create(
 				_scene,
 				fireFlower.attribute("actor").as_int(),
-				fireFlowerName,
+				_name + fireFlower.attribute("name").as_string(),
 				fireFlower.attribute("source").as_string(),
 				_x, _y, _gx, _gy, _layer - 1
 			)
@@ -479,12 +475,11 @@ void CBlock::Spawn()
 	case CBlock::ESpawn::STARMAN:
 	{
 		pugi::xml_node starman = prefab.child("Prefab").child("Starman");
-		std::string starmanName = _name + starman.attribute("name").as_string();
-		pStarman spawnedStarman = dynamic_cast<pStarman>(
+		auto spawnedStarman = dynamic_cast<pStarman>(
 			_game->Create(
 				_scene,
 				starman.attribute("actor").as_int(),
-				starmanName,
+				_name + starman.attribute("name").as_string(),
 				starman.attribute("source").as_string(),
 				_x, _y, _gx, _gy, _layer - 1
 			)
@@ -496,12 +491,11 @@ void CBlock::Spawn()
 	case CBlock::ESpawn::EXTRA_LIFE:
 	{
 		pugi::xml_node extraLifeMushroom = prefab.child("Prefab").child("ExtraLifeMushroom");
-		std::string extraLifeMushroomName = _name + extraLifeMushroom.attribute("name").as_string();
-		pExtraLifeMushroom spawnedExtraLifeMushroom = dynamic_cast<pExtraLifeMushroom>(
+		auto spawnedExtraLifeMushroom = dynamic_cast<pExtraLifeMushroom>(
 			_game->Create(
 				_scene,
 				extraLifeMushroom.attribute("actor").as_int(),
-				extraLifeMushroomName,
+				_name + extraLifeMushroom.attribute("name").as_string(),
 				extraLifeMushroom.attribute("source").as_string(),
 				_x, _y, _gx, _gy, _layer - 1
 			)
@@ -513,12 +507,11 @@ void CBlock::Spawn()
 	case CBlock::ESpawn::RELAY:
 	{
 		pugi::xml_node relay = prefab.child("Prefab").child("Relay");
-		std::string relayName = _name + relay.attribute("name").as_string();
-		pRelay spawnedRelay = dynamic_cast<pRelay>(
+		auto spawnedRelay = dynamic_cast<pRelay>(
 			_game->Create(
 				_scene,
 				relay.attribute("actor").as_int(),
-				relayName,
+				_name + relay.attribute("name").as_string(),
 				relay.attribute("source").as_string(),
 				_x, _y, _gx, _gy, _layer - 1
 			)

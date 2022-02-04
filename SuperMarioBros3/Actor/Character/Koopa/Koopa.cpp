@@ -33,12 +33,11 @@ void CKoopa::Load()
 	pugi::xml_node sensor = prefab.child("Prefab").child("Sensor");
 	SENSOR_OFFSETX = sensor.attribute("OffsetX").as_float();
 	SENSOR_OFFSETY = sensor.attribute("OffsetY").as_float();
-	std::string sensorName = _name + sensor.attribute("name").as_string();
 	_sensor = dynamic_cast<pKoopaSensor>(
 		_game->Create(
 			_scene,
 			sensor.attribute("actor").as_int(),
-			sensorName,
+			_name + sensor.attribute("name").as_string(),
 			sensor.attribute("source").as_string(),
 			_x, _y, _gx, _gy, _layer
 		)
