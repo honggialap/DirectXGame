@@ -65,6 +65,7 @@
 	<GameObject actor="40402" name="upTranportPipe" source="Data/Asset/Item/ExtraLifeMushroom.xml" x="500" y="100" gx="0" gy="0" layer="10"/>
 	-->
 	
+	<!--
 	<GameObject actor="40501" name="relay" source="Data/Asset/Item/ExtraLifeMushroom.xml" x="500" y="100" gx="0" gy="0" layer="10"/>
 	
 	<GameObject actor="40601" name="spawnZone1" source="Data/Asset/Item/ExtraLifeMushroom.xml" x="500" y="100" gx="0" gy="0" layer="10"/>
@@ -73,7 +74,6 @@
 	<GameObject actor="40701" name="deadZone1" source="Data/Asset/Item/ExtraLifeMushroom.xml" x="500" y="100" gx="0" gy="0" layer="10"/>
 	<GameObject actor="40701" name="deadZone2" source="Data/Asset/Item/ExtraLifeMushroom.xml" x="500" y="100" gx="0" gy="0" layer="10"/>
 	
-	<!--
 	<GameObject actor="40801" name="goal" source="Data/Asset/Item/ExtraLifeMushroom.xml" x="500" y="100" gx="0" gy="0" layer="10"/>
 	-->
 
